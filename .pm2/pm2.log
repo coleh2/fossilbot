@@ -1,0 +1,245 @@
+[2018-06-29 22:15:06] PM2 log: ===============================================================================
+[2018-06-29 22:15:06] PM2 log: --- New PM2 Daemon started ----------------------------------------------------
+[2018-06-29 22:15:06] PM2 log: Time                 : Fri Jun 29 2018 22:15:06 GMT+0000 (UTC)
+[2018-06-29 22:15:06] PM2 log: PM2 version          : 2.10.4
+[2018-06-29 22:15:06] PM2 log: Node.js version      : 8.11.3
+[2018-06-29 22:15:06] PM2 log: Current arch         : x64
+[2018-06-29 22:15:06] PM2 log: PM2 home             : /app/.pm2
+[2018-06-29 22:15:06] PM2 log: PM2 PID file         : /app/.pm2/pm2.pid
+[2018-06-29 22:15:06] PM2 log: RPC socket file      : /app/.pm2/rpc.sock
+[2018-06-29 22:15:06] PM2 log: BUS socket file      : /app/.pm2/pub.sock
+[2018-06-29 22:15:06] PM2 log: Application log path : /app/.pm2/logs
+[2018-06-29 22:15:06] PM2 log: Process dump file    : /app/.pm2/dump.pm2
+[2018-06-29 22:15:06] PM2 log: Concurrent actions   : 2
+[2018-06-29 22:15:06] PM2 log: SIGTERM timeout      : 1600
+[2018-06-29 22:15:06] PM2 log: ===============================================================================
+[2018-06-29 22:15:06] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:0
+[2018-06-29 22:15:06] PM2 log: App name:bot id:0 online
+[2018-06-29 22:16:07] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:1
+[2018-06-29 22:16:07] PM2 log: App name:bot id:1 online
+[2018-06-29 22:16:11] PM2 log: App [bot] with id [1] and pid [4510], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:16:11] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:1
+[2018-06-29 22:16:11] PM2 log: App name:bot id:1 online
+[2018-06-29 22:16:14] PM2 log: App [bot] with id [1] and pid [4528], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:16:14] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:1
+[2018-06-29 22:16:14] PM2 log: App name:bot id:1 online
+[2018-06-29 22:16:18] PM2 log: App [bot] with id [1] and pid [4540], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:16:18] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:1
+[2018-06-29 22:16:18] PM2 log: App name:bot id:1 online
+[2018-06-29 22:16:18] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:2
+[2018-06-29 22:16:18] PM2 log: App name:bot id:2 online
+[2018-06-29 22:16:25] PM2 log: App [bot] with id [1] and pid [4575], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:16:25] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:1
+[2018-06-29 22:16:25] PM2 log: App name:bot id:1 online
+[2018-06-29 22:16:25] PM2 log: App [bot] with id [2] and pid [4583], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:16:25] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:2
+[2018-06-29 22:16:25] PM2 log: App name:bot id:2 online
+[2018-06-29 22:16:29] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:3
+[2018-06-29 22:16:29] PM2 log: App name:bot id:3 online
+[2018-06-29 22:16:35] PM2 log: App [bot] with id [2] and pid [4613], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:16:35] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:2
+[2018-06-29 22:16:35] PM2 log: App name:bot id:2 online
+[2018-06-29 22:16:35] PM2 log: App [bot] with id [1] and pid [4605], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:16:35] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:1
+[2018-06-29 22:16:35] PM2 log: App name:bot id:1 online
+[2018-06-29 22:16:40] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:4
+[2018-06-29 22:16:40] PM2 log: App name:bot id:4 online
+[2018-06-29 22:16:41] PM2 log: App [bot] with id [3] and pid [4650], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:16:41] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:3
+[2018-06-29 22:16:41] PM2 log: App name:bot id:3 online
+[2018-06-29 22:16:51] PM2 log: App [bot] with id [1] and pid [4675], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:16:51] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:1
+[2018-06-29 22:16:51] PM2 log: App name:bot id:1 online
+[2018-06-29 22:16:52] PM2 log: App [bot] with id [2] and pid [4668], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:16:52] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:2
+[2018-06-29 22:16:52] PM2 log: App name:bot id:2 online
+[2018-06-29 22:16:55] PM2 log: App [bot] with id [4] and pid [4713], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:16:55] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:4
+[2018-06-29 22:16:55] PM2 log: App name:bot id:4 online
+[2018-06-29 22:16:55] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:5
+[2018-06-29 22:16:56] PM2 log: App name:bot id:5 online
+[2018-06-29 22:16:58] PM2 log: App [bot] with id [3] and pid [4721], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:16:58] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:3
+[2018-06-29 22:16:58] PM2 log: App name:bot id:3 online
+[2018-06-29 22:17:07] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:6
+[2018-06-29 22:17:07] PM2 log: App name:bot id:6 online
+[2018-06-29 22:17:08] PM2 log: App [bot] with id [1] and pid [4764], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:17:08] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:1
+[2018-06-29 22:17:09] PM2 log: App name:bot id:1 online
+[2018-06-29 22:17:14] PM2 log: App [bot] with id [2] and pid [4772], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:17:14] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:2
+[2018-06-29 22:17:14] PM2 log: App name:bot id:2 online
+[2018-06-29 22:17:16] PM2 log: App [bot] with id [4] and pid [4784], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:17:16] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:4
+[2018-06-29 22:17:16] PM2 log: App name:bot id:4 online
+[2018-06-29 22:17:19] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:7
+[2018-06-29 22:17:19] PM2 log: App name:bot id:7 online
+[2018-06-29 22:17:20] PM2 log: App [bot] with id [3] and pid [4811], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:17:20] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:3
+[2018-06-29 22:17:20] PM2 log: App name:bot id:3 online
+[2018-06-29 22:17:24] PM2 log: App [bot] with id [5] and pid [4796], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:17:24] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:5
+[2018-06-29 22:17:24] PM2 log: App name:bot id:5 online
+[2018-06-29 22:17:32] PM2 log: App [bot] with id [6] and pid [4854], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:17:32] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:6
+[2018-06-29 22:17:32] PM2 log: App name:bot id:6 online
+[2018-06-29 22:17:34] PM2 log: App [bot] with id [1] and pid [4863], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:17:34] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:1
+[2018-06-29 22:17:34] PM2 log: App name:bot id:1 online
+[2018-06-29 22:17:36] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:8
+[2018-06-29 22:17:36] PM2 log: App name:bot id:8 online
+[2018-06-29 22:17:41] PM2 log: App [bot] with id [2] and pid [4901], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:17:41] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:2
+[2018-06-29 22:17:42] PM2 log: App name:bot id:2 online
+[2018-06-29 22:17:51] PM2 log: App [bot] with id [3] and pid [4933], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:17:51] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:3
+[2018-06-29 22:17:51] PM2 log: App name:bot id:3 online
+[2018-06-29 22:17:53] PM2 log: App [bot] with id [5] and pid [4967], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:17:53] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:5
+[2018-06-29 22:17:53] PM2 log: App name:bot id:5 online
+[2018-06-29 22:17:54] PM2 log: App [bot] with id [4] and pid [4917], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:17:54] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:4
+[2018-06-29 22:17:55] PM2 log: App name:bot id:4 online
+[2018-06-29 22:17:56] PM2 log: App [bot] with id [7] and pid [4925], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:17:56] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:7
+[2018-06-29 22:17:56] PM2 log: App name:bot id:7 online
+[2018-06-29 22:18:00] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:9
+[2018-06-29 22:18:00] PM2 log: App name:bot id:9 online
+[2018-06-29 22:18:02] PM2 log: App [bot] with id [6] and pid [4992], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:18:02] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:6
+[2018-06-29 22:18:02] PM2 log: App name:bot id:6 online
+[2018-06-29 22:18:09] PM2 log: App [bot] with id [1] and pid [5000], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:18:09] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:1
+[2018-06-29 22:18:09] PM2 log: App name:bot id:1 online
+[2018-06-29 22:18:12] PM2 log: App [bot] with id [8] and pid [5012], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:18:12] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:8
+[2018-06-29 22:18:12] PM2 log: App name:bot id:8 online
+[2018-06-29 22:18:22] PM2 log: App [bot] with id [2] and pid [5048], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:18:22] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:2
+[2018-06-29 22:18:22] PM2 log: App name:bot id:2 online
+[2018-06-29 22:18:31] PM2 log: App [bot] with id [6] and pid [5122], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:18:31] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:6
+[2018-06-29 22:18:31] PM2 log: App name:bot id:6 online
+[2018-06-29 22:18:33] PM2 log: App [bot] with id [3] and pid [5065], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:18:33] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:3
+[2018-06-29 22:18:33] PM2 log: App name:bot id:3 online
+[2018-06-29 22:18:35] PM2 log: App [bot] with id [8] and pid [5193], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:18:35] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:8
+[2018-06-29 22:18:35] PM2 log: App name:bot id:8 online
+[2018-06-29 22:18:36] PM2 log: App [bot] with id [4] and pid [5083], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:18:36] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:4
+[2018-06-29 22:18:36] PM2 log: App name:bot id:4 online
+[2018-06-29 22:18:37] PM2 log: App [bot] with id [9] and pid [5111], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:18:38] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:9
+[2018-06-29 22:18:38] PM2 log: App name:bot id:9 online
+[2018-06-29 22:18:52] PM2 log: App [bot] with id [5] and pid [5075], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:18:52] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:5
+[2018-06-29 22:18:52] PM2 log: App name:bot id:5 online
+[2018-06-29 22:19:07] PM2 log: App [bot] with id [7] and pid [5095], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:19:07] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:7
+[2018-06-29 22:19:08] PM2 log: App name:bot id:7 online
+[2018-06-29 22:19:47] PM2 log: App [bot] with id [1] and pid [5166], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:19:47] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:1
+[2018-06-29 22:19:48] PM2 log: App name:bot id:1 online
+[2018-06-29 22:20:27] PM2 log: App [bot] with id [3] and pid [5271], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:20:27] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:3
+[2018-06-29 22:20:28] PM2 log: App name:bot id:3 online
+[2018-06-29 22:20:49] PM2 log: App [bot] with id [2] and pid [5251], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:20:49] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:2
+[2018-06-29 22:20:50] PM2 log: App name:bot id:2 online
+[2018-06-29 22:21:40] PM2 log: App [bot] with id [6] and pid [5263], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:21:40] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:6
+[2018-06-29 22:21:44] PM2 log: App name:bot id:6 online
+[2018-06-29 22:21:50] PM2 log: App [bot] with id [9] and pid [5299], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:21:50] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:9
+[2018-06-29 22:21:51] PM2 log: App name:bot id:9 online
+[2018-06-29 22:22:01] PM2 log: App [bot] with id [4] and pid [5287], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:22:01] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:4
+[2018-06-29 22:22:02] PM2 log: App name:bot id:4 online
+[2018-06-29 22:22:37] PM2 log: App [bot] with id [8] and pid [5279], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:22:37] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:8
+[2018-06-29 22:22:38] PM2 log: App name:bot id:8 online
+[2018-06-29 22:23:10] PM2 log: App [bot] with id [5] and pid [5323], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:23:10] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:5
+[2018-06-29 22:23:13] PM2 log: App name:bot id:5 online
+[2018-06-29 22:23:35] PM2 log: App [bot] with id [7] and pid [5331], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:23:35] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:7
+[2018-06-29 22:23:37] PM2 log: App name:bot id:7 online
+[2018-06-29 22:24:07] PM2 log: App [bot] with id [1] and pid [5352], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:24:07] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:1
+[2018-06-29 22:24:09] PM2 log: App name:bot id:1 online
+[2018-06-29 22:27:00] PM2 log: App [bot] with id [2] and pid [5375], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:27:00] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:2
+[2018-06-29 22:27:02] PM2 log: App name:bot id:2 online
+[2018-06-29 22:27:14] PM2 log: App [bot] with id [3] and pid [5367], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:27:14] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:3
+[2018-06-29 22:27:16] PM2 log: App name:bot id:3 online
+[2018-06-29 22:27:36] PM2 log: App [bot] with id [9] and pid [5406], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:27:36] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:9
+[2018-06-29 22:27:39] PM2 log: App name:bot id:9 online
+[2018-06-29 22:27:41] PM2 log: App [bot] with id [8] and pid [5427], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:27:41] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:8
+[2018-06-29 22:27:43] PM2 log: App name:bot id:8 online
+[2018-06-29 22:28:29] PM2 log: App [bot] with id [4] and pid [5414], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:28:29] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:4
+[2018-06-29 22:28:32] PM2 log: App name:bot id:4 online
+[2018-06-29 22:28:36] PM2 log: App [bot] with id [7] and pid [5459], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:28:36] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:7
+[2018-06-29 22:28:36] PM2 log: App name:bot id:7 online
+[2018-06-29 22:28:43] PM2 log: App [bot] with id [5] and pid [5448], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:28:43] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:5
+[2018-06-29 22:28:45] PM2 log: App name:bot id:5 online
+[2018-06-29 22:30:00] PM2 log: App [bot] with id [6] and pid [5398], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:30:00] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:6
+[2018-06-29 22:30:02] PM2 log: App name:bot id:6 online
+[2018-06-29 22:32:33] PM2 log: App [bot] with id [1] and pid [5475], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:32:33] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:1
+[2018-06-29 22:32:34] PM2 log: App name:bot id:1 online
+[2018-06-29 22:32:48] PM2 log: App [bot] with id [2] and pid [5518], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:32:49] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:2
+[2018-06-29 22:32:49] PM2 log: App name:bot id:2 online
+[2018-06-29 22:32:50] PM2 log: App [bot] with id [9] and pid [5537], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:32:50] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:9
+[2018-06-29 22:32:52] PM2 log: App name:bot id:9 online
+[2018-06-29 22:33:26] PM2 log: App [bot] with id [8] and pid [5543], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:33:27] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:8
+[2018-06-29 22:33:29] PM2 log: App name:bot id:8 online
+[2018-06-29 22:35:19] PM2 log: App [bot] with id [3] and pid [5526], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:35:19] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:3
+[2018-06-29 22:35:20] PM2 log: App name:bot id:3 online
+[2018-06-29 22:35:40] PM2 log: App [bot] with id [5] and pid [5590], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:35:41] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:5
+[2018-06-29 22:35:44] PM2 log: App name:bot id:5 online
+[2018-06-29 22:35:49] PM2 log: App [bot] with id [7] and pid [5582], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:35:49] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:7
+[2018-06-29 22:35:51] PM2 log: App name:bot id:7 online
+[2018-06-29 22:36:33] PM2 log: App [bot] with id [4] and pid [5568], exited with code [1] via signal [SIGINT]
+[2018-06-29 22:36:33] PM2 log: Starting execution sequence in -fork mode- for app name:bot id:4
+[2018-06-29 22:36:37] PM2 log: App name:bot id:4 online
+[2018-06-29 22:38:36] PM2 log: Stopping app:bot id:0
+[2018-06-29 22:38:37] PM2 log: Stopping app:bot id:1
+[2018-06-29 22:38:39] PM2 log: pid=4252 msg=failed to kill - retrying in 100ms
+[2018-06-29 22:38:40] PM2 log: pid=4252 msg=failed to kill - retrying in 100ms
+[2018-06-29 22:38:40] PM2 log: App [bot] with id [1] and pid [5850], exited with code [0] via signal [SIGINT]
+[2018-06-29 22:38:41] PM2 log: pid=4252 msg=failed to kill - retrying in 100ms
+[2018-06-29 22:38:41] PM2 log: pid=5850 msg=process killed
+[2018-06-29 22:38:41] PM2 log: Process with pid 4252 still alive after 1600ms, sending it SIGKILL now...
+[2018-06-29 22:38:42] PM2 log: Stopping app:bot id:2
+[2018-06-29 22:38:43] PM2 log: App [bot] with id [0] and pid [4252], exited with code [0] via signal [SIGINT]
+[2018-06-29 22:38:45] PM2 log: pid=4252 msg=process killed
+[2018-06-29 22:38:45] PM2 log: Stopping app:bot id:3
+[2018-06-29 22:38:47] PM2 log: pid=5908 msg=failed to kill - retrying in 100ms
+[2018-06-29 22:38:47] PM2 log: pid=6307 msg=failed to kill - retrying in 100ms
+[2018-06-29 22:38:47] PM2 log: App [bot] with id [3] and pid [6307], exited with code [0] via signal [SIGINT]
+[2018-06-29 22:38:48] PM2 log: pid=5908 msg=failed to kill - retrying in 100ms
+[2018-06-29 22:38:48] PM2 log: pid=6307 msg=process killed
+[2018-06-29 22:38:48] PM2 log: Process with pid 5908 still alive after 1600ms, sending it SIGKILL now...
+[2018-06-29 22:38:49] PM2 log: Stopping app:bot id:4
+[2018-06-29 22:38:50] PM2 log: App [bot] with id [2] and pid [5908], exited with code [0] via signal [SIGINT]
+[2018-06-29 22:38:51] PM2 log: pid=5908 msg=process killed
+[2018-06-29 22:38:51] PM2 log: Stopping app:bot id:5
+[2018-06-29 22:38:52] PM2 log: App [bot] with id [4] and pid [6395], exited with code [0] via signal [SIGINT]
+[2018-06-29 22:38:53] PM2 log: pid=6395 msg=process killed
+[2018-06-29 22:38:54] PM2 log: pid=6358 msg=failed to kill - retrying in 100ms
+[2018-06-29 22:38:54] PM2 log: App [bot] with id [5] and pid [6358], exited with code [0] via signal [SIGINT]
+[2018-06-29 22:38:55] PM2 log: pid=6358 msg=process killed

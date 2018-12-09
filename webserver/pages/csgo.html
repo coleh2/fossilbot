@@ -1,0 +1,500 @@
+<html>
+    <head><!--R00905-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <style>
+		* {
+		font-family: sans-serif;
+		}
+		body {
+		background: #1D2023;
+		margin: 0px;
+		padding: 0px;
+		color: #ffffff;
+		}
+		ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+	background: #23272A;
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 0px; /* Give each list item a left margin to make room for the numbers */
+	box-sizing: content-box;
+	padding:4px 10px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-left:10px solid #7289DA;
+	background:#2C2F33;
+	min-height: 3em;
+	line-height: 3em;
+	color: #ffffff;
+	font-size: 1.25em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+	
+}
+ol > li:hover {
+border-left:11px solid #8B9EE0;
+
+}
+
+li > img {
+border-radius: 100%;
+overflow: hidden;
+height: 2.7em;
+position: relative;
+display: inline-block;
+border: 2px solid #3E4246;
+margin-right: 0.25em;
+}
+li > div.listatdiv > span {
+color: #99AAC5;
+}
+li > .listatdiv {
+color: #ABB9C2;
+display: inline-block;
+float: right;
+white-space: nowrap;
+margin-left: auto;
+margin-right: 5em;
+}
+#listHolder {
+height: auto;
+}
+#top {
+height: auto;
+font-size: 2em;
+display: flex;
+align-items: center;
+color: #ffffff;
+} 
+#top > img {
+border-radius: 100%;
+overflow: hidden;
+height: 2.7em;
+position: relative;
+display: inline-block;
+margin-right: 0.25em;
+}
+span.small {
+    font-size: 0.75em;
+	color: #626D74;
+	font-weight: bold;
+}
+#top > span {
+
+}
+li > span > b  {
+    font-size: 0.75em;
+	color: #626D74;
+}
+#top > span {
+margin-left: 0.25em;
+}
+a:link, a:visited {
+color: inherit;
+text-decoration: none;
+}
+#content {
+position: relative;
+min-width: 5in;
+width: 50vw;
+min-height: 100vh;
+background: #23272A;
+margin: auto;
+padding: 10px;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+* {
+    	box-sizing: content-box;
+
+}
+#q {
+position: fixed;
+min-width: 5in;
+width: 50vw;
+top: 20vh;
+min-height: 50vh;
+background: #23272A;
+left: 0%;
+padding: 10px;
+background: #2C2F33;
+z-index: 100;
+box-shadow: 0px 7px 10px 5px rgba(0,0,0,0.75);
+}
+#loading {
+position: relative;
+min-width: 5in;
+width: auto;
+height: 100%;
+background: #23272A;
+margin: auto;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+a.showlink {
+    color: #8B9EE0;
+	text-decoration: underline;
+}
+#loading > img {
+width: 20%;
+}
+code {
+background: #1D2023;
+font-family: monospace;
+
+}
+samp {
+background: #1D2023;
+padding: 1px;
+color: #BCBCBF;
+}
+span.dsgd-link {
+text-decoration: underline;
+color: #1E658E;
+}
+#sortHolder {
+padding: 5px;
+}
+#sort {
+    float: right;
+}
+#sort > select {
+    background: #494C4E;
+	color: #ffffff;
+}
+.advancedData {
+width: 100%;
+height: 50%;
+position: relative;
+margin: 0px;
+overflow: auto;
+line-height: initial;
+}
+.advLoadImgH {
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+height: 100%;
+}
+.advancedData > hr {
+border: 1px solid #494C4E;
+}
+.advLoadImg {
+}
+.dataDefinitionHolder {
+min-width: 1.5in;
+margin: 1px;
+padding: 3px ;
+border: 2px solid #1D2023;
+border-radius: 5px;
+display: inline-block;
+flex-grow: 1;
+flex-basis: auto;
+}
+.dataDefinitionSection {
+max-width: 100%;
+margin: 0px;
+margin-bottom: 10px;
+padding: 5px;
+background: #00000022;
+display: flex;
+flex-wrap: wrap;
+border-radius: 5px;
+
+}
+.dataName {
+color: #626D74;
+font-weight: bold;
+font-size: 0.75em;
+}
+		</style>
+		<script>
+		
+Array.prototype.findSName = function(y) {
+
+return this.find(x => { return x.name == y })
+
+}
+		
+		var playerDats = {};
+function formatLb(d,sFunc,dOR) {
+var nE = true;
+var ol = document.getElementById('list');
+
+if(!dOR) { ol.innerHTML = '' }
+
+d = d.sort(sFunc);
+
+var GSBNhex = ['#FFD700','#C0C0C0','#CD7F32','#3E4246'];
+for(var i = 0; i < d.length; i++) {
+try {
+var bE = document.createElement('li');
+
+var kll = d[i].r.stats.find(x => { return x.name == 'total_kills'}).value,
+    dth = d[i].r.stats.find(x => { return x.name == 'total_deaths'}).value,
+    exp = d[i].r.stats.find(x => { return x.name == 'total_contribution_score'}).value;
+
+bE.innerHTML = '<img src="https://cdn.discordapp.com/avatars/' + d[i].discord.id + '/' + d[i].discord.avatar + '" alt="'+ d[i].discord.username +' " style="border: 2px solid ' + GSBNhex[Math.min(3,i)] +'"> <span>' + d[i].discord.username +'<b>#'+d[i].discord.discriminator +'</b></span> <div class="listatdiv"> <span>Rank ' + (i + 1) +'</span> | <span class="data1">K/D ' + ((kll / dth ).toString().substring(0,4)) +'</span> | <span class="data2">' + exp + 'XP</span></div><div class="advancedData" onclick="event.stopPropagation();" style="display:none"><hr><div class=dataHolder></div><div class="advLoadImgH"><img src="/load.svg" alt="Loading..." class="advLoadImg"></div></div>'
+
+bE.setAttribute('data-discord-id',d[i].discord.id);
+bE.addEventListener('click', function(e) { 
+advInfoOpen(e);
+});
+ol.appendChild(bE);
+} catch(e) {if(e) { nE = false } }
+}
+return nE
+}
+
+function formatAdvData (x,y) {
+
+var putIn = y.querySelector(".dataHolder");
+var ec = '';
+var csWeaponIdToNameArray = ['','Desert Eagle','Dual Berettas','Five-SeveN','Glock-18','AK-47','AUG','AWP','FAMAS','G3SG1','Galil AR','M249','M4A4','MAC-10','MP5-SD','UMP-45','XM1014','PP-Bizon','MAG-7','Negev','Sawed-Off','Tec-9','Zeus x27','P2000','MP7','MP9','Nova','P250','SCAR-20','SG 553','SSG 08','Knife','Knife','Flashbang','H-Ex Grenade', 'Smoke Grenade', 'Molotov','Decoy Grenade','Incendiary Grenade', 'C4','Kevlar Vest','Kevlar Vest + Helmet','Heavy Assualt Suit','item_nvg','Defuse Kit','Rescue Kit','Medi-Shot','Music Kit','Knife','M4-A1-S','USP-S','Trade Up Contract','CZ75-Auto','R8 Revolver','Tactical Awareness Grenade','Bayonet','Flip Knife','Gut Knife','Karambit','M9 Bayonet','Huntsman Knife','Falchion Knife','Bowie Knife','Butterfly Knife','Shadow Daggers','Ursus Knife','Navaja Knife','Stiletto Knife','Talon Knife'];
+
+function sdd(a,m) {
+if(!a) return
+var e = {name: a.name, value: a.value};
+if(m) e.name = m
+return '<div class="dataDefinitionHolder"><div class="dataName">'+e.name.replace(/_/g,' ').toUpperCase()+'</div><div class="dataData">' + e.value + '</div></div>\n'
+}
+
+ec += '<span class="dataSectionName">General Stats</span><div class="dataDefinitionSection">'
+ec += sdd(x.findSName('total_contribution_score'))
+ec += sdd(x.findSName('total_kills'))
+ec += sdd(x.findSName('total_deaths'))
+ec += '<div class="dataDefinitionHolder"><div class="dataName">K/D</div><div class="dataData">' + (x.findSName('total_kills').value / x.findSName('total_deaths').value).toString().substring(0,6) + '</div></div>\n'
+ec += '<div class="dataDefinitionHolder"><div class="dataName">ACCURACY</div><div class="dataData">' + (x.findSName('total_shots_hit').value / x.findSName('total_shots_fired').value).toString().substring(0,4) + '</div></div>\n'
+ec += sdd(x.findSName('total_wins'))
+ec += sdd(x.findSName('total_damage_done'))
+ec += sdd(x.findSName('total_kills_headshot'),'headshots')
+ec += sdd(x.findSName('total_money_earned'))
+ec += sdd(x.findSName('total_planted_bombs'))
+ec += sdd(x.findSName('total_defused_bombs'))
+ec += sdd(x.findSName('total_wins_pistolround'),'total_wins_(pistol round)')
+ec += sdd(x.findSName('total_weapons_donated'))
+ec += sdd(x.findSName('total_broken_windows'))
+ec += sdd(x.findSName('total_mvps'))
+ec += sdd(x.findSName('total_kills_enemy_blinded'),'total_kills_(enemy_blinded)')
+ec += sdd(x.findSName('total_kills_knife_fight'),'total_kills_in_a_knife_fight')
+ec += sdd(x.findSName('total_kills_against_zoomed_sniper'))
+ec += sdd(x.findSName('total_dominations'))
+ec += sdd(x.findSName('total_domination_overkills'))
+ec += sdd(x.findSName('total_revenges'))
+ec += sdd(x.findSName('total_shots_fired'))
+ec += sdd(x.findSName('total_shots_hit'))
+ec += sdd(x.findSName('total_matches_played'))
+ec += sdd(x.findSName('total_matches_won'))
+ec += sdd(x.findSName('total_rounds_played'))
+ec += '</div>'
+
+ec += '<span class="dataSectionName">Last Match Stats</span><div class="dataDefinitionSection">'
+ec += sdd(x.findSName('last_match_t_wins'),'t_rounds_won')
+ec += sdd(x.findSName('last_match_ct_wins'),'ct_rounds_won')
+ec += sdd(x.findSName('last_match_wins'),'rounds_won')
+ec += sdd(x.findSName('last_match_kills'),'kills')
+ec += sdd(x.findSName('last_match_deaths'),'deaths')
+ec += '<div class="dataDefinitionHolder"><div class="dataName">K/D</div><div class="dataData">' + (x.findSName('last_match_kills').value / x.findSName('last_match_deaths').value).toString().substring(0,6) + '</div></div>\n'
+ec += sdd(x.findSName('last_match_mvps'),'mvps')
+ec += sdd(x.findSName('last_match_damage'),'damage')
+ec += '<div class="dataDefinitionHolder"><div class="dataName">FAVORITE WEAPON</div><div class="dataData">' + csWeaponIdToNameArray[x.findSName('last_match_favweapon_id').value] + '</div></div>\n'
+ec += '<div class="dataDefinitionHolder"><div class="dataName">FAVORITE WEAPON ACCURACY</div><div class="dataData">' + (x.findSName('last_match_favweapon_hits').value / x.findSName('last_match_favweapon_shots').value).toString().substring(0,6) + '</div></div>\n'
+ec += sdd(x.findSName('last_match_favweapon_shots'),'favorite_weapon_shots')
+ec += sdd(x.findSName('last_match_favweapon_hits'),'favorite_weapon_hits')
+ec += sdd(x.findSName('last_match_favweapon_kills'),'favorite_weapon_kills')
+ec += sdd(x.findSName('last_match_contribution_score'),'contribution_score')
+ec += sdd(x.findSName('last_match_rounds'),'rounds')
+ec += sdd(x.findSName('last_match_money_spent'),'money_spent')
+ec += sdd(x.findSName('last_match_dominations'),'dominations')
+ec += sdd(x.findSName('last_match_revenges'),'revenges')
+ec += '</div>'
+
+console.log();
+
+y.querySelector('.advLoadImgH').style.display = 'none'
+putIn.innerHTML = ec
+
+
+}
+
+function advInfoOpen(e) {
+
+if(e.target.querySelector('.advancedData').style.display == 'block') {
+e.target.querySelector('.advancedData').style.display = 'none'
+} else {
+var id = e.target.getAttribute('data-discord-id'),
+    openRn = e.target.querySelector('.advancedData').style.display == 'none',
+	advDiv = e.target.querySelector('.advancedData');
+
+if(!playerDats[id]) {
+
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+	   if(!this.responseText) return
+	   playerDats[id] = JSON.parse(this.responseText).playerstats.stats
+	   formatAdvData(playerDats[id],advDiv);
+    }
+  } 
+  req.open("GET", "/data?src=steam&mode=730&type=spec&did="+id, true);
+  req.send();
+} //else formatAdvData(playerDats[id],advDiv)
+//show/hide the data div
+
+for(var i = 0, es = document.querySelectorAll('.advancedData'); i < es.length; i++) {
+es[i].style.display = 'none'
+}
+e.target.querySelector('.advancedData').style.display = 'block'
+}
+
+
+
+}
+
+function toggleQ() {
+
+var q = document.getElementById('q');
+if(q.style.left = '0%') {
+var c = document.getElementById('content');
+q.style.left = c.getBoundingClientRect().left + 'px'
+}
+q.hidden = !q.hidden
+}
+document.addEventListener("DOMContentLoaded", init, false);
+function init(e) {
+document.body.addEventListener('click', function() { if(document.getElementById('q').hidden == false) {document.getElementById('q').hidden = true}});
+
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+	   if( formatLb(JSON.parse(this.responseText),  function (a,b) {var atk = a.r.stats.find(x => { return x.name == 'total_kills'}).value;var btk = b.r.stats.find(x => { return x.name == 'total_kills'}).value;var atd = a.r.stats.find(x => { return x.name == 'total_deaths'}).value;var btd = b.r.stats.find(x => { return x.name == 'total_deaths'}).value;return (btk / btd) - (atk / atd)}) ) {
+	       window.rawData = JSON.parse(this.responseText);
+	       endLoad();
+	   }
+    }
+  };
+  req.open("GET", "/data?src=steam&mode=730&type=lb&start=0", true);
+  req.send();
+}
+
+(function(){
+  var lastWidth = 0;
+  function pollZoomFireEvent() {
+    var widthNow = window.innerWidth;
+    if (lastWidth == widthNow) return;
+    lastWidth = widthNow;
+		var q = document.getElementById('q');
+		var c = document.getElementById('content');
+		q.style.left = c.getBoundingClientRect().left + 'px'
+    
+  }
+  setInterval(pollZoomFireEvent, 100);
+})();
+
+(function(){
+  var s = window.rawData;
+  console.log(s);
+  function updateReloadTime() {
+    if (!s) { s = window.rawData; if(!s) { return } }
+	     var ts = s[0].s.lastReload;
+		 var i = 'innerHTML';
+		var dN = Date.now();
+		var lR = document.getElementById('lastReload');
+		if(ts > dN - 30000) lR[i] = 'just now'
+		else if (ts > dN - 120000) lR[i] = 'about a minute ago'
+		else lR[i] = (Math.floor((dN - ts)/60000)) + ' minutes ago'
+		
+		if( (Math.floor((dN - ts)/60000)) > 10) document.getElementById('cacheoodwarning').innerHTML = 'Your data is out of date! Reload the page to get up-to-date information.'
+    
+  }
+  setInterval(updateReloadTime, 2000);
+})();
+
+function endLoad(i) {
+if(!i) {
+document.getElementById('loading').style.display = 'none';
+document.getElementById('listHolder').style.display = 'block';
+} else {  }
+}
+
+function middleSortRes(t) {
+console.log(t);
+[
+function() {
+	   formatLb(window.rawData,  function (a,b) {var atk = a.r.stats.find(x => { return x.name == 'total_kills'}).value;var btk = b.r.stats.find(x => { return x.name == 'total_kills'}).value;var atd = a.r.stats.find(x => { return x.name == 'total_deaths'}).value;var btd = b.r.stats.find(x => { return x.name == 'total_deaths'}).value;return (btk / btd) - (atk / atd)});
+},
+function() {
+	   formatLb(window.rawData,  function(a,b) { return (b.r.stats.find(x => { return x.name == 'total_contribution_score'}).value - a.r.stats.find(x => { return x.name == 'total_contribution_score'}).value) });
+},
+function() {
+	   formatLb(window.rawData,  function(a,b) { return (b.r.stats.find(x => { return x.name == 'total_matches_won'}).value - a.r.stats.find(x => { return x.name == 'total_matches_won'}).value) });
+},
+function() {
+	   formatLb(window.rawData,  function (a,b) {var atk = a.r.stats.find(x => { return x.name == 'total_shots_hit'}).value;var btk = b.r.stats.find(x => { return x.name == 'total_shots_hit'}).value;var atd = a.r.stats.find(x => { return x.name == 'total_shots_fired'}).value;var btd = b.r.stats.find(x => { return x.name == 'total_shots_fired'}).value;return (btk / btd) - (atk / atd)});
+}
+][t]()
+}
+		</script>
+	</head>
+	<body>
+
+	   <div id="content">
+	   		<div id="q" hidden  onclick="event.stopPropagation();">
+			<h2>What is this?</h2>
+			<p>This is a leaderboard for CS:GO stats in the NHS Discord server.</p>
+			<h2>I'm not shown on the leaderboard</h2>
+			<p>Currently, the leaderboard only shows people who have connected their Steam accounts. You can do this by using the <code>&gt;link steam &lt;Profile Url&gt;</code> chat command (for example, <samp>&gt;link steam <span class="dsgd-link">https://steamcommunity.com/id/coleh/</span></samp>).</p>
+		    <h2>My stats are showing as "0-0-0" or "Error"</h2>
+			<p>Make sure you have your Steam account set to public, and make sure that you are allowing people to view game stats.</p>
+			<h2>I have a problem</h2>
+			<p>Okay! You can tell me about it through <a href="https://discordapp.com/channels/@me/297151429087592449" class="showlink">Discord</a> or  <a href="mailto:coleh@coleh.net" class="showlink">email</a>.</p>
+			
+		</div>
+		   <div id="top">
+			   <img src="https://cdn.discordapp.com/icons/392830469500043266/1288b0f8eefd036669eba992dd2ecceb.jpg" alt="NHS icon" style="z-index:2"> <span><b>NHS</b>'s Leaderboard for <b>CS:GO</b><span class="small"><a href="#" onclick="event.stopPropagation(); toggleQ();">(?)</a></span></span>
+		   </div>
+		   <div id="listHolder" style="display:none;">
+		       <div id="sortHolder">
+					
+			       <div id="sort">
+			   <span>Sort By </span><select onchange="if (this.selectedIndex > -1) middleSortRes(this.selectedIndex);" onfocus="this.selectedIndex = -1;">
+			   <option value="kd">K/D</option>
+			   <option value="score">Score</option>
+			   <option value="gamesWon">Games Won</option>
+			   <option value="accuracy">Accuracy</option>
+			   </select>
+			       </div>
+				   <span style="float:left;padding:5px;display:block;">Cache refreshed <span id="lastReload">. . .</span>  <span id="cacheoodwarning" style="color:#B37373"></span></span>
+				   <div style="clear:both"></div>
+			   </div>
+				<ol id="list">
+				</ol>
+						
+			</div>
+			<div id="loading">
+		<img src="/load.svg" alt="Loading..." id="loadImg">
+		<span style="font-size:2em;display=none;color:#7D2020;padding:10px;border-radius:5%;" id="loadText"></span>
+		<script>
+		document.getElementById('loading').style.height = ( window.innerHeight - document.getElementById('top').offsetHeight ) + 'px';
+		setTimeout(function() {
+		if(document.getElementById('loading').style.display != 'none') {
+		document.getElementById('loadImg').style.display = 'none'
+		document.getElementById('loadText').innerHTML = 'Could not connect.'
+		document.getElementById('loadText').style.border = '2px solid #7D2020'
+		document.getElementById('loadText').style.display = 'initial'
+		}
+		},10000)
+		</script>
+		</div>
+		</div>
+
+	</body>
+</html>

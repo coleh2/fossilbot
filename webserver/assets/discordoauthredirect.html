@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Control Panel - Fossilbot</title>
+    <meta name="description" content="Fossilbot's control panel">
+    <link id="favicon" rel="icon" href="https://cdn.discordapp.com/icons/443917592084873236/b64f9e7e746eb12481f1dc42f4f6e920.png" type="image/png">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet 
+    <link rel="stylesheet" href="/style.css">-->
+    <style>
+	</style>
+	
+    <script>
+	function init() {
+    if(!window.opener) { return }
+	var h = window.location.hash;
+    var r = /access_token=([^\&]+)\&/.exec(h);
+    if(r) {
+    window.opener.postMessage(r[1],window.location.protocol + '//' + window.location.hostname);
+    }
+	}
+	</script>
+  </head>
+  <body>
+    If you're seeing this, something went wrong. Try again.
+    <script>init()</script>
+
+  </body>
+</html>

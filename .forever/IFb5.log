@@ -1,0 +1,1319 @@
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:22:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #1
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:22:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #2
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:22:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #3
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:22:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #4
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:22:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #5
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:22:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #6
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:22:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #7
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:22:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #8
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:22:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #9
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:22:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #10
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:19:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #11
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:19:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #12
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:19:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #13
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:19:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #14
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:19:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #15
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:19:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #16
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:19:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #17
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:19:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #18
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:19:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #19
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:19:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #20
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:19:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #21
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:19:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #22
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:19:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #23
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:19:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #24
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:19:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #25
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:19:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #26
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:19:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #27
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:19:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #28
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:19:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #29
+module.js:549
+    throw err;
+    ^
+
+Error: Cannot find module 'pm2'
+    at Function.Module._resolveFilename (module.js:547:15)
+    at Function.Module._load (module.js:474:25)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/app/bot.js:19:11)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+error: Forever detected script exited with code: 1
+error: Script restart attempt #30
+<span style="color: red"> THIS IS BLUE, TRUST ME</span>
+📡 Connected
+🔑 Logged in as: fossilbot - (387963766798811136)
+📱 Presence set
+🔋 1530314267717 Ping Received
+🖼️ Getme request for https://www.google.com/search?tbm=isch&q=joe+crackower&safe=images
+{ ResponseError: Could not add role
+    at handleResCB (/rbd/pnpm-volume/f5af9d3a-ffd0-418f-aa32-b1c33f42f24a/node_modules/.github.com/woor/discord.io/a4b67182f493804d205d1cd5768a7d97f8f5996c/node_modules/discord.io/lib/index.js:1403:10)
+    at /rbd/pnpm-volume/f5af9d3a-ffd0-418f-aa32-b1c33f42f24a/node_modules/.github.com/woor/discord.io/a4b67182f493804d205d1cd5768a7d97f8f5996c/node_modules/discord.io/lib/index.js:1178:3
+    at /rbd/pnpm-volume/f5af9d3a-ffd0-418f-aa32-b1c33f42f24a/node_modules/.github.com/woor/discord.io/a4b67182f493804d205d1cd5768a7d97f8f5996c/node_modules/discord.io/lib/index.js:1489:13
+    at Gunzip.onError (zlib.js:116:5)
+    at emitOne (events.js:116:13)
+    at Gunzip.emit (events.js:211:7)
+    at Gunzip.zlibOnError (zlib.js:156:8)
+  name: 'ResponseError',
+  statusCode: 429,
+  statusMessage: 'TOO MANY REQUESTS',
+  response: 
+   { global: false,
+     message: 'You are being rate limited.',
+     retry_after: 7894 } }
+🖼️ Getme request for https://www.google.com/search?tbm=isch&q=pie&safe=images
+{ ResponseError: Could not add role
+    at handleResCB (/rbd/pnpm-volume/f5af9d3a-ffd0-418f-aa32-b1c33f42f24a/node_modules/.github.com/woor/discord.io/a4b67182f493804d205d1cd5768a7d97f8f5996c/node_modules/discord.io/lib/index.js:1403:10)
+    at /rbd/pnpm-volume/f5af9d3a-ffd0-418f-aa32-b1c33f42f24a/node_modules/.github.com/woor/discord.io/a4b67182f493804d205d1cd5768a7d97f8f5996c/node_modules/discord.io/lib/index.js:1178:3
+    at /rbd/pnpm-volume/f5af9d3a-ffd0-418f-aa32-b1c33f42f24a/node_modules/.github.com/woor/discord.io/a4b67182f493804d205d1cd5768a7d97f8f5996c/node_modules/discord.io/lib/index.js:1489:13
+    at Gunzip.onError (zlib.js:116:5)
+    at emitOne (events.js:116:13)
+    at Gunzip.emit (events.js:211:7)
+    at Gunzip.zlibOnError (zlib.js:156:8)
+  name: 'ResponseError',
+  statusCode: 429,
+  statusMessage: 'TOO MANY REQUESTS',
+  response: 
+   { global: false,
+     message: 'You are being rate limited.',
+     retry_after: 3509 } }
+{ ResponseError: Could not add role
+    at handleResCB (/rbd/pnpm-volume/f5af9d3a-ffd0-418f-aa32-b1c33f42f24a/node_modules/.github.com/woor/discord.io/a4b67182f493804d205d1cd5768a7d97f8f5996c/node_modules/discord.io/lib/index.js:1403:10)
+    at /rbd/pnpm-volume/f5af9d3a-ffd0-418f-aa32-b1c33f42f24a/node_modules/.github.com/woor/discord.io/a4b67182f493804d205d1cd5768a7d97f8f5996c/node_modules/discord.io/lib/index.js:1178:3
+    at /rbd/pnpm-volume/f5af9d3a-ffd0-418f-aa32-b1c33f42f24a/node_modules/.github.com/woor/discord.io/a4b67182f493804d205d1cd5768a7d97f8f5996c/node_modules/discord.io/lib/index.js:1489:13
+    at Gunzip.onError (zlib.js:116:5)
+    at emitOne (events.js:116:13)
+    at Gunzip.emit (events.js:211:7)
+    at Gunzip.zlibOnError (zlib.js:156:8)
+  name: 'ResponseError',
+  statusCode: 429,
+  statusMessage: 'TOO MANY REQUESTS',
+  response: 
+   { global: false,
+     message: 'You are being rate limited.',
+     retry_after: 1915 } }
+{ ResponseError: Could not add role
+    at handleResCB (/rbd/pnpm-volume/f5af9d3a-ffd0-418f-aa32-b1c33f42f24a/node_modules/.github.com/woor/discord.io/a4b67182f493804d205d1cd5768a7d97f8f5996c/node_modules/discord.io/lib/index.js:1403:10)
+    at /rbd/pnpm-volume/f5af9d3a-ffd0-418f-aa32-b1c33f42f24a/node_modules/.github.com/woor/discord.io/a4b67182f493804d205d1cd5768a7d97f8f5996c/node_modules/discord.io/lib/index.js:1178:3
+    at /rbd/pnpm-volume/f5af9d3a-ffd0-418f-aa32-b1c33f42f24a/node_modules/.github.com/woor/discord.io/a4b67182f493804d205d1cd5768a7d97f8f5996c/node_modules/discord.io/lib/index.js:1489:13
+    at Gunzip.onError (zlib.js:116:5)
+    at emitOne (events.js:116:13)
+    at Gunzip.emit (events.js:211:7)
+    at Gunzip.zlibOnError (zlib.js:156:8)
+  name: 'ResponseError',
+  statusCode: 429,
+  statusMessage: 'TOO MANY REQUESTS',
+  response: 
+   { global: false,
+     message: 'You are being rate limited.',
+     retry_after: 1915 } }
+{ ResponseError: Could not add role
+    at handleResCB (/rbd/pnpm-volume/f5af9d3a-ffd0-418f-aa32-b1c33f42f24a/node_modules/.github.com/woor/discord.io/a4b67182f493804d205d1cd5768a7d97f8f5996c/node_modules/discord.io/lib/index.js:1403:10)
+    at /rbd/pnpm-volume/f5af9d3a-ffd0-418f-aa32-b1c33f42f24a/node_modules/.github.com/woor/discord.io/a4b67182f493804d205d1cd5768a7d97f8f5996c/node_modules/discord.io/lib/index.js:1178:3
+    at /rbd/pnpm-volume/f5af9d3a-ffd0-418f-aa32-b1c33f42f24a/node_modules/.github.com/woor/discord.io/a4b67182f493804d205d1cd5768a7d97f8f5996c/node_modules/discord.io/lib/index.js:1489:13
+    at Gunzip.onError (zlib.js:116:5)
+    at emitOne (events.js:116:13)
+    at Gunzip.emit (events.js:211:7)
+    at Gunzip.zlibOnError (zlib.js:156:8)
+  name: 'ResponseError',
+  statusCode: 429,
+  statusMessage: 'TOO MANY REQUESTS',
+  response: 
+   { global: false,
+     message: 'You are being rate limited.',
+     retry_after: 1914 } }
+{ ResponseError: Could not add role
+    at handleResCB (/rbd/pnpm-volume/f5af9d3a-ffd0-418f-aa32-b1c33f42f24a/node_modules/.github.com/woor/discord.io/a4b67182f493804d205d1cd5768a7d97f8f5996c/node_modules/discord.io/lib/index.js:1403:10)
+    at /rbd/pnpm-volume/f5af9d3a-ffd0-418f-aa32-b1c33f42f24a/node_modules/.github.com/woor/discord.io/a4b67182f493804d205d1cd5768a7d97f8f5996c/node_modules/discord.io/lib/index.js:1178:3
+    at /rbd/pnpm-volume/f5af9d3a-ffd0-418f-aa32-b1c33f42f24a/node_modules/.github.com/woor/discord.io/a4b67182f493804d205d1cd5768a7d97f8f5996c/node_modules/discord.io/lib/index.js:1489:13
+    at Gunzip.onError (zlib.js:116:5)
+    at emitOne (events.js:116:13)
+    at Gunzip.emit (events.js:211:7)
+    at Gunzip.zlibOnError (zlib.js:156:8)
+  name: 'ResponseError',
+  statusCode: 429,
+  statusMessage: 'TOO MANY REQUESTS',
+  response: 
+   { global: false,
+     message: 'You are being rate limited.',
+     retry_after: 1910 } }
+⚠️ Bot disconnected from Discord with code4003for reason:Not Authenticated
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530314544820 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530314551906 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530314604711 Ping Received
+🔋 1530314604715 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530314769919 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530314824800 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530314851350 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530314884720 Ping Received
+🔋 1530314884722 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530315050023 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530315104802 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530315151283 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530315164716 Ping Received
+🔋 1530315164720 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530315329982 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530315384810 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530315444748 Ping Received
+🔋 1530315444755 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530315451675 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530315664816 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530315724732 Ping Received
+🔋 1530315724733 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530315751675 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530315944852 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530316004736 Ping Received
+🔋 1530316004770 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530316051311 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530316224836 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530316284739 Ping Received
+🔋 1530316284748 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530316351250 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530316415001 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530316504839 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530316564786 Ping Received
+🔋 1530316564786 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530316584441 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530316695018 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530316784833 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530316844738 Ping Received
+🔋 1530316844739 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530316884335 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530317064835 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530317124759 Ping Received
+🔋 1530317124764 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530317184333 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530317344839 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530317404745 Ping Received
+🔋 1530317404749 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530317484276 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530317624839 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530317684751 Ping Received
+🔋 1530317684752 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+🔋 1530317784676 Ping Received
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed
+⚠️ Bot disconnected from Discord with code4004for reason:Authentication Failed

@@ -1,0 +1,376 @@
+{
+  "License": "https://github.com/danielecappuccio/Game-of-Thrones-Wiki/blob/master/LICENSE",
+  "Noble_Houses": [{
+    "House" : "Stark",
+    "Sigil": "A grey direwolf on a white field",
+    "Words": "Winter is coming",
+    "Titles": [
+      "King in the North",
+      "Lord of Winterfell"  
+    ],
+    "Seats": "Winterfell",
+    "Regions": "The North",
+    "Lords/Members": [
+      "Eddard Stark",
+      "Bran Stark",
+      "Robb Stark",
+      "Sansa Stark",
+      "Arya Stark",
+      "Rickon Stark",
+      "Jon Snow"
+    ],
+    "Allegiances": [
+      "House Baratheon (formerly)",
+      "House Targaryen (formerly)"
+    ],
+    "Founders" : "Bran the Builder"
+  }, {
+    "House" : "Lannister",
+    "Sigil": "A golden lion rampant on a crimson field",
+    "Words": "A Lannister always pays his debts",
+    "Titles": [
+      "King of the Andals and the First Men",
+      "Protector of the Seven Kingdoms",
+      "Lord of Casterly Rock",
+      "Warden of the West"  
+    ],
+    "Seats": [
+      "Red Keep",
+      "King's Landing",
+      "Casterly Rock"
+    ],
+    "Regions": [
+      "The Crownlands",
+      "The Westerlands"
+    ],
+    "Lords/Members": [
+      "Tywin Lannister",
+      "Cersei Lannister",
+      "Jaime Lannister",
+      "Tyrion Lannister"
+    ],
+    "Allegiances": [
+      "House Baratheon (formerly)",
+      "House Targaryen (formerly)"
+    ],
+    "Founders" : "Lann the Clever"
+  }, {
+    "House" : "Targaryen",
+    "Sigil": "A red three-headed dragon, on a black field",
+    "Words": "Fire and Blood",
+    "Titles": [
+      "King of the Andals and the First Men",
+      "Protector of the Seven Kingdoms",
+      "Protector of the Realm",
+      "Queen of Meereen"  
+    ],
+    "Seats": [
+      "Dragonstone",
+      "King's Landing",
+      "Red Keep",
+      "Great Pyramid",
+      "Meereen"
+    ],
+    "Regions": [
+      "Dragonstone",
+      "Bay of Dragons",
+      "The Crownlands"
+    ],
+    "Lords/Members": [
+      "Aerys II Targaryen",
+      "Viserys Targaryen",
+      "Daenerys Targaryen"
+    ],
+    "Allegiances": [
+      "House Baratheon (cadet branch)",
+      "House Blackfire (extinct)"
+    ],
+    "Founders" : "---"
+  }, {
+    "House" : "Tyrell",
+    "Sigil": "A golden rose on a green field",
+    "Words": "Growing strong",
+    "Titles": [
+      "Lord of Highgarden",
+      "Lord Paramount of the Reach",
+      "Warden of the South"
+    ],
+    "Seats": "Highgarden",
+    "Regions": "The Reach",
+    "Lords/Members": [
+      "Olenna Tyrell",
+      "Margaery Tyrell",
+      "Loras Tyrell"
+    ],
+    "Allegiances": [
+      "House Targaryen",
+      "House Baratheon"
+    ],
+    "Founders" : "---"  
+  }, {
+    "House" : "Greyjoy",
+    "Sigil": "A golden kraken on a black field",
+    "Words": [
+      "We do not sow",
+      "What is dead may never die"
+    ],
+    "Titles": [
+      "King of the Iron Islands",
+      "Lord Reaper of Pyke",
+      "Son of the Sea Wind",
+      "King of Salt and Rock"  
+    ],
+    "Seats": "Pyke",
+    "Regions": "Iron Islands",
+    "Lords/Members": [
+      "Euron Greyjoy",
+      "Balon Greyjoy",
+      "Yara Greyjoy",
+      "Theon Greyjoy"
+    ],
+    "Allegiances": [
+      "House Lannister",
+      "House Baratheon (formerly)",
+      "House Targaryen (formerly)"
+    ],
+    "Founders" : "---"
+  }, {
+    "House" : "Bolton",
+    "Sigil": "A red flayed man, hanging upside-down on a white X-shaped cross, on a black background",
+    "Words": [
+      "Our blades are sharp",
+      "A naked man has few secrets; A flayed man, none"
+    ],
+    "Titles": [
+      "Lord of the Dreadfort",
+      "Lord of Winterfell",
+      "Warden of the North"  
+    ],
+    "Seats": [
+      "The Dreadfort",
+      "Winterfell"
+    ],
+    "Regions": "The North",
+    "Lords/Members": [
+      "Roose Bolton",
+      "Ramsay Bolton"
+    ],
+    "Allegiances": [
+      "House Baratheon (formerly)",
+      "House Stark (formerly)"
+    ],
+    "Founders" : "---"
+  }, {
+    "House" : "Frey",
+    "Sigil": "The two stone grey towers and bridge of the Twins, on a dark grey field, surmounting an escutcheon of blue water",
+    "Words": "We stand together",
+    "Titles": [
+      "Lord of the Crossing",
+      "Lord of Riverrun",
+      "Lord Paramount of the Trident"
+    ],
+    "Seats": [
+      "The Twins",
+      "Riverrun"
+    ],
+    "Regions": "The Riverlands",
+    "Lords/Members": "Walder Frey",
+    "Allegiances": [
+      "House Lannister",
+      "House Baratheon (formerly)",
+      "House Tully (formerly)"
+    ],
+    "Founders" : "---"
+  }, {
+    "House" : "Martell",
+    "Sigil": "A red sun pierced by a gold spear, on an orange field",
+    "Words": "Unbowed, unbent, unbroken",
+    "Titles": [
+      "Prince of Dorne",
+      "Lord of Sunspear"  
+    ],
+    "Seats": "Sunspear",
+    "Regions": "Dorne",
+    "Lords/Members": [
+      "Doran Martell",
+      "Trystane Martell",
+      "Oberyn Martell",
+      "Ellaria Sand",
+      "Sand Snakes"
+    ],
+    "Allegiances": [
+      "House Targaryen (under Ellaria Sand)",
+      "House Baratheon (formerly)"
+    ],
+    "Founders" : "---"
+  }, {
+    "House" : "Arryn",
+    "Sigil": "A white falcon volant and crescent moon on a blue field",
+    "Words": "As high as honor",
+    "Titles": [
+      "Lord of the Eyrie",
+      "Lord Paramount of the Vale",
+      "Warden of the East",
+      "King of Mountain and Vale"  
+    ],
+    "Seats": "The Eyrie",
+    "Regions": "The Vale of Arryn",
+    "Lords/Members": [
+      "Jon Arryn",
+      "Robin Arryn",
+      "Petyr 'Littlefinger' Baelish (regent)"
+    ],
+    "Allegiances": [
+      "House Stark",
+      "House Baratheon (formerly)",
+      "House Targaryen (formerly)"
+    ],
+    "Founders" : "Artys Arryn"
+  }, {
+    "House" : "Tully",
+    "Sigil": "A silver trout leaping on a red and blue background",
+    "Words": "Family, duty, honor",
+    "Titles": [
+      "Lord of Riverrun",
+      "Lord Paramount of the Riverlands" 
+    ],
+    "Seats": "Riverrun",
+    "Regions": "The Riverlands",
+    "Lords/Members": [
+      "Catelyn Tully",
+      "Lisa Tully"
+    ],
+    "Allegiances": [
+      "House Frey (forcibly)",
+      "House Stark (formerly)",
+      "House Baratheon (formerly)",
+      "House Targaryen (formerly)"
+    ],
+    "Founders" : "Axel Tully"
+  }, {
+    "House" : "Tarly",
+    "Sigil": "A striding huntsman, red on green",
+    "Words": "First in battle",
+    "Titles": "Lord of Horn Hill",
+    "Seats": "Horn Hill",
+    "Regions": "The Reach",
+    "Lords/Members": [
+      "Randyll Tarly",
+      "Samwell Tarly",
+      "Dickon Tarly"
+    ],
+    "Allegiances": [
+      "House Lannister",
+      "House Tyrell (formerly)"
+    ],
+    "Founders" : "---"
+  }, {
+    "House" : "Baratheon",
+    "Sigil": "A crowned black stag on a field of gold",
+    "Words": "Ours is the fury",
+    "Titles": [
+      "Lord of Storm's End",
+      "Lord Paramount of the Stormlands"
+    ],
+    "Seats": "Storm's End",
+    "Regions": "Stormlands",
+    "Lords/Members": [
+      "Robert Baratheon",
+      "Stannis Baratheon",
+      "Renly Baratheon"
+    ],
+    "Allegiances": "House Targaryen (formerly)",
+    "Founders" : "Orys Baratheon"
+  }, {
+    "House" : "Mormont",
+    "Sigil": "A rampant black bear on a white field, surrounded by a green escutcheon",
+    "Words": "Here we stand",
+    "Titles": "Lord of Bear Island",
+    "Seats": "Bear Island",
+    "Regions": "The North",
+    "Lords/Members": [
+      "Jorah Mormont",
+      "Lyanna Mormont"
+    ],
+    "Allegiances": "House Stark",
+    "Founders" : "---"
+  }, {
+    "House" : "Umber",
+    "Sigil": "Four silver chains linked by a central ring on dark red",
+    "Words": "---",
+    "Titles": "Lord of Last Hearth",
+    "Seats": "Last Hearth",
+    "Regions": "The North",
+    "Lords/Members": [
+      "Smalljon Umber",
+      "Ned Umber"
+    ],
+    "Allegiances": [
+      "House Stark",
+      "House Bolton (formerly)"
+    ],
+    "Founders" : "---"
+  }, {
+    "House" : "Reed",
+    "Sigil": "A black lizard-lion on a grey-green field",
+    "Words": "---",
+    "Titles": "Lord of Greywater Watch",
+    "Seats": "Greywater Watch",
+    "Regions": "The North",
+    "Lords/Members": [
+      "Howland Reed",
+      "Meera Reed"
+    ],
+    "Allegiances": "House Stark",
+    "Founders" : "---"
+  }, {
+    "House" : "Karstark",
+    "Sigil": "A white sunburst on black",
+    "Words": "The Sun of winter",
+    "Titles": "Lord of Karhold",
+    "Seats": "Karhold",
+    "Regions": "The North",
+    "Lords/Members": [
+      "Rickard Karstark",
+      "Alys Karstark"
+    ],
+    "Allegiances": [
+      "House Stark",
+      "House Bolton (formerly)"
+    ],
+    "Founders" : "Karlon Stark"
+  }, {
+    "House" : "Hightower",
+    "Sigil": "A white tower crowned with flames on smoke grey",
+    "Words": "We Light the Way",
+    "Titles": ["King of the High Tower (formerly)",
+       "Lord of the Hightower",
+       "Lord of the Port",
+       "Voice of Oldtown",
+       "Defender of the Citadel",
+       "Beacon of the South"],
+    "Seats": ["The Hightower", "Oldtown"],
+    "Regions": "The Reach",
+    "Lords/Members": [
+      "Leyton Hightower"
+    ],
+    "Allegiances": [
+      "House Lannister"
+    ],
+    "Founders" : "King Uthor of the High Tower"
+  }, {
+    "House" : "Blackwater",
+    "Sigil": "A green, flaming chain on a smoking grey field",
+    "Words": "---",
+    "Titles": ["Lord of Castle Stokeworth"],
+    "Seats": ["Castle Stokeworth"],
+    "Regions": "The Crownlands",
+    "Lords/Members": [
+      "Bronn Blackwater"
+    ],
+    "Allegiances": [
+      "House Lannister"
+    ],
+    "Founders" : "Ser Bronn of the Blackwater"
+  }]
+}

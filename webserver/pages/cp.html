@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Control Panel - Fossilbot</title>
+    <meta name="description" content="Fossilbot's control panel">
+    <link id="favicon" rel="icon" href="https://cdn.discordapp.com/icons/443917592084873236/b64f9e7e746eb12481f1dc42f4f6e920.png" type="image/png">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Work+Sans" rel="stylesheet">
+    <style>
+	iframe#discordLogin {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	animation: 1s forwards slideup;
+	}
+	#logindude {
+	background: #373A3D;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: 100;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	}
+	#logindude > svg {
+    min-width: 0.5in;
+	width: 20%;
+	}
+	#logindude > a {
+	color: white;
+	text-decoration: none;
+	margin: 5%;
+	font-size: 5vmin;
+	text-align: center;
+	}
+	body {
+	margin:0px;
+	color: white;
+	font-family: 'Work Sans', sans-serif;
+	background: #313437;
+	display: flex; 
+	justify-content: center;
+	}
+	main {
+	   width: 75%;
+	   min-width: 4in;
+	   background: #373A3D;
+	   overflow-x: hidden;
+	   padding: 10px;
+	   min-height: 100vh;
+	}
+	@keyframes slideup {
+	from { top: 100vh; }
+	to { top: 0%; }
+	}
+	input[type="checkbox"] {
+	  position: relative;
+	  width: 4.4em;
+	  height: 2.4em;
+	}
+	input:checked {
+	  display: initial;
+	}
+	input[type="checkbox"]::after {
+	  height: 1.6em;
+	  position: absolute;
+	  background: #fff;
+	  content:" ";
+	  left: 0.4em;
+	  top: 0.4em;
+	  width: 1.6em;
+	  z-index: 2;
+	  transition: all 0.1s ease-out;
+	  cursor: pointer;
+	}
+	input:checked::after {
+	  left:2.4em;
+	  transition: all 0.1s ease-out;
+	}
+	input[type="checkbox"]::before {
+	  height: 2.4em;
+	  width: 4.4em;
+	  position: absolute;
+	  background: #CCC;
+	  content:" ";
+	  top: 0px;
+	  left: 0px;
+	  z-index: 1;
+	  cursor: pointer;
+	}
+	input:checked::before {
+	  background:#7289DA;
+	}
+
+	input {
+	  height: 2.4em;
+	  border: none;
+	  border-bottom: solid 5px #7E878C;
+	  background: #ddd;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+	}
+	input:focus {
+	  border-bottom: solid 5px #7289DA;
+      outline: #7289DA;
+	}
+	input:not(:valid) {
+	  border-bottom: solid 5px #B37373 !important;
+      outline: #B37373;
+	}
+	code {
+	font-family: 'IBM Plex Mono', monospace;
+	display: inline;
+	}
+	section > div {
+	display: flex; 
+	align-items: center;
+	margin-left: 2em;
+	margin-right: 2em;
+	flex-wrap: wrap;
+	border-top: 1px solid #cccccc;
+	}
+	section > div:first-child {
+	border-top: none;
+	}
+	section > div > code { 
+	}
+	a:link {
+	color: #C4D1FF;
+	
+	}
+	a:visited {
+	color: #C4D1FF;
+	}
+	#popup {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: #373A3D;
+	z-index: 1000;
+	display: none;
+	box-sizing: content-box;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+    overflow-y: auto;
+	}
+	#popupcont {
+	padding: 5vmin;
+	position: relative;
+	}
+	.editContext {
+	margin-left: 10%;
+	margin-right: 0%;
+	display: flex;
+	box-sizing: content-box;
+	padding-left: 2em;
+	padding-right: 2em;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	text-align: center;
+	align-content: center;
+	position: relative;
+    fill: #fff;
+	}
+	.spacer1 {
+	width: 30%;
+	flex-grow: 100;
+	height: 10px;
+	margin-left: auto;
+	}
+	button {
+	background: #61B774;
+	outline: none;
+	  border: none;
+	  padding: 0.5em;
+	  padding-left: 0.75em;
+	  padding-right: 0.75em;
+	  font-size: 1.25em;
+	  color: white;
+	  border-radius: 0.25em;
+      width: auto;
+	  cursor: pointer;
+	  overflow: hidden;
+      transition: width 10s linear;
+    }
+    button:focus {
+    background: #4D915B;
+    box-sizing: border-box;
+    }
+	.noteditablecover {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background: #373A3D88;
+	z-index: -1;
+
+	}
+    ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    }
+    li {
+    margin-top: 0.5em;
+    }
+    .deletebutton {
+    border-radius: 100%;
+    border: 1px solid #B37373;
+    width: 1em;
+    height: 1em;
+    background: #B3737344;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #B37373;
+    text-decoration: none;
+    margin-left: 0.5em;
+    }
+    .deletebutton::before {
+    content: "\D7";
+    color: #B37373;
+    text-decoration: none;
+    }
+	</style>
+	
+    <script>
+	var serverIdMode = '',cfgLocal = {},_cfgLocal = {}, sObj;
+	function init() {
+	if(localStorage.getItem('connectCode')) {
+	document.getElementById('main').style.display = 'initial';
+	document.getElementById('logindude').style.display = 'none';
+	
+	  serverIdMode = ''
+	  if(window.location.pathname.length > 5) serverIdMode = window.location.pathname.substring(4)
+	  else { return }
+	  
+  //request server config
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+       //console.log(this.responseText);
+	       cfgLocal = JSON.parse(this.responseText);
+           _cfgLocal = JSON.parse(this.responseText);
+		   reloadDisplay();
+           cfgLocal.guild_id = cfgLocal.guild_id || serverIdMode;
+    } else if (this.status == 403) {
+       // localStorage.removeItem('connectCode');
+       // window.location.reload();
+	}
+  };
+    req.open("GET", "/data?src=discord&mode="+ serverIdMode +"&type=cfg", true);
+    req.setRequestHeader('Authorization',localStorage.getItem('connectCode'));
+    
+    req.send();
+//get guild object
+/*req = new XMLHttpRequest();
+  req.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+       localStorage.setItem('sObj-'+serverIdMode,this.responseText);
+       sObj = JSON.parse(this.responseText);
+	   
+    } else if (this.status == 403) {
+        localStorage.removeItem('connectCode');
+        window.location.reload();
+	}
+  };
+    req.open("GET", "https://discordapp.com/api/v6/guilds/"+ serverIdMode, true);
+    req.setRequestHeader('Authorization',localStorage.getItem('discordToken'));
+    req.send(); */
+    
+     for(var i = 0, e = document.querySelectorAll("input.enableCommandsCheck"); i < e.length; i++) {
+	e[i].onchange = function(e) {
+	  e.target.parentElement.querySelector('.noteditablecover').style.zIndex = e.target.checked?'-1':'2'
+      if(!cfgLocal.enabledFeatures) { cfgLocal.enabledFeatures = {} }
+      cfgLocal.enabledFeatures[e.target.parentElement.querySelector('code').innerHTML.replace(/ |(\&gt\;)|-/g,'')] = e.target.checked;
+      
+	
+	}
+	e[i].onchange({target: e[i]});
+	}
+  
+	}
+	}
+
+window.onbeforeunload = function () {
+    if(JSON.stringify(cfgLocal) != JSON.stringify(_cfgLocal)) {
+    
+    return 'You have unsaved changes. Remember to go back to the main page and save!'
+    
+    }
+}
+    
+function setTimer() {
+    setInterval(function () {
+        try {
+        if(JSON.stringify(cfgLocal) == JSON.stringify(_cfgLocal)) {
+        
+        document.getElementById('saveDiv').style.height = '0em'
+        
+        } else {
+        
+         document.getElementById('saveDiv').style.height = '3em'
+        
+        }
+        } catch (e) { } 
+    },100);
+}
+
+function reloadDisplay() {
+if(!cfgLocal) { return }
+if(!cfgLocal.enabledFeatures) { cfgLocal.enabledFeatures = {} }
+
+    for(var i = 0, e = document.querySelectorAll("input.enableCommandsCheck"); i < e.length; i++) {
+        e[i].checked = cfgLocal.enabledFeatures[e[i].parentElement.querySelector('code').innerHTML.replace(/ |(\&gt\;)|-/g,'')];
+        e[i].onchange({target: e[i]});
+	}
+}	
+	
+function openLogin() {
+    var dLW = window.open("https://discordapp.com/oauth2/authorize?client_id=387963766798811136&redirect_uri=http%3A%2F%2Ffossilbot.cf%2Fdiscordoauthresponse&response_type=token&scope=identify%20guilds%20connections&state=" + encodeURIComponent(window.location.pathname), 'DiscordAuthWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=400,height=600'); 
+    window.addEventListener("message", function(e) {
+    console.log(e);
+        localStorage.setItem('discordToken',e.data);
+        e.source.close();
+        (function(w,d,x) {
+             x = ((w.XMLHttpRequest)?(new XMLHttpRequest()):(new ActiveXObject("Microsoft.XMLHTTP")));
+
+          x.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              localStorage.setItem('connectCode',JSON.parse(this.responseText).code);
+              localStorage.setItem('connectCode',JSON.parse(this.responseText).code);
+              localStorage.setItem('discordMyAccount',JSON.stringify(JSON.parse(this.responseText).user));
+			  if(localStorage.getItem('connectCode')) { init() }
+                }
+              };
+              x.open("GET", "/connectCode", true);
+              x.setRequestHeader('Authorization',e.data);
+              x.send();
+            })(window,document);
+        
+    }, false);
+    
+}
+
+function editProps(prop,type) {
+var pE = document.getElementById('popup');
+pE.style.display = 'block'
+document.getElementById('pu-editing-elem').innerHTML = (function() {
+    switch(prop) {
+        case 'getme':
+        return '&gt;getme'
+        break
+        case 'notify':
+        return '&gt;notify'
+        break
+        case 'addmeto':
+        return '&gt;addmeto'
+        break
+            case 'emojis':
+        return 'voice emojis'
+        break
+            case 'xp':
+        return 'XP points'
+        break
+            case 'spam':
+        return 'anti-spam'
+        break
+            case 'resp':
+        return 'auto-response'
+        break
+            case 'joinm':
+        return 'join messages'
+        break
+            case 'namecolor':
+        return '&gt;namecolor'
+        break
+    }
+})();
+document.getElementById('pu-props-list').innerHTML = (function() {
+    try {
+    switch(prop+type) {
+        case 'getmeedit':
+        return '&gt;getme'
+        break
+        case 'notifyedit':
+        return '&gt;notify' 
+        break
+        case 'addmetoedit':
+        return '&gt;addmeto'
+        break
+            case 'emojisedit':
+            if(!cfgLocal.gameEmoji) { cfgLocal.gameEmoji = {} }
+            return '<li style="background:#292B2D;width:100%;box-sizing:content-box;"><div style=padding:0.5em;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;">Game: <input pattern=".+" id="addGame" style="margin-right: 1em;"> Emoji: <input pattern="..?" id="addEmoji"> <button onclick="if(!cfgLocal.gameEmoji[document.getElementById(\'addGame\').value]) { cfgLocal.gameEmoji[document.getElementById(\'addGame\').value] = document.getElementById(\'addEmoji\').value.length <= 5?document.getElementById(\'addEmoji\').value.substring(0,5):(window.alert(\'Please limit your emoji to less than 5 combined characters.\')); document.getElementById(\'pu-props-list\').appendChild(document.createElement(\'li\')).outerHTML = \'<li style=&quot;background:#323538;width:100%;box-sizing:content-box;&quot;><div style=&quot;padding:0.5em;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;&quot;><span style=&quot;margin-right:1em;&quot;>\'+ document.getElementById(\'addGame\').value +\': </span><input style=&quot;width:1.5em;text-align:center;margin-left:1em;&quot; value=&quot;\' + document.getElementById(\'addEmoji\').value +\'&quot; pattern=&quot;..?&quot; onkeyup=&quot;if(event.target.value.length <= 5) { cfgLocal.gameEmoji[\\\'\'+ document.getElementById(\'addGame\').value.replace(/\'|\&quot;|\\\\/g,\'\\\\&1\') + \'\\\'] = event.target.value }&quot;><a class=&quot;deletebutton&quot; onclick=&quot;delete cfgLocal.gameEmoji[\\\'\'+ document.getElementById(\'addGame\').value.replace(/\'|\&quot;|\\\\/g,\'\\\\&1\') + \'\\\']; document.getElementById(\\\'pu-props-list\\\').removeChild(event.target.parentElement.parentElement)&quot; href=&quot;javascript:void(0)&quot;></a></div></li>\'; document.getElementById(\'addGame\').value = \'\'; document.getElementById(\'addEmoji\').value = \'\'}" style="margin-left:1em;">Add</button></div></li>\n' +
+            (function(f,i,x,l) {
+            x=x||''
+            l=Object.keys(f);
+            for(i=0;i<l.length;i++) {
+            x = x + '<li style="background:#323538;width:100%;box-sizing:content-box;"><div style="padding:0.5em;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;"><span style="margin-right:1em;">' + l[i].replace(/(\'|\"|\\)/g,'\\$1') +': </span><input style="width:1.5em;text-align:center;margin-left:1em;" value="' + cfgLocal.gameEmoji[l[i]].replace(/(\'|\"|\\)/g,'\\$1') +'" pattern="..?" onkeyup="cfgLocal.gameEmoji[\''+ l[i].replace(/(\'|\"|\\)/g,'\\$1') + '\'] = event.target.value||\'\'"><a class="deletebutton" onclick="delete cfgLocal.gameEmoji[\''+l[i].replace(/(\'|\"|\\)/g,'\\$1') + '\']; document.getElementById(\'pu-props-list\').removeChild(event.target.parentElement.parentElement)" href="javascript:void(0)"></a></div></li>'
+            }
+            return x
+            })(cfgLocal.gameEmoji);
+        break
+            case 'xpedit':
+        return 'XP points'
+        break
+            case 'spamedit':
+        return '<li><div><h2>@everyone Cooldown</h2><br><p>People can use @everyone <input value="' + (cfgLocal.cooldown_e||0) + '" onkeyup="cfgLocal.cooldown_e = !isNaN(event.target.value)?event.target.value*1:0" type="number" min="0"> times, which resets every <input value="' + ((cfgLocal.cooldown_e_t / 60000)||0) +  '" onkeyup="cfgLocal.cooldown_e_t = !isNaN(event.target.value)?event.target.value*60000:0" type="number" min="0"> minutes</p></div><div><h2>Specific Ping</h2><br><p>If someone pings someone else <input value="' + (cfgLocal.cooldown_s||0) + '" onkeyup="cfgLocal.cooldown_s = !isNaN(event.target.value)?event.target.value*1:0" type="number" min="0"> times in <input value="' + (cfgLocal.cooldown_s_t/60000||0) + '" onkeyup="cfgLocal.cooldown_s_t = !isNaN(event.target.value)?event.target.value*60000:0" type="number" min="0"> minutes, they will be muted.</p></div><div><h2>Mass Pinging</h2><br><p>If someone pings more than <input value="' + (cfgLocal.cooldown_m||0) + '" onkeyup="cfgLocal.cooldown_m = !isNaN(event.target.value)?event.target.value*1:0" type="number" min="0"> people in <input value="' + (cfgLocal.cooldown_m_t/60000||0) + '" onkeyup="cfgLocal.cooldown_m_t = !isNaN(event.target.value)?event.target.value*60000:0" type="number" min="0"> minutes, they will be muted.</p></div><div><h2>Punishment</h2><br><p>When someone is muted, this lasts <input type="number" value="'+ (cfgLocal.spam_time_mins||0)+'" onkeyup="cfgLocal.spam_time_mins = !isNaN(event.target.value)?event.target.value*1:0"> minutes.</p></div></li>'
+        break
+            case 'respedit':
+            if(!cfgLocal.autoResp) { cfgLocal.autoResp = {} }
+            return '<li><h3>Note: You may use a regular expression for the prompt.</h3></li><li style="background:#292B2D;width:100%;box-sizing:content-box;"><div style=padding:0.5em;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;">Prompt: <input id="addGame" style="margin-right: 1em;"> Response: <input id="addEmoji"> <button onclick="if(!cfgLocal.autoResp[document.getElementById(\'addGame\').value]) { cfgLocal.autoResp[document.getElementById(\'addGame\').value] = document.getElementById(\'addEmoji\').value; document.getElementById(\'pu-props-list\').appendChild(document.createElement(\'li\')).outerHTML = \'<li style=&quot;background:#323538;width:100%;box-sizing:content-box;&quot;><div style=&quot;padding:0.5em;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;&quot;><span style=&quot;margin-right:1em;&quot;>When someone says a message with &quot;\'+ document.getElementById(\'addGame\').value +\'&quot; in it, respond with: </span><input style=&quot;text-align:center;margin-left:1em;&quot; value=&quot;\' + document.getElementById(\'addEmoji\').value +\'&quot; onkeyup=&quot;cfgLocal.autoResp[\\\'\'+ document.getElementById(\'addGame\').value.replace(/\'|\&quot;|\\\\/g,\'\\\\&1\') + \'\\\'] = event.target.value&quot;><a class=&quot;deletebutton&quot; onclick=&quot;delete cfgLocal.autoResp[\\\'\'+ document.getElementById(\'addGame\').value.replace(/\'|\&quot;|\\\\/g,\'\\\\&1\') + \'\\\']; document.getElementById(\\\'pu-props-list\\\').removeChild(event.target.parentElement.parentElement)&quot; href=&quot;javascript:void(0)&quot;></a></div></li>\'; document.getElementById(\'addGame\').value = \'\'; document.getElementById(\'addEmoji\').value = \'\'}" style="margin-left:1em;">Add</button></div></li>\n' +
+            (function(f,i,x,l) {
+            x=x||''
+            l=Object.keys(f);
+            for(i=0;i<l.length;i++) {
+            x = x + '<li style="background:#323538;width:100%;box-sizing:content-box;"><div style="padding:0.5em;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;"><span style="margin-right:1em;">When someone says a message with &quot;'+ l[i].replace(/(\'|\"|\\)/g,'\\$1') +'&quot; in it, respond with: </span><input style="text-align:center;margin-left:1em;" value="' + cfgLocal.autoResp[l[i]].replace(/(\'|\"|\\)/g,'\\$1') +'" onkeyup=" cfgLocal.autoResp[\''+ l[i].replace(/(\'|\"|\\)/g,'\\$1') + '\'] = event.target.value "><a class="deletebutton" onclick="delete cfgLocal.autoResp[\''+l[i].replace(/(\'|\"|\\)/g,'\\$1') + '\']; document.getElementById(\'pu-props-list\').removeChild(event.target.parentElement.parentElement)" href="javascript:void(0)"></a></div></li>'
+            }
+            return x
+            })(cfgLocal.autoResp);
+        break
+            case 'joinmedit':
+            if(!cfgLocal.msgs) { cfgLocal.msgs = {} }
+            return '<li><div>When someone joins, send &quot; <input value="' + (cfgLocal.msgs.joinPublic||'') + '" onkeyup="cfgLocal.msgs.joinPublic = event.target.value||\'\'"> &quot; in the default channel, and send &quot; <input value="' + (cfgLocal.msgs.joinPrivate||'') + '" onkeyup="cfgLocal.msgs.joinPrivate = event.target.value||\'\'"> &quot; in a DM to them. (use <code>&lt;@{USER}&gt;</code> to ping the user)</li>'
+        break
+            case 'namecoloredit':
+            if(!cfgLocal.nameColorRoles) { cfgLocal.nameColorRoles = {} }
+            return '<li><h3>Note: Nametag roles not on this list will be accessible to all users.</h3></li><li style="background:#292B2D;width:100%;box-sizing:content-box;"><div style=padding:0.5em;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;">Color: <input id="addGame" style="margin-right: 1em;">Allowed Roles (comma-seperated): <input id="addEmoji"> <button onclick="if(!cfgLocal.nameColorRoles[document.getElementById(\'addGame\').value]) { cfgLocal.nameColorRoles[document.getElementById(\'addGame\').value] = document.getElementById(\'addEmoji\').value.split(\',\'); document.getElementById(\'pu-props-list\').appendChild(document.createElement(\'li\')).outerHTML = \'<li style=&quot;background:#323538;width:100%;box-sizing:content-box;&quot;><div style=&quot;padding:0.5em;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;&quot;><span style=&quot;margin-right:1em;&quot;>The following roles have access to the  <code>\'+ document.getElementById(\'addGame\').value +\'</code> command: </span><input style=&quot;text-align:center;margin-left:1em;&quot; value=&quot;\' + document.getElementById(\'addEmoji\').value +\'&quot; onkeyup=&quot;cfgLocal.nameColorRoles[\\\'\'+ document.getElementById(\'addGame\').value.replace(/\'|\&quot;|\\\\/g,\'\\\\&1\') + \'\\\'] = event.target.value.split(\\\',\\\')&quot;><a class=&quot;deletebutton&quot; onclick=&quot;delete cfgLocal.nameColorRoles[\\\'\'+ document.getElementById(\'addGame\').value.replace(/\'|\&quot;|\\\\/g,\'\\\\&1\') + \'\\\']; document.getElementById(\\\'pu-props-list\\\').removeChild(event.target.parentElement.parentElement)&quot; href=&quot;javascript:void(0)&quot;></a></div></li>\'; document.getElementById(\'addGame\').value = \'\'; document.getElementById(\'addEmoji\').value = \'\'}" style="margin-left:1em;">Add</button></div></li>\n' +
+            (function(f,i,x,l) {
+            x=x||''
+            l=Object.keys(f);
+            for(i=0;i<l.length;i++) {
+            x = x + '<li style="background:#323538;width:100%;box-sizing:content-box;"><div style="padding:0.5em;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;"><span style="margin-right:1em;">The following roles have access to the <code>&gt;namecolor '+ l[i].replace(/(\'|\"|\\)/g,'\\$1') +'</code> command: </span><input style="text-align:center;margin-left:1em;" value="' + cfgLocal.nameColorRoles[l[i]].join(',') +'" onkeyup=" cfgLocal.nameColorRoles[\''+ l[i].replace(/(\'|\"|\\)/g,'\\$1') + '\'] = event.target.value.split(\',\') "><a class="deletebutton" onclick="delete cfgLocal.nameColorRoles[\''+l[i].replace(/(\'|\"|\\)/g,'\\$1') + '\']; document.getElementById(\'pu-props-list\').removeChild(event.target.parentElement.parentElement)" href="javascript:void(0)"></a></div></li>'
+            }
+            return x
+            })(cfgLocal.nameColorRoles);
+        break
+    }
+    } catch (e) { if(e) { console.log(e); return '<span style="color:#B37373">Error</span>' }}
+})();
+}
+
+function sendEdits() {
+        document.getElementById('hgebjkhgrkujeab').classList.add('expandHor');
+        document.getElementById('saveDiv').style.background = '#364447';
+        document.getElementById('sendButton').style.background = '#9AB7A0';
+        document.getElementById('sendButton').style.cursor = 'default';
+        document.getElementById('sendButton').onclick = '';
+        document.getElementById('sendButton').innerHTML = '. . .';
+        (function(w,d,x) {
+             x = ((w.XMLHttpRequest)?(new XMLHttpRequest()):(new ActiveXObject("Microsoft.XMLHTTP")));
+
+          x.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              _cfgLocal = JSON.parse(JSON.stringify(cfgLocal));
+              document.getElementById('saveDiv').style.background = '#37473B';
+              document.getElementById('hgebjkhgrkujeab').classList.remove('expandHor');
+              document.getElementById('sendButton').style.background = '#61B774';
+              document.getElementById('sendButton').style.cursor = 'pointer';
+              document.getElementById('sendButton').innerHTML = 'Save Edits';
+              document.getElementById('sendButton').onclick = function() { sendEdits() };
+                }
+              };
+              x.open("POST", "/adminAction", true);
+              x.setRequestHeader('Authorization',localStorage.getItem('connectCode'));
+              x.setRequestHeader('Content-Type','application/json');
+              x.send(JSON.stringify(cfgLocal));
+            })(window,document);
+            setTimeout(function() {
+            if(JSON.stringify(cfgLocal) != JSON.stringify(_cfgLocal)) {
+            document.getElementById('hgebjkhgrkujeab').classList.remove('expandHor');
+            document.getElementById('saveDiv').style.background = '#473636'
+            document.getElementById('sendButton').style.background = '#61B774';
+            document.getElementById('sendButton').style.cursor = 'pointer';
+            document.getElementById('sendButton').onclick = function() { sendEdits() };
+            document.getElementById('sendButton').innerHTML = 'Fatal Error. Retry?';
+            }
+            },24000)
+
+}
+	</script>
+  </head>
+  <body>
+    <div id="logindude">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20vmin" height="20vmin" fill="#B37373" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm7 14h-14v-4h14v4z"/></svg>
+    <a onclick="openLogin()" href="javascript:void(0)">You aren't logged in. Click here to log in.</a>
+    </div>
+    <main id="main">
+      <section style="height: 3em;overflow:hidden;margin-bottom:1.5em">
+	      <div id="saveDiv" style="background:#292B2D; border-radius:5px; height: 0px;display:flex;position:relative;align-items:end;justify-content:center;transition: height 0.2s linear;overflow:hidden;">
+	          <button id="sendButton" onclick="sendEdits()" style="z-index:2;margin-bottom:0.1em;margin-top:0.1em;">Save Changes</button>
+			  
+			  <div id="hgebjkhgrkujeab">
+			  </div>
+		  </div>
+		  <style>@keyframes shrinkVert { from { height: 3em; } to { height: 0px; } } @keyframes expand { 0% { width: 0%; left: 50%; } 23% { width: 100%; left: 0%; } 25% { width: 96%; left: 2%; } 27% { width: 100%; left: 0%; } 40% { width: 100%; left: 0%; } } #hgebjkhgrkujeab { position: absolute; top: 0%; left: 50%; background: #373A3Dee; border-radius:5px; transition: all 1s linear; height: 100%; width: 0%; } .expandHor { animation: expand 6s ease-in both infinite }</style>
+	  </section>
+<section id="enableCommands">
+<div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> &gt;getme</code><div class="editContext">
+<div class="noteditablecover"></div>
+<!--<a href="javascript:void(0)" onclick="editProps('getme','edit')">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
+
+</a>-->
+</div></div>
+<div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> &gt;notify</code><div class="editContext">
+<div class="noteditablecover"></div>
+<!--<a href="javascript:void(0)" onclick="editProps('notify','edit')">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
+
+</a>-->
+</div></div>
+<div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> &gt;addmeto</code><div class="editContext">
+<div class="noteditablecover"></div>
+<!--<a href="javascript:void(0)" onclick="editProps('addmeto','edit')">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
+
+</a>-->
+</div></div>
+<div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> voice channel game emojis</code><div class="editContext">
+<div class="noteditablecover"></div>
+<a href="javascript:void(0)" onclick="editProps('emojis','edit')">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
+
+</a>
+</div></div>
+<div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> experience</code><div class="editContext">
+<div class="noteditablecover"></div>
+<!--<a href="javascript:void(0)" onclick="editProps('xp','edit')">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
+
+</a>-->
+</div></div>
+<div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> anti-spam</code><div class="editContext">
+<div class="noteditablecover"></div>
+<a href="javascript:void(0)" onclick="editProps('spam','edit')">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
+
+</a>
+</div></div>
+<div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> auto-response</code><div class="editContext">
+<div class="noteditablecover"></div>
+<a href="javascript:void(0)" onclick="editProps('resp','edit')">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
+
+</a>
+</div></div>
+<div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> join messages</code><div class="editContext">
+<div class="noteditablecover"></div>
+<a href="javascript:void(0)" onclick="editProps('joinm','edit')">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
+
+</a>
+</div></div>
+<div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> &gt;namecolor</code><div class="editContext">
+<div class="noteditablecover"></div>
+<a href="javascript:void(0)" onclick="editProps('namecolor','edit')">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
+
+</a>
+</div></div>
+</section>
+
+    </main>
+
+	
+	<div id="popup">
+	<div id="popupcont">
+	<a href="javascript:void(0)" class="exitbutton" onclick="document.getElementById('popup').style.display = 'none'" style="float: right; display: block; font-size: 0.5in; text-decoration: none;"></a><style>#popupcont > a.exitbutton::before { content: "\D7"}</style>
+	<div style="clear: both;"></div>
+     <h1><span id="pu-action-elem">Editing</span>: <code id="pu-editing-elem">&gt;getme</code></h1>
+	 
+	 <ul id="pu-props-list">
+     
+     
+     </ul>
+	</div>
+	</div>
+
+    <script>init();setTimer();</script>
+
+	
+	
+  </body>
+</html>

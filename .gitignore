@@ -1,0 +1,9 @@
+/.data/db.json
+auth.json
+_env
+apiCodes.json
+db/userdb.json
+db/webcache.json
+/music
+/velociraptortokens.json
+webcache.json
