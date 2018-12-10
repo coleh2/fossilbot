@@ -2,8 +2,9 @@
 auth.json
 _env
 apiCodes.json
-db/userdb.json
-db/webcache.json
+/webserver/db/userdb.json
+/webserver/db/webcache.json
+/webserver/db/votes.json
 /music
 /velociraptortokens.json
 webcache.json

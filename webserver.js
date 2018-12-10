@@ -12,8 +12,21 @@ var fs = require('fs');
 var jsonDb = require('simple-json-db');
 var cache = new jsonDb('./webserver/db/webcache.json');
 var userDb = new jsonDb('./webserver/db/userdb.json');
+var channelDb = new jsonDb('./webserver/db/channelDb.json');
 //var auths = require('./webserver/apiCodes.json');
 var botAuth = require('./auth.json');
+
+Date.prototype.getWeek = function() {
+  var date = new Date(this.getTime());
+  date.setHours(0, 0, 0, 0);
+  // Thursday in current week decides the year.
+  date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
+  // January 4 is always in week 1.
+  var week1 = new Date(date.getFullYear(), 0, 4);
+  // Adjust to Thursday in week 1 and count number of weeks from date to week1.
+  return 1 + Math.round(((date.getTime() - week1.getTime()) / 86400000
+                        - 3 + (week1.getDay() + 6) % 7) / 7);
+}
 
 if(cache.JSON().cache === undefined) {
 	cache.JSON({"cache": [],"stats":{}});
@@ -219,7 +232,7 @@ app.get('/data', function(req, resp) {
 						uS[i] = {r: uS[i][q.src].data[q.mode], discord: uS[i].discord.id}
 						}
 						uS[0].s = cache.JSON().stats;
-                        us[0].s.aL = _uSLength;
+                        uS[0].s.aL = _uSLength;
 						} catch (e) {console.log('Caught Error ' +e)}
 						
 						if(!uS) {
@@ -246,7 +259,15 @@ app.get('/data', function(req, resp) {
 					if(!s.guild_id) { s.guild_id = q.mode }
 					 resp.send(s);
 				});
+				} else if (q.type == 'votes') {
+                if(!q.mode) { resp.sendStatus(400); return }
+				if(!cache.JSON().discordvotes[q.mode]) { cache.JSON().discordvotes[q.mode] = [] }
+                resp.send({d: cache.JSON().discordvotes[q.mode].slice(q.start, q.start + 100)})
+                } else {
+					resp.sendStatus(400); return 
 				}
+	} else {
+		resp.sendStatus(400); return 
 	}
 });
 
@@ -256,8 +277,27 @@ process.on('message', (m) => {
   if(m.cmd) {
 	  var evt = m.cmd;
 	  var c = cache.JSON();
-	  var cC = c.cache
+	  var cC = c.cache;
+	  var cDb = channelDb.JSON();
 	  var s = cC.find(x => { return x.discord.id.id == evt.d.author.id });
+	  
+	  
+	  //adjust activity metrics
+	  
+      if(!cDb[evt.d.guild_id]) { cDb[evt.d.guild_id] = {} }
+      if(!cDb[evt.d.guild_id].tree) { cDb[evt.d.guild_id].tree = {} }
+      if(!cDb[evt.d.guild_id].total) { cDb[evt.d.guild_id].total = 0 }
+      if(!cDb[evt.d.guild_id].tree[evt.d.channel_id]) { cDb[evt.d.guild_id].tree[evt.d.channel_id] = 0 }
+	  
+	  cDb[evt.d.guild_id].lastSet = Date.now();
+	  cDb[evt.d.guild_id].tree[evt.d.channel_id] = cDb[evt.d.guild_id].tree[evt.d.channel_id] + 1
+	  cDb[evt.d.guild_id].total = cDb[evt.d.guild_id].total + 1
+	  
+	  //calculation for "activity score": (c/t)*(r/1000000000000)
+	  
+	  channelDb.JSON(cDb);
+	  channelDb.sync();
+	  
 	  
 	  if(!s) { 
 	  

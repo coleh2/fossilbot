@@ -5,5 +5,11 @@ var bot = new Discord.Client({
 bot.connect();
 bot.on('ready', function() {
 var tMO = {id: '352567610379862026' };
-console.log((((Object.values(bot.servers['392830469500043266'].members)).sort(function(a,b) { return a.joined_at - b.joined_at}).findIndex(x => {return x.id == tMO.id}))+1) + '/' + Object.keys(bot.servers['392830469500043266'].members).length);
+var e = bot.servers['392830469500043266'];
+for(var i = 0, e = Object.keys(bot.servers['392830469500043266'].channels), x; i < e.length; i++) {
+	x = JSON.parse(JSON.stringify(bot.servers['392830469500043266'].channels[e[i]]));
+	delete bot.servers['392830469500043266'].channels[e[i]]
+	bot.servers['392830469500043266'].channels[e[i]] = x;
+}
+console.log(JSON.stringify(bot.servers['392830469500043266']));
 })
