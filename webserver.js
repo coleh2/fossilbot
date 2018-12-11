@@ -115,7 +115,7 @@ app.post('/adminAction',function(req,resp) {
 			serverRolesArr = serverRolesArr.filter(x => {
 			    return (0x8 & x.permissions)
 			});
-			if(!serverRolesArr.find(x => { return ~rolesArr.indexOf(x.id) })) { notAuth(); return }
+			if(JSON.parse(b).owner_id != authHeadSplit[1] && !serverRolesArr.find(x => { return ~rolesArr.indexOf(x.id) })) { notAuth(); return }
 			//now that all that validation's aside, let's get down to bid-ness.
 			console.log('yeah seems legit');
 			
@@ -294,7 +294,7 @@ app.get('/data', function(req, resp) {
 			serverRolesArr = serverRolesArr.filter(x => {
 			    return (0x8 & x.permissions)
 			});
-			if(!serverRolesArr.find(x => { return ~rolesArr.indexOf(x.id) })) { notAuth(); return }
+			if(JSON.parse(b).owner_id != authHeadSplit[1] && !serverRolesArr.find(x => { return ~rolesArr.indexOf(x.id) })) { notAuth(); return }
 			//now that all that validation's aside, let's get down to bid-ness.
 			console.log('yeah seems legit');
 					fs.readFile('./.data/db.json', 'utf8', function (err, data) {
