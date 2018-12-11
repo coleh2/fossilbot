@@ -268,10 +268,9 @@ app.get('/data', function(req, resp) {
 	
     console.log(req.body);
     
-	if(!req.body.guild_id) { resp.sendStatus(400); return }
 	
 	request({
-	  url: 'http://discordapp.com/api/v6/guilds/'+ req.body.guild_id +'/members/' + authHeadSplit[1],
+	  url: 'http://discordapp.com/api/v6/guilds/'+ q.mode +'/members/' + authHeadSplit[1],
 	  method: 'GET',
       headers: {
 		  'Authorization': 'Bot ' + botAuth
@@ -282,7 +281,7 @@ app.get('/data', function(req, resp) {
 		try { rolesArr = JSON.parse(b).roles } catch(e) { if(e) { notAuth(); return } }
 		//console.log(rolesArr);
 		request({
-		  url: 'http://discordapp.com/api/v6/guilds/'+ req.body.guild_id,
+		  url: 'http://discordapp.com/api/v6/guilds/'+ q.mode,
 		  method: 'GET',
 		  headers: {
 			  'Authorization': 'Bot ' + botAuth
