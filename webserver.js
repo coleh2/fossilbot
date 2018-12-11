@@ -281,9 +281,16 @@ process.on('message', (m) => {
 	  var cDb = channelDb.JSON();
 	  var s = cC.find(x => { return x.discord.id.id == evt.d.author.id });
 	  
+	  if(!cDb[evt.d.guild_id]) { cDb[evt.d.guild_id] = {} }
 	  
+	  if(!cDb[evt.d.guild_id][evt.d.author.id]) { cDb[evt.d.guild_id][evt.d.author.id] = Date.parse(evt.d.timestamp) }
+	  
+	  //if an item is too old, delete it
+	  for(var i = 0, e = Object.keys(cDb[evt.d.guild_id]); i < e.length; i++) {
+	     if(cDb[evt.d.guild_id][e[i]] < Date.parse(evt.d.timestamp) - 604800000) { delete cDb[evt.d.guild_id][e[i]] }
+	  }
 	  //adjust activity metrics
-	  
+	  /*
       if(!cDb[evt.d.guild_id]) { cDb[evt.d.guild_id] = {} }
       if(!cDb[evt.d.guild_id].tree) { cDb[evt.d.guild_id].tree = {} }
       if(!cDb[evt.d.guild_id].total) { cDb[evt.d.guild_id].total = 0 }
@@ -294,7 +301,7 @@ process.on('message', (m) => {
 	  cDb[evt.d.guild_id].total = cDb[evt.d.guild_id].total + 1
 	  
 	  //calculation for "activity score": (c/t)*(r/1000000000000)
-	  
+	  */
 	  channelDb.JSON(cDb);
 	  channelDb.sync();
 	  

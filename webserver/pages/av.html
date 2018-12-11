@@ -290,8 +290,8 @@ input {
     display:inline-block;border:solid 1px white;border-radius:5px;position:relative;font-size:0.5em;padding:4px;margin:
 }
 
-#ModalBox {
-  display: none; 
+.ModalBox {
+  display: none;
   position: fixed; 
   z-index: 10; 
   left: 0;
@@ -310,9 +310,27 @@ input {
   padding: 20px;
   border: 1px solid #888;
   width: 80%; 
+  position: relative; 
+  top: -100%;
 }
 .modal-body {
   background-color: #373A3D;
+}
+.modalIsntHidden {
+  display: block;
+  animation: fadein 0.1s;
+}
+.modalIsntHidden > .modal-content {
+   top: initial;
+   animation: animatefromup 0.2s;
+}
+@keyframes fadein {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+@keyframes animatefromup {
+  from {top: -100%; opacity: 0}
+  to {top: 0px; opacity: 1}
 }
 		</style>
 		<script src="https://unpkg.com/konva@2.4.2/konva.min.js"></script>
@@ -501,7 +519,7 @@ document.getElementById('input_two').placeholder = 'Channel Name'
 break
 case "DELETE_CHANNEL":
 //reset to nothing
-document.getElementById('select_two').innerHTML = ''
+document.getElementById('select_two').innerHTML = '<option disabled selected value>Select an option</option>'
 //loop through and add everything as an option
 for(var i = 0,f=Object.keys(serverObject.channels),e; i < f.length; i++) {
   e = document.createElement('option');
@@ -512,7 +530,7 @@ for(var i = 0,f=Object.keys(serverObject.channels),e; i < f.length; i++) {
 break
 case "EDIT_CHANNEL":
 //reset to nothing
-document.getElementById('select_two').innerHTML = ''
+document.getElementById('select_two').innerHTML = '<option disabled selected value>Select an option</option>'
 //loop through and add everything as an option
 for(var i = 0,f=Object.keys(serverObject.channels),e; i < f.length; i++) {
      
@@ -557,19 +575,35 @@ function openAdvancedEdit(e) {
 
 if(proposedAction.type && proposedAction.target) {
 
-var modalElem = document.getElementById('ModalBox');
+var modalElem = document.querySelector('.ModalBox');
 
 window.onclick = function(event) {
   if (event.target == modalElem) {
-    modalElem.style.display = "none";
+    modalElem.classList.remove('modalIsntHidden');
   }
 }
 
 
-modalElem.style.display = 'block'
+modalElem.classList.add('modalIsntHidden');
 
 }
 
+}
+
+
+function showEmojiPreview (event) {
+
+if(event.target.files[0].size < 250000) {
+var fRead = new FileReader();
+fRead.addEventListener('load', function(data) {
+    proposedAction.content = fRead.result
+});
+fRead.readAsDataURL(event.target.files[0]); 
+
+document.getElementById('file_two_label').innerHTML = '<img alt="Upload Preview" style="max-width: 24px;max-height: 24px;" src="' + window.URL.createObjectURL(event.target.files[0]) + '">'
+} else {
+  window.alert('Your file is too large! Make sure it\'s under 256kb.');
+} 
 }
 		</script>
 	</head>
@@ -591,7 +625,7 @@ modalElem.style.display = 'block'
                    </div>
                </div>
            </div>
-		   <div id="ModalBox">
+		   <div class="ModalBox">
 		     <div class="modal-content">
 			 
 			 <div class="modal-head">
@@ -605,7 +639,7 @@ modalElem.style.display = 'block'
 		   <div id="listHolder" style="display:none;">
            <div id="addVote">
            
-           <select onchange="setActionOfProposal(event)"><option>Create Channel</option><option>Delete Channel</option><option>Edit Channel</option><option>Edit Server</option><option>Create Emoji</option><option>Delete Emoji</option>           </select>
+           <select onchange="setActionOfProposal(event)"><option disabled selected value>Action</option><option>Create Channel</option><option>Delete Channel</option><option>Edit Channel</option><option>Edit Server</option><option>Create Emoji</option><option>Delete Emoji</option>           </select>
 			<input placeholder="Reason...">
            <select id="select_two" onchange="setTargetOfProposal(event)"></select>
             <input id="input_two" style="display: none; ">
@@ -614,7 +648,7 @@ modalElem.style.display = 'block'
 				   <label for="file_two_input" id="file_two_label" style="height:24px;width:24px;cursor: pointer;">
 						<svg width="24" height="24" fill="white" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M7 2c1.695 1.942 2.371 3 4 3h13v17h-24v-20h7zm4 5c-2.339 0-3.537-1.388-4.917-3h-4.083v16h20v-13h-11zm2 6h3v2h-3v3h-2v-3h-3v-2h3v-3h2v3z"/></svg>
                    </label>      
-				   <input type="file" id="file_two_input" onchange="proposedAction.target = event.target.files[0]; document.getElementById('file_two_label').innerHTML = '&lt;img alt=&quot;Upload Preview&quot; style=&quot;max-width: 24px;max-height: 24px;&quot; src=&quot;' + window.URL.createObjectURL(event.target.files[0]) + '&quot;&gt;'" name="file_two_input" accept="image/png, image/jpeg, image/gif" style="display: none">
+				   <input type="file" id="file_two_input" onchange="showEmojiPreview(event)" name="file_two_input" accept="image/png, image/jpeg, image/gif" style="display: none">
 				   </a>
 		    </div>
 			<div class="bopbutton" id="edit">       

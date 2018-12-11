@@ -551,7 +551,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 	} else if(!bot.servers[evt.d.guild_id]) { return } 
 	
 	var _cfg = cfg;
-	if(db.JSON().config[evt.d.guild_id]) { cfg = db.JSON().config[evt.d.guild_id] } else {
+	if(db.JSON().config[evt.d.guild_id]) { _cfg = db.JSON().config[evt.d.guild_id] } else {
     (function() {
         var dbc = db.JSON();
         dbc.config[evt.d.guild_id] = cfg
