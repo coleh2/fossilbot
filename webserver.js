@@ -74,7 +74,7 @@ app.post('/adminAction',function(req,resp) {
         resp.send('"Not Authorized"');
 	}
 	
-    console.log(req.headers['authorization']);
+    //console.log(req.headers['authorization']);
     if(!req.headers['authorization']) { notAuth(); return }
 	var authHead = req.headers['authorization'];
 	var authHeadSplit = authHead.split('|');
@@ -245,10 +245,59 @@ app.get('/data', function(req, resp) {
 						resp.status = 200
 						resp.send(uS);
 				} else if (q.type == 'cfg') {
-					//just some authentication-- nothing drastic needed here
 					if(!q.mode) { resp.sendStatus(400); return }
-					try { if(!c.find(x => { return x.discord.id.id == req.headers['authorization'].split('|')[1] })) { resp.sendStatus(403); return } } catch (e) { if(e) { console.log(e); return } }
 
+					//~~just some authentication-- nothing drastic needed here~~ cHANGE OF PLANS AUTHORIZATION REEQQQUUUIIIREDDD
+	var notAuth = function() {
+        console.log('notAuth executed');
+        resp.status(401);
+        resp.send('"Not Authorized"');
+	}
+	
+    //console.log(req.headers['authorization']);
+    if(!req.headers['authorization']) { notAuth(); return }
+	var authHead = req.headers['authorization'];
+	var authHeadSplit = authHead.split('|');
+	if(authHeadSplit.length != 2) { notAuth(); return }
+	
+	var _usUser = cache.JSON().cache.find(x => {return (x.discord.id.id == authHeadSplit[1])});
+	console.log(_usUser.discord.auth);
+	if(!_usUser) { notAuth(); return }
+	if(!_usUser.discord) { notAuth(); return }
+	if(_usUser.discord.auth != authHead) { notAuth(); return }
+	
+    console.log(req.body);
+    
+	if(!req.body.guild_id) { resp.sendStatus(400); return }
+	
+	request({
+	  url: 'http://discordapp.com/api/v6/guilds/'+ req.body.guild_id +'/members/' + authHeadSplit[1],
+	  method: 'GET',
+      headers: {
+		  'Authorization': 'Bot ' + botAuth
+      }
+	}, function(e,r,b) {
+		if(e) { console.log('e: ' + e); notAuth(); return }
+		var rolesArr;
+		try { rolesArr = JSON.parse(b).roles } catch(e) { if(e) { notAuth(); return } }
+		//console.log(rolesArr);
+		request({
+		  url: 'http://discordapp.com/api/v6/guilds/'+ req.body.guild_id,
+		  method: 'GET',
+		  headers: {
+			  'Authorization': 'Bot ' + botAuth
+		  }
+		}, function(e,r,b) {
+		    if(e) { notAuth(); return }
+			var serverRolesArr;
+			//console.log(b);
+			try { serverRolesArr = JSON.parse(b).roles } catch(e) { if(e) { notAuth(); return } }
+			serverRolesArr = serverRolesArr.filter(x => {
+			    return (0x8 & x.permissions)
+			});
+			if(!serverRolesArr.find(x => { return ~rolesArr.indexOf(x.id) })) { notAuth(); return }
+			//now that all that validation's aside, let's get down to bid-ness.
+			console.log('yeah seems legit');
 					fs.readFile('./.data/db.json', 'utf8', function (err, data) {
 				
 					if(err) return
@@ -259,6 +308,9 @@ app.get('/data', function(req, resp) {
 					if(!s.guild_id) { s.guild_id = q.mode }
 					 resp.send(s);
 				});
+		});
+	});
+
 				} else if (q.type == 'votes') {
                 if(!q.mode) { resp.sendStatus(400); return }
 				if(!cache.JSON().discordvotes[q.mode]) { cache.JSON().discordvotes[q.mode] = [] }
