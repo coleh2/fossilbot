@@ -518,7 +518,7 @@ bot.on('guildMemberAdd', function(member,evt) {
 	var _cfg = cfg;
 	if(db.JSON().config[evt.d.guild_id]) { cfg = db.JSON().config[evt.d.guild_id] }
 	
-    bot.addToRole({serverID: evt.d.guild_id, userID: evt.d.user.id, roleID: roleSearchByName('New Recruit')}, function (err) {if (err != null && err.statusMessage != 'NOT FOUND') {console.log(err);}});
+    bot.addToRole({serverID: evt.d.guild_id, userID: evt.d.user.id, roleID: roleSearchByName(evt, 'New Recruit')}, function (err) {if (err != null && err.statusMessage != 'NOT FOUND') {console.log(err);}});
 if(!_cfg.msgs.joinPublic) { return }
 if(!_cfg.msgs.joinPrivate) { return }
 if(!_cfg.enabledFeatures.joinmessages) { return }
