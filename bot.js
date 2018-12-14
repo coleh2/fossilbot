@@ -1165,7 +1165,12 @@ var e = [];
 				  
 			  });
 			}
-        } else if(args[0].toUpperCase().match(/^#([0-F]){6}$/)) {
+        } else if (!args[0]) {
+                    bot.sendMessage({
+                        to: channelID,
+                        message: "You need to specify a color!",
+                    });
+		} else if(args[0].toUpperCase().match(/^#([0-F]){6}$/)) {
             if(_cfg.enabledFeatures.namecolor_hex) {
                 var hexCode = args[0].toUpperCase().match(/^#([0-F]){6}$/).input;
                 if(!hexCode) {

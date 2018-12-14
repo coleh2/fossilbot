@@ -5,11 +5,7 @@ var bot = new Discord.Client({
 bot.connect();
 bot.on('ready', function() {
 bot.sendMessage({
-	to: '393902771746897930',
-	message: 'heyy guys i\'ve been hacked and ya gotta give me your money if you want your account backkkk'
-});
-bot.sendMessage({
-	to: '393902771746897930',
-	message: '(jk it\'s just cole; austin, don\'t give me your laptop for any amount of time sorry)'
+	to: '521345011758006274',
+	message: 'This is a confirmation that Cole hacked Adam\'s account'
 });
 })
