@@ -1224,7 +1224,6 @@ var e = [];
                                       });
                                 }
                             });
-                        }
                     } else {
                         bot.sendMessage({
                             to: channelID,
