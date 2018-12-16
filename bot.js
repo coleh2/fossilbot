@@ -1172,7 +1172,7 @@ var e = [];
                     });
 		} else if(args[0].toUpperCase().match(/^#([0-F]){6}$/)) {
             if(_cfg.enabledFeatures.namecolor_hex) {
-                var hexCode = args[0].toUpperCase().match(/^#([0-F]){6}$/).input;
+                var hexCode = args[0].toUpperCase().match(/^#([0-F]){6}$/).input.substring(1);
                 if(!hexCode) {
                     bot.sendMessage({
                         to: channelID,
