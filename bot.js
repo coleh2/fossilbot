@@ -1206,18 +1206,6 @@ var e = [];
                         return (r + g + b) / 3;
                     }
                     if(hexColorDelta(hexCode, '140A02') < 0.95) {
-                        if(colorRoleObjList(evt).find(x => { return hexColorDelta(x.color.toString(16),hexCode) > 0.95 })) {
-                            bot.addToRole({
-                            serverID: evt.d.guild_id,
-                            userID: evt.d.author.id,
-                            roleID: colorRoleObjList(evt).find(x => { return hexColorDelta(x.color.toString(16),hexCode) > 0.95 }).id 
-                            }); 
-                              bot.sendMessage({
-                                to: channelID,
-                                message: 'Your nametag color has been set! *Please note that your color has been \'snapped\' to a preexisting color I found, which was more than 95% the same as yours.'
-                                  
-                              });
-                        } else {
                             bot.createRole(evt.d.guild_id, function(err,resp) { 
                                 if(err) { console.log(err); return }
                                 //console.log(resp);
