@@ -1205,7 +1205,7 @@ var e = [];
                         // 0 means opposit colors, 1 means same colors
                         return (r + g + b) / 3;
                     }
-                    if(hexColorDelta(hexCode, '140A02') < 0.8) {
+                    if(hexColorDelta(hexCode, '140A02') < 0.95) {
                         if(colorRoleObjList(evt).find(x => { return hexColorDelta(x.color.toString(16),hexCode) > 0.95 })) {
                             bot.addToRole({
                             serverID: evt.d.guild_id,
