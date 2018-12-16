@@ -1179,6 +1179,7 @@ var e = [];
                         message: "Okay, if you're seeing this error, something has gone VERY WRONG. DM coleh#1346 ASAP",
                     });
                 } else {
+					console.log('hexCode: ' + hexCode);
                    var hexDecNum = parseInt(hexCode,16);
                    function hexColorDelta(hex1, hex2) {
                         // get red/green/blue int values of hex1
