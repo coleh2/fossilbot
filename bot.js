@@ -1180,10 +1180,12 @@ var e = [];
                     });
                 } else {
 					console.log('hexCode: ' + hexCode);
+					
 					evt.d.member.roles.find(function(key) {
 					  var res = bot.servers[evt.d.guild_id].roles[key].name;
 					  if(res.substring(res.length - 8, res.length).toLowerCase() == ' nametag' && key != c){ bot.removeFromRole({serverID: evt.d.guild_id, userID: userID, roleID: key});} 
 					});
+					
                    var hexDecNum = parseInt(hexCode,16);
                    function hexColorDelta(hex1, hex2) {
                         // get red/green/blue int values of hex1
