@@ -835,7 +835,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				var toLang = (function() {
 					var i = args.findIndex(x => { return x.startsWith('to:') });
 					if(i == -1) { return }
-					var n = args[argsI].match(/to:(\w+)/)[1];
+					var n = args[i].match(/to:(\w+)/)[1];
 					args.splice(i,1);
 					return n
 				})();		
@@ -843,7 +843,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				var fromLang = (function() {
 					var i = args.findIndex(x => { return x.startsWith('from:') });
 					if(i == -1) { return }
-					var n = args[argsI].match(/from:(\w+)/)[1];
+					var n = args[i].match(/from:(\w+)/)[1];
 					args.splice(i,1);
 					return n
 				})();
