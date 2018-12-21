@@ -860,7 +860,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				translateapi.translate(args.join(' '), { to: toCode, from: fromCode }, function(err, res) {
 					bot.sendMessage({
 						to: channelID,
-						message: "Your message has been translated: \n From: " + languages[res.lang.split('-')[0]].nativeName + '\n ```' + args.join(' ').replace(/`/g, '') + "``` \n To: " + languages[res.lang.split('-')[1]].nativeName.split(',')[0] + '\n```' + res.text[0] + '```'
+						message: "Your message has been translated: \n From: " + languages[res.lang.split('-')[0]].nativeName.split(',')[0] + '\n ```' + args.join(' ').replace(/`/g, '') + "``` \n To: " + languages[res.lang.split('-')[1]].nativeName.split(',')[0] + '\n```' + res.text[0] + '```'
 					});
 				});
 			break
