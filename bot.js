@@ -859,7 +859,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					bot.sendMessage({
 						to: channelID,
 						message: "Your message has been translated: \n From: " + languages[res.lang.split('-')[0]].nativeName + '\n ```' + args.join(' ').replace(/`/g, '') + "``` \n To: " + languages[res.lang.split('-')[1]].nativeName + '\n```' + res.text[0] + '```'
-				});
+					});
+				}
 			break
 			case 'vote':
 			if(!Object.values(playerVotes).find(x => {return (x.q == args.join(' '))}) && !playerVotes[args[0]]) {
