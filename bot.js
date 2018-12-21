@@ -833,7 +833,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			case 'translate':
 			    
 				var toLang = (function() {
-					var i = args.findIndex(x => { return x.startsWith('to:') });
+					var i = args.findIndex(x => { return x.match(/to:(\w+)/) });
 					if(i == -1) { return }
 					var n = args[i].match(/to:(\w+)/)[1];
 					args.splice(i,1);
@@ -841,7 +841,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				})();		
 				
 				var fromLang = (function() {
-					var i = args.findIndex(x => { return x.startsWith('from:') });
+					var i = args.findIndex(x => { return x.match(/from:(\w+)/) });
 					if(i == -1) { return }
 					var n = args[i].match(/from:(\w+)/)[1];
 					args.splice(i,1);
@@ -850,7 +850,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				
 				if(!fromLang) { fromLang = '_autodetect' }
 				
-				if(!toLang) { bot.sendMessage({to: channelID, message: "You need to specify the language you want to translate to!"}); return; }
+				if(!toLang) { bot.sendMessage({to: channelID, message: "You need to specify the language you want to translate to! Make sure there aren't any spaces in between the colon and the language"}); return; }
 				
 			    var toCode = Object.keys(languages)[Object.values(languages).findIndex(x => {return x.name.toLowerCase() == toLang.toLowerCase()})];
 			    var fromCode = Object.keys(languages)[Object.values(languages).findIndex(x => {return x.name.toLowerCase() == fromLang.toLowerCase()})];
