@@ -105,7 +105,7 @@
         "nativeName":"ဗမာစာ"
     },
     "ca":{
-        "name":"Catalan; Valencian",
+        "name":"Catalan",
         "nativeName":"Català"
     },
     "ch":{
@@ -117,7 +117,7 @@
         "nativeName":"нохчийн мотт"
     },
     "ny":{
-        "name":"Chichewa; Chewa; Nyanja",
+        "name":"Chichewa",
         "nativeName":"chiCheŵa, chinyanja"
     },
     "zh":{
@@ -153,7 +153,7 @@
         "nativeName":"dansk"
     },
     "dv":{
-        "name":"Divehi; Dhivehi; Maldivian;",
+        "name":"Divehi",
         "nativeName":"ދިވެހި"
     },
     "nl":{
@@ -193,7 +193,7 @@
         "nativeName":"français, langue française"
     },
     "ff":{
-        "name":"Fula; Fulah; Pulaar; Pular",
+        "name":"Fula",
         "nativeName":"Fulfulde, Pulaar, Pular"
     },
     "gl":{
@@ -221,7 +221,7 @@
         "nativeName":"ગુજરાતી"
     },
     "ht":{
-        "name":"Haitian; Haitian Creole",
+        "name":"Haitian",
         "nativeName":"Kreyòl ayisyen"
     },
     "ha":{
@@ -593,7 +593,7 @@
         "nativeName":"Sesotho"
     },
     "es":{
-        "name":"Spanish; Castilian",
+        "name":"Spanish",
         "nativeName":"español, castellano"
     },
     "su":{
