@@ -913,7 +913,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			
 			break
 			case 'addmeto':
-            if(!_cfg.enabledFeatures.addmeto) { console.log(_cfg.enabledFeatures); return }
+            if(!_cfg.enabledFeatures.addmeto) { bot.sendMessage({to: channelID, message: "Sorry, but that feature isn't enabled on this server."}); return }
             var specificChanRole = roleSearchByName(evt, (( args.slice(0,3).join(' ') ) ) + ' Channel');
 			if(specificChanRole != null) {
 				bot.addToRole({
@@ -969,7 +969,7 @@ var e = [];
 			break
 			// !notifylist
 			case 'notifylist':
-            if(!_cfg.enabledFeatures.notify) { return }	
+            if(!_cfg.enabledFeatures.notify) { bot.sendMessage({to: channelID, message: "Sorry, but that feature isn't enabled on this server."}); return }	
 			var thatNotifyRole = roleSearchByName(evt, args.slice(0,3).join(' ').substring(0,32) + ' Notifications');
 			if(thatNotifyRole) {
 			var usrs = bot.servers[evt.d.guild_id].members;
@@ -994,7 +994,7 @@ var e = [];
 			break
 			// !notifyroles
 			case 'notifyroles':
-            if(!_cfg.enabledFeatures.notify) { return }	
+            if(!_cfg.enabledFeatures.notify) { bot.sendMessage({to: channelID, message: "Sorry, but that feature isn't enabled on this server."}); return }	
 			var nRoles = Object.values(bot.servers[evt.d.guild_id].roles).filter(x => { 
 				return (x.name.substring(x.name.length - 14, x.name.length) == ' Notifications')
 			});
@@ -1043,7 +1043,7 @@ var e = [];
 			break
 			//>notify
 			case 'notify':
-            if(!_cfg.enabledFeatures.notify) { return }	
+            if(!_cfg.enabledFeatures.notify) { bot.sendMessage({to: channelID, message: "Sorry, but that feature isn't enabled on this server."}); return }	
                         var specificNotifRole;
 			if(roleSearchByName(evt, (( args.slice(0,3).join(' ').substring(0,32) ) || "Annoying People") + ' Notifications') == null) {
 			    bot.createRole(evt.d.guild_id, function(err,resp) { 
@@ -1076,7 +1076,7 @@ var e = [];
             break   
 			//!unnotify
 			case 'unnotify':
-            if(!_cfg.enabledFeatures.notify) { return }	
+            if(!_cfg.enabledFeatures.notify) { bot.sendMessage({to: channelID, message: "Sorry, but that feature isn't enabled on this server."}); return }	
 			try {
 			if(roleSearchByName(evt, args.slice(0,3).join(' ').substring(0,32) + ' Notifications')) {
 			bot.removeFromRole({
@@ -1105,7 +1105,7 @@ var e = [];
 		  break
 			// >getme
           case 'getme':
-          if(!_cfg.enabledFeatures.getme) { return }
+          if(!_cfg.enabledFeatures.getme) { bot.sendMessage({to: channelID, message: "Sorry, but that feature isn't enabled on this server."}); return }
 				var query = args.join(' ');
 				var indx = null;
 			        var _indx = /(?:(?:number)|#) *(\d+)/i.exec(query);
@@ -1117,7 +1117,7 @@ var e = [];
 				bingGetPic(query, bot, channelID, evt, indx);
                 break
       case 'namecolor':
-      if(!_cfg.enabledFeatures.namecolor) { return }
+      if(!_cfg.enabledFeatures.namecolor) { bot.sendMessage({to: channelID, message: "Sorry, but that feature isn't enabled on this server."}); return }
         var c = roleName(evt, args.join(' ').toLowerCase());
 		var accpt = (_cfg.nameColorRoles[(args.join(' ') || 'None').toLowerCase()]);
         if(!bot.servers[evt.d.guild_id]) {
