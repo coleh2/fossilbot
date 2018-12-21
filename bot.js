@@ -21,7 +21,9 @@ var request = require('request');
 var fs = require('fs');
 var jsonDb = require('simple-json-db');
 var db = new jsonDb('./.data/db.json');
+var languages = require('./languages.json')
 var htmlParse = require('fast-html-parser');
+var translateapi = require('yandex-translate')(require('./translatekey.json'));
 var cp = require('child_process');
 var velociraptors = {cPs:[]};/*
 var raptorTokens = require('./velociraptortokens.json');
@@ -828,14 +830,37 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 
             break
 			// !isthisspam
-			/*case 'isthisspam':
-			var cat = bayes.categorize(args.join(' '));
-			console.log(cat);
-                bot.sendMessage({
-                    to: channelID,
-                    message: ( cat || "Could not classify, sorry")
-                });
-			break*/
+			case 'translate':
+			    
+				var toLang = (function() {
+					var i = args.findIndex(x => { return x.startsWith('to:') });
+					if(i == -1) { return }
+					var n = args[argsI].match(/to:(\w+)/)[1];
+					args.splice(i,1);
+					return n
+				})();		
+				
+				var fromLang = (function() {
+					var i = args.findIndex(x => { return x.startsWith('from:') });
+					if(i == -1) { return }
+					var n = args[argsI].match(/from:(\w+)/)[1];
+					args.splice(i,1);
+					return n
+				})();
+				
+				if(!toLang) { bot.sendMessage({to: channelID, message: "You need to specify the language you want to translate to!"}); }
+				
+			    var toCode = Object.keys(languages)[Object.values(languages).findIndex(x => {return x.name.toLowerCase() == toLang.toLowerCase()})];
+			    var fromCode = Object.keys(languages)[Object.values(languages).findIndex(x => {return x.name.toLowerCase() == fromLang.toLowerCase()})];
+				
+				if(!fromCode || !toCode) { bot.sendMessage({to: channelID, message: "I couldn't find the language you wanted!"}); }
+				
+				translateapi.translate(args.join(' '), { to: toCode, from: fromCode }, function(err, res) {
+					bot.sendMessage({
+						to: channelID,
+						message: "Your message has been translated: \n From: " + languages[res.lang.split('-')[0]].nativeName + '\n ```' + args.join(' ').replace(/`/g, '') + "``` \n To: " + languages[res.lang.split('-')[1]].nativeName + '\n```' res.text[0] + '```'
+				});
+			break
 			case 'vote':
 			if(!Object.values(playerVotes).find(x => {return (x.q == args.join(' '))}) && !playerVotes[args[0]]) {
 				playerVotes[args.join('_').toLowerCase()] = {q: args.join(' '), c: evt.d.author.id, y:0, n:0, v: {}, i: Object.values(playerVotes).length+1}
