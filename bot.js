@@ -855,7 +855,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			    var toCode = Object.keys(languages)[Object.values(languages).findIndex(x => {return x.name.toLowerCase() == toLang.toLowerCase()})];
 			    var fromCode = Object.keys(languages)[Object.values(languages).findIndex(x => {return x.name.toLowerCase() == fromLang.toLowerCase()})];
 				
-				if(!toCode) { bot.sendMessage({to: channelID, message: "I couldn't find the language you wanted!"}); }
+				if(!toCode) { bot.sendMessage({to: channelID, message: "I couldn't find the language you wanted!"}); return}
 				
 				translateapi.translate(args.join(' '), { to: toCode, from: fromCode }, function(err, res) {
 					bot.sendMessage({
