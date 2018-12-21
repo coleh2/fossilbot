@@ -848,7 +848,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					return n
 				})();
 				
-				if(!toLang) { bot.sendMessage({to: channelID, message: "You need to specify the language you want to translate to!"}); }
+				if(!toLang) { bot.sendMessage({to: channelID, message: "You need to specify the language you want to translate to!"}); return; }
 				
 			    var toCode = Object.keys(languages)[Object.values(languages).findIndex(x => {return x.name.toLowerCase() == toLang.toLowerCase()})];
 			    var fromCode = Object.keys(languages)[Object.values(languages).findIndex(x => {return x.name.toLowerCase() == fromLang.toLowerCase()})];
