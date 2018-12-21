@@ -1,5 +1,9 @@
 {
-	"_comment": "@author Phil Teare \n using wikipedia data",
+	"_comment": {
+	    "name": "_",
+		"nativeName": "_",
+		"comment": "@author Phil Teare \n using wikipedia data"
+	},
     "ab":{
         "name":"Abkhaz",
         "nativeName":"аҧсуа"
