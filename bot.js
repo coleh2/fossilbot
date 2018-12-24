@@ -965,7 +965,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 var e = [];
 (Object.keys(bot.servers[evt.d.guild_id].roles).forEach(function(key) {
     var res = bot.servers[evt.d.guild_id].roles[key].name;
-    if(res.substring(res.length - 8, res.length).toLowerCase() == ' channel') {e.push(res.substring(0, res.length  - 8))} else {}      
+    if(res.substring(res.length - 8, res.length).toLowerCase() == ' channel') {e.push("`>addmeto " + res.substring(0, res.length  - 8) + "`")} else {}      
   }));
   return e
   
