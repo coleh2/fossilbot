@@ -960,7 +960,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				});
 				bot.sendMessage({
 					to: evt.d.author.id,
-					message: (function (evt) { 
+					message: 'Open Channels:\n' + (function (evt) { 
 					
 var e = [];
 (Object.keys(bot.servers[evt.d.guild_id].roles).forEach(function(key) {
