@@ -602,14 +602,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
       });
         },120000);
     }*/
-    (function(d,c) {
-        d=db.JSON();
-        c=evt.d;
-        if(!d.mL) { d.mL = [] }
-        d.mL.push(c);
-        db.JSON(d);
-        db.sync();        
-    })();
+	
   if(cooldowns.everyone[evt.d.author.id] == null || isNaN(cooldowns.everyone[evt.d.author.id])) {cooldowns.everyone[evt.d.author.id] = 2}
   if (evt.d.mention_everyone) {
     cooldowns.everyone[evt.d.author.id] = cooldowns.everyone[evt.d.author.id] - 1
