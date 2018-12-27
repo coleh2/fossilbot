@@ -93,12 +93,6 @@ var cfg = {
 		"Rocket League": "\ud83d\ude97"
 	},
 	nameColorRoles: {
-	    "yellow": ['Citizen','Count','Keeper'],
-	    "lime": ['Citizen','Count','Keeper'],
-	    "cyan": ['Citizen','Count','Keeper'],
-	    "purple": ["Count", "Keeper"],
-	    "white": ["Count", "Keeper"],
-		"slightly bloodthirsty orange": ["Count", "Keeper"],
 	
 	},
 	commonSynonyms: {
@@ -241,7 +235,7 @@ function bingGetPic(q, bot, channelID, x, number,evt) {
 var cisnsfw = bot.servers[x.d.guild_id].channels[channelID].nsfw;
 
 var _cfg = cfg;
-if(db.JSON().config[x.d.guild_id]) { cfg = db.JSON().config[x.d.guild_id] }
+if(db.JSON().config[x.d.guild_id]) { _cfg = db.JSON().config[x.d.guild_id] }
 
 if(number == 0) {
 
@@ -463,7 +457,7 @@ bot.sendMessage(data);
 bot.on('voiceStateUpdate', function(evt) {
 	
 	var _cfg = cfg;
-	if(db.JSON().config[evt.d.guild_id]) { cfg = db.JSON().config[evt.d.guild_id] }
+	if(db.JSON().config[evt.d.guild_id]) { _cfg = db.JSON().config[evt.d.guild_id] }
 
 if(!_cfg.enabledFeatures.voicechannelgameemojis) { return }	
 	
@@ -518,7 +512,7 @@ if(Object.keys(bot.channels[evt.d.channel_id].members).length == 1 && bot.channe
 bot.on('guildMemberAdd', function(member,evt) {
 	
 	var _cfg = cfg;
-	if(db.JSON().config[evt.d.guild_id]) { cfg = db.JSON().config[evt.d.guild_id] }
+	if(db.JSON().config[evt.d.guild_id]) { _cfg = db.JSON().config[evt.d.guild_id] }
 	
     bot.addToRole({serverID: evt.d.guild_id, userID: evt.d.user.id, roleID: roleSearchByName(evt, 'New Recruit')}, function (err) {if (err != null && err.statusMessage != 'NOT FOUND') {console.log(err);}});
 if(!_cfg.msgs.joinPublic) { return }
