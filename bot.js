@@ -603,7 +603,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         },120000);
     }*/
 	
-  if(cooldowns.everyone[evt.d.author.id] == null || isNaN(cooldowns.everyone[evt.d.author.id])) {cooldowns.everyone[evt.d.author.id] = 2}
+  if(cooldowns.everyone[evt.d.author.id] == null || isNaN(cooldowns.everyone[evt.d.author.id])) {cooldowns.everyone[evt.d.author.id] = _cfg.cooldown_e}
   if (evt.d.mention_everyone) {
     cooldowns.everyone[evt.d.author.id] = cooldowns.everyone[evt.d.author.id] - 1
     console.log('📯 Message mentioning @everyone in server ' + evt.d.guild_id + ' from ' + evt.d.author.username + '#' + evt.d.author.discriminator + '. They have ' + cooldowns.everyone[evt.d.author.id] + ' uses left before cooldown.');
@@ -624,6 +624,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
   //if the account is a bot account, don't do any of this
   if(!evt.d.author.bot) {
 	  //if either mass or specific records don't exist, make them
+      if (!cooldowns.specific[evt.d.guild_id]) { cooldowns.specific[evt.d.guild_id] = {} }
 	  if (cooldowns.specific[userID] == null) cooldowns.specific[userID] = {}
 	  if (cooldowns.mass[userID] == null) cooldowns.mass[userID] = []
 	  
@@ -673,7 +674,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 	  
 	  //for mass @ing:
 		for(var i = 0; i < 1/*evt.d.mentions.length*/; i++) {
-			cooldowns.mass[userID].push({t: time, m: evt.d.id});//note: this is disabled atm
+			cooldowns.mass[userID].push({t: time, m: evt.d.id});
 		}
         
       var single_message_spam = false;
