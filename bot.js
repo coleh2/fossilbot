@@ -656,7 +656,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		}
 		
 	  }
-	  
+      
 	  //Add message data to records, if applicable
 	  //for warnings and mutings
 	  
@@ -672,13 +672,16 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			}
 	  
 	  //for mass @ing:
-		for(var i = 0; i < evt.d.mentions.length; i++) {
+		for(var i = 0; i < 1/*evt.d.mentions.length*/; i++) {
 			cooldowns.mass[userID].push({t: time, m: evt.d.id});//note: this is disabled atm
-		}	  
+		}
+        
+      var single_message_spam = false;
+      if(slst.length >= _cfg.cooldown_g) { single_message_spam = true }
 	  }
 	  
 	  //Where everything actually gets done-- if they went over the limit, give them the Criminal role and send a message explaining how they were detected
-	  if(cooldowns.mass[userID].length >= _cfg.cooldown_m || Object.keys(cooldowns.specific[userID]).filter(itm => cooldowns.specific[userID][itm].length >= _cfg.cooldown_s).length > 0) {
+	  if(cooldowns.mass[userID].length >= _cfg.cooldown_m || Object.keys(cooldowns.specific[userID]).filter(itm => cooldowns.specific[userID][itm].length >= _cfg.cooldown_s).length > 0 || single_message_spam) {
 		if(cooldowns.muted[userID] == false) {
 		bot.sendMessage({
 			to: channelID,
