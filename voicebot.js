@@ -9,7 +9,7 @@ const client = new Client();
 const ytsl = require('youtube-search-list').search;
 var queue = {};
 //debugging values
-process.env.TOKEN = 'NTE1NTA4NDI1OTc5OTg1OTIw.DtrfFA.ENgMhRSe-cMFGBx1kF-NOnAlwAw'
+process.env.TOKEN = ''
 process.env.JOIN_VC = '427197003458543616'
 process.env.VC_GUILD = '427197003035049985'
 process.env.INIT_PLAY = 'https://www.youtube.com/watch?v=ajjj4pLnjz8'
