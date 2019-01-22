@@ -35,8 +35,6 @@ for(var i = 0; i < 3; i++) {
         if(m.f == 'freeRaptor') {
             if(!velociraptors[m.g]) { return }
             if(!velociraptors[m.g][m.c]) { return }
-            var e = velociraptors[m.g][m.c];
-            if(!e) { return }
             delete velociraptors[m.g][m.c]
         }
         
@@ -1352,16 +1350,6 @@ console.log(canvas.height);
         }
     }
     
-    }
-         
-     
-    if((message.toLowerCase().indexOf('sry') != -1 || message.toLowerCase().indexOf('sorry')) != -1 && message.length < 16 && evt.d.author.id == 297151429087592449) {
-    bot.sendMessage({
-    to: channelID,
-    message: 'no'
-    }, function(e,r) { setTimeout(function() { bot.deleteMessage({channelID: r.channel_id, messageID: r.id}); }, 5000 ) 
-    });
-    //setTimeout(function() { bot.deleteMessage({channelID: evt.channel_id, messageID: evt.id}, function(e,r){if(e) { console.log(e) } } ); }, 5000 );
     }
      }
   } 
