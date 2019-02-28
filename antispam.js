@@ -11,7 +11,9 @@ var cooldowns = {
 module.exports = {
 	update: updateRecords,
 	getUserState: getUserState,
-	unmuted: unmuted
+	unmuted: unmuted,
+	muted: muted,
+	warned: warned
 };
 function cooldownNullChecks (evt) {
 	if (!cooldowns.specific[evt.d.guild_id]) cooldowns.specific[evt.d.guild_id] = {}

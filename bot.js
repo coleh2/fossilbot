@@ -40,12 +40,6 @@ for(var i = 0; i < 3; i++) {
         
     });
 }*/
-var cooldowns = {};
-cooldowns.everyone = {};
-cooldowns.specific = {};
-cooldowns.mass = {};
-cooldowns.warned ={};
-cooldowns.muted ={};
 var loyalty = {};
 var voiceSessions = {};
 //var juliusTEST = new Julius();
@@ -563,7 +557,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				userID: evt.d.author.id,
 				roleID: roleSearchByName(evt, 'Criminal')
 			});
-
+			antiSpam.muted();
 		//then, after half an hour, remove the role & unwarn them
 			setTimeout(function() {
 				bot.removeFromRole({
@@ -578,7 +572,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		  bot.sendMessage({
 				to: channelID,
 				message: ':warning: You\'re about to be marked for spam; please hold off on the pinging or you\'ll be muted for ' +( _cfg.spam_time_mins )+ ' minutes. Thank you!'
-	   	});
+			 });
+			 antiSpam.warned();
 	  }
   }
   if(_cfg.enabledFeatures.experience) {  
@@ -873,7 +868,7 @@ var e = [];
 			// !notifyroles
 			case 'notifyroles':
             if(!_cfg.enabledFeatures.notify) { bot.sendMessage({to: channelID, message: "Sorry, but that feature isn't enabled on this server."}); return }	
-			var nRoles = Object.values(bot.servers[evt.d.guild_id].roles).filter(x => { 
+			      var nRoles = Object.values(bot.servers[evt.d.guild_id].roles).filter(x => { 
 				return (x.name.substring(x.name.length - 14, x.name.length) == ' Notifications')
 			});
 		    if(!nRoles) { return }
