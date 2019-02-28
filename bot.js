@@ -557,7 +557,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				userID: evt.d.author.id,
 				roleID: roleSearchByName(evt, 'Criminal')
 			});
-			antiSpam.muted();
+			antiSpam.muted(evt.d.guild_id, evt.d.author.id);
 		//then, after half an hour, remove the role & unwarn them
 			setTimeout(function() {
 				bot.removeFromRole({
@@ -573,7 +573,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				to: channelID,
 				message: ':warning: You\'re about to be marked for spam; please hold off on the pinging or you\'ll be muted for ' +( _cfg.spam_time_mins )+ ' minutes. Thank you!'
 			 });
-			 antiSpam.warned();
+			 antiSpam.warned(evt.d.guild_id, evt.d.author.id);
 	  }
   }
   if(_cfg.enabledFeatures.experience) {  
