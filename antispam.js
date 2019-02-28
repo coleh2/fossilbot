@@ -105,7 +105,7 @@ function updateRecords(evt, server_config) {
 			Object.keys(cooldowns.specific[evt.d.guild_id][evt.d.author.id]).filter(itm => cooldowns.specific[evt.d.guild_id][evt.d.author.id][itm].length >= server_config.cooldown_s).length > 0 || 
 			single_message_spam
 		) {
-			if(!cooldown.muted[evt.d.guild_id][evt.d.author.id]) cooldowns.tomute[evt.d.guild_id][evt.d.author.id] = true
+			if(!cooldowns.muted[evt.d.guild_id][evt.d.author.id]) cooldowns.tomute[evt.d.guild_id][evt.d.author.id] = true
 		}
 	  
 	   if(
