@@ -10,7 +10,8 @@ var cooldowns = {
 };
 module.exports = {
 	update: updateRecords,
-	getUserState: getUserState
+	getUserState: getUserState,
+	unmuted: unmuted
 };
 function cooldownNullChecks (evt) {
 	if (!cooldowns.specific[evt.d.guild_id]) cooldowns.specific[evt.d.guild_id] = {}
@@ -40,7 +41,7 @@ function cooldownNullChecks (evt) {
 	if(!cooldowns.last_everyone_reset_time[evt.d.guild_id]) cooldowns.last_everyone_reset_time[evt.d.guild_id] = 0;
 
 }
-function updateRecords(evt, _cfg) {
+function updateRecords(evt, server_config) {
 
 	  //a ton of null checks
 	  cooldownNullChecks(evt);
@@ -54,7 +55,7 @@ function updateRecords(evt, _cfg) {
 		x = listOfSpecificEntryKeys[i];
 		for(var iz = 0, y; iz < cooldowns.specific[evt.d.guild_id][evt.d.author.id][x].length; iz++) {
 			y = cooldowns.specific[evt.d.guild_id][evt.d.author.id][x][iz];
-			if(y.t < currentTime - _cfg.cooldown_s_t) {
+			if(y.t < currentTime - server_config.cooldown_s_t) {
 				cooldowns.specific[evt.d.guild_id][evt.d.author.id][x].splice(i, 1);
 			}
 		}
@@ -64,13 +65,13 @@ function updateRecords(evt, _cfg) {
 	  for(var i = 0, x; i < cooldowns.mass[evt.d.guild_id][evt.d.author.id].length; i++) {
 		x = cooldowns.mass[evt.d.guild_id][evt.d.author.id][i];
 		
-		if(x.t < currentTime - _cfg.cooldown_m_t) {
+		if(x.t < currentTime - server_config.cooldown_m_t) {
 			cooldowns.mass[evt.d.guild_id][evt.d.author.id].splice(i, 1);
 		}
 	  }
 	  
 	  //... for everyone
-	  if(cooldowns.last_everyone_reset_time[evt.d.guild_id] < currentTime - _cfg.cooldown_e_t) {
+	  if(cooldowns.last_everyone_reset_time[evt.d.guild_id] < currentTime - server_config.cooldown_e_t) {
 		  cooldowns.last_everyone_reset_time[evt.d.guild_id] = currentTime;
 		  var keysOfEveryoneCooldown = Object.keys(cooldowns.everyone[evt.d.guild_id]);
 		  for (var i = 0, e; i <= keysOfEveryoneCooldown.length; i++){
@@ -91,7 +92,7 @@ function updateRecords(evt, _cfg) {
 		    }
         
 			//determine whether this message qualifies as single-message spam
-			if(listOfSpecificEntryKeys.length >= _cfg.cooldown_g) { single_message_spam = true }
+			if(listOfSpecificEntryKeys.length >= server_config.cooldown_g) { single_message_spam = true }
 			else { var single_message_spam = false; }
 	  }
 	  if (evt.d.mention_everyone) {
@@ -100,8 +101,8 @@ function updateRecords(evt, _cfg) {
 		
 		//mark as to be warned/muted if such
 	  if(
-			cooldowns.mass[evt.d.guild_id][evt.d.author.id].length >= _cfg.cooldown_m || 
-			Object.keys(cooldowns.specific[evt.d.guild_id][evt.d.author.id]).filter(itm => cooldowns.specific[evt.d.guild_id][evt.d.author.id][itm].length >= _cfg.cooldown_s).length > 0 || 
+			cooldowns.mass[evt.d.guild_id][evt.d.author.id].length >= server_config.cooldown_m || 
+			Object.keys(cooldowns.specific[evt.d.guild_id][evt.d.author.id]).filter(itm => cooldowns.specific[evt.d.guild_id][evt.d.author.id][itm].length >= server_config.cooldown_s).length > 0 || 
 			single_message_spam
 		) {
 			if(!cooldown.muted[evt.d.guild_id][evt.d.author.id]) cooldowns.tomute[evt.d.guild_id][evt.d.author.id] = true
@@ -109,8 +110,8 @@ function updateRecords(evt, _cfg) {
 	  
 	   if(
 			(
-				cooldowns.mass[evt.d.guild_id][evt.d.author.id].length >= _cfg.cooldown_m - 1 || 
-				Object.keys(cooldowns.specific[evt.d.guild_id][evt.d.author.id]).filter(itm => cooldowns.specific[evt.d.guild_id][userID][itm].length >= _cfg.cooldown_s - 1).length > 0
+				cooldowns.mass[evt.d.guild_id][evt.d.author.id].length >= server_config.cooldown_m - 1 || 
+				Object.keys(cooldowns.specific[evt.d.guild_id][evt.d.author.id]).filter(itm => cooldowns.specific[evt.d.guild_id][evt.d.author.id][itm].length >= server_config.cooldown_s - 1).length > 0
 			) && 
 		    cooldowns.warned[evt.d.guild_id][evt.d.author.id] == false
 		  ) {
@@ -132,4 +133,11 @@ function getUserState(evt) {
 	};
 
 	return flattenedObject;
+}
+
+function unmuted(serverId, userId) {
+	cooldowns.warned[serverId][userId] = false
+  cooldowns.muted[serverId][userId] = false
+  cooldowns.tomute[serverId][userId] = false
+  cooldowns.towarn[serverId][userId] = false
 }
