@@ -138,6 +138,10 @@ function getUserState(evt) {
 function unmuted(serverId, userId) {
 	cooldowns.warned[serverId][userId] = false
   cooldowns.muted[serverId][userId] = false
+}
+function muted(serverId, userId) {
   cooldowns.tomute[serverId][userId] = false
+}
+function warned(serverId, userId) {
   cooldowns.towarn[serverId][userId] = false
 }
