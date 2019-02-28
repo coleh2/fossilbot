@@ -60,6 +60,8 @@ const webserver = cp.fork(`${__dirname}/webserver.js`);
 var pointCache = {};
 var jsdom = require("jsdom");
 const { JSDOM } = jsdom;
+var channelactivity = require('./channelactivity.js');
+var antiSpam = require('./antispam.js');
 
 
 //load the ml data
@@ -198,16 +200,6 @@ bot.on('ready', function (evt) {
     bot.setPresence({ status: 'online', game: { name: 'with >help' } });
     console.log('📱 Presence set');
 });
-setInterval(() => {
-	try {
-      for (var i = 0, e; i <= Object.keys(cooldowns.everyone).length; i++){
-        
-	      cooldowns.everyone[Object.keys(cooldowns.everyone)[i]] = {}
-	  }
-	} catch(err) {console.log(err)}   
-	  bot.connect();
-	  console.log('@.everyone Cooldowns reset!');
-}, 3600000);
 
 // Automatically reconnect if the bot disconnects
 bot.on('disconnect', function(erMsg, code) {
@@ -530,9 +522,7 @@ if(!_cfg.enabledFeatures.joinmessages) { return }
 });
 bot.on('message', function (user, userID, channelID, message, evt) {
 	try {
-	
-
-	
+		
   //deny commands in DMs
   if(!bot.servers[evt.d.guild_id] && message.split(' ')[0] == '>help') {
 			var helpdochere = strdoc.help.main
@@ -544,189 +534,60 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			return
 	} else if(!bot.servers[evt.d.guild_id]) { return } 
 	
+	//set the configuration obj (oh my lord we should asap transfer to sql or literally anything other than a json file)
 	var _cfg = cfg;
 	if(db.JSON().config[evt.d.guild_id]) { _cfg = db.JSON().config[evt.d.guild_id] } else {
-    (function() {
-        var dbc = db.JSON();
-        dbc.config[evt.d.guild_id] = cfg
-        dbc.config[evt.d.guild_id].guild_id = evt.d.guild_id
-        db.JSON(dbc);
-        db.sync();
-        
-    })();    
+		(function() {
+			var dbc = db.JSON();
+			dbc.config[evt.d.guild_id] = cfg
+			dbc.config[evt.d.guild_id].guild_id = evt.d.guild_id
+			db.JSON(dbc);
+			db.sync();
+			
+		})();    
     }
 	
   //if the user is a bot, stop ALL of this stuff
   if(evt.d.author.bot) return
   if(_cfg.enabledFeatures.antispam) {
-	//set timeout for checking for the spam emoji-- if it's not an isthisspam command
-    /*if(evt.d.content.split(' ')[0].toLowerCase() != '>isthisspam') {
-        setTimeout(function() {
-        request({
-          url: 'https://discordapp.com/api/v6/channels/' + evt.d.channel_id + '/messages/' + evt.d.id,
-          method: 'GET',
-          headers: {
-              'Content-Type': 'application/json',
-              'Authorization': 'Bot ' + auth
-          }
-      },function(e,r,b) {
-            //console.log('resp:\n');
-            //console.log(b);
-            //console.log('\n:resp');
-          if(e == null && b) {
-            if(!b) { return }
-              try {
-            var resp = JSON.parse(b);
-            } catch (e) {}
-            if(!resp) { return }
-            if(!resp.content) { return }
-            if(!bayes.toJson().docCount) { var confrm = true; } else { var confrm = false; }
-            if( confrm || ((bayes.toJson().docCount.nospam || 0) <= ((bayes.toJson().docCount.spam || 0) + 5))) {
-                if(!resp.reactions) { bayes.learn(resp.content, 'nospam'); return }
-                if(resp.reactions.filter(x => (x.emoji.name.toLowerCase() === "this_is_spam"))) {
-                    bayes.learn(resp.content, 'spam');
-                
-                } else {
-                    bayes.learn(resp.content, 'nospam');
-                }
-          }
-            var dbc = db.JSON();
-            dbc.bayes = bayes.toJson();
-            db.JSON(dbc);
-            db.sync();
-            
-          } else { console.log('error with GETting message obj') };
-          
-      });
-        },120000);
-    }*/
-	
-  if(cooldowns.everyone[evt.d.author.id] == null || isNaN(cooldowns.everyone[evt.d.author.id])) {cooldowns.everyone[evt.d.author.id] = _cfg.cooldown_e}
-  if (evt.d.mention_everyone) {
-    cooldowns.everyone[evt.d.author.id] = cooldowns.everyone[evt.d.author.id] - 1
-    console.log('📯 Message mentioning @everyone in server ' + evt.d.guild_id + ' from ' + evt.d.author.username + '#' + evt.d.author.discriminator + '. They have ' + cooldowns.everyone[evt.d.author.id] + ' uses left before cooldown.');
-    if (cooldowns.everyone[evt.d.author.id] <= 0) {
-      var everyonerole = everyoneRoleSearch(evt);
-      console.log('User ' + evt.d.author.username + '#' + evt.d.author.discriminator + ' is now on @everyone cooldown for server ' + evt.d.guild_id + ' ("' + bot.servers[evt.d.guild_id].name + '"). The role is ' + everyonerole); 
-    bot.removeFromRole({serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: everyonerole}, function (err) {if (err != null && err.statusMessage != 'NOT FOUND') {console.log(err);}});
-      
-    }
-  }
+		antiSpam.update(evt, _cfg);
+		
+		var userSpamStatus = antiSpam.getUserState(evt);
+		if(userSpamStatus.tomute)	{
+				bot.sendMessage({
+				to: channelID,
+				message: 'You have been auto-detected as spamming! Please wait ' +( _cfg.spam_time_mins )+ ' minutes in order to be able to type again.'
+			});
+			bot.addToRole({
+				serverID: evt.d.guild_id,
+				userID: evt.d.author.id,
+				roleID: roleSearchByName(evt, 'Criminal')
+			});
 
-  if (cooldowns.everyone[evt.d.author.id] > 0 || cooldowns.everyone[evt.d.author.id] === null) {
-    var everyonerole = everyoneRoleSearch(evt);
-    bot.addToRole({serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: everyonerole}, function (err) {if (err != null && err.statusMessage != 'NOT FOUND') {console.log(err);}});
-  }
-  
-  //cooldowns for pinging specific people and/or mass pingin
-  //if the account is a bot account, don't do any of this
-  if(!evt.d.author.bot) {
-	  //if either mass or specific records don't exist, make them
-      if (!cooldowns.specific[evt.d.guild_id]) { cooldowns.specific[evt.d.guild_id] = {} }
-	  if (cooldowns.specific[userID] == null) cooldowns.specific[userID] = {}
-	  if (cooldowns.mass[userID] == null) cooldowns.mass[userID] = []
-	  
-	  //if specific records for the @-ed person(s) don't exist, make them (if applicable)
-	  
-	  for(var i = 0; i < evt.d.mentions.length; i++) {
-		  if(cooldowns.specific[userID][evt.d.mentions[i].id] == null) cooldowns.specific[userID][evt.d.mentions[i].id] = [];
+		//then, after half an hour, remove the role & unwarn them
+			setTimeout(function() {
+				bot.removeFromRole({
+					serverID: evt.d.guild_id,
+					userID: evt.d.author.id,
+					roleID: roleSearchByName(evt, 'Criminal')
+				});
+				antiSpam.unmuted(evt.d.guild_id, evt.d.author.id);
+			}, _cfg.spam_time_mins * 60000);
+			
+		} else if (userSpamStatus.towarn) {
+		  bot.sendMessage({
+				to: channelID,
+				message: ':warning: You\'re about to be marked for spam; please hold off on the pinging or you\'ll be muted for ' +( _cfg.spam_time_mins )+ ' minutes. Thank you!'
+	   	});
 	  }
-	  
-	  //loop through and delete expired entries
-	  //for specific
-	  var slst = Object.keys(cooldowns.specific[userID]);
-	  
-	  for(var i = 0, x; i < slst.length; i++) {
-		x = slst[i];
-		for(var iz = 0, y; iz < cooldowns.specific[userID][x].length; iz++) {
-			y = cooldowns.specific[userID][x][iz];
-			if(y.t < Date.now() - _cfg.cooldown_s_t) {
-				cooldowns.specific[userID][x].splice(i, 1);
-			}
-		}
-		
-	  }
-	  //for mass
-	  for(var i = 0, x; i < cooldowns.mass[userID].length; i++) {
-		x = cooldowns.mass[userID][i];
-		
-		if(x.t < Date.now() - _cfg.cooldown_m_t) {
-			cooldowns.mass[userID].splice(i, 1);
-		}
-		
-	  }
-      
-	  //Add message data to records, if applicable
-	  //for warnings and mutings
-	  
-	  if(!cooldowns.warned[userID]) { cooldowns.warned[userID] = false }
-	  if(!cooldowns.muted[userID]) { cooldowns.muted[userID] = false }
-	  
-	  //for actual spamming
-	  if(evt.d.mentions.length > 0) {
-			var time = Date.now();
-			//for specific people:
-			for(var i = 0; i < evt.d.mentions.length; i++) {
-				cooldowns.specific[userID][evt.d.mentions[i].id].push({t: time, m: evt.d.id});
-			}
-	  
-	  //for mass @ing:
-		for(var i = 0; i < 1/*evt.d.mentions.length*/; i++) {
-			cooldowns.mass[userID].push({t: time, m: evt.d.id});
-		}
-        
-      var single_message_spam = false;
-      if(slst.length >= _cfg.cooldown_g) { single_message_spam = true }
-	  }
-	  
-	  //Where everything actually gets done-- if they went over the limit, give them the Criminal role and send a message explaining how they were detected
-	  if(cooldowns.mass[userID].length >= _cfg.cooldown_m || Object.keys(cooldowns.specific[userID]).filter(itm => cooldowns.specific[userID][itm].length >= _cfg.cooldown_s).length > 0 || single_message_spam) {
-		if(cooldowns.muted[userID] == false) {
-		bot.sendMessage({
-			to: channelID,
-			message: 'You have been auto-detected as spamming! Please wait ' +( _cfg.spam_time_mins )+ ' minutes in order to be able to type again.'
-		});
-		cooldowns.muted[userID] = true
-		}
-		
-		
-		bot.addToRole({
-			serverID: evt.d.guild_id,
-			userID: evt.d.author.id,
-			roleID: '461629603996368928' //'485614819341238302'
-		});
-		console.log('detected as spam');
-
-	 //then, after half an hour, remove the role & unwarn them
-	  setTimeout(function() {
-		bot.removeFromRole({
-			serverID: evt.d.guild_id,
-			userID: evt.d.author.id,
-			roleID: '461629603996368928' 
-		});
-		cooldowns.warned[userID] = false
-		cooldowns.muted[userID] = false
-
-	  
-	  }, _cfg.spam_time_mins * 60000);
-	  
-	  } else if((cooldowns.mass[userID].length >= _cfg.cooldown_m - 1 || Object.keys(cooldowns.specific[userID]).filter(itm => cooldowns.specific[userID][itm].length >= _cfg.cooldown_s - 1).length > 0) && cooldowns.warned[userID] == false) {
-	   bot.sendMessage({
-		to: channelID,
-		message: ':warning: You\'re about to be marked for spam; please hold off on the pinging or you\'ll be muted for ' +( _cfg.spam_time_mins )+ ' minutes. Thank you!'
-	   });
-	   cooldowns.warned[userID] = true
-	  }
-	 // console.log('Warned: ' + cooldowns.warned[userID] + '\n Muted: ' + cooldowns.muted[userID]);
-  }
   }
   if(_cfg.enabledFeatures.experience) {  
-  //add a random number between 10 and 25 to the score
-  if(message.substring(0,1) != cmdprefix) {
-	  try {
-  webserver.send({cmd: evt,serverDat: bot.servers[evt.d.guild_id]});
-	  } catch (e) { console.log(e)}
-  }
+		//add a random number between 10 and 25 to the score
+		if(message.substring(0,1) != cmdprefix) {
+			try {
+		webserver.send({cmd: evt,serverDat: bot.servers[evt.d.guild_id]});
+			} catch (e) { console.log(e)}
+		}
   }
 
   evt.d.server_id = evt.d.guild_id

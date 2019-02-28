@@ -10,3 +10,4 @@ apiCodes.json
 webcache.json
 channelDb.json
 translatekey.json
+.pm2/
