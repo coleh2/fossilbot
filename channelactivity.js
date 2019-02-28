@@ -14,7 +14,7 @@ module.exports = function(discord_bot_instance, js_db_instance) {
 var exportfunctions = {
 	deleteOld: deleteOldActivities,
 	orderChannels: updateChannelOrderFromActivity,
-	updateData: updateActivity
+	updateData: updateActivity,
 	getLastReorderTime: getlastOrderingTimestamp
 };
 
