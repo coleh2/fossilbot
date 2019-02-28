@@ -142,8 +142,10 @@ function unmuted(serverId, userId) {
   cooldowns.muted[serverId][userId] = false
 }
 function muted(serverId, userId) {
-  cooldowns.tomute[serverId][userId] = false
+	cooldowns.tomute[serverId][userId] = false
+	cooldowns.muted[serverId][userId] = false
 }
 function warned(serverId, userId) {
-  cooldowns.towarn[serverId][userId] = false
+	cooldowns.towarn[serverId][userId] = false
+	cooldowns.warned[serverId][userId] = false
 }
