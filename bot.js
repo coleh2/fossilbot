@@ -23,7 +23,7 @@ var voiceSessions = {};
 var cp = require('child_process');
 const webserver = cp.fork(`${__dirname}/webserver.js`);
 var pointCache = {};
-var channelActivity = require('./channelactivity.js');
+var channelActivity = require('./channelactivity.js')(bot,db);
 var antiSpam = require('./antispam.js');
 var commandManager = require('./commandmanager.js')
 
@@ -278,6 +278,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			}
 		}
 		//auto-ordering channels
+		console.log(channelActivity);
 		if(_cfg.enabledFeatures.autosort || evt.d.guild_id == '392830469500043266') {
 			channelActivity.updateData(evt);
 			if(channelActivity.getLastReorderTime(evt.d.guild_id) < Date.now() - 3600000 ) {
