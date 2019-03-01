@@ -426,27 +426,7 @@ process.on('message', (m) => {
 	  cache.JSON(c);
 	  cache.sync();
 	  process.send({c:cache.JSON(),e:evt,l:lvUped,d:s});
-    } else if (m.fn == 'getLinkCode') {
-        var udb = cache.JSON();
-        if(!m.evt) { return } else { var evt = m.evt }
-        var uimI = udb.cache.findIndex(x => {console.log( x.discord.id.id == evt.d.author.id ); return (x.discord.id.id == evt.d.author.id)});
-        console.log('uimI: ' + uimI);
-        if(uimI == -1) { return }
-        if(!udb.cache[uimI].discord.auth) {
-            udb.cache[uimI].discord.auth = (function (m,n,i,c,f) { 
-                c = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890_-!";
-                for(i=0;i<30;i++) {
-                    f = (f||'') + c.charAt(m.floor(m.random() * c.length));
-                }
-                return f
-            })(Math) + '|' + evt.d.author.id
-            cache.JSON(udb);
-            cache.sync();
-        }
-        
-        process.send({code: udb.cache[uimI].discord.auth, evt: evt, fn: 'giveLinkCode'});
-        
-    }
+    } 
 });
 
 

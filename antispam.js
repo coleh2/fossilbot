@@ -108,17 +108,15 @@ function updateRecords(evt, server_config) {
 			single_message_spam
 		) {
 			if(!cooldowns.muted[evt.d.guild_id][evt.d.author.id]) cooldowns.tomute[evt.d.guild_id][evt.d.author.id] = true
+		} else if(
+		(
+			cooldowns.mass[evt.d.guild_id][evt.d.author.id].length >= server_config.cooldown_m - 1 || 
+			Object.keys(cooldowns.specific[evt.d.guild_id][evt.d.author.id]).filter(itm => cooldowns.specific[evt.d.guild_id][evt.d.author.id][itm].length >= server_config.cooldown_s - 1).length > 0
+		) && 
+			cooldowns.warned[evt.d.guild_id][evt.d.author.id] == false
+		) {
+		cooldowns.towarn[evt.d.guild_id][evt.d.author.id] = true
 		}
-	  
-	   if(
-			(
-				cooldowns.mass[evt.d.guild_id][evt.d.author.id].length >= server_config.cooldown_m - 1 || 
-				Object.keys(cooldowns.specific[evt.d.guild_id][evt.d.author.id]).filter(itm => cooldowns.specific[evt.d.guild_id][evt.d.author.id][itm].length >= server_config.cooldown_s - 1).length > 0
-			) && 
-		    cooldowns.warned[evt.d.guild_id][evt.d.author.id] == false
-		  ) {
-		  cooldowns.towarn[evt.d.guild_id][evt.d.author.id] = true
-	   }
 }
 function getUserState(evt) {
 	cooldownNullChecks(evt);

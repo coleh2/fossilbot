@@ -39,7 +39,7 @@ function makeActivityObj(server_id)  {
 function deleteOldActivities(dbc) {
 	for(var i = 0, keys = Object.keys(dbc.activity); i < keys.length; i++) {
 		//if the entry is older than a week, delete it
-		if(keys[i] < ( new Date() ).setHours(0,0,0,0) - 604800000) delete keys[keys[i]]
+		if(keys[i] < ( new Date() ).setHours(0,0,0,0) - 604800000) delete dbc.activity[keys[i]]
 	}
 }
 function updateActivity(evt) {
