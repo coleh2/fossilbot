@@ -386,6 +386,9 @@ document.getElementById('pu-editing-elem').innerHTML = (function() {
             case 'namecolor':
         return '&gt;namecolor'
         break
+            case 'sort':
+        return 'auto-sort'
+        break
     }
 })();
 document.getElementById('pu-props-list').innerHTML = (function() {
@@ -445,6 +448,9 @@ document.getElementById('pu-props-list').innerHTML = (function() {
             }
             return x
             })(cfgLocal.nameColorRoles);
+        break
+            case 'sortedit':
+            return '<li><div><h2>Category to Sort</h2><br><p>Fossilbot will automatically sort channels in the <input value="' + (cfgLocal.autoorder_category_name||'') + '" onkeyup="cfgLocal.autoorder_category_name = event.target.value"> category by their activity.'
         break
     }
     } catch (e) { if(e) { console.log(e); return '<span style="color:#B37373">Error</span>' }}
@@ -542,6 +548,13 @@ function sendEdits() {
 
 </a>-->
 </div></div>
+<div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> auto-order</code><div class="editContext">
+  <div class="noteditablecover"></div>
+  <a href="javascript:void(0)" onclick="editProps('sort','edit')">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
+  
+  </a>
+  </div></div>
 <div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> anti-spam</code><div class="editContext">
 <div class="noteditablecover"></div>
 <a href="javascript:void(0)" onclick="editProps('spam','edit')">

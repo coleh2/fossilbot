@@ -19,7 +19,7 @@ var exportfunctions = {
 };
 
 function getlastOrderingTimestamp (id) {
-	return lastOrderingTimestamp[id];
+	return (lastOrderingTimestamp[id]||0);
 }
 
 function makeActivityObj(server_id)  {
@@ -76,10 +76,9 @@ function updateChannelOrderFromActivity(serverId,categoryToUpdateId,topCallback)
 	var activitiesOfChannels = makeActivityObj(serverId);
 	if(!categoryToUpdateId) return false;
 	
-	Object.keys(activitiesOfChannels).forEach((x,i) => {
+	Object.keys(activitiesOfChannels).sort((b,a) => {return activitiesOfChannels[a] - activitiesOfChannels[b]}).forEach((x,i) => {
 		activitiesOfChannels[x] = i
 	});
-	
 	
 	
 	request({ 
@@ -90,7 +89,10 @@ function updateChannelOrderFromActivity(serverId,categoryToUpdateId,topCallback)
 	}, function(err, resp, body) {
 		if(err) return false;
 		if(typeof body == 'string') body = JSON.parse(body);
-		
+
+		//check that the channel we should sort inside exists and is a category
+		if(!body.find(x => {if(x.id == categoryToUpdateId && x.type == 4) {return true}})) { return false}
+
 		var channelPossForDiscord = [];
 		var channelsThatAreInTheSpecifiedCategory = [];
 		var basePosition = -Infinity;
@@ -104,14 +106,18 @@ function updateChannelOrderFromActivity(serverId,categoryToUpdateId,topCallback)
 		for(var i = 0; i < channelsThatAreInTheSpecifiedCategory.length; i++) {
 			var thisChannel = channelsThatAreInTheSpecifiedCategory[i];
 			if(activitiesOfChannels[thisChannel.id] === undefined) {
-				activitiesOfChannels[thisChannel.id] = Object.values(channelsThatAreInTheSpecifiedCategory).length - numberOfDefaultSortedChannelsSoFar;
+				activitiesOfChannels[thisChannel.id] = Object.values(channelsThatAreInTheSpecifiedCategory).length - numberOfDefaultSortedChannelsSoFar - 1;
 				numberOfDefaultSortedChannelsSoFar++
 			}
 			channelPossForDiscord.push({
 				id: thisChannel.id,
 				position: activitiesOfChannels[thisChannel.id] + basePosition
 			});
-		}
+		} 
+
+		//check that there are actually channels which we are operating on
+		if(channelPossForDiscord.length == 0) { return console.warn('channelposis0length');  }
+		
 		request({ 
 			url: 'https://discordapp.com/api/v6/guilds/' + serverId + '/channels',
 			headers: {
@@ -121,8 +127,8 @@ function updateChannelOrderFromActivity(serverId,categoryToUpdateId,topCallback)
 			method: 'PATCH',
 			body: JSON.stringify(channelPossForDiscord)
 		},topCallback||defaultCallback);
-		function defaultCallback() {
-			
+		function defaultCallback(e,b,r) {
+			console.log(e,b);
 		}
 	});
 }

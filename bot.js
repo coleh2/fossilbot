@@ -68,10 +68,10 @@ var cfg = {
 	},
 	msgs: {
 		joinPublic: "Welcome to the server, <@{USER}>!",
-		joinPrivate: "Welcome to the server, <@{USER}>!"
+		joinPrivate: ""
 	},
-	enabledFeatures: { "getme": true, "autosort": true, "notify": true, "addmeto": true, "voicechannelgameemojis": true, "experience": true, "antispam": true, "autoresponse": true, "joinmessages": true, "namecolor": true },
-	autoResp: { "^([A-Z \\d_]|[^\\w]){20,}$": "woah cool down fam", "(R|r)(S|s)(M|m)": "This is what you meant, right? <https://www.urbandictionary.com/define.php?term=RSM>" }
+	enabledFeatures: { "getme": true, "autoorder": true, "notify": true, "addmeto": true, "voicechannelgameemojis": true, "experience": true, "antispam": true, "autoresponse": true, "joinmessages": true, "namecolor": true },
+	autoResp: {}
 };
 
 console.log('💾 Process launched!');
@@ -278,11 +278,17 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			}
 		}
 		//auto-ordering channels
-		console.log(channelActivity);
-		if(_cfg.enabledFeatures.autosort || evt.d.guild_id == '392830469500043266') {
+		if(_cfg.enabledFeatures.autoorder && _cfg.autoorder_category_name) {
+			console.log('orderable');
 			channelActivity.updateData(evt);
-			if(channelActivity.getLastReorderTime(evt.d.guild_id) < Date.now() - 3600000 ) {
-				channelActivity.orderChannels(evt.d.guild_id, '408324287020138506');
+			console.log(channelActivity.getLastReorderTime(evt.d.guild_id));
+			if(channelActivity.getLastReorderTime(evt.d.guild_id) < Date.now() /*- 3600000*/ ) {
+				console.log('ordering time');
+				var categoryId = channelSearchByName(evt, _cfg.autoorder_category_name);
+				if(categoryId) {
+					console.log('ordering ', categoryId);
+				  channelActivity.orderChannels(evt.d.guild_id, categoryId);
+				}
 			}
 		}
 		//exp management section
@@ -313,7 +319,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				});
 			}
 
-			return
+			return true
 		}
 		//automatic response
 		if (_cfg.enabledFeatures.autoresponse && _cfg.autoResp) {
@@ -332,10 +338,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 	catch (err) {
 		console.error(err);
 		bot.sendMessage({
-			to: (channelID || "447382861771833364"),
-			message: "Sorry, there was an error. The error has been reported to <@297151429087592449>; please try again later."
-		});
-		bot.sendMessage({
 			to: "297151429087592449",
 			message: 'ERROR, FRIEND:\n```' + err.toString() + '``` on line `' + err.lineNumber + '`and the message object was ```' + JSON.stringify(evt.d) + '```'
 		});
@@ -347,6 +349,14 @@ function roleSearchByName(evt, q) {
 	if (!bot.servers[evt.d.guild_id]) { return null }
 	var r = (Object.keys(bot.servers[evt.d.guild_id].roles).find(function (key) {
 		var res = bot.servers[evt.d.guild_id].roles[key].name;
+		if (res.toLowerCase() == q.toLowerCase()) { return true } else { }
+	}));
+	if (r != null) { return r } else { return null }
+}
+function channelSearchByName(evt, q) {
+	if (!bot.servers[evt.d.guild_id]) { return null }
+	var r = (Object.keys(bot.servers[evt.d.guild_id].channels).find(function (key) {
+		var res = bot.servers[evt.d.guild_id].channels[key].name;
 		if (res.toLowerCase() == q.toLowerCase()) { return true } else { }
 	}));
 	if (r != null) { return r } else { return null }
