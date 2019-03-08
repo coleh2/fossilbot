@@ -1,4 +1,3 @@
-
 var pokemon = require('../getme_context_data/pokemon.json');
 pokemon = pokemon.pokemon;
 var citiesdata = require('../getme_context_data/us_cities.json');

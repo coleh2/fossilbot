@@ -282,7 +282,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			console.log('orderable');
 			channelActivity.updateData(evt);
 			console.log(channelActivity.getLastReorderTime(evt.d.guild_id));
-			if(channelActivity.getLastReorderTime(evt.d.guild_id) < Date.now() /*- 3600000*/ ) {
+			if(channelActivity.getLastReorderTime(evt.d.guild_id) < Date.now() - 3600000 ) {
 				console.log('ordering time');
 				var categoryId = channelSearchByName(evt, _cfg.autoorder_category_name);
 				if(categoryId) {
@@ -302,7 +302,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		}
 
 		//user commands
-		if (message.substring(0, 1) == cmdprefix) {
+		if (message.substring(0, 1) === cmdprefix) {
 
 			var args = message.substring(1).split(' ');
 			var cmd = args[0].toLowerCase();
@@ -312,11 +312,27 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			if (commandManager[cmd]) {
 				commandManager[cmd](evt, args, _cfg, bot);
 			} else {
-				if (_cfg.commonSynonyms[cmd.toLowerCase()]) { var dym = " Do you mean `>" + _cfg.commonSynonyms[cmd] + '`?'; } else { var dym; }
+				if (cfg.commonSynonyms[cmd.toLowerCase()]) { var dym = " Do you mean `>" + cfg.commonSynonyms[cmd] + '`?'; } else { var dym; }
 				bot.sendMessage({
 					to: channelID,
 					message: "Sorry, I couldn't find a command named `" + cmd + '`.' + (dym || ' Try using `>help` to get a list of commands :smiley:')
 				});
+				//this'll be removed later-- basically a 'this has been removed' note for concancated-word commands
+				var recentlyChangedCommands = {
+					"getme": "get",
+					"joinchannel": "join",
+					"leavechannel": "leave",
+					"notifyroles": "notifiers",
+					"notifylist": "notified",
+					"namecolor": "nametag",
+
+				}
+				if(recentlyChangedCommands[cmd]) {
+					bot.sendMessage({
+						to: channelID,
+						message: "That command has been renamed. Use `>" + recentlyChangedCommands[cmd] + "` instead, please. Thank you! =)"
+					});
+				}
 			}
 
 			return true
