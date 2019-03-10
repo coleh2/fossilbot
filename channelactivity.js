@@ -76,7 +76,7 @@ function updateChannelOrderFromActivity(serverId,categoryToUpdateId,topCallback)
 	var activitiesOfChannels = makeActivityObj(serverId);
 	if(!categoryToUpdateId) return false;
 	
-	Object.keys(activitiesOfChannels).sort((b,a) => {return activitiesOfChannels[a] - activitiesOfChannels[b]}).forEach((x,i) => {
+	Object.keys(activitiesOfChannels).sort((b,a) => {return activitiesOfChannels[b] - activitiesOfChannels[a]}).forEach((x,i) => {
 		activitiesOfChannels[x] = i
 	});
 	

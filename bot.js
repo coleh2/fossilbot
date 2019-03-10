@@ -332,10 +332,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						to: channelID,
 						message: "That command has been renamed. Use `>" + recentlyChangedCommands[cmd] + "` instead, please. Thank you! =)"
 					});
-				} else {
+				} else if(dym) {
 					bot.sendMessage({
 						to: channelID,
-						message: "Sorry, I couldn't find a command named `" + cmd + '`.' + (dym || ' Try using `>help` to get a list of commands :smiley:')
+						message: "Sorry, I couldn't find a command named `" + cmd + '`.' + dym
 					});
 				}
 }
