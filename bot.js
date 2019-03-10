@@ -312,11 +312,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			if (commandManager[cmd]) {
 				commandManager[cmd](evt, args, _cfg, bot);
 			} else {
-				if (cfg.commonSynonyms[cmd.toLowerCase()]) { var dym = " Do you mean `>" + cfg.commonSynonyms[cmd] + '`?'; } else { var dym; }
-				bot.sendMessage({
-					to: channelID,
-					message: "Sorry, I couldn't find a command named `" + cmd + '`.' + (dym || ' Try using `>help` to get a list of commands :smiley:')
-				});
+		         
 				//this'll be removed later-- basically a 'this has been removed' note for concancated-word commands
 				var recentlyChangedCommands = {
 					"getme": "get",
@@ -327,13 +323,22 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					"namecolor": "nametag",
 
 				}
+
+
+				if (cfg.commonSynonyms[cmd.toLowerCase()]) { var dym = " Do you mean `>" + _cfg.commonSynonyms[cmd] + '`?'; } else { var dym; }
+
 				if(recentlyChangedCommands[cmd]) {
 					bot.sendMessage({
 						to: channelID,
 						message: "That command has been renamed. Use `>" + recentlyChangedCommands[cmd] + "` instead, please. Thank you! =)"
 					});
+				} else {
+					bot.sendMessage({
+						to: channelID,
+						message: "Sorry, I couldn't find a command named `" + cmd + '`.' + (dym || ' Try using `>help` to get a list of commands :smiley:')
+					});
 				}
-			}
+}
 
 			return true
 		}
