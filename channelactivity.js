@@ -76,7 +76,7 @@ function updateChannelOrderFromActivity(serverId,categoryToUpdateId,topCallback)
 	var activitiesOfChannels = makeActivityObj(serverId);
 	if(!categoryToUpdateId) return false;
 	
-	Object.keys(activitiesOfChannels).sort((b,a) => {return activitiesOfChannels[b] - activitiesOfChannels[a]}).forEach((x,i) => {
+	Object.keys(activitiesOfChannels).sort((a,b) => {return activitiesOfChannels[b] - activitiesOfChannels[a]}).forEach((x,i) => {
 		activitiesOfChannels[x] = i
 	});
 	
@@ -128,7 +128,7 @@ function updateChannelOrderFromActivity(serverId,categoryToUpdateId,topCallback)
 			body: JSON.stringify(channelPossForDiscord)
 		},topCallback||defaultCallback);
 		function defaultCallback(e,b,r) {
-			console.log(e,b);
+			e&&console.log(e);
 		}
 	});
 }
