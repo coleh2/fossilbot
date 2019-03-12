@@ -217,23 +217,24 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					var cmd = message.toLowerCase().split(' ');
 					var email = cmd[2]
 
-					if(email.split('@')[1] != 'students.needham.k12.ma.us' || email.split('@')[0].length > 6) {
-						bot.sendMessage({
-							to: userID,
-							message: `Sorry, \`${email}\` is not a valid email address.`
-						});
-					} else {
-						bot.sendMessage({
-							to: userID,
-							message: "Okay, I'm sending an email with a validation code to you now..."
-						});
+				if (email.split('@')[1] != 'students.needham.k12.ma.us' || email.split('@')[0].length > 6) {
+					bot.sendMessage({
+						to: userID,
+						message: `Sorry, \`${email}\` is not a valid email address.`
+					});
+				} else {
+					bot.sendMessage({
+						to: userID,
+						message: "Okay, I'm sending an email with a validation code to you now..."
+					}, function () {
 						console.log(webserver);
-						webserver.email({evt: evt}, function(r) {
-						bot.sendMessage({
-							to: userID,
-							message: r.err?"It looks like there was an error with sending the email. The error code I got was `"+r.err+"`. Try again later, maybe?":"Email sent successfully! If you don't see it, try looking in your Spam or Junk folders."
+						webserver.email({ evt: evt, email_address: email }, function (r) {
+							bot.sendMessage({
+								to: userID,
+								message: r.err ? "It looks like there was an error with sending the email. The error code I got was `" + r.err + "`. Try again later, maybe?" : "Email sent successfully! If you don't see it, try looking in your Spam or Junk folders."
+							});
 						});
-					})
+					});
 				}
 			}
 			return
