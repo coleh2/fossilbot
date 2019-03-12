@@ -227,14 +227,15 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 							to: userID,
 							message: "Okay, I'm sending an email with a validation code to you now..."
 						});
-						webserver.emailCodeGenerateAndSend({evt: evt}, function(r) {
+						console.log(webserver.email);
+						webserver.email({evt: evt}, function(r) {
 						bot.sendMessage({
 							to: userID,
 							message: r.err?"It looks like there was an error with sending the email. The error code I got was `"+r.err+"`. Try again later, maybe?":"Email sent successfully! If you don't see it, try looking in your Spam or Junk folders."
 						});
 					})
 				}
-			} else if (!bot.servers[evt.d.guild_id]) { return }
+			}
 			return
 	  }
 

@@ -30,7 +30,7 @@ var exportFunctions = {
 	onLevelUp: (cb) => { callbacks.onLevelUp = cb; },
 	onEmailAuth: (cb) => { callbacks.onEmailAuth = cb; },
 	incrementXp: incrementXpFunc,
-	emailCodeGenerateAndSend: emailCodeGenerateAndSend
+	email: emailCodeGenerateAndSend
 }
 
 
