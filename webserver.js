@@ -29,8 +29,8 @@ module.exports = function(_db) {
 var exportFunctions = {
 	onLevelUp: (cb) => { callbacks.onLevelUp = cb; },
 	onEmailAuth: (cb) => { callbacks.onEmailAuth = cb; },
-	incrementXp: incrementXpFunc,
-	email: emailCodeGenerateAndSend
+	incrementXp: m => {incrementXpFunc(m)},
+	email: (m,cb) => {emailCodeGenerateAndSend(m,cb)}
 }
 
 

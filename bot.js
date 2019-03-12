@@ -227,7 +227,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 							to: userID,
 							message: "Okay, I'm sending an email with a validation code to you now..."
 						});
-						console.log(webserver.email);
+						console.log(webserver);
 						webserver.email({evt: evt}, function(r) {
 						bot.sendMessage({
 							to: userID,
