@@ -19,19 +19,19 @@ var callbacks = {};
 var db;
 
 
+module.exports = function(_db) {
+	if(!_db) return false;
+	db = _db
+	return exportFunctions;
+}
+
+
 var exportFunctions = {
 	onLevelUp: (cb) => { callbacks.onLevelUp = cb; },
 	onEmailAuth: (cb) => { callbacks.onEmailAuth = cb; },
 	incrementXp: incrementXpFunc,
 	emailCodeGenerateAndSend: emailCodeGenerateAndSend
 }
-
-module.exports = function(_db) {
-	if(!db) return false;
-	db = _db
-	return exportFunctions;
-}
-
 
 
 Date.prototype.getWeek = function() {
