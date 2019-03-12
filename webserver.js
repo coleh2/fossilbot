@@ -346,7 +346,7 @@ app.get('/validate_email', (req, res) => {
 
 	 callbacks.onEmailAuth({userid: req.query.userid, guild_id: req.query.serverid});
 
-   res.end('ok great thanks! you should have been authorized now.');
+   res.sendFile(__dirname + '/webserver/pages/email_response.html');
 });
 
 app.use(express.static(__dirname + '/webserver/assets'));
