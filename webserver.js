@@ -407,7 +407,7 @@ var emailCodeGenerateAndSend = (m,cb) => {
 	};
 	
 	transporter.sendMail(mailOptions, function(error, info){
-		  cb({err: error, status: info.response});
+		  cb({err: error, email: m.email_address});
 	});
 }
 

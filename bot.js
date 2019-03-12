@@ -226,12 +226,12 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					bot.sendMessage({
 						to: userID,
 						message: "Okay, I'm sending an email with a validation code to you now..."
-					}, function () {
+					}, function (e,r) {
 						console.log(webserver);
 						webserver.email({ evt: evt, email_address: email }, function (r) {
 							bot.sendMessage({
 								to: userID,
-								message: r.err ? "It looks like there was an error with sending the email. The error code I got was `" + r.err + "`. Try again later, maybe?" : "Email sent successfully! If you don't see it, try looking in your Spam or Junk folders."
+								message: r.err ? "It looks like there was an error with sending the email. The error code I got was `" + r.err + "`. Try again later, maybe?" : "Email sent successfully to `"+r.email+"`. If you don't see it, try looking in your Spam or Junk folders."
 							});
 						});
 					});
