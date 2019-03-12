@@ -1,7 +1,4 @@
-// server.js
-// where your node app starts
 
-// init project
 var express = require('express');
 var app = express();
 var https = require('https');
@@ -9,12 +6,33 @@ var http = require('http');
 //app = http.createServer(app);
 var request = require('request');
 var fs = require('fs');
+var nodemailer = require('nodemailer')
 var jsonDb = require('simple-json-db');
 var cache = new jsonDb('./webserver/db/webcache.json');
 var userDb = new jsonDb('./webserver/db/userdb.json');
 var channelDb = new jsonDb('./webserver/db/channelDb.json');
 //var auths = require('./webserver/apiCodes.json');
 var botAuth = require('./auth.json');
+
+var callbacks = {};
+
+var db;
+
+
+var exportFunctions = {
+	onLevelUp: (cb) => { callbacks.onLevelUp = cb; },
+	onEmailAuth: (cb) => { callbacks.onEmailAuth = cb; },
+	incrementXp: incrementXpFunc,
+	emailCodeGenerateAndSend: emailCodeGenerateAndSend
+}
+
+module.exports = function(_db) {
+	if(!db) return false;
+	db = _db
+	return exportFunctions;
+}
+
+
 
 Date.prototype.getWeek = function() {
   var date = new Date(this.getTime());
@@ -37,11 +55,6 @@ if(cache.JSON().cache === undefined) {
 
 app.use(express.json());
 
-//console.log(cache.JSON().cache);
-// we've started you off with Express, 
-// but feel free to use whatever libs or frameworks you'd like through `package.json`.
-
-// http://expressjs.com/en/starter/static-files.html
 
 app.get('/discordoauthresponse', function (req,resp) {
         resp.sendFile(__dirname + '/webserver/assets/discordoauthredirect.html');
@@ -60,9 +73,6 @@ app.get('/sd/:serverId/:fileName', function(req, resp) {
   try {
   resp.sendFile(__dirname + '/webserver/pages/sd/' + req.params.serverId + req.params.fileName + '.html');
   } catch (e) {}
-});
-app.get('/lb/csgo', function(req, resp) {
-  resp.sendFile(__dirname + '/webserver/pages/csgo.html');
 });
 
 
@@ -119,7 +129,10 @@ app.post('/adminAction',function(req,resp) {
 			//now that all that validation's aside, let's get down to bid-ness.
 			console.log('yeah seems legit');
 			
-			process.send({fn: "setServerConfig", cfg: req.body});
+			var dbc = db.JSON();
+			dbc.config[req.body.guild_id] = req.body
+			db.JSON(dbc);
+			db.sync();
 			
 			resp.sendStatus(200);
 		});
@@ -322,9 +335,83 @@ app.get('/data', function(req, resp) {
 	}
 });
 
+app.get('/validate_email', (req, res) => {
+	 if(!req.query.userid || !req.query.serverid || !req.query.code) return res.sendStatus(400)
+
+	 var cacheObject = cache.JSON();
+	 var cacheContents = cacheObject.cache;
+	 var userRecord = cacheContents.find(x => { return x.discord.id.id == req.query.userid });
+	 if(!userRecord) return res.sendStatus(404)
+	 if(userRecord.emailConnectCode != req.query.code) return res.sendStatus(401)
+
+	 callbacks.onEmailAuth({userid: req.query.userid, guild_id: req.query.serverid});
+
+   res.end('ok great thanks! you should have been authorized now.');
+});
+
 app.use(express.static(__dirname + '/webserver/assets'));
 
-process.on('message', (m) => {
+var emailCodeGenerateAndSend = (m,cb) => {
+	var evt = m.evt;
+	var cacheObject = cache.JSON();
+	var cacheContents = cacheObject.cache;
+	var userRecord = cacheContents.find(x => { return x.discord.id.id == evt.d.author.id });
+	
+	if(!userRecord) {
+		 cacheContents.push({discord: {id: evt.d.author, data: {} }});
+		 userRecord = cacheContents.find(x => { return x.discord.id.id == evt.d.author.id });
+		}
+		
+	if(cacheContents.find(x => { return x.email_address == m.email_address })) return cb({err: 'That email is already linked to an account.'})
+
+
+	var generateCode = function (m, n, i, c, f) {
+		m = Math;
+		c = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890_-!";
+		for (i = 0; i < 30; i++) {
+			f = (f || '') + c.charAt(m.floor(m.random() * c.length));
+		}
+		return f
+	};
+	//it's always going to be nhs
+	var guild_id = '392830469500043266';
+	
+	var user_id = evt.d.author.id
+	var code = generateCode();
+	
+	userRecord.emailConnectCode = code
+	
+	cacheObject.cache = cacheContents;
+	cache.JSON(cacheObject);
+
+	var transporter = nodemailer.createTransport({
+		host: 'smtp.zoho.com',
+		port: 587,
+		auth: {
+			user: 'fossilbot-donotreply@coleh.net',
+			pass: require('./email_auth.json')
+		}
+	});
+	
+	var mailOptions = {
+		from: 'fossilbot-donotreply@coleh.net',
+		to: 'cbh221@students.needham.k12.ma.us',
+		subject: 'Code for Verification',
+		text: `Go to https://fossilbot.cf/validate_email?userid=${user_id}&serverid=${guild_id}&code=${code}&action=verify`,
+		html: `<!DOCTYPE HTML><html><head></head><body style=\"padding: 3em; margin: 0px; color: #000000; background: #dedede;font-family: sans-serif;\">\r\n <div style=\"padding: 10px; background: #fefefe; \">\r\n    <h1 style=\"width: 100%; display: block; height: 2em; position: relative;\">\r\n\t    <img src=\"cid:fossilbotlogo\" style=\"width: 2em;border-radius:100%; width: 2em;\" alt=\"Fossilbot logo\">\r\n\t\t<span style=\"display: inline-block; position: absolute; top: 0px; left: 2.5em; line-height: 2em; vertical-align: middle;\">Email Verification<\/span>\r\n\t<\/h1>\r\n\t<div style=\"padding:10px;\">\r\n\t\t<p>Hey there! Someone wanted to use this email address to access the <b>NHS</b> Discord server. If it was you, click on the button below.<\/p>\r\n\t    <div style=\"background: #dedede; padding: 10px; border-radius: 4px; font-size: 2em;\">\r\n\t\t\t<button style=\"margin: auto; display:block; background: #61B774; outline: none; border: none; padding: 0.5em; padding-left: 0.75em; padding-right: 0.75em; font-size: 1.25em; color: white; border-radius: 0.25em; width: auto; cursor: pointer; overflow: hidden; transition: width 10s linear;\">\r\n\t\t\t    <a style=\"text-decoration:none;color:black;\" href="https://fossilbot.cf/validate_email?userid=${user_id}&serverid=${guild_id}&code=${code}&action=verify">Verify Email<\/a>\r\n\t\t\t<\/button>\r\n\t\t<\/div>\r\n\t\t<p>If you didn\'t request this email, please click <a href=\"mailto:coleh@coleh.net\" style=\"color: #3333cc;\">here<\/a> to notify  a human about that.<\/p>\r\n\t\t\r\n\t<\/div>\r\n\r\n <\/div>\r\n<div style=\"background: #cecece; padding: 10px; position: relative; text-align: center;\">\r\n\t<i><span style=\"white-space: nowrap;\"><a href=\"https:\/\/discordapp.com\/oauth2\/authorize?client_id=387963766798811136&permissions=335760448&scope=bot\" style=\"color: #3333cc;\">Get Fossilbot for your server<\/a><\/span> &bull; <span style=\"white-space: nowrap;\"><a href=\"mailto:coleh@coleh.net\" style=\"color: #3333cc;\">Contact me<\/a><\/span> <\/i>\r\n<\/div>\r\n<\/body></html>`,
+		attachments: [{
+			filename: 'fossilbotlogo.png',
+			path: './icon.png',
+			cid: 'fossilbotlogo' 
+		}]
+	};
+	
+	transporter.sendMail(mailOptions, function(error, info){
+		  cb({err: error, status: info.response});
+	});
+}
+
+var incrementXpFunc = (m) => {
   if(m.cmd) {
 	  var evt = m.cmd;
 	  var c = cache.JSON();
@@ -339,20 +426,8 @@ process.on('message', (m) => {
 	  //if an item is too old, delete it
 	  for(var i = 0, e = Object.keys(cDb[evt.d.guild_id]); i < e.length; i++) {
 	     if(cDb[evt.d.guild_id][e[i]] < Date.parse(evt.d.timestamp) - 604800000) { delete cDb[evt.d.guild_id][e[i]] }
-	  }
-	  //adjust activity metrics
-	  /*
-      if(!cDb[evt.d.guild_id]) { cDb[evt.d.guild_id] = {} }
-      if(!cDb[evt.d.guild_id].tree) { cDb[evt.d.guild_id].tree = {} }
-      if(!cDb[evt.d.guild_id].total) { cDb[evt.d.guild_id].total = 0 }
-      if(!cDb[evt.d.guild_id].tree[evt.d.channel_id]) { cDb[evt.d.guild_id].tree[evt.d.channel_id] = 0 }
-	  
-	  cDb[evt.d.guild_id].lastSet = Date.now();
-	  cDb[evt.d.guild_id].tree[evt.d.channel_id] = cDb[evt.d.guild_id].tree[evt.d.channel_id] + 1
-	  cDb[evt.d.guild_id].total = cDb[evt.d.guild_id].total + 1
-	  
-	  //calculation for "activity score": (c/t)*(r/1000000000000)
-	  */
+		}
+		
 	  channelDb.JSON(cDb);
 	  channelDb.sync();
 	  
@@ -396,121 +471,26 @@ process.on('message', (m) => {
 	  s.discord.data[evt.d.guild_id].level = cL
 	  s.discord.data[evt.d.guild_id].totalNeededXp = ( s.discord.data[evt.d.guild_id].neededXp + ( 5 / 6 * (cL) * (2 * (cL) * (cL) + 27 * (cL) + 91) ) )
 	  
-
 	  s.discord.data[evt.d.guild_id].sName = m.serverDat.name
 	  s.discord.data[evt.d.guild_id].sId = m.serverDat.id
 	  s.discord.data[evt.d.guild_id].sIcon = m.serverDat.icon
-	  
-	   
-	  
-	  /*console.log('current score: ' +cS);
-	  console.log('Total Exp Required to level up: ' + ( s.discord.data[evt.d.guild_id].neededXp + ( 5 / 6 * (cL) * (2 * (cL) * (cL) + 27 * (cL) + 91) ) ));
-	  console.log('Can Level Up: ' + ( cS >= ( s.discord.data[evt.d.guild_id].totalNeededXp)));*/
 	  
 	  for( ; cS >= s.discord.data[evt.d.guild_id].totalNeededXp ; ) {
 		s.discord.data[evt.d.guild_id].level = s.discord.data[evt.d.guild_id].level + 1
 	    s.discord.data[evt.d.guild_id].neededXp = Math.floor(5 / 6 * (s.discord.data[evt.d.guild_id].level+1) * (2 * (s.discord.data[evt.d.guild_id].level+1) * (s.discord.data[evt.d.guild_id].level+1) + 27 * (s.discord.data[evt.d.guild_id].level+1) + 91))
 	    s.discord.data[evt.d.guild_id].totalNeededXp = ( s.discord.data[evt.d.guild_id].neededXp + ( 5 / 6 * (s.discord.data[evt.d.guild_id].level) * (2 * (s.discord.data[evt.d.guild_id].level) * (s.discord.data[evt.d.guild_id].level) + 27 * (s.discord.data[evt.d.guild_id].level) + 91) ) )
-		console.log('Level up!');
 		lvUped = true;
 	  }
-	  /*if(cS >= s.discord.data[evt.d.guild_id].neededXp + ( 5 / 6 * (cL) * (2 * (cL) * (cL) + 27 * (cL) + 91) )) {
-		  s.discord.data[evt.d.guild_id].level++
-		  
-	  }*/
 	  
 	  var tI = cC.findIndex(x => { return x.discord.id.id == evt.d.author.id });
 	  cC[tI] = s
 	  
 	  c.cache = cC;
 	  cache.JSON(c);
-	  cache.sync();
-	  process.send({c:cache.JSON(),e:evt,l:lvUped,d:s});
+		cache.sync();
+		if(callbacks.onLevelUp) callbacks.onLevelUp({e:evt,d:s});
     } 
-});
-
-
-
-function reloadCache(service, mode) {
-//var sKey = auths[service];
-
-if(!sKey) return null
-console.log('Reloading cache for ' + service + '.');
-switch (service) {
-
-case 'steam':
-var filteredUserDb = userDb.JSON().filter(x => {return x.ids.steam != ''} )
-	for(var i = 0; i < filteredUserDb.length; i++) {
-		
-		var u = filteredUserDb;
-		var c = cache.JSON().cache;
-		console.log(u[i].ids.steam);
-		request.get('http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid='+ mode + '&key=' + sKey +'&steamid=' +  u[i].ids.steam, function(err,resp,body) {
-			    if(resp.statusCode != 200) {
-					console.log(resp.request.uri.query.split('&steamid=')[1]);
-					var u = filteredUserDb;
-					var udI = u.findIndex(x => { return x.ids.steam == resp.request.uri.query.split('&steamid=')[1] });
-				     u[udI].ids.steam = ''
-					userDb.JSON(u);
-					userDb.sync();
-				console.log('Error reloading the cache for user ' + (udI+1) + ': ' + resp.statusCode + ' - Steam ID cleared.');
-				
-				} else {
-			    try {
-				body = JSON.parse(body);
-				} catch(e) {if(e) {console.log(body); } }
-				//console.log(body);
-				if(body.playerstats) {
-				var c = cache.JSON().cache;
-				var u = filteredUserDb;
-				var uI = c.findIndex(x => { return x.steam.data[mode].playerstats.steamID == body.playerstats.steamID });
-				var udI = u.findIndex(x => { return x.ids.steam == body.playerstats.steamID });
-				console.log(uI,udI);
-				if(uI != -1) {
-					if(c[uI].steam.data[mode] != body) {
-					c[uI].steam.data[mode] = body;
-					if(c[uI].discord === null || c[uI].discord === undefined) {
-						c[uI].discord = {}
-					    c[uI].discord.id = u[udI].ids.discord
-					}
-					var cacheSet = cache.JSON();
-					cacheSet.cache = c
-					cache.JSON(cacheSet);
-					cache.sync();
-					}
-				  var cacheStatSet = cache.JSON();
-				  cacheStatSet.stats.lastReload = Date.now();
-				  cache.JSON(cacheStatSet);
-				  cache.sync()
-				} else if (udI != -1) {
-					var x = {};
-					x.steam = {}
-					if(x.discord) {
-					x.discord = {}
-					x.discord.id = u[udI].ids.discord
-					}
-					x.steam.data = {}
-					x.steam.data[mode] = body;
-					c.push(x);
-					var cacheSet = cache.JSON();
-					cacheSet.cache = c
-					cacheSet.stats.lastReload = Date.now();
-					cache.JSON(cacheSet);
-					cache.sync();
-					console.log('Added a user to the cache!');
-				} else console.log('Reload failed');
-				}
-				}
-			 });
-		
-	}
-	break
-}
-}/*
-setInterval(function() {
-	reloadCache('steam','730');
-}, 600000)
-reloadCache('steam','730');*/
+};
 
 var server = app.listen(5555, function() {
   console.log('Your app is listening on port ' + server.address().port);

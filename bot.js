@@ -20,14 +20,12 @@ for(var i = 0; i < 3; i++) {
     });
 }*/
 var voiceSessions = {};
-var cp = require('child_process');
-const webserver = cp.fork(`${__dirname}/webserver.js`);
-var pointCache = {};
+const webserver = require(`./webserver.js`)(db);
 var channelActivity = require('./channelactivity.js')(bot,db);
 var antiSpam = require('./antispam.js');
 var commandManager = require('./commandmanager.js')
+var conversations = {};
 
-var playerVotes = {};
 var cfg = {
 	cooldown_e: 2,
 	cooldown_e_t: 3600000,
@@ -76,10 +74,7 @@ var cfg = {
 
 console.log('💾 Process launched!');
 
-webserver.on('message', function (m) {
-	pointCache = m.c
-
-	if (m.l) {
+webserver.onLevelUp(function (m) {
 		var evt = m.e;
 		if (!evt) return
 
@@ -90,25 +85,15 @@ webserver.on('message', function (m) {
 		}, function (e, r) {
 			setTimeout(function () { bot.deleteMessage({ channelID: r.channel_id, messageID: r.id }); }, 10000)
 		});
-
-	} else if (m.fn == "giveLinkCode") {
-		bot.sendMessage({
-			to: m.evt.d.author.id,
-			message: 'Your connection code is: ```' + m.code + '```. Alternatively, you can use this link to automatically sign in: \nhttp://fossilbot.cf/lb/' + m.evt.d.guild_id + '?acn=gcn&tcd=' + encodeURIComponent(m.code)
-
-		});
-
-	} else if (m.fn == "setServerConfig") {
-		var dbc = db.JSON();
-		dbc.config[m.cfg.guild_id] = m.cfg
-		db.JSON(dbc);
-		db.sync();
-
-	}
-
-
 });
-
+webserver.onEmailAuth(function(m) {
+	bot.removeFromRole({
+		serverID: m.guild_id,
+		userID: m.userid,
+		roleID: roleSearchByName({d:{guild_id: m.guild_id}}, 'New Recruit')
+	});
+    
+});
 // Initialize Discord Bot
 var bot = new Discord.Client({
 	token: auth
@@ -130,10 +115,6 @@ bot.on('disconnect', function (erMsg, code) {
 });
 
 var cmdprefix = ">";
-var doRSM = true,
-	botenabled = true;
-var cfgtrytime = 0;
-var createdRoleGlobal;
 
 //Update the name of voice channels when the first person joins
 bot.on('voiceStateUpdate', function (evt) {
@@ -200,31 +181,62 @@ bot.on('guildMemberAdd', function (member, evt) {
 	if (!_cfg.msgs.joinPublic) { return }
 	if (!_cfg.msgs.joinPrivate) { return }
 	if (!_cfg.enabledFeatures.joinmessages) { return }
-	try {
+	if(evt.d.guild_id != '392830469500043266') {
+		try {
+			bot.sendMessage({
+				to: evt.d.guild_id,
+				message: _cfg.msgs.joinPublic.replace('{USER}', evt.d.user.id)
+			});
+		} catch (e) { }
 		bot.sendMessage({
-			to: evt.d.guild_id,
-			message: _cfg.msgs.joinPublic.replace('{USER}', evt.d.user.id)
+			to: evt.d.user.id,
+			message: _cfg.msgs.joinPrivate.replace('{USER}', evt.d.user.id)
 		});
-	} catch (e) { }
-	bot.sendMessage({
-		to: evt.d.user.id,
-		message: _cfg.msgs.joinPrivate.replace('{USER}', evt.d.user.id)
-	});
+	} else {
+		bot.sendMessage({
+			to: evt.d.user.id,
+			message: "Hey, welcome to NHS! As you can see, there aren't many open channels. This is to keep the majority of the server secure against raids and trolling; we're a very friendly server, and we don't want that to be taken advantage of. If you want to be automatically allowed in, please use the `>nhs email <email address>` command in this DM so I can make sure you're from our school. Please use your school-provided email address. Thanks, and I hope to see you in the server!"
+		});
+	}
 
 });
 bot.on('message', function (user, userID, channelID, message, evt) {
 	try {
 
 		//deny commands in DMs
-		if (!bot.servers[evt.d.guild_id] && message.split(' ')[0] == '>help') {
-			var helpdochere = strdoc.help.main
-			if (message.split(' ')[1] && strdoc.help[message.split(' ')[1]]) { helpdochere = strdoc.help[message.split(' ')[1]] }
-			bot.sendMessage({
-				to: userID,
-				message: helpdochere
-			});
+		if(!bot.servers[evt.d.guild_id]) {
+			if (message.split(' ')[0] == '>help') {
+				var helpdochere = strdoc.help.main
+				if (message.split(' ')[1] && strdoc.help[message.split(' ')[1]]) { helpdochere = strdoc.help[message.split(' ')[1]] }
+				bot.sendMessage({
+					to: userID,
+					message: helpdochere
+				});
+				return
+			} else if(message.split(' ')[0].toLowerCase() == 'nhs') {
+					var cmd = message.toLowerCase().split(' ');
+					var email = cmd[2]
+
+					if(email.split('@')[1] != 'students.needham.k12.ma.us' || email.split('@')[0].length > 6) {
+						bot.sendMessage({
+							to: userID,
+							message: `Sorry, \`${email}\` is not a valid email address.`
+						});
+					} else {
+						bot.sendMessage({
+							to: userID,
+							message: "Okay, I'm sending an email with a validation code to you now..."
+						});
+						webserver.emailCodeGenerateAndSend({evt: evt}, function(r) {
+						bot.sendMessage({
+							to: userID,
+							message: r.err?"It looks like there was an error with sending the email. The error code I got was `"+r.err+"`. Try again later, maybe?":"Email sent successfully! If you don't see it, try looking in your Spam or Junk folders."
+						});
+					})
+				}
+			} else if (!bot.servers[evt.d.guild_id]) { return }
 			return
-		} else if (!bot.servers[evt.d.guild_id]) { return }
+	  }
 
 		//set the configuration obj (oh my lord we should asap transfer to sql or literally anything other than a json file)
 		var _cfg = cfg;
@@ -296,7 +308,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			//add a random number between 10 and 25 to the score
 			if (message.substring(0, 1) != cmdprefix) {
 				try {
-					webserver.send({ cmd: evt, serverDat: bot.servers[evt.d.guild_id] });
+					webserver.incrementXp({ evt: evt, serverDat: bot.servers[evt.d.guild_id] });
 				} catch (e) { console.log(e) }
 			}
 		}
@@ -383,4 +395,3 @@ function channelSearchByName(evt, q) {
 	if (r != null) { return r } else { return null }
 }
 
-process.on('SIGTERM', function () { webserver.kill() });

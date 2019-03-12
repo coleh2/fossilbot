@@ -1,5 +1,6 @@
 /.data/db.json
 auth.json
+email_auth.json
 _env
 apiCodes.json
 /webserver/db/userdb.json

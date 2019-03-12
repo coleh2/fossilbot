@@ -26,6 +26,7 @@
     "import-scripts": "^1.0.0",
     "isstream": "^0.1.2",
     "jsdom": "^13.0.0",
+    "nodemailer": "^5.1.1",
     "options": "^0.0.6",
     "opusscript": "0.0.6",
     "profanity-matcher": "^1.0.1",
