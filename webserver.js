@@ -344,6 +344,11 @@ app.get('/validate_email', (req, res) => {
 	 if(!userRecord) return res.sendStatus(404)
 	 if(userRecord.emailConnectCode != req.query.code) return res.sendStatus(401)
 
+   userRecord.email_address = userRecord.allegedEmail;
+
+	 cacheObject.cache = cacheContents;
+	 cache.JSON(cacheObject);
+
 	 callbacks.onEmailAuth({userid: req.query.userid, guild_id: req.query.serverid});
 
    res.sendFile(__dirname + '/webserver/pages/email_response.html');
@@ -379,7 +384,8 @@ var emailCodeGenerateAndSend = (m,cb) => {
 	var user_id = evt.d.author.id
 	var code = generateCode();
 	
-	userRecord.emailConnectCode = code
+	userRecord.emailConnectCode = code;
+	userRecord.allegedEmail = m.email_address;
 	
 	cacheObject.cache = cacheContents;
 	cache.JSON(cacheObject);
