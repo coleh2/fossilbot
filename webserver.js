@@ -349,7 +349,7 @@ app.get('/validate_email', (req, res) => {
 	 cacheObject.cache = cacheContents;
 	 cache.JSON(cacheObject);
 
-	 callbacks.onEmailAuth({userid: req.query.userid, guild_id: req.query.serverid});
+	 callbacks.onEmailAuth({userid: req.query.userid, guild_id: req.query.serverid, email: userRecord.email_address});
 
    res.sendFile(__dirname + '/webserver/pages/email_response.html');
 });

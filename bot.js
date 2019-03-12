@@ -92,6 +92,15 @@ webserver.onEmailAuth(function(m) {
 		userID: m.userid,
 		roleID: roleSearchByName({d:{guild_id: m.guild_id}}, 'New Recruit')
 	});
+	var directory = require('./nps_email_directory.json');
+	var directoryItem = directory.find(x=> {x.e == m.email_address});
+	var hasMidddleInitial = (directoryItem.n.split(' ').length==4);
+	var nick = hasMidddleInitial?(bot.users[m.userid].username + ' (' + directoryItem.n.split(' ')[0] + ' ' + directoryItem.n.split(' ')[2].substring(0,1) + ')'):(bot.users[m.userid].username + ' (' + directoryItem.n.split(' ')[0] + ' ' + directoryItem.n.split(' ')[1].substring(0,1) + ')');
+	bot.editNickname({
+		serverID: m.guild_id,
+		userID: m.userid,
+		nick: nick
+	})
     
 });
 // Initialize Discord Bot
