@@ -213,7 +213,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					message: helpdochere
 				});
 				return
-			} else if(message.split(' ')[0].toLowerCase() == 'nhs') {
+			} else if(message.split(' ')[0].toLowerCase() == '>nhs') {
 					var cmd = message.toLowerCase().split(' ');
 					var email = cmd[2]
 
