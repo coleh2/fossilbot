@@ -21,7 +21,7 @@ for(var i = 0; i < 3; i++) {
 }*/
 var voiceSessions = {};
 const webserver = require(`./webserver.js`)(db);
-var channelActivity = require('./channelactivity.js')(bot,db);
+var channelActivity = require('./channelactivity.js')(bot, db);
 var antiSpam = require('./antispam.js');
 var commandManager = require('./commandmanager.js')
 var conversations = {};
@@ -65,44 +65,44 @@ var cfg = {
 		take: "takemefrom"
 	},
 	msgs: {
-		joinPublic: "Welcome to the server, <@{USER}>!",
+		joinPublic: "",
 		joinPrivate: ""
 	},
-	enabledFeatures: { "getme": true, "autoorder": true, "notify": true, "addmeto": true, "voicechannelgameemojis": true, "experience": true, "antispam": true, "autoresponse": true, "joinmessages": true, "namecolor": true },
+	enabledFeatures: { "getme": true, "autoorder": false, "notify": true, "addmeto": true, "voicechannelgameemojis": false, "experience": false, "antispam": false, "autoresponse": false, "joinmessages": false, "namecolor": true },
 	autoResp: {}
 };
 
 console.log('💾 Process launched!');
 
 webserver.onLevelUp(function (m) {
-		var evt = m.e;
-		if (!evt) return
+	var evt = m.e;
+	if (!evt) return
 
-		bot.sendMessage({
-			to: evt.d.channel_id,
-			message: 'Congrats, <@' + evt.d.author.id + '>! You just leveled up to level ' + m.d.discord.data[evt.d.guild_id].level + '\n*This message will be deleted in 10s*'
+	bot.sendMessage({
+		to: evt.d.channel_id,
+		message: 'Congrats, <@' + evt.d.author.id + '>! You just leveled up to level ' + m.d.discord.data[evt.d.guild_id].level + '\n*This message will be deleted in 10s*'
 
-		}, function (e, r) {
-			setTimeout(function () { bot.deleteMessage({ channelID: r.channel_id, messageID: r.id }); }, 10000)
-		});
+	}, function (e, r) {
+		setTimeout(function () { bot.deleteMessage({ channelID: r.channel_id, messageID: r.id }); }, 10000)
+	});
 });
-webserver.onEmailAuth(function(m) {
+webserver.onEmailAuth(function (m) {
 	bot.removeFromRole({
 		serverID: m.guild_id,
 		userID: m.userid,
-		roleID: roleSearchByName({d:{guild_id: m.guild_id}}, 'New Recruit')
+		roleID: roleSearchByName({ d: { guild_id: m.guild_id } }, 'New Recruit')
 	});
 	var directory = require('./nps_email_directory.json');
-	var directoryItem = directory.find(x=> {return x.e == m.email});
-	if(!directoryItem) return;
-	var hasMidddleInitial = (directoryItem.n.split(' ').length==4);
-	var nick = hasMidddleInitial?(bot.users[m.userid].username + ' (' + directoryItem.n.split(' ')[0] + ' ' + directoryItem.n.split(' ')[2].substring(0,1) + ')'):(bot.users[m.userid].username + ' (' + directoryItem.n.split(' ')[0] + ' ' + directoryItem.n.split(' ')[1].substring(0,1) + ')');
+	var directoryItem = directory.find(x => { return x.e == m.email });
+	if (!directoryItem) return;
+	var hasMidddleInitial = (directoryItem.n.split(' ').length == 4);
+	var nick = hasMidddleInitial ? (bot.users[m.userid].username + ' (' + directoryItem.n.split(' ')[0] + ' ' + directoryItem.n.split(' ')[2].substring(0, 1) + ')') : (bot.users[m.userid].username + ' (' + directoryItem.n.split(' ')[0] + ' ' + directoryItem.n.split(' ')[1].substring(0, 1) + ')');
 	bot.editNickname({
 		serverID: m.guild_id,
 		userID: m.userid,
 		nick: nick
 	})
-    
+
 });
 // Initialize Discord Bot
 var bot = new Discord.Client({
@@ -127,6 +127,17 @@ bot.on('disconnect', function (erMsg, code) {
 var cmdprefix = ">";
 
 //Update the name of voice channels when the first person joins
+bot.on('presenceUpdate', function (evt) {
+	var _cfg = cfg;
+	if (db.JSON().config[evt.d.guild_id]) { _cfg = db.JSON().config[evt.d.guild_id] }
+
+	if (!_cfg.enabledFeatures.voicechannelgameemojis || !voiceSessions[evt.d.user.id]) { return }
+
+	bot.editChannelInfo({
+		channelID: voiceSessions[evt.d.user_id],
+		name: '\ud83c\udfae:' + (_cfg.gameEmoji[bot.users[evt.d.user.id].game.name] || '\ud83c\udfb2') + '| ' + bot.channels[voiceSessions[evt.d.user_id]].name
+	});
+});
 bot.on('voiceStateUpdate', function (evt) {
 
 	var _cfg = cfg;
@@ -138,46 +149,23 @@ bot.on('voiceStateUpdate', function (evt) {
 		if (!voiceSessions[evt.d.user_id]) { return }
 		evt.d._channel_id = voiceSessions[evt.d.user_id];
 		if (Object.keys(bot.channels[evt.d._channel_id].members).length == 0 && bot.channels[evt.d._channel_id].name.substring(0, 3) == '\ud83c\udfae:' && bot.channels[evt.d._channel_id].name.length >= 5) {
-			request({
-				url: 'https://discordapp.com/api/v6/channels/' + evt.d._channel_id,
-				method: 'PATCH',
-				headers: {
-					'Content-Type': 'application/json',
-					'Authorization': 'Bot ' + auth
-				},
-				body: '{"name": "' + bot.channels[evt.d._channel_id].name.split('| ').splice(1).join('| ') + '"}'
-			}, function (e, r, b) { console.log(r.statusCode) });
+			bot.editChannelInfo({
+				channelID: evt.d.channel_id,
+				name: bot.channels[evt.d._channel_id].name.split('| ').splice(1).join('| ')
+			});
 		}
 
-		voiceSessions[evt.d.user_id] = null
+		delete voiceSessions[evt.d.user_id];
 		if (!evt.d.channel_id) { return }
 	}
-	voiceSessions[evt.d.user_id] = evt.d.channel_id
-	if (!bot.users[evt.d.user_id].game) {
-		if (Object.keys(bot.channels[evt.d.channel_id].members).length == 1 && bot.channels[evt.d.channel_id].name.length < 96 && bot.channels[evt.d.channel_id].name.substring(0, 3) != '\ud83c\udfae:') {
-			request({
-				url: 'https://discordapp.com/api/v6/channels/' + evt.d.channel_id,
-				method: 'PATCH',
-				headers: {
-					'Content-Type': 'application/json',
-					'Authorization': 'Bot ' + auth
-				},
-				body: '{"name": "' + (('\ud83c\udfae:' + '\ud83c\udf37') + '| ' + bot.channels[evt.d.channel_id].name) + '"}'
-			}, function (e, r, b) { console.log(r.statusCode) });
-			return
-		}
-	}
+	voiceSessions[evt.d.user_id] = evt.d.channel_id;
+	
 	if (!_cfg.gameEmoji) { _cfg.gameEmoji = { 'foo': 'bar' } }
 	if (Object.keys(bot.channels[evt.d.channel_id].members).length == 1 && bot.channels[evt.d.channel_id].name.length < 96 && bot.channels[evt.d.channel_id].name.substring(0, 3) != '\ud83c\udfae:') {
-		request({
-			url: 'https://discordapp.com/api/v6/channels/' + evt.d.channel_id,
-			method: 'PATCH',
-			headers: {
-				'Content-Type': 'application/json',
-				'Authorization': 'Bot ' + auth
-			},
-			body: '{"name": "' + ('\ud83c\udfae:' + (_cfg.gameEmoji[bot.users[evt.d.user_id].game.name] || '\ud83c\udfb2') + '| ' + bot.channels[evt.d.channel_id].name) + '"}'
-		}, function (e, r, b) { console.log(r.statusCode) });
+		bot.editChannelInfo({
+			channelID: evt.d.channel_id,
+			name: '\ud83c\udfae:' + (_cfg.gameEmoji[bot.users[evt.d.user_id].game.name] || '\ud83c\udfb2') + '| ' + bot.channels[evt.d.channel_id].name
+		});
 	}
 });
 
@@ -191,7 +179,7 @@ bot.on('guildMemberAdd', function (member, evt) {
 	if (!_cfg.msgs.joinPublic) { return }
 	if (!_cfg.msgs.joinPrivate) { return }
 	if (!_cfg.enabledFeatures.joinmessages) { return }
-	if(evt.d.guild_id != '392830469500043266') {
+	if (evt.d.guild_id != '392830469500043266') {
 		try {
 			bot.sendMessage({
 				to: evt.d.guild_id,
@@ -210,11 +198,12 @@ bot.on('guildMemberAdd', function (member, evt) {
 	}
 
 });
+
 bot.on('message', function (user, userID, channelID, message, evt) {
 	try {
 
 		//deny commands in DMs
-		if(!bot.servers[evt.d.guild_id]) {
+		if (!bot.servers[evt.d.guild_id]) {
 			if (message.split(' ')[0] == '>help') {
 				var helpdochere = strdoc.help.main
 				if (message.split(' ')[1] && strdoc.help[message.split(' ')[1]]) { helpdochere = strdoc.help[message.split(' ')[1]] }
@@ -223,9 +212,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					message: helpdochere
 				});
 				return
-			} else if(message.split(' ')[0].toLowerCase() == '>nhs') {
-					var cmd = message.toLowerCase().split(' ');
-					var email = cmd[2]
+			} else if (message.split(' ')[0].toLowerCase() == '>nhs') {
+				var cmd = message.toLowerCase().split(' ');
+				var email = cmd[2]
 
 				if (email.split('@')[1] != 'students.needham.k12.ma.us' || email.split('@')[0].length > 6) {
 					bot.sendMessage({
@@ -236,19 +225,19 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					bot.sendMessage({
 						to: userID,
 						message: "Okay, I'm sending an email with a validation code to you now..."
-					}, function (e,r) {
+					}, function (e, r) {
 						console.log(webserver);
 						webserver.email({ evt: evt, email_address: email }, function (r) {
 							bot.sendMessage({
 								to: userID,
-								message: r.err ? "It looks like there was an error with sending the email. The error code I got was `" + r.err + "`. Try again later, maybe?" : "Email sent successfully to `"+r.email+"`. If you don't see it, try looking in your Spam or Junk folders."
+								message: r.err ? "It looks like there was an error with sending the email. The error code I got was `" + r.err + "`. Try again later, maybe?" : "Email sent successfully to `" + r.email + "`. If you don't see it, try looking in your Spam or Junk folders."
 							});
 						});
 					});
 				}
 			}
 			return
-	  }
+		}
 
 		//set the configuration obj (oh my lord we should asap transfer to sql or literally anything other than a json file)
 		var _cfg = cfg;
@@ -302,16 +291,16 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			}
 		}
 		//auto-ordering channels
-		if(_cfg.enabledFeatures.autoorder && _cfg.autoorder_category_name) {
+		if (_cfg.enabledFeatures.autoorder && _cfg.autoorder_category_name) {
 			console.log('orderable');
 			channelActivity.updateData(evt);
 			console.log(channelActivity.getLastReorderTime(evt.d.guild_id));
-			if(channelActivity.getLastReorderTime(evt.d.guild_id) < Date.now() - 3600000 ) {
+			if (channelActivity.getLastReorderTime(evt.d.guild_id) < Date.now() - 3600000) {
 				console.log('ordering time');
 				var categoryId = channelSearchByName(evt, _cfg.autoorder_category_name);
-				if(categoryId) {
+				if (categoryId) {
 					console.log('ordering ', categoryId);
-				  channelActivity.orderChannels(evt.d.guild_id, categoryId);
+					channelActivity.orderChannels(evt.d.guild_id, categoryId);
 				}
 			}
 		}
@@ -336,7 +325,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			if (commandManager[cmd]) {
 				commandManager[cmd](evt, args, _cfg, bot);
 			} else {
-		         
+
 				//this'll be removed later-- basically a 'this has been removed' note for concancated-word commands
 				var recentlyChangedCommands = {
 					"getme": "get",
@@ -349,20 +338,20 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				}
 
 
-				if (cfg.commonSynonyms[cmd.toLowerCase()]) { var dym = " Do you mean `>" + _cfg.commonSynonyms[cmd] + '`?'; } else { var dym; }
+				if (cfg.commonSynonyms[cmd.toLowerCase()]) { var didYouMean = " Do you mean `>" + _cfg.commonSynonyms[cmd] + '`?'; } else { var didYouMean; }
 
-				if(recentlyChangedCommands[cmd]) {
+				if (recentlyChangedCommands[cmd]) {
 					bot.sendMessage({
 						to: channelID,
 						message: "That command has been renamed. Use `>" + recentlyChangedCommands[cmd] + "` instead, please. Thank you! =)"
 					});
-				} else if(dym) {
+				} else if (didYouMean) {
 					bot.sendMessage({
 						to: channelID,
-						message: "Sorry, I couldn't find a command named `" + cmd + '`.' + dym
+						message: "Sorry, I couldn't find a command named `" + cmd + '`.' + didYouMean
 					});
 				}
-}
+			}
 
 			return true
 		}
