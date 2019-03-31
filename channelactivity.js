@@ -4,7 +4,7 @@ var request = require('request');
 
 var lastOrderingTimestamp = {};
 
-module.exports = function(discord_bot_instance, js_db_instance) {
+module.exports = function(discord_bot_instance, sqlite_db_instance) {
 	bot = discord_bot_instance;
 	db = js_db_instance;
 	
@@ -22,51 +22,35 @@ function getlastOrderingTimestamp (id) {
 	return (lastOrderingTimestamp[id]||0);
 }
 
-function makeActivityObj(server_id)  {
-	var data = db.JSON().activity;
-	if(!data) return
+function makeActivityObj(guild_id)  {
+	var data = db.prepare('SELECT * FROM channelactivity WHERE guild_id = ?').all([guild_id])
 	
-	var keys = Object.keys(data), workingobject = {};
-	for(var i = 0; i < keys.length; i++) {
-		var _keys = Object.keys(data[keys[i]][server_id]||{});
-		for(var _i = 0; _i < _keys.length; _i++) {
-			if(!workingobject[_keys[_i]]) workingobject[_keys[_i]] = 0;
-			workingobject[_keys[_i]] += data[keys[i]][server_id][_keys[_i]];
-		}
+	//return an object containing the total messages for each channel, stored by the channel ids.
+	var keys = workingobject = {};
+	for(var i = 0; i < data.length; i++) {
+		if(!workingobject[data[i].channel_id]) workingobject[data[i].channel_id] = 0;
+		workingobject[data[i].channel_id] += data[i].messages;
 	}
 	return workingobject;
 }
-function deleteOldActivities(dbc) {
-	for(var i = 0, keys = Object.keys(dbc.activity); i < keys.length; i++) {
-		//if the entry is older than a week, delete it
-		if(keys[i] < ( new Date() ).setHours(0,0,0,0) - 604800000) delete dbc.activity[keys[i]]
-	}
+function deleteOldActivities(cutOffPoint) {
+
+	db.prepare('DELETE FROM channelactivity WHERE day < ?').run([cutOffPoint])
 }
 function updateActivity(evt) {
-	var dbc = db.JSON();
 	
-	//null checks 
-	if(!dbc.activity) { dbc.activity = {} }
-	if(!dbc.activity[today]) { dbc.activity[today] = {} }
-	
-	deleteOldActivities(dbc);
-	
+	var today = Math.floor(Date.now() / 86400000);
+	deleteOldActivities(today - 8);
+
 	if(evt.t == 'MESSAGE_CREATE') {
-		var today = ( new Date() ).setHours(0,0,0,0);
 		
-		if(!dbc.activity[today]) { dbc.activity[today] = {} }
-		if(!dbc.activity[today][evt.d.guild_id]) { dbc.activity[today][evt.d.guild_id] = {} }
-		if(!dbc.activity[today][evt.d.guild_id][evt.d.channel_id]) dbc.activity[today][evt.d.guild_id][evt.d.channel_id] = 0;
+		db.prepare('INSERT OR IGNORE INTO channelactivity (channel_id, guild_id, day, messages) VALUES (?, ?, ?, 0)').run([evt.d.guild_id, evt.d.channel_id, today]);
 		
-		dbc.activity[today][evt.d.guild_id][evt.d.channel_id]++
+		db.prepare('UPDATE channelactivity SET messages = messages + 1 WHERE channel_id = ? AND guild_id = ? AND messages = ?').run([evt.d.guild_id, evt.d.channel_id, today]);
 		
 	} else if (evt.t == 'PRESENCE_UPDATE') {
 		
 	}
-	
-	
-	db.JSON(dbc);
-	db.sync();
 }
 function updateChannelOrderFromActivity(serverId,categoryToUpdateId,topCallback) {
 	

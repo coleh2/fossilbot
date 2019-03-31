@@ -13,3 +13,4 @@ channelDb.json
 translatekey.json
 .pm2/
 nps_email_directory.json
+/node_modules/

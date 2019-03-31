@@ -9,8 +9,6 @@ var fs = require('fs');
 var nodemailer = require('nodemailer')
 var jsonDb = require('simple-json-db');
 var cache = new jsonDb('./webserver/db/webcache.json');
-var userDb = new jsonDb('./webserver/db/userdb.json');
-var channelDb = new jsonDb('./webserver/db/channelDb.json');
 //var auths = require('./webserver/apiCodes.json');
 var botAuth = require('./auth.json');
 
@@ -19,8 +17,8 @@ var callbacks = {};
 var db;
 
 
-module.exports = function(_db) {
-	if(!_db) return false;
+module.exports = function (_db) {
+	if (!_db) return false;
 	db = _db
 	return exportFunctions;
 }
@@ -29,25 +27,25 @@ module.exports = function(_db) {
 var exportFunctions = {
 	onLevelUp: (cb) => { callbacks.onLevelUp = cb; },
 	onEmailAuth: (cb) => { callbacks.onEmailAuth = cb; },
-	incrementXp: m => {incrementXpFunc(m)},
-	email: (m,cb) => {emailCodeGenerateAndSend(m,cb)}
+	incrementXp: m => { incrementXpFunc(m) },
+	email: (m, cb) => { emailCodeGenerateAndSend(m, cb) }
 }
 
 
-Date.prototype.getWeek = function() {
-  var date = new Date(this.getTime());
-  date.setHours(0, 0, 0, 0);
-  // Thursday in current week decides the year.
-  date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
-  // January 4 is always in week 1.
-  var week1 = new Date(date.getFullYear(), 0, 4);
-  // Adjust to Thursday in week 1 and count number of weeks from date to week1.
-  return 1 + Math.round(((date.getTime() - week1.getTime()) / 86400000
-                        - 3 + (week1.getDay() + 6) % 7) / 7);
+Date.prototype.getWeek = function () {
+	var date = new Date(this.getTime());
+	date.setHours(0, 0, 0, 0);
+	// Thursday in current week decides the year.
+	date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
+	// January 4 is always in week 1.
+	var week1 = new Date(date.getFullYear(), 0, 4);
+	// Adjust to Thursday in week 1 and count number of weeks from date to week1.
+	return 1 + Math.round(((date.getTime() - week1.getTime()) / 86400000
+		- 3 + (week1.getDay() + 6) % 7) / 7);
 }
 
-if(cache.JSON().cache === undefined) {
-	cache.JSON({"cache": [],"stats":{}});
+if (cache.JSON().cache === undefined) {
+	cache.JSON({ "cache": [], "stats": {} });
 	cache.sync();
 	//console.log('cache initialized: ' + cache.JSON().cache);
 }
@@ -56,318 +54,318 @@ if(cache.JSON().cache === undefined) {
 app.use(express.json());
 
 
-app.get('/discordoauthresponse', function (req,resp) {
-        resp.sendFile(__dirname + '/webserver/assets/discordoauthredirect.html');
+app.get('/discordoauthresponse', function (req, resp) {
+	resp.sendFile(__dirname + '/webserver/assets/discordoauthredirect.html');
 });
 // http://expressjs.com/en/starter/basic-routing.html
-app.get('/', function(req, resp) {
-  resp.send('');
+app.get('/', function (req, resp) {
+	resp.send('');
 });// http://expressjs.com/en/starter/basic-routing.html
-app.get('/lb/:serverId', function(req, resp) {
-  resp.sendFile(__dirname + '/webserver/pages/lb.html');
+app.get('/lb/:serverId', function (req, resp) {
+	resp.sendFile(__dirname + '/webserver/pages/lb.html');
 });
-app.get('/cp/:serverId', function(req, resp) {
-  resp.sendFile(__dirname + '/webserver/pages/cp.html');
+app.get('/cp/:serverId', function (req, resp) {
+	resp.sendFile(__dirname + '/webserver/pages/cp.html');
 });
-app.get('/sd/:serverId/:fileName', function(req, resp) {
-  try {
-  resp.sendFile(__dirname + '/webserver/pages/sd/' + req.params.serverId + req.params.fileName + '.html');
-  } catch (e) {}
+app.get('/sd/:serverId/:fileName', function (req, resp) {
+	try {
+		resp.sendFile(__dirname + '/webserver/pages/sd/' + req.params.serverId + req.params.fileName + '.html');
+	} catch (e) { }
 });
 
 
-app.post('/adminAction',function(req,resp) {
-	
-	var notAuth = function() {
-        console.log('notAuth executed');
-        resp.status(401);
-        resp.send('"Not Authorized"');
+app.post('/adminAction', function (req, resp) {
+
+	var notAuth = function () {
+		console.log('notAuth executed');
+		resp.status(401);
+		resp.send('"Not Authorized"');
 	}
-	
-    //console.log(req.headers['authorization']);
-    if(!req.headers['authorization']) { notAuth(); return }
+
+	//console.log(req.headers['authorization']);
+	if (!req.headers['authorization']) { notAuth(); return }
 	var authHead = req.headers['authorization'];
 	var authHeadSplit = authHead.split('|');
-	if(authHeadSplit.length != 2) { notAuth(); return }
-	
-	var _usUser = cache.JSON().cache.find(x => {return (x.discord.id.id == authHeadSplit[1])});
+	if (authHeadSplit.length != 2) { notAuth(); return }
+
+	var _usUser = cache.JSON().cache.find(x => { return (x.discord.id.id == authHeadSplit[1]) });
 	console.log(_usUser.discord.auth);
-	if(!_usUser) { notAuth(); return }
-	if(!_usUser.discord) { notAuth(); return }
-	if(_usUser.discord.auth != authHead) { notAuth(); return }
-	
-    console.log(req.body);
-    
-	if(!req.body.guild_id) { resp.sendStatus(400); return }
-	
+	if (!_usUser) { notAuth(); return }
+	if (!_usUser.discord) { notAuth(); return }
+	if (_usUser.discord.auth != authHead) { notAuth(); return }
+
+	console.log(req.body);
+
+	if (!req.body.guild_id) { resp.sendStatus(400); return }
+
 	request({
-	  url: 'http://discordapp.com/api/v6/guilds/'+ req.body.guild_id +'/members/' + authHeadSplit[1],
-	  method: 'GET',
-      headers: {
-		  'Authorization': 'Bot ' + botAuth
-      }
-	}, function(e,r,b) {
-		if(e) { console.log('e: ' + e); notAuth(); return }
+		url: 'http://discordapp.com/api/v6/guilds/' + req.body.guild_id + '/members/' + authHeadSplit[1],
+		method: 'GET',
+		headers: {
+			'Authorization': 'Bot ' + botAuth
+		}
+	}, function (e, r, b) {
+		if (e) { console.log('e: ' + e); notAuth(); return }
 		var rolesArr;
-		try { rolesArr = JSON.parse(b).roles } catch(e) { if(e) { notAuth(); return } }
+		try { rolesArr = JSON.parse(b).roles } catch (e) { if (e) { notAuth(); return } }
 		//console.log(rolesArr);
 		request({
-		  url: 'http://discordapp.com/api/v6/guilds/'+ req.body.guild_id,
-		  method: 'GET',
-		  headers: {
-			  'Authorization': 'Bot ' + botAuth
-		  }
-		}, function(e,r,b) {
-		    if(e) { notAuth(); return }
+			url: 'http://discordapp.com/api/v6/guilds/' + req.body.guild_id,
+			method: 'GET',
+			headers: {
+				'Authorization': 'Bot ' + botAuth
+			}
+		}, function (e, r, b) {
+			if (e) { notAuth(); return }
 			var serverRolesArr;
 			//console.log(b);
-			try { serverRolesArr = JSON.parse(b).roles } catch(e) { if(e) { notAuth(); return } }
+			try { serverRolesArr = JSON.parse(b).roles } catch (e) { if (e) { notAuth(); return } }
 			serverRolesArr = serverRolesArr.filter(x => {
-			    return (0x8 & x.permissions)
+				return (0x8 & x.permissions)
 			});
-			if(JSON.parse(b).owner_id != authHeadSplit[1] && !serverRolesArr.find(x => { return ~rolesArr.indexOf(x.id) })) { notAuth(); return }
+			if (JSON.parse(b).owner_id != authHeadSplit[1] && !serverRolesArr.find(x => { return ~rolesArr.indexOf(x.id) })) { notAuth(); return }
 			//now that all that validation's aside, let's get down to bid-ness.
 			console.log('yeah seems legit');
-			
+
 			var dbc = db.JSON();
+			db.prepare('INSERT OR REPLACE INTO serverconfig (cooldown_g, cooldown_e, cooldown_e_t, cooldown_s, cooldown_s_t, cooldown_m, colldown_m_t, spam_time_mins, autoorder_category_name, game_emoji, name_color_roles, msgs, enabled_getme, enabled_autoorder, enabled_notify, enabled_addmeto, enabled_voicechannelgameemojis, enabled_experience, enabled_antispam, enabled_autoresponse, enabled_namecolor, auto_resp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)').run([
+				req.body.cooldown_g, req.body.cooldown_e, req.body.cooldown_e_t, req.body.cooldown_s, req.body.cooldown_s_t, req.body.cooldown_m, req.body.cooldown_m_t, req.body.spam_time_mins, req.body.autoorder_category_name, JSON.stringify(req.body.gameEmoji), JSON.stringify(req.body.nameColorRoles), JSON.stringify(req.body.msgs), req.body.enabledFeatures.getme, req.body.enabledFeatures.autoorder, req.body.enabledFeatures.notify, req.body.enabledFeatures.addmeto, req.body.enabledFeatures.voicechannelgameemojis, req.body.enabledFeatures.experience, req.body.enabledFeatures.antispam, req.body.enabledFeatures.autoresponse, req.body.enabledFeatures.namecolor, JSON.stringify(req.body.autoResp)
+			])
 			dbc.config[req.body.guild_id] = req.body
 			db.JSON(dbc);
 			db.sync();
-			
+
 			resp.sendStatus(200);
 		});
 	});
 });
 
-app.get('/connectCode',function(req,resp) {
-   // console.log(req.headers);
-    if(!req.headers['authorization']) { return }
-    
+app.get('/connectCode', function (req, resp) {
+	// console.log(req.headers);
+	if (!req.headers['authorization']) { return }
+
 	request({
-      url: 'https://discordapp.com/api/v6/users/@me',
-      method: 'GET',
-      headers: {
-		  'Authorization': 'Bearer ' + req.headers['authorization']
-      }
-  },function(e,r,b) {
-      console.log(b);
-      if(r.statusCode==200) {
-          resp.status = 200;
-          var sendDat = (function() {
-                    try { b = JSON.parse(b); } catch(e) {console.log(e) }
-                    var udb = cache.JSON();
-                     var uimI = udb.cache.findIndex(x => {return (x.discord.id.id == b.id)});
-                     if(uimI == -1) { return }
-                     if(!udb.cache[uimI].discord.auth) {
-            udb.cache[uimI].discord.auth = (function (m,n,i,c,f) { 
-                c = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890_-!";
-                for(i=0;i<30;i++) {
-                    f = (f||'') + c.charAt(m.floor(m.random() * c.length));
-                }
-                return f
-            })(Math) + '|' + b.id
-            cache.JSON(udb);
-            cache.sync();
-        }
-        
-        return {code: udb.cache[uimI].discord.auth, user: udb.cache[uimI].discord.id}
-              })();
-           console.log(sendDat);    
-          resp.send(sendDat);
-      } else {
-        resp.status = 403;
-        resp.send('"Not Authorized"');
-      }
-  });
+		url: 'https://discordapp.com/api/v6/users/@me',
+		method: 'GET',
+		headers: {
+			'Authorization': 'Bearer ' + req.headers['authorization']
+		}
+	}, function (e, r, b) {
+		console.log(b);
+		if (r.statusCode == 200) {
+			resp.status = 200;
+			var sendDat = (function () {
+				try { b = JSON.parse(b); } catch (e) { console.log(e) }
+				var udb = cache.JSON();
+				var uimI = udb.cache.findIndex(x => { return (x.discord.id.id == b.id) });
+				if (uimI == -1) { return }
+				if (!udb.cache[uimI].discord.auth) {
+					udb.cache[uimI].discord.auth = (function (m, n, i, c, f) {
+						c = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890_-!";
+						for (i = 0; i < 30; i++) {
+							f = (f || '') + c.charAt(m.floor(m.random() * c.length));
+						}
+						return f
+					})(Math) + '|' + b.id
+					cache.JSON(udb);
+					cache.sync();
+				}
+
+				return { code: udb.cache[uimI].discord.auth, user: udb.cache[uimI].discord.id }
+			})();
+			console.log(sendDat);
+			resp.send(sendDat);
+		} else {
+			resp.status = 403;
+			resp.send('"Not Authorized"');
+		}
+	});
 
 
 });
 
-app.get('/data', function(req, resp) {
+app.get('/data', function (req, resp) {
 	console.log('request for data!');
-	var u = userDb.JSON();
 	var c = cache.JSON().cache;
 	var q = req.query;
-	if(q.src == 'steam') {
-				if(q.type == 'lb') {
-					try {
-					var uS = c.filter(x => { return x[q.src].data[q.mode]});
-					//uS = uS.slice(q.start, q.start + 100)
-					for(var i = 0; i < uS.length; i++) {
-					
-					uS[i] = {r: 
-					{stats: uS[i][q.src].data[q.mode].playerstats.stats.filter(x => {
-						return x.name == 'total_kills' || x.name == 'total_deaths' || x.name == 'total_contribution_score' || x.name == 'total_matches_won' || x.name == 'total_matches_played' || x.name == 'total_shots_fired' || x.name == 'total_shots_hit'
-						}) }, discord: uS[i].discord.id}
-					
+	if (q.src == 'steam') {
+		if (q.type == 'lb') {
+			try {
+				var uS = c.filter(x => { return x[q.src].data[q.mode] });
+				//uS = uS.slice(q.start, q.start + 100)
+				for (var i = 0; i < uS.length; i++) {
+
+					uS[i] = {
+						r:
+						{
+							stats: uS[i][q.src].data[q.mode].playerstats.stats.filter(x => {
+								return x.name == 'total_kills' || x.name == 'total_deaths' || x.name == 'total_contribution_score' || x.name == 'total_matches_won' || x.name == 'total_matches_played' || x.name == 'total_shots_fired' || x.name == 'total_shots_hit'
+							})
+						}, discord: uS[i].discord.id
 					}
-					uS[0].s = cache.JSON().stats
-					} catch (e) {console.log(e)}
-					if(!uS) {
-					resp.status = 404
-					resp.send('404 Not Found');
-					return null
-					
-					}
-					
-					//console.log(uS);
-					resp.status = 200
-					resp.send(uS);
-				
-				} else if(q.type == 'spec') {
-					try {
-						var uS = c.filter(x => { return x[q.src].data[q.mode]});
-						uS = uS.find(x => { return x.discord.id.id == q.did })
-						
-						
-					} catch(e) {console.log(e)}
-					if(!uS) {
-					resp.status = 404
-					resp.send('404');
-					return null
-					
-					}
-					
-					uS = uS[q.src].data[q.mode]
-					resp.status = 200
-					resp.send(uS);
-					
+
 				}
+				uS[0].s = cache.JSON().stats
+			} catch (e) { console.log(e) }
+			if (!uS) {
+				resp.status = 404
+				resp.send('404 Not Found');
+				return null
+
+			}
+
+			//console.log(uS);
+			resp.status = 200
+			resp.send(uS);
+
+		} else if (q.type == 'spec') {
+			try {
+				var uS = c.filter(x => { return x[q.src].data[q.mode] });
+				uS = uS.find(x => { return x.discord.id.id == q.did })
+
+
+			} catch (e) { console.log(e) }
+			if (!uS) {
+				resp.status = 404
+				resp.send('404');
+				return null
+
+			}
+
+			uS = uS[q.src].data[q.mode]
+			resp.status = 200
+			resp.send(uS);
+
+		}
 	} else if (q.src == 'discord') {
-	
-					if(q.type == 'lb') {
-						try {
-						var uS = c.filter(x => { try {return x[q.src].data[q.mode] } catch(e) {}});
-						if(!uS) console.log('uS isn"t a thing!!');
-                        var _uSLength = uS.length;
-						uS = uS.slice(q.start, q.start + 100)
-						for(var i = 0; i < uS.length; i++) {
-						uS[i] = {r: uS[i][q.src].data[q.mode], discord: uS[i].discord.id}
-						}
-						uS[0].s = cache.JSON().stats;
-                        uS[0].s.aL = _uSLength;
-						} catch (e) {console.log('Caught Error ' +e)}
-						
-						if(!uS) {
-						resp.status = 404
-						resp.send('404');
-						return null
-						}
-						
-						//console.log(uS);
-						resp.status = 200
-						resp.send(uS);
-				} else if (q.type == 'cfg') {
-					if(!q.mode) { resp.sendStatus(400); return }
 
-					//~~just some authentication-- nothing drastic needed here~~ cHANGE OF PLANS AUTHORIZATION REEQQQUUUIIIREDDD
-	var notAuth = function() {
-        console.log('notAuth executed');
-        resp.status(401);
-        resp.send('"Not Authorized"');
-	}
-	
-    //console.log(req.headers['authorization']);
-    if(!req.headers['authorization']) { notAuth(); return }
-	var authHead = req.headers['authorization'];
-	var authHeadSplit = authHead.split('|');
-	if(authHeadSplit.length != 2) { notAuth(); return }
-	
-	var _usUser = cache.JSON().cache.find(x => {return (x.discord.id.id == authHeadSplit[1])});
-	console.log(_usUser.discord.auth);
-	if(!_usUser) { notAuth(); return }
-	if(!_usUser.discord) { notAuth(); return }
-	if(_usUser.discord.auth != authHead) { notAuth(); return }
-	
-    console.log(req.body);
-    
-	
-	request({
-	  url: 'http://discordapp.com/api/v6/guilds/'+ q.mode +'/members/' + authHeadSplit[1],
-	  method: 'GET',
-      headers: {
-		  'Authorization': 'Bot ' + botAuth
-      }
-	}, function(e,r,b) {
-		if(e) { console.log('e: ' + e); notAuth(); return }
-		var rolesArr;
-		try { rolesArr = JSON.parse(b).roles } catch(e) { if(e) { notAuth(); return } }
-		//console.log(rolesArr);
-		request({
-		  url: 'http://discordapp.com/api/v6/guilds/'+ q.mode,
-		  method: 'GET',
-		  headers: {
-			  'Authorization': 'Bot ' + botAuth
-		  }
-		}, function(e,r,b) {
-		    if(e) { notAuth(); return }
-			var serverRolesArr;
-			//console.log(b);
-			try { serverRolesArr = JSON.parse(b).roles } catch(e) { if(e) { notAuth(); return } }
-			serverRolesArr = serverRolesArr.filter(x => {
-			    return (0x8 & x.permissions)
-			});
-			if(JSON.parse(b).owner_id != authHeadSplit[1] && !serverRolesArr.find(x => { return ~rolesArr.indexOf(x.id) })) { notAuth(); return }
-			//now that all that validation's aside, let's get down to bid-ness.
-			console.log('yeah seems legit');
-					fs.readFile('./.data/db.json', 'utf8', function (err, data) {
-				
-					if(err) return
-
-					var s = JSON.parse(data).config[q.mode];
-
-					if(!s) { resp.sendStatus(500); return }
-					if(!s.guild_id) { s.guild_id = q.mode }
-					 resp.send(s);
-				});
-		});
-	});
-
-				} else if (q.type == 'votes') {
-                if(!q.mode) { resp.sendStatus(400); return }
-				if(!cache.JSON().discordvotes[q.mode]) { cache.JSON().discordvotes[q.mode] = [] }
-                resp.send({d: cache.JSON().discordvotes[q.mode].slice(q.start, q.start + 100)})
-                } else {
-					resp.sendStatus(400); return 
+		if (q.type == 'lb') {
+			try {
+				var uS = c.filter(x => { try { return x[q.src].data[q.mode] } catch (e) { } });
+				if (!uS) console.log('uS isn"t a thing!!');
+				var _uSLength = uS.length;
+				uS = uS.slice(q.start, q.start + 100)
+				for (var i = 0; i < uS.length; i++) {
+					uS[i] = { r: uS[i][q.src].data[q.mode], discord: uS[i].discord.id }
 				}
+				uS[0].s = cache.JSON().stats;
+				uS[0].s.aL = _uSLength;
+			} catch (e) { console.log('Caught Error ' + e) }
+
+			if (!uS) {
+				resp.status = 404
+				resp.send('404');
+				return null
+			}
+
+			//console.log(uS);
+			resp.status = 200
+			resp.send(uS);
+		} else if (q.type == 'cfg') {
+			if (!q.mode) { resp.sendStatus(400); return }
+
+			//~~just some authentication-- nothing drastic needed here~~ cHANGE OF PLANS AUTHORIZATION REEQQQUUUIIIREDDD
+			var notAuth = function () {
+				console.log('notAuth executed');
+				resp.status(401);
+				resp.send('"Not Authorized"');
+			}
+
+			//console.log(req.headers['authorization']);
+			if (!req.headers['authorization']) { notAuth(); return }
+			var authHead = req.headers['authorization'];
+			var authHeadSplit = authHead.split('|');
+			if (authHeadSplit.length != 2) { notAuth(); return }
+
+			var _usUser = cache.JSON().cache.find(x => { return (x.discord.id.id == authHeadSplit[1]) });
+			console.log(_usUser.discord.auth);
+			if (!_usUser) { notAuth(); return }
+			if (!_usUser.discord) { notAuth(); return }
+			if (_usUser.discord.auth != authHead) { notAuth(); return }
+
+			console.log(req.body);
+
+
+			request({
+				url: 'http://discordapp.com/api/v6/guilds/' + q.mode + '/members/' + authHeadSplit[1],
+				method: 'GET',
+				headers: {
+					'Authorization': 'Bot ' + botAuth
+				}
+			}, function (e, r, b) {
+				if (e) { console.log('e: ' + e); notAuth(); return }
+				var rolesArr;
+				try { rolesArr = JSON.parse(b).roles } catch (e) { if (e) { notAuth(); return } }
+				//console.log(rolesArr);
+				request({
+					url: 'http://discordapp.com/api/v6/guilds/' + q.mode,
+					method: 'GET',
+					headers: {
+						'Authorization': 'Bot ' + botAuth
+					}
+				}, function (e, r, b) {
+					if (e) { notAuth(); return }
+					var serverRolesArr;
+					//console.log(b);
+					try { serverRolesArr = JSON.parse(b).roles } catch (e) { if (e) { notAuth(); return } }
+					serverRolesArr = serverRolesArr.filter(x => {
+						return (0x8 & x.permissions)
+					});
+					if (JSON.parse(b).owner_id != authHeadSplit[1] && !serverRolesArr.find(x => { return ~rolesArr.indexOf(x.id) })) { notAuth(); return }
+					//now that all that validation's aside, let's get down to bid-ness.
+					console.log('yeah seems legit');
+					var data = db.prepare('SELECT * FROM serverconfig WHERE id = ?').get([q.mode])
+
+					if (!data) { resp.sendStatus(404); return }
+					resp.send(toLegacyConfigSchema(data));
+				});
+			});
+
+		} else if (q.type == 'votes') {
+			if (!q.mode) { resp.sendStatus(400); return }
+			if (!cache.JSON().discordvotes[q.mode]) { cache.JSON().discordvotes[q.mode] = [] }
+			resp.send({ d: cache.JSON().discordvotes[q.mode].slice(q.start, q.start + 100) })
+		} else {
+			resp.sendStatus(400); return
+		}
 	} else {
-		resp.sendStatus(400); return 
+		resp.sendStatus(400); return
 	}
 });
 
 app.get('/validate_email', (req, res) => {
-	 if(!req.query.userid || !req.query.serverid || !req.query.code) return res.sendStatus(400)
+	if (!req.query.userid || !req.query.serverid || !req.query.code) return res.sendStatus(400)
 
-	 var cacheObject = cache.JSON();
-	 var cacheContents = cacheObject.cache;
-	 var userRecord = cacheContents.find(x => { return x.discord.id.id == req.query.userid });
-	 if(!userRecord) return res.sendStatus(404)
-	 if(userRecord.emailConnectCode != req.query.code) return res.sendStatus(401)
+	var cacheObject = cache.JSON();
+	var cacheContents = cacheObject.cache;
+	var userRecord = cacheContents.find(x => { return x.discord.id.id == req.query.userid });
+	if (!userRecord) return res.sendStatus(404)
+	if (userRecord.emailConnectCode != req.query.code) return res.sendStatus(401)
 
-   userRecord.email_address = userRecord.allegedEmail;
+	userRecord.email_address = userRecord.allegedEmail;
 
-	 cacheObject.cache = cacheContents;
-	 cache.JSON(cacheObject);
+	cacheObject.cache = cacheContents;
+	cache.JSON(cacheObject);
 
-	 callbacks.onEmailAuth({userid: req.query.userid, guild_id: req.query.serverid, email: userRecord.email_address});
+	callbacks.onEmailAuth({ userid: req.query.userid, guild_id: req.query.serverid, email: userRecord.email_address });
 
-   res.sendFile(__dirname + '/webserver/pages/email_response.html');
+	res.sendFile(__dirname + '/webserver/pages/email_response.html');
 });
 
 app.use(express.static(__dirname + '/webserver/assets'));
 
-var emailCodeGenerateAndSend = (m,cb) => {
+var emailCodeGenerateAndSend = (m, cb) => {
 	var evt = m.evt;
 	var cacheObject = cache.JSON();
 	var cacheContents = cacheObject.cache;
 	var userRecord = cacheContents.find(x => { return x.discord.id.id == evt.d.author.id });
-	
-	if(!userRecord) {
-		 cacheContents.push({discord: {id: evt.d.author, data: {} }});
-		 userRecord = cacheContents.find(x => { return x.discord.id.id == evt.d.author.id });
-		}
-		
-	if(cacheContents.find(x => { return x.email_address == m.email_address })) return cb({err: 'That email is already linked to an account.'})
+
+	if (!userRecord) {
+		cacheContents.push({ discord: { id: evt.d.author, data: {} } });
+		userRecord = cacheContents.find(x => { return x.discord.id.id == evt.d.author.id });
+	}
+
+	if (cacheContents.find(x => { return x.email_address == m.email_address })) return cb({ err: 'That email is already linked to an account.' })
 
 
 	var generateCode = function (m, n, i, c, f) {
@@ -380,13 +378,13 @@ var emailCodeGenerateAndSend = (m,cb) => {
 	};
 	//it's always going to be nhs
 	var guild_id = '392830469500043266';
-	
+
 	var user_id = evt.d.author.id
 	var code = generateCode();
-	
+
 	userRecord.emailConnectCode = code;
 	userRecord.allegedEmail = m.email_address;
-	
+
 	cacheObject.cache = cacheContents;
 	cache.JSON(cacheObject);
 
@@ -398,7 +396,7 @@ var emailCodeGenerateAndSend = (m,cb) => {
 			pass: require('./email_auth.json')
 		}
 	});
-	
+
 	var mailOptions = {
 		from: 'fossilbot-donotreply@coleh.net',
 		to: m.email_address,
@@ -408,97 +406,114 @@ var emailCodeGenerateAndSend = (m,cb) => {
 		attachments: [{
 			filename: 'fossilbotlogo.png',
 			path: './icon.png',
-			cid: 'fossilbotlogo' 
+			cid: 'fossilbotlogo'
 		}]
 	};
-	
-	transporter.sendMail(mailOptions, function(error, info){
-		  cb({err: error, email: m.email_address});
+
+	transporter.sendMail(mailOptions, function (error, info) {
+		cb({ err: error, email: m.email_address });
 	});
 }
 
 var incrementXpFunc = (m) => {
-  if(m.cmd) {
-	  var evt = m.cmd;
-	  var c = cache.JSON();
-	  var cC = c.cache;
-	  var cDb = channelDb.JSON();
-	  var s = cC.find(x => { return x.discord.id.id == evt.d.author.id });
-	  
-	  if(!cDb[evt.d.guild_id]) { cDb[evt.d.guild_id] = {} }
-	  
-	  if(!cDb[evt.d.guild_id][evt.d.author.id]) { cDb[evt.d.guild_id][evt.d.author.id] = Date.parse(evt.d.timestamp) }
-	  
-	  //if an item is too old, delete it
-	  for(var i = 0, e = Object.keys(cDb[evt.d.guild_id]); i < e.length; i++) {
-	     if(cDb[evt.d.guild_id][e[i]] < Date.parse(evt.d.timestamp) - 604800000) { delete cDb[evt.d.guild_id][e[i]] }
-		}
-		
-	  channelDb.JSON(cDb);
-	  channelDb.sync();
-	  
-	  
-	  if(!s) { 
-	  
-	  cC.push({discord: {id: evt.d.author, data: {} }})
-	  s = {discord: {id: evt.d.author, data: {} }}
-	  
-	  }
-	  
-	  
-	  
-	  if(!s.discord) s.discord = {}
-	  if(!s.discord.data) s.discord.data = {}
-	  if(!s.discord.data[evt.d.guild_id]) s.discord.data[evt.d.guild_id] = {}
-	  
-	  if(!s.discord.data[evt.d.guild_id].lastGain) s.discord.data[evt.d.guild_id].lastGain = 0
-	  
-	  s.discord.id = evt.d.author;
-	  
-	  var cS = s.discord.data[evt.d.guild_id].score; 
-	  var cM = s.discord.data[evt.d.guild_id].sms;
-	  var cL = s.discord.data[evt.d.guild_id].level;
-	  var lvUped = false;
-	  
-	  if(!cS) cS = 0;
-	  if(!cM) cM = 0;
-	  if(!cL) cL = 0;
-	  
-	  if(s.discord.data[evt.d.guild_id].lastGain < Date.now()-(1000*60)) {
-	  cS = cS + Math.floor( (Math.random() * 15 ) + 10 )
-      s.discord.data[evt.d.guild_id].lastGain = Date.now()
-      }
-	  
-	  cM++
-	  
-	  s.discord.data[evt.d.guild_id].score = cS
-	  s.discord.data[evt.d.guild_id].sms = cM
-	  s.discord.data[evt.d.guild_id].neededXp = Math.floor(5 / 6 * (cL+1) * (2 * (cL+1) * (cL+1) + 27 * (cL+1) + 91))
-	  s.discord.data[evt.d.guild_id].level = cL
-	  s.discord.data[evt.d.guild_id].totalNeededXp = ( s.discord.data[evt.d.guild_id].neededXp + ( 5 / 6 * (cL) * (2 * (cL) * (cL) + 27 * (cL) + 91) ) )
-	  
-	  s.discord.data[evt.d.guild_id].sName = m.serverDat.name
-	  s.discord.data[evt.d.guild_id].sId = m.serverDat.id
-	  s.discord.data[evt.d.guild_id].sIcon = m.serverDat.icon
-	  
-	  for( ; cS >= s.discord.data[evt.d.guild_id].totalNeededXp ; ) {
-		s.discord.data[evt.d.guild_id].level = s.discord.data[evt.d.guild_id].level + 1
-	    s.discord.data[evt.d.guild_id].neededXp = Math.floor(5 / 6 * (s.discord.data[evt.d.guild_id].level+1) * (2 * (s.discord.data[evt.d.guild_id].level+1) * (s.discord.data[evt.d.guild_id].level+1) + 27 * (s.discord.data[evt.d.guild_id].level+1) + 91))
-	    s.discord.data[evt.d.guild_id].totalNeededXp = ( s.discord.data[evt.d.guild_id].neededXp + ( 5 / 6 * (s.discord.data[evt.d.guild_id].level) * (2 * (s.discord.data[evt.d.guild_id].level) * (s.discord.data[evt.d.guild_id].level) + 27 * (s.discord.data[evt.d.guild_id].level) + 91) ) )
-		lvUped = true;
-	  }
-	  
-	  var tI = cC.findIndex(x => { return x.discord.id.id == evt.d.author.id });
-	  cC[tI] = s
-	  
-	  c.cache = cC;
-	  cache.JSON(c);
-		cache.sync();
-		if(callbacks.onLevelUp) callbacks.onLevelUp({e:evt,d:s});
-    } 
-};
+	if (m.cmd) {
+		var evt = m.cmd;
+		var c = cache.JSON();
+		var cC = c.cache;
+		var s = cC.find(x => { return x.discord.id.id == evt.d.author.id });
 
-var server = app.listen(5555, function() {
-  console.log('Your app is listening on port ' + server.address().port);
+
+		if (!s) {
+
+			cC.push({ discord: { id: evt.d.author, data: {} } })
+			s = { discord: { id: evt.d.author, data: {} } }
+
+		}
+
+
+
+		if (!s.discord) s.discord = {}
+		if (!s.discord.data) s.discord.data = {}
+		if (!s.discord.data[evt.d.guild_id]) s.discord.data[evt.d.guild_id] = {}
+
+		if (!s.discord.data[evt.d.guild_id].lastGain) s.discord.data[evt.d.guild_id].lastGain = 0
+
+		s.discord.id = evt.d.author;
+
+		var cS = s.discord.data[evt.d.guild_id].score;
+		var cM = s.discord.data[evt.d.guild_id].sms;
+		var cL = s.discord.data[evt.d.guild_id].level;
+		var lvUped = false;
+
+		if (!cS) cS = 0;
+		if (!cM) cM = 0;
+		if (!cL) cL = 0;
+
+		if (s.discord.data[evt.d.guild_id].lastGain < Date.now() - (1000 * 60)) {
+			cS = cS + Math.floor((Math.random() * 15) + 10)
+			s.discord.data[evt.d.guild_id].lastGain = Date.now()
+		}
+
+		cM++
+
+		s.discord.data[evt.d.guild_id].score = cS
+		s.discord.data[evt.d.guild_id].sms = cM
+		s.discord.data[evt.d.guild_id].neededXp = Math.floor(5 / 6 * (cL + 1) * (2 * (cL + 1) * (cL + 1) + 27 * (cL + 1) + 91))
+		s.discord.data[evt.d.guild_id].level = cL
+		s.discord.data[evt.d.guild_id].totalNeededXp = (s.discord.data[evt.d.guild_id].neededXp + (5 / 6 * (cL) * (2 * (cL) * (cL) + 27 * (cL) + 91)))
+
+		s.discord.data[evt.d.guild_id].sName = m.serverDat.name
+		s.discord.data[evt.d.guild_id].sId = m.serverDat.id
+		s.discord.data[evt.d.guild_id].sIcon = m.serverDat.icon
+
+		for (; cS >= s.discord.data[evt.d.guild_id].totalNeededXp;) {
+			s.discord.data[evt.d.guild_id].level = s.discord.data[evt.d.guild_id].level + 1
+			s.discord.data[evt.d.guild_id].neededXp = Math.floor(5 / 6 * (s.discord.data[evt.d.guild_id].level + 1) * (2 * (s.discord.data[evt.d.guild_id].level + 1) * (s.discord.data[evt.d.guild_id].level + 1) + 27 * (s.discord.data[evt.d.guild_id].level + 1) + 91))
+			s.discord.data[evt.d.guild_id].totalNeededXp = (s.discord.data[evt.d.guild_id].neededXp + (5 / 6 * (s.discord.data[evt.d.guild_id].level) * (2 * (s.discord.data[evt.d.guild_id].level) * (s.discord.data[evt.d.guild_id].level) + 27 * (s.discord.data[evt.d.guild_id].level) + 91)))
+			lvUped = true;
+		}
+
+		var tI = cC.findIndex(x => { return x.discord.id.id == evt.d.author.id });
+		cC[tI] = s
+
+		c.cache = cC;
+		cache.JSON(c);
+		cache.sync();
+		if (callbacks.onLevelUp) callbacks.onLevelUp({ e: evt, d: s });
+	}
+};
+function toLegacyConfigSchema(data) {
+	return {
+		"cooldown_g": data.cooldown_g,
+		"cooldown_e": data.cooldown_e,
+		"cooldown_e_t": data.cooldown_e_t,
+		"cooldown_s": data.cooldown_s,
+		"cooldown_s_t": data.cooldown_s_t,
+		"cooldown_m": data.cooldown_m,
+		"cooldown_m_t": data.cooldown_m_t,
+		"spam_time_mins": data.spam_time_mins,
+		"gameEmoji": JSON.parse(data.game_emoji),
+		"nameColorRoles": JSON.parse(data.name_color_roles),
+		"msgs": JSON.parse(data.msgs),
+		"enabledFeatures": {
+			"getme": data.enabled_getme,
+			"notify": data.enabled_notify,
+			"addmeto": data.enabled_addmeto,
+			"voicechannelgameemojis": data.enabled_voicechannelgameemojis,
+			"experience": data.enabled_experience,
+			"antispam": data.enabled_antispam,
+			"autoresponse": data.enabled_autoresponse,
+			"joinmessages": data.enabled_joinmessages,
+			"namecolor": data.enabled_namecolor,
+			"namecolor_hex": data.enabled_namecolor_hex,
+			"autoorder": data.enabled_autoorder
+		},
+		"autoResp": JSON.parse(data.auto_resp),
+		"guild_id": data.id,
+		"autoorder_category_name": data.autoorder_category_name
+	};
+}
+var server = app.listen(5555, function () {
+	console.log('Your app is listening on port ' + server.address().port);
 });
-process.on('SIGTERM', function() {  server.close(); cache.sync(); process.exit(); });
+process.on('SIGTERM', function () { server.close(); cache.sync(); process.exit(); });

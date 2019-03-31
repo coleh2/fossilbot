@@ -1,30 +1,16 @@
 var Discord = require('discord.io');
 var auth = require('./auth.json');
-var request = require('request');
-var jsonDb = require('simple-json-db');
-var db = new jsonDb('./.data/db.json');
-var cp = require('child_process');
-var velociraptors = { cPs: [] };/*
-var raptorTokens = require('./velociraptortokens.json');
-velociraptors.cPs.push(cp.fork('./voicebot.js',[''],{env: {TOKEN: raptorTokens[0]}}));
-velociraptors.cPs.push(cp.fork('./voicebot.js',[''],{env: {TOKEN: raptorTokens[1]}}));
-velociraptors.cPs.push(cp.fork('./voicebot.js',[''],{env: {TOKEN: raptorTokens[2]}}));
-for(var i = 0; i < 3; i++) {
-    velociraptors.cPs[i].on('message', function(m) {
-        if(m.f == 'freeRaptor') {
-            if(!velociraptors[m.g]) { return }
-            if(!velociraptors[m.g][m.c]) { return }
-            delete velociraptors[m.g][m.c]
-        }
-        
-    });
-}*/
+const db = require('better-sqlite3')('./.data/sqlite.db');
+
+//initialize sql tables
+db.prepare('CREATE TABLE IF NOT EXISTS serverconfig (id TEXT PRIMARY KEY, cooldown_g NUMERIC, cooldown_e NUMERIC, cooldown_e_t NUMERIC, cooldown_s NUMERIC, cooldown_s_t NUMERIC, cooldown_m NUMERIC, colldown_m_t NUMERIC, spam_time_mins NUMERIC, autoorder_category_name TEXT, game_emoji TEXT, name_color_roles TEXT, msgs TEXT, enabled_getme INTEGER, enabled_autoorder INTEGER, enabled_notify INTEGER, enabled_addmeto INTEGER, enabled_voicechannelgameemojis INTEGER, enabled_experience INTEGER, enabled_antispam INTEGER, enabled_autoresponse INTEGER, enabled_namecolor INTEGER, auto_resp TEXT)').run();
+db.prepare('CREATE TABLE IF NOT EXISTS channelactivity (channel_id TEXT, guild_id TEXT, day INTEGER, messages INTEGER, UNIQUE(channel_id, guild_id, day))').run();
+
 var voiceSessions = {};
 const webserver = require(`./webserver.js`)(db);
-var channelActivity = require('./channelactivity.js')(bot, db);
+var channelActivity = require('./channelactivity.js')(bot, db); 
 var antiSpam = require('./antispam.js');
-var commandManager = require('./commandmanager.js')
-var conversations = {};
+var commandManager = require('./commandmanager.js');
 
 var cfg = {
 	cooldown_e: 2,
@@ -48,28 +34,19 @@ var cfg = {
 	nameColorRoles: {
 
 	},
-	commonSynonyms: {
-		levels: "leaderboard",
-		rank: "score",
-		xp: "score",
-		nametag: "namecolor",
-		color: "namecolor",
-		get: "getme",
-		listnotify: "notifylist",
-		name: "namecolor",
-		tag: "namecolor",
-		points: "score",
-		colorname: "namecolor",
-		lb: "leaderboard",
-		add: "addmeto",
-		take: "takemefrom"
-	},
 	msgs: {
 		joinPublic: "",
 		joinPrivate: ""
 	},
-	enabledFeatures: { "getme": true, "autoorder": false, "notify": true, "addmeto": true, "voicechannelgameemojis": false, "experience": false, "antispam": false, "autoresponse": false, "joinmessages": false, "namecolor": true },
-	autoResp: {}
+	enabled_getme: true,
+	enabled_autoorder: true,
+	enabled_notify: true,
+	enabled_addmeto: true,
+	enabled_voicechannelgameemojis: true,
+	enabled_experience: false,
+	enabled_antispam: false,
+	enabled_autoresponse: false,
+	enabled_namecolor: true
 };
 
 console.log('💾 Process launched!');
@@ -128,30 +105,30 @@ var cmdprefix = ">";
 
 //Update the name of voice channels when the first person joins
 bot.on('presenceUpdate', function (evt) {
-	var _cfg = cfg;
-	if (db.JSON().config[evt.d.guild_id]) { _cfg = db.JSON().config[evt.d.guild_id] }
+	var _cfg = db.prepare('SELECT * FROM serverconfig WHERE id = ?').get([evt.d.guild_id]);
+	if (!_cfg) { _cfg = cfg } else { _cfg = toLegacyConfigSchema(_cfg) }
 
-	if (!_cfg.enabledFeatures.voicechannelgameemojis || !voiceSessions[evt.d.user.id]) { return }
-
-	bot.editChannelInfo({
-		channelID: voiceSessions[evt.d.user_id],
-		name: '\ud83c\udfae:' + (_cfg.gameEmoji[bot.users[evt.d.user.id].game.name] || '\ud83c\udfb2') + '| ' + bot.channels[voiceSessions[evt.d.user_id]].name
-	});
+	if (!_cfg.enabledFeatures.voicechannelgameemojis || !voiceSessions[evt.d.user.id] || !bot.channels[voiceSessions[evt.d.user_id]]) { return }
+  if(bot.users[evt.d.user.id].game) {
+		bot.editChannelInfo({
+			channelID: voiceSessions[evt.d.user_id],
+			name: '\ud83c\udfae:' + (_cfg.gameEmoji[bot.users[evt.d.user.id].game.name] || '\ud83c\udfb2') + '| ' + bot.channels[voiceSessions[evt.d.user_id]].name
+		});
+  }
 });
 bot.on('voiceStateUpdate', function (evt) {
 
-	var _cfg = cfg;
-	if (db.JSON().config[evt.d.guild_id]) { _cfg = db.JSON().config[evt.d.guild_id] }
+	var _cfg = db.prepare('SELECT * FROM serverconfig WHERE id = ?').get([evt.d.guild_id]);
+	if (!_cfg) { _cfg = cfg } else { _cfg = toLegacyConfigSchema(_cfg) }
 
 	if (!_cfg.enabledFeatures.voicechannelgameemojis) { return }
 
 	if (!evt.d.channel_id || voiceSessions[evt.d.user_id]) {
-		if (!voiceSessions[evt.d.user_id]) { return }
-		evt.d._channel_id = voiceSessions[evt.d.user_id];
-		if (Object.keys(bot.channels[evt.d._channel_id].members).length == 0 && bot.channels[evt.d._channel_id].name.substring(0, 3) == '\ud83c\udfae:' && bot.channels[evt.d._channel_id].name.length >= 5) {
+		evt.d.channel_id = evt.d.channel_id || voiceSessions[evt.d.user_id];
+		if (Object.keys(bot.channels[evt.d.channel_id].members).length == 0 && bot.channels[evt.d.channel_id].name.substring(0, 3) == '\ud83c\udfae:' && bot.channels[evt.d.channel_id].name.length >= 5) {
 			bot.editChannelInfo({
 				channelID: evt.d.channel_id,
-				name: bot.channels[evt.d._channel_id].name.split('| ').splice(1).join('| ')
+				name: bot.channels[evt.d.channel_id].name.split('| ').splice(1).join('| ')
 			});
 		}
 
@@ -159,7 +136,7 @@ bot.on('voiceStateUpdate', function (evt) {
 		if (!evt.d.channel_id) { return }
 	}
 	voiceSessions[evt.d.user_id] = evt.d.channel_id;
-	
+
 	if (!_cfg.gameEmoji) { _cfg.gameEmoji = { 'foo': 'bar' } }
 	if (Object.keys(bot.channels[evt.d.channel_id].members).length == 1 && bot.channels[evt.d.channel_id].name.length < 96 && bot.channels[evt.d.channel_id].name.substring(0, 3) != '\ud83c\udfae:') {
 		bot.editChannelInfo({
@@ -172,8 +149,8 @@ bot.on('voiceStateUpdate', function (evt) {
 //when people join, do stuff
 bot.on('guildMemberAdd', function (member, evt) {
 
-	var _cfg = cfg;
-	if (db.JSON().config[evt.d.guild_id]) { _cfg = db.JSON().config[evt.d.guild_id] }
+	var _cfg = db.prepare('SELECT * FROM serverconfig WHERE id = ?').get([evt.d.guild_id]);
+	if (!_cfg) { _cfg = cfg } else { _cfg = toLegacyConfigSchema(_cfg) }
 
 	bot.addToRole({ serverID: evt.d.guild_id, userID: evt.d.user.id, roleID: roleSearchByName(evt, 'New Recruit') }, function (err) { if (err != null && err.statusMessage != 'NOT FOUND') { console.log(err); } });
 	if (!_cfg.msgs.joinPublic) { return }
@@ -239,18 +216,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			return
 		}
 
-		//set the configuration obj (oh my lord we should asap transfer to sql or literally anything other than a json file)
-		var _cfg = cfg;
-		if (db.JSON().config[evt.d.guild_id]) { _cfg = db.JSON().config[evt.d.guild_id] } else {
-			(function () {
-				var dbc = db.JSON();
-				dbc.config[evt.d.guild_id] = cfg
-				dbc.config[evt.d.guild_id].guild_id = evt.d.guild_id
-				db.JSON(dbc);
-				db.sync();
-
-			})();
-		}
+		var _cfg = db.prepare('SELECT * FROM serverconfig WHERE id = ?').get([evt.d.guild_id]);
+		if (!_cfg) { _cfg = cfg } else { _cfg = toLegacyConfigSchema(_cfg) }
 
 		//if the user is a bot, stop ALL of this stuff
 		if (evt.d.author.bot) return
@@ -292,14 +259,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		}
 		//auto-ordering channels
 		if (_cfg.enabledFeatures.autoorder && _cfg.autoorder_category_name) {
-			console.log('orderable');
 			channelActivity.updateData(evt);
-			console.log(channelActivity.getLastReorderTime(evt.d.guild_id));
 			if (channelActivity.getLastReorderTime(evt.d.guild_id) < Date.now() - 3600000) {
-				console.log('ordering time');
 				var categoryId = channelSearchByName(evt, _cfg.autoorder_category_name);
 				if (categoryId) {
-					console.log('ordering ', categoryId);
 					channelActivity.orderChannels(evt.d.guild_id, categoryId);
 				}
 			}
@@ -338,7 +301,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				}
 
 
-				if (cfg.commonSynonyms[cmd.toLowerCase()]) { var didYouMean = " Do you mean `>" + _cfg.commonSynonyms[cmd] + '`?'; } else { var didYouMean; }
+				if (commonCommandSynonyms[cmd.toLowerCase()]) { var didYouMean = " Do you mean `>" + _cfg.commonCommandSynonyms[cmd] + '`?'; } else { var didYouMean = false; }
 
 				if (recentlyChangedCommands[cmd]) {
 					bot.sendMessage({
@@ -395,4 +358,43 @@ function channelSearchByName(evt, q) {
 	}));
 	if (r != null) { return r } else { return null }
 }
+function toLegacyConfigSchema(data) {
+	return {
+		"cooldown_g": data.cooldown_g,
+		"cooldown_e": data.cooldown_e,
+		"cooldown_e_t": data.cooldown_e_t,
+		"cooldown_s": data.cooldown_s,
+		"cooldown_s_t": data.cooldown_s_t,
+		"cooldown_m": data.cooldown_m,
+		"cooldown_m_t": data.cooldown_m_t,
+		"spam_time_mins": data.spam_time_mins,
+		"gameEmoji": JSON.parse(data.game_emoji),
+		"nameColorRoles": JSON.parse(data.name_color_roles),
+		"msgs": JSON.parse(data.msgs),
+		"enabledFeatures": {
+			"getme": data.enabled_getme,
+			"notify": data.enabled_notify,
+			"addmeto": data.enabled_addmeto,
+			"voicechannelgameemojis": data.enabled_voicechannelgameemojis,
+			"experience": data.enabled_experience,
+			"antispam": data.enabled_antispam,
+			"autoresponse": data.enabled_autoresponse,
+			"joinmessages": data.enabled_joinmessages,
+			"namecolor": data.enabled_namecolor,
+			"namecolor_hex": data.enabled_namecolor_hex,
+			"autoorder": data.enabled_autoorder
+		},
+		"autoResp": JSON.parse(data.auto_resp),
+		"guild_id": data.id,
+		"autoorder_category_name": data.autoorder_category_name
+	};
+}
 
+
+process.on('exit', () => db.close());
+
+process.on('SIGHUP', () => process.exit(128 + 1));
+
+process.on('SIGINT', () => process.exit(128 + 2));
+
+process.on('SIGTERM', () => process.exit(128 + 15));
