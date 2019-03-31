@@ -38,15 +38,19 @@ var cfg = {
 		joinPublic: "",
 		joinPrivate: ""
 	},
-	enabled_getme: true,
-	enabled_autoorder: true,
-	enabled_notify: true,
-	enabled_addmeto: true,
-	enabled_voicechannelgameemojis: true,
-	enabled_experience: false,
-	enabled_antispam: false,
-	enabled_autoresponse: false,
-	enabled_namecolor: true
+	"enabledFeatures": {
+		"getme": true,
+		"notify": true,
+		"addmeto": true,
+		"voicechannelgameemojis": false,
+		"experience": false,
+		"antispam": false,
+		"autoresponse": false,
+		"joinmessages": false,
+		"namecolor": true,
+		"namecolor_hex": false,
+		"autoorder": false
+	}
 };
 
 console.log('💾 Process launched!');
@@ -117,7 +121,7 @@ bot.on('presenceUpdate', function (evt) {
   }
 });
 bot.on('voiceStateUpdate', function (evt) {
-
+  try {
 	var _cfg = db.prepare('SELECT * FROM serverconfig WHERE id = ?').get([evt.d.guild_id]);
 	if (!_cfg) { _cfg = cfg } else { _cfg = toLegacyConfigSchema(_cfg) }
 
@@ -138,12 +142,15 @@ bot.on('voiceStateUpdate', function (evt) {
 	voiceSessions[evt.d.user_id] = evt.d.channel_id;
 
 	if (!_cfg.gameEmoji) { _cfg.gameEmoji = { 'foo': 'bar' } }
-	if (Object.keys(bot.channels[evt.d.channel_id].members).length == 1 && bot.channels[evt.d.channel_id].name.length < 96 && bot.channels[evt.d.channel_id].name.substring(0, 3) != '\ud83c\udfae:') {
-		bot.editChannelInfo({
-			channelID: evt.d.channel_id,
-			name: '\ud83c\udfae:' + (_cfg.gameEmoji[bot.users[evt.d.user_id].game.name] || '\ud83c\udfb2') + '| ' + bot.channels[evt.d.channel_id].name
-		});
+	if(bot.users[evt.d.user_id].game) {
+		if (Object.keys(bot.channels[evt.d.channel_id].members).length == 1 && bot.channels[evt.d.channel_id].name.length < 96 && bot.channels[evt.d.channel_id].name.substring(0, 3) != '\ud83c\udfae:') {
+			bot.editChannelInfo({
+				channelID: evt.d.channel_id,
+				name: '\ud83c\udfae:' + (_cfg.gameEmoji[bot.users[evt.d.user_id].game.name] || '\ud83c\udfb2') + '| ' + bot.channels[evt.d.channel_id].name
+			});
+		}
 	}
+} catch(e) {}
 });
 
 //when people join, do stuff
@@ -300,18 +307,10 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 
 				}
 
-
-				if (commonCommandSynonyms[cmd.toLowerCase()]) { var didYouMean = " Do you mean `>" + _cfg.commonCommandSynonyms[cmd] + '`?'; } else { var didYouMean = false; }
-
 				if (recentlyChangedCommands[cmd]) {
 					bot.sendMessage({
 						to: channelID,
 						message: "That command has been renamed. Use `>" + recentlyChangedCommands[cmd] + "` instead, please. Thank you! =)"
-					});
-				} else if (didYouMean) {
-					bot.sendMessage({
-						to: channelID,
-						message: "Sorry, I couldn't find a command named `" + cmd + '`.' + didYouMean
 					});
 				}
 			}

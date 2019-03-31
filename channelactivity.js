@@ -26,7 +26,7 @@ function makeActivityObj(guild_id)  {
 	var data = db.prepare('SELECT * FROM channelactivity WHERE guild_id = ?').all([guild_id])
 	
 	//return an object containing the total messages for each channel, stored by the channel ids.
-	var keys = workingobject = {};
+	var workingobject = {};
 	for(var i = 0; i < data.length; i++) {
 		if(!workingobject[data[i].channel_id]) workingobject[data[i].channel_id] = 0;
 		workingobject[data[i].channel_id] += data[i].messages;
@@ -44,9 +44,9 @@ function updateActivity(evt) {
 
 	if(evt.t == 'MESSAGE_CREATE') {
 		
-		db.prepare('INSERT OR IGNORE INTO channelactivity (channel_id, guild_id, day, messages) VALUES (?, ?, ?, 0)').run([evt.d.guild_id, evt.d.channel_id, today]);
+		db.prepare('INSERT OR IGNORE INTO channelactivity (guild_id, channel_id , day, messages) VALUES (?, ?, ?, 0)').run([evt.d.guild_id, evt.d.channel_id, today]);
 		
-		db.prepare('UPDATE channelactivity SET messages = messages + 1 WHERE channel_id = ? AND guild_id = ? AND messages = ?').run([evt.d.guild_id, evt.d.channel_id, today]);
+		db.prepare('UPDATE channelactivity SET messages = messages + 1 WHERE channel_id = ? AND guild_id = ? AND day = ?').run([evt.d.guild_id, evt.d.channel_id, today]);
 		
 	} else if (evt.t == 'PRESENCE_UPDATE') {
 		
