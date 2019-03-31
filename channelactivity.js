@@ -6,7 +6,7 @@ var lastOrderingTimestamp = {};
 
 module.exports = function(discord_bot_instance, sqlite_db_instance) {
 	bot = discord_bot_instance;
-	db = js_db_instance;
+	db = sqlite_db_instance;
 	
 	return exportfunctions;
 }
