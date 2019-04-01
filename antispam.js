@@ -50,14 +50,15 @@ function updateRecords(evt, server_config) {
 	  var currentTime = Date.now();
 	  
 	  //loop through and delete expired entries...
-	  var listOfSpecificEntryKeys = Object.keys(cooldowns.specific[evt.d.guild_id][evt.d.author.id]);
 	  
-	  //...for specific
+	  
+		//...for specific
+		var listOfSpecificEntryKeys = Object.keys(cooldowns.specific[evt.d.guild_id][evt.d.author.id]);
 	  for(var i = 0, x; i < listOfSpecificEntryKeys.length; i++) {
 		x = listOfSpecificEntryKeys[i];
 		for(var iz = 0, y; iz < cooldowns.specific[evt.d.guild_id][evt.d.author.id][x].length; iz++) {
 			y = cooldowns.specific[evt.d.guild_id][evt.d.author.id][x][iz];
-			if(y.t < currentTime - server_config.cooldown_s_t) {
+			if(y.t < currentTime - (server_config.cooldown_s_t||180000)) {
 				cooldowns.specific[evt.d.guild_id][evt.d.author.id][x].splice(i, 1);
 			}
 		}
@@ -67,13 +68,13 @@ function updateRecords(evt, server_config) {
 	  for(var i = 0, x; i < cooldowns.mass[evt.d.guild_id][evt.d.author.id].length; i++) {
 		x = cooldowns.mass[evt.d.guild_id][evt.d.author.id][i];
 		
-		if(x.t < currentTime - server_config.cooldown_m_t) {
+		if(x.t < currentTime - (server_config.cooldown_m_t||100)) {
 			cooldowns.mass[evt.d.guild_id][evt.d.author.id].splice(i, 1);
 		}
 	  }
 	  
 	  //... for everyone
-	  if(cooldowns.last_everyone_reset_time[evt.d.guild_id] < currentTime - server_config.cooldown_e_t) {
+	  if(cooldowns.last_everyone_reset_time[evt.d.guild_id] < currentTime - (server_config.cooldown_e_t||3600000)) {
 		  cooldowns.last_everyone_reset_time[evt.d.guild_id] = currentTime;
 		  var keysOfEveryoneCooldown = Object.keys(cooldowns.everyone[evt.d.guild_id]);
 		  for (var i = 0, e; i <= keysOfEveryoneCooldown.length; i++){
@@ -94,7 +95,7 @@ function updateRecords(evt, server_config) {
 		    }
         
 			//determine whether this message qualifies as single-message spam
-			if(listOfSpecificEntryKeys.length >= server_config.cooldown_g) { single_message_spam = true }
+			if(evt.d.mentions.length >= (server_config.cooldown_g||30)) { single_message_spam = true }
 			else { var single_message_spam = false; }
 	  }
 	  if (evt.d.mention_everyone) {
@@ -103,16 +104,16 @@ function updateRecords(evt, server_config) {
 		
 		//mark as to be warned/muted if such
 	  if(
-			cooldowns.mass[evt.d.guild_id][evt.d.author.id].length >= server_config.cooldown_m || 
-			Object.keys(cooldowns.specific[evt.d.guild_id][evt.d.author.id]).filter(itm => cooldowns.specific[evt.d.guild_id][evt.d.author.id][itm].length >= server_config.cooldown_s).length > 0 || 
+			cooldowns.mass[evt.d.guild_id][evt.d.author.id].length >= (server_config.cooldown_m||20) || 
+			Object.keys(cooldowns.specific[evt.d.guild_id][evt.d.author.id]).filter(itm => cooldowns.specific[evt.d.guild_id][evt.d.author.id][itm].length >= (server_config.cooldown_s||5)).length > 0 || 
 			single_message_spam
 		) {
 			if(!cooldowns.muted[evt.d.guild_id][evt.d.author.id]) cooldowns.tomute[evt.d.guild_id][evt.d.author.id] = true
 		} else if(
-		(
-			cooldowns.mass[evt.d.guild_id][evt.d.author.id].length >= server_config.cooldown_m - 1 || 
-			Object.keys(cooldowns.specific[evt.d.guild_id][evt.d.author.id]).filter(itm => cooldowns.specific[evt.d.guild_id][evt.d.author.id][itm].length >= server_config.cooldown_s - 1).length > 0
-		) && 
+			(
+				cooldowns.mass[evt.d.guild_id][evt.d.author.id].length >= (server_config.cooldown_m||20) - 1 || 
+				Object.keys(cooldowns.specific[evt.d.guild_id][evt.d.author.id]).filter(itm => cooldowns.specific[evt.d.guild_id][evt.d.author.id][itm].length >= (server_config.cooldown_s||5) - 1).length > 0
+			) && 
 			cooldowns.warned[evt.d.guild_id][evt.d.author.id] == false
 		) {
 		cooldowns.towarn[evt.d.guild_id][evt.d.author.id] = true
