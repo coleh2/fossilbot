@@ -2,7 +2,7 @@ var strdoc = require('../doc.json');
 
 module.exports = function (evt, args, _cfg, bot) {
     bot.sendMessage({
-        to: channelID,
+        to: evt.d.channel_id,
         message: 'Don\'t worry, <@' + userID + '>-- I\'ll DM you the help documentation.'
     });
     var helpdochere = strdoc.help.main

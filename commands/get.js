@@ -12,7 +12,7 @@ var jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
 module.exports = function(evt,args,_cfg,bot) {
-    if (!_cfg.enabledFeatures.getme) { bot.sendMessage({ to: channelID, message: "Sorry, but that feature isn't enabled on this server." }); return }
+    if (!_cfg.enabledFeatures.getme) { bot.sendMessage({ to: evt.d.channel_id, message: "Sorry, but that feature isn't enabled on this server." }); return }
     var query = args.join(' ');
     var indx = null;
     var _indx = /(?:(?:number)|#) *(\d+)/i.exec(query);

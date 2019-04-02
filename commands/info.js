@@ -11,7 +11,7 @@ module.exports = function(evt,args,_cfg,bot) {
         var tUO = bot.users[thatUser];
         var tMO = bot.servers[evt.d.guild_id].members[thatUser];
         var messageDat = {
-            to: channelID,
+            to: evt.d.channel_id,
             embed: {
                 "title": 'Data on ' + tUO.username + ":",
                 "image": {
@@ -50,7 +50,7 @@ module.exports = function(evt,args,_cfg,bot) {
         bot.sendMessage(messageDat);
     } else {
         bot.sendMessage({
-            to: channelID,
+            to: evt.d.channel_id,
             message: "I didn't find anyone from that search. Please be sure to include both the user's Discord Username and Tag (e.g. `username#0000`)"
         });
     }

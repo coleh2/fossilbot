@@ -12,7 +12,7 @@ module.exports = function(evt,args,_cfg,bot) {
 
 
         bot.sendMessage({
-            to: channelID,
+            to: evt.d.channel_id,
             message: '<@' + evt.d.author.id + '>, you are currently at level ' + s.level + ' and have ' + s.score + ' XP points. You need ' + (s.totalNeededXp - s.score) + ' more XP points to level up (' + (Math.floor(((s.totalNeededXp - s.score) / s.neededXp) * 100)) + '%)'
         });
     });

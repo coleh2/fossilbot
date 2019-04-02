@@ -7,12 +7,12 @@ module.exports = function(evt,args,_cfg,bot) {
                 roleID: roleSearchByName(evt, ((args.slice(0, 3).join(' '))) + ' Channel')
             });
             bot.sendMessage({
-                to: channelID,
+                to: evt.d.channel_id,
                 message: 'You\'ve been removed from the channel.'
             });
         } else {
             bot.sendMessage({
-                to: channelID,
+                to: evt.d.channel_id,
                 message: 'I didn\'t find that. Maybe you made a typo?'
             });
 
