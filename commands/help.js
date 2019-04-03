@@ -8,7 +8,7 @@ module.exports = function (evt, args, _cfg, bot) {
     var helpdochere = strdoc.help.main
     if (args[0] && strdoc.help[args[0]]) { helpdochere = strdoc.help[args[0]] }
     bot.sendMessage({
-        to: userID,
+        to: evt.d.author.id,
         message: helpdochere
     });
 }

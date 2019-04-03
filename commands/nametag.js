@@ -39,7 +39,7 @@ module.exports = function(evt,args,_cfg,bot) {
         } else if (iscpt) {
             evt.d.member.roles.find(function (key) {
                 var res = bot.servers[evt.d.guild_id].roles[key].name;
-                if (res.substring(res.length - 8, res.length).toLowerCase() == ' nametag' && key != c) { bot.removeFromRole({ serverID: evt.d.guild_id, userID: userID, roleID: key }); } else { }
+                if (res.substring(res.length - 8, res.length).toLowerCase() == ' nametag' && key != c) { bot.removeFromRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: key }); } else { }
             });
             console.log("🖌️ Nametag Color on server " + evt.d.guild_id + " for " + evt.d.author.username + "#" + evt.d.author.discriminator + " changed to " + args.join(' ') + " (" + c + ")");
             bot.addToRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: c });
@@ -66,7 +66,7 @@ module.exports = function(evt,args,_cfg,bot) {
                 console.log('hexCode: ' + hexCode);
                 evt.d.member.roles.find(function (key) {
                     var res = bot.servers[evt.d.guild_id].roles[key].name;
-                    if (res.substring(res.length - 8, res.length).toLowerCase() == ' nametag' && key != c) { bot.removeFromRole({ serverID: evt.d.guild_id, userID: userID, roleID: key }); }
+                    if (res.substring(res.length - 8, res.length).toLowerCase() == ' nametag' && key != c) { bot.removeFromRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: key }); }
                 });
 
                 var hexDecNum = parseInt(hexCode, 16);
@@ -163,7 +163,7 @@ module.exports = function(evt,args,_cfg,bot) {
         } else if (args[0] == 'none' || args[0] == 'clear') {
             evt.d.member.roles.find(function (key) {
                 var res = bot.servers[evt.d.guild_id].roles[key].name;
-                if (res.substring(res.length - 8, res.length).toLowerCase() == ' nametag') { bot.removeFromRole({ serverID: evt.d.guild_id, userID: userID, roleID: key }); } else { }
+                if (res.substring(res.length - 8, res.length).toLowerCase() == ' nametag') { bot.removeFromRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: key }); } else { }
             });
             bot.sendMessage({
                 to: evt.d.channel_id,
@@ -177,7 +177,7 @@ module.exports = function(evt,args,_cfg,bot) {
         }
         evt.d.member.roles.find(function (key) {
             var res = bot.servers[evt.d.guild_id].roles[key].name;
-            if (res.substring(res.length - 8, res.length).toLowerCase() == ' nametag') { bot.removeFromRole({ serverID: evt.d.guild_id, userID: userID, roleID: key }); } else { }
+            if (res.substring(res.length - 8, res.length).toLowerCase() == ' nametag') { bot.removeFromRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: key }); } else { }
         });
     } else {
         bot.sendMessage({
