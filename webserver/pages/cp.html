@@ -255,7 +255,91 @@
     } else if (this.status == 403) {
        // localStorage.removeItem('connectCode');
        // window.location.reload();
+	} else /*if (req.status == 404)*/ {
+    console.log('updated!');
+    cfgLocal = {
+	cooldown_g: 30,
+	cooldown_e: 2,
+	cooldown_e_t: 3600000,
+	cooldown_s: 5,
+	cooldown_s_t: 180000,
+	cooldown_m: 20,
+	cooldown_m_t: 100,
+	spam_time_mins: 10,
+	gameEmoji: {
+		"Counter-Strike: Global Offensive": "\ud83d\udd2b",
+		"Minecraft": "\u26cf\ufe0f",
+		"Town of Salem": "\u2696\ufe0f",
+		"Tom Clancy's Rainbow Six Siege": "\ud83c\udf08",
+		"Besiege": "\ud83d\udcd0",
+		"Starmade": "\ud83d\ude80",
+		"For Honor": "\u2694\ufe0f",
+		"Sid Meier's Civilization V": "\ud83c\udf0d",
+		"Rocket League": "\ud83d\ude97"
+	},
+	nameColorRoles: {
+
+	},
+	msgs: {
+		joinPublic: "",
+		joinPrivate: ""
+	},
+	"enabledFeatures": {
+		"getme": true,
+		"notify": true,
+		"addmeto": true,
+		"voicechannelgameemojis": false,
+		"experience": false,
+		"antispam": false,
+		"autoresponse": false,
+		"joinmessages": false,
+		"namecolor": true,
+		"namecolor_hex": false,
+		"autoorder": false
 	}
+};
+_cfgLocal = {
+	cooldown_g: 30,
+	cooldown_e: 2,
+	cooldown_e_t: 3600000,
+	cooldown_s: 5,
+	cooldown_s_t: 180000,
+	cooldown_m: 20,
+	cooldown_m_t: 100,
+	spam_time_mins: 10,
+	gameEmoji: {
+		"Counter-Strike: Global Offensive": "\ud83d\udd2b",
+		"Minecraft": "\u26cf\ufe0f",
+		"Town of Salem": "\u2696\ufe0f",
+		"Tom Clancy's Rainbow Six Siege": "\ud83c\udf08",
+		"Besiege": "\ud83d\udcd0",
+		"Starmade": "\ud83d\ude80",
+		"For Honor": "\u2694\ufe0f",
+		"Sid Meier's Civilization V": "\ud83c\udf0d",
+		"Rocket League": "\ud83d\ude97"
+	},
+	nameColorRoles: {
+
+	},
+	msgs: {
+		joinPublic: "",
+		joinPrivate: ""
+	},
+	"enabledFeatures": {
+		"getme": true,
+		"notify": true,
+		"addmeto": true,
+		"voicechannelgameemojis": false,
+		"experience": false,
+		"antispam": false,
+		"autoresponse": false,
+		"joinmessages": false,
+		"namecolor": true,
+		"namecolor_hex": false,
+		"autoorder": false
+	}
+};
+  }
   };
     req.open("GET", "/data?src=discord&mode="+ serverIdMode +"&type=cfg", true);
     req.setRequestHeader('Authorization',localStorage.getItem('connectCode'));
@@ -396,7 +480,7 @@ document.getElementById('pu-props-list').innerHTML = (function() {
         return '&gt;getme'
         break
         case 'notifyedit':
-        return '&gt;notify' 
+        return '<li><div><h2>Notify Role Creation Budget</h2><br><p>Fossilbot will limit people to making <input type="number" value="' + (cfgLocal.notifyBudget||'') + '" onkeyup="cfgLocal.notifyBudget = event.target.value"> new notification roles.'
         break
         case 'addmetoedit':
         return '&gt;addmeto'
@@ -520,10 +604,10 @@ function sendEdits() {
 </div></div>
 <div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> &gt;notify</code><div class="editContext">
 <div class="noteditablecover"></div>
-<!--<a href="javascript:void(0)" onclick="editProps('notify','edit')">
+<a href="javascript:void(0)" onclick="editProps('notify','edit')">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
 
-</a>-->
+</a>
 </div></div>
 <div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> &gt;addmeto</code><div class="editContext">
 <div class="noteditablecover"></div>

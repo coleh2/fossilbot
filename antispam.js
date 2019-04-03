@@ -58,7 +58,7 @@ function updateRecords(evt, server_config) {
 		x = listOfSpecificEntryKeys[i];
 		for(var iz = 0, y; iz < cooldowns.specific[evt.d.guild_id][evt.d.author.id][x].length; iz++) {
 			y = cooldowns.specific[evt.d.guild_id][evt.d.author.id][x][iz];
-			if(y.t < currentTime - (server_config.cooldown_s_t||180000)) {
+			if(y.t < currentTime - (server_config.cooldown_s_t||300)) {
 				cooldowns.specific[evt.d.guild_id][evt.d.author.id][x].splice(i, 1);
 			}
 		}

@@ -1,4 +1,6 @@
 /.data/db.json
+/.data/sqlite.db
+.data/
 auth.json
 email_auth.json
 _env

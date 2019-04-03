@@ -13,6 +13,7 @@ var antiSpam = require('./antispam.js');
 var commandManager = require('./commandmanager.js');
 
 var cfg = {
+	cooldown_g: 30,
 	cooldown_e: 2,
 	cooldown_e_t: 3600000,
 	cooldown_s: 5,
@@ -189,6 +190,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		//deny commands in DMs
 		if (!bot.servers[evt.d.guild_id]) {
 			if (message.split(' ')[0] == '>help') {
+				var strdoc = require('./doc.json');
 				var helpdochere = strdoc.help.main
 				if (message.split(' ')[1] && strdoc.help[message.split(' ')[1]]) { helpdochere = strdoc.help[message.split(' ')[1]] }
 				bot.sendMessage({
@@ -293,7 +295,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 
 			//find the command; if it exists, run it
 			if (commandManager[cmd]) {
-				commandManager[cmd](evt, args, _cfg, bot);
+				commandManager[cmd](evt, args, _cfg, bot, db);
 			} else {
 
 				//this'll be removed later-- basically a 'this has been removed' note for concancated-word commands
@@ -380,12 +382,13 @@ function toLegacyConfigSchema(data) {
 			"autoresponse": data.enabled_autoresponse,
 			"joinmessages": data.enabled_joinmessages,
 			"namecolor": data.enabled_namecolor,
-			"namecolor_hex": data.enabled_namecolor_hex,
+			"namecolor_hex": data.enabled_namecolorhex,
 			"autoorder": data.enabled_autoorder
 		},
 		"autoResp": JSON.parse(data.auto_resp),
 		"guild_id": data.id,
-		"autoorder_category_name": data.autoorder_category_name
+		"autoorder_category_name": data.autoorder_category_name,
+	  "notifyBudget": data.notifybudget
 	};
 }
 
