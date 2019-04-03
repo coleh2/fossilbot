@@ -8,8 +8,8 @@ for(var i = 0; i < filenamearray.length; i++) {
     requiredfileobject[fileNameWithoutExtension] = require('./commands/' + filenamearray[i]);
     if(aliases[fileNameWithoutExtension]) {
         var aliasedEntry = aliases[fileNameWithoutExtension];
-        for(var aliasI = 0; aliasI < aliasedEntry.length; aliasesI++) {
-            requiredfileobject[aliasedEntry[aliasesI]] = requiredfileobject[fileNameWithoutExtension];
+        for(var aliasI = 0; aliasI < aliasedEntry.length; aliasI++) {
+            requiredfileobject[aliasedEntry[aliasI]] = requiredfileobject[fileNameWithoutExtension];
         }
     }
 }
