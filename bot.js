@@ -337,7 +337,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		console.error(err);
 		bot.sendMessage({
 			to: "297151429087592449",
-			message: 'ERROR, FRIEND:\n```' + err.toString() + '``` on line `' + err.lineNumber + '`and the message object was ```' + JSON.stringify(evt.d) + '```'
+			message: 'ERROR, FRIEND:\n```' + err.stack + '``` and the message object was ```' + JSON.stringify(evt.d) + '```'
 		});
 
 	}

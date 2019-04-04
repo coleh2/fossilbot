@@ -191,6 +191,7 @@ module.exports = function(evt,args,_cfg,bot) {
         if (!bot.servers[evt.d.guild_id]) { return null }
         var r = (Object.keys(bot.servers[evt.d.guild_id].roles).find(function (key) {
             var res = bot.servers[evt.d.guild_id].roles[key].name;
+            if(!res) {res = '___________________________'; }
             if (res.substring(0, res.length - 8).toLowerCase() == q.toLowerCase() && res.substring(res.length - 8, res.length).toLowerCase() == ' nametag') { return true } else { }
         }));
         if (r != null) { return r } else { return null }
