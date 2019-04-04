@@ -2,5 +2,10 @@
     "nametag": [
         "namecolor",
         "color"
+    ],
+    "get": [
+        "getme",
+        "picture",
+        "pic"
     ]
 }
