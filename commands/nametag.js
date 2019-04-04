@@ -137,9 +137,11 @@ module.exports = function(evt,args,_cfg,bot) {
     } else if (colorRoleList(evt).length > 0) {
         var clrRoleList = colorRoleList(evt);
         if (args.length > 0 && (args[0] != 'none' && args[0] != 'clear')) {
+            if(args[0] == 'list') { var missingColorErrorMesssage = "I'll DM you a list of colors right away!" }
+            else { var missingColorErrorMesssage = "That's not a valid color here! I'll DM you a list of colors that work on this server."; }
             bot.sendMessage({
                 to: evt.d.channel_id,
-                message: "That's not a valid color here! I'll DM you a list of colors that work on this server.",
+                message: missingColorErrorMesssage,
             });
             //Generate image of colors 
 
@@ -150,7 +152,6 @@ module.exports = function(evt,args,_cfg,bot) {
             for (var i = 0; i < colorRObjs.length; i++) {
                 ctx.beginPath();
                 ctx.fillStyle = '#' + colorRObjs[i].color.toString(16);
-                console.log(i);
                 ctx.rect(0, i * 40, 100, 40);
                 ctx.fill();
                 ctx.beginPath();
@@ -162,7 +163,6 @@ module.exports = function(evt,args,_cfg,bot) {
                 ctx.fillText(_name, 5, (i * 40) + 15);
 
             }
-            console.log(canvas.height);
             //console.log(canvas.toDataURL());
             bot.uploadFile({
                 to: evt.d.author.id,
@@ -231,7 +231,7 @@ module.exports = function(evt,args,_cfg,bot) {
         var e = [];
         var r = (Object.keys(bot.servers[evt.d.guild_id].roles).find(function (key) {
             var res = bot.servers[evt.d.guild_id].roles[key].name;
-            if (res.substring(res.length - 8, res.length).toLowerCase() == ' nametag') { e.push(bot.servers[evt.d.guild_id].roles[key]) } else { }
+            if (res.substring(res.length - 8, res.length).toLowerCase() == ' nametag' && res.substring(0,1) != '#') { e.push(bot.servers[evt.d.guild_id].roles[key]) } else { }
         }));
         return e
     }
