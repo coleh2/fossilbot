@@ -92,7 +92,18 @@ module.exports = function(evt,args,_cfg,bot) {
                 }
                 if (hexColorDelta(hexCode, '140A02') < 0.95) {
                     bot.createRole(evt.d.guild_id, function (err, resp) {
-                        if (err) { console.log(err); return }
+                        if (err) {
+                            if(err.statusCode == 403 && err.response) {
+                                if(err.response.code == 50013) {
+                                    bot.sendMessage({
+                                        to: evt.d.channel_id,
+                                        message: "Looks like I can't do that; I don't have the required permissions! Please ask the server owner to make sure that I have the `Manage Permissions` permission. "
+                                    })
+                                }
+                            }
+                            
+                            console.log(err); return 
+                        }
                         //console.log(resp);
                         var JustMadeRole = resp.id;
                         bot.editRole({ serverID: evt.d.guild_id, roleID: JustMadeRole, name: '#' + hexCode + ' Nametag', color: hexDecNum });
