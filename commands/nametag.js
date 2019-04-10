@@ -97,7 +97,7 @@ module.exports = function(evt,args,_cfg,bot) {
                                 if(err.response.code == 50013) {
                                     bot.sendMessage({
                                         to: evt.d.channel_id,
-                                        message: "Looks like I can't do that; I don't have the required permissions! Please ask the server owner to make sure that I have the `Manage Permissions` permission. "
+                                        message: "Looks like I can't do that; I don't have the required permissions! Please ask an admin to make sure that I have the `Manage Permissions` permission. "
                                     })
                                 }
                             }

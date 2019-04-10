@@ -16,3 +16,5 @@ translatekey.json
 .pm2/
 nps_email_directory.json
 /node_modules/
+classperiods.json
+nhs_sched_store.json

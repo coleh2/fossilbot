@@ -285,7 +285,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				} catch (e) { console.log(e) }
 			}
 		}
-
+		if(evt.d.channel_id == '513465814519906314' && evt.d.attachments[0]) {
+			bot.addReaction({
+				channelID: evt.d.channel_id,
+				messageID: evt.d.id,
+				reaction: 'heart'
+			})
+		}
 		//user commands
 		if (message.substring(0, 1) === cmdprefix) {
 
