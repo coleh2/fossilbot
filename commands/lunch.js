@@ -1,40 +1,45 @@
 var classPeriods = require("../classperiods.json");
-var scedules = require('../nhs_sched_store.json');
+var schedules = require('../nhs_sched_store.json');
 
 module.exports = function(evt,args,_cfg,bot) {
     //process arguments
-    var block = -1;
-    var lunch = -1;
+    var searchedBlock = -1;
+    var searchedLunch = -1;
     var day = Date.now();
+    var usingTodayAsSchedule = undefined;
     args.forEach(function (arg) {
-        if(arg.length == 1 && parseInt(arg, 17) > 10) {
+        if(arg.length == 1 && parseInt(arg, 17) >= 10) {
             //assume it's a block letter
-            block = parseInt(arg, 17) - 10;
+            searchedBlock = parseInt(arg, 17) - 10;
+            usingTodayAsSchedule = false;
         } else if (parseInt(arg) <= 3 && parseInt(arg) >= 1) {
             //assume it's a lunch number
-            lunch = parseInt(arg) - 1;
+            searchedLunch = parseInt(arg) - 1;
         } else if (!Number.isNaN(new Date(arg).getDate())) {
             //assume it's a day
             day = (new Date(arg)).getTime();
         }
     });
-
+    //fetch the schedule object for today and use it as the lunch block (if we don't have any specified)
+    if(usingTodayAsSchedule === undefined) {
+        var todayDate = (new Date(day)).setUTCHours(0,0,0,0);
+        var scheduleObject = schedules.find(function(x) { return x.t == todayDate; });
+        if(!scheduleObject) {
+            return bot.sendMessage({to: evt.d.channel_id, message: "Oops! There was an error with getting today's schedule. Please contact <@297151429087592449>"});
+        }
+        searchedBlock = ([2,0,5,3,1,6,4])[scheduleObject.o];
+        usingTodayAsSchedule = true;
+    }
     //verify that we have the required arguments
-    if(block + lunch < 0) {
+    if(searchedBlock < 0 || searchedLunch < 0) {
         return bot.sendMessage({to: evt.d.channel_id, message: "Sorry; I don't understand what you mean. Please include both a block letter and a lunch number."});
     }
 
-    //fetch the schedule object for today
-    var todayDate = (new Date(day)).setUTCHours(0,0,0,0);
-    var scheduleObject = schedules.find(function(x) { return x.t == todayDate; });
-    if(!scheduleObject) {
-        return bot.sendMessage({to: evt.d.channel_id, message: "Oops! There was an error with getting today's schedule. Please contact <@297151429087592449>"});
-    }
 
     //get a list of people who are actually in this lunch
-    var lunchBlock = ([2,0,5,3,1,6,4])[block];
+    
     var peopleInThatLunch = classPeriods.filter(function(x) {
-        var thisCourse = (x.c1[lunchBlock] || x.c2[lunchBlock]).i;
+        var thisCourse = (x.c2[searchedBlock] || x.c1[searchedBlock] || {}).i;
         var lunchInThisCourse = -1;
         
         //assign the lunchInThisCourse value according to the 2018-2019 2nd semester rules
@@ -48,16 +53,16 @@ module.exports = function(evt,args,_cfg,bot) {
             //media(idk if i'm calculating that right), math, or skills (again, not sure abt the id) third lunch.
             lunchInThisCourse = 2;
         }
-        return lunchInThisCourse == lunchBlock;
+        return lunchInThisCourse == searchedLunch;
     });
 
     //format & send the data
     var stringToSend = "";
-    
+
     for(var i = 0; i < peopleInThatLunch.length; i++) {
-        stringToSend = stringToSend + (i==0?"":(i==peopleInThatLunch.length-1?", and":", ")) + peopleInThatLunch[i].name.replace('_', ' ');
+        stringToSend = stringToSend + (i==0?"":(i==peopleInThatLunch.length-1?", and ":", ")) + peopleInThatLunch[i].name.replace('_', ' ');
     }
-    if(!stringToSend) {stringToSend = "Sorry, I don't know of anyone in that lunch."}
+    if(!stringToSend) {stringToSend = "Sorry, I don't know of anyone in that lunch."} else {stringToSend = stringToSend + " are in Lunch " + (searchedLunch+1) +  (usingTodayAsSchedule?" today.":" during " + ((['A','B','C','D','E','F','G'])[searchedBlock])+ " block.")}
 
     bot.sendMessage({
         to: evt.d.channel_id,
