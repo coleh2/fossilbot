@@ -295,7 +295,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			bot.addReaction({
 				channelID: evt.d.channel_id,
 				messageID: evt.d.id,
-				reaction: '\u2764\ufe0f'
+				reaction: '❤'
 			})
 		}
 		//user commands
