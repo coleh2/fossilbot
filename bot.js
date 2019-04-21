@@ -86,6 +86,12 @@ webserver.onEmailAuth(function (m) {
 	})
 
 });
+webserver.onSnowDayAnnounced(function(m) {
+	bot.sendMessage({
+		to: '485200425176268824',
+		message: 'The Collective is unsure, but Dr. Gutes may have just announced a snow day. Here\'s the text of the Tweet: ```' + m.text + '```'
+	});
+});
 // Initialize Discord Bot
 var bot = new Discord.Client({
 	token: auth

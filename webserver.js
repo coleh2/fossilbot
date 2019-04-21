@@ -27,6 +27,7 @@ module.exports = function (_db) {
 var exportFunctions = {
 	onLevelUp: (cb) => { callbacks.onLevelUp = cb; },
 	onEmailAuth: (cb) => { callbacks.onEmailAuth = cb; },
+	onSnowDayAnnounced: (cb) => { callbacks.onSnowDayAnnounced = cb; },
 	incrementXp: m => { incrementXpFunc(m) },
 	email: (m, cb) => { emailCodeGenerateAndSend(m, cb) }
 }
@@ -73,6 +74,22 @@ app.get('/sd/:serverId/:fileName', function (req, resp) {
 	} catch (e) { }
 });
 
+
+app.post('/gutekanstTweet', function(req,resp) {
+	if(!req.body) { return resp.sendStatus(400) }
+	if(!req.body.text || !req.body.at) { return resp.sendStatus(400) }
+
+	resp.sendStatus(204);
+
+	var arrayOfPhrasesWhichIndicateASnowDay = [
+		"will be closed",
+		"no school today",
+		"no school tomorrow"
+	];
+	for(var i = 0; i < arrayOfPhrasesWhichIndicateASnowDay.length; i++) {
+		if(~req.body.text.toLowerCase().indexOf(arrayOfPhrasesWhichIndicateASnowDay[i])) { callbacks.onSnowDayAnnounced(body); break;}
+	}
+});
 
 app.post('/adminAction', function (req, resp) {
 
