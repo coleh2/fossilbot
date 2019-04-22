@@ -84,10 +84,11 @@ app.post('/gutekanstTweet', function(req,resp) {
 	var arrayOfPhrasesWhichIndicateASnowDay = [
 		"will be closed",
 		"no school today",
-		"no school tomorrow"
+		"no school tomorrow",
+		"no classes tomorrow"
 	];
 	for(var i = 0; i < arrayOfPhrasesWhichIndicateASnowDay.length; i++) {
-		if(~req.body.text.toLowerCase().indexOf(arrayOfPhrasesWhichIndicateASnowDay[i])) { callbacks.onSnowDayAnnounced(body); break;}
+		if(~req.body.text.toLowerCase().indexOf(arrayOfPhrasesWhichIndicateASnowDay[i])) { callbacks.onSnowDayAnnounced(req.body); break;}
 	}
 });
 

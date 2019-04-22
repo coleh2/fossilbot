@@ -88,8 +88,22 @@ webserver.onEmailAuth(function (m) {
 });
 webserver.onSnowDayAnnounced(function(m) {
 	bot.sendMessage({
-		to: '485200425176268824',
-		message: 'The Collective is unsure, but Dr. Gutes may have just announced a snow day. Here\'s the text of the Tweet: ```' + m.text + '```'
+		"to": '485200425176268824',
+		"message": 'Snow day?',
+		"embed": {
+			"description": m.text,
+			"color": 1942002,
+			"timestamp": (new Date(m.at)).toISOString(),
+			"footer": {
+			  "icon_url": "https://i.ibb.co/5xtV2XC/Twitter-Logo-Blue.png",
+			  "text": "via IFTTT"
+			},
+			"author": {
+			  "name": "Daniel Gutekanst",
+			  "url": m.link,
+			  "icon_url": "https://pbs.twimg.com/profile_images/1109937281010491393/kqiSI01L.jpg"
+			}
+		  }
 	});
 });
 // Initialize Discord Bot
