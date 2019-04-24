@@ -180,11 +180,11 @@ bot.on('guildMemberAdd', function (member, evt) {
 	var _cfg = db.prepare('SELECT * FROM serverconfig WHERE id = ?').get([evt.d.guild_id]);
 	if (!_cfg) { _cfg = cfg } else { _cfg = toLegacyConfigSchema(_cfg) }
 
-	bot.addToRole({ serverID: evt.d.guild_id, userID: evt.d.user.id, roleID: roleSearchByName(evt, 'New Recruit') }, function (err) { if (err != null && err.statusMessage != 'NOT FOUND') { console.log(err); } });
-	if (!_cfg.msgs.joinPublic) { return }
-	if (!_cfg.msgs.joinPrivate) { return }
-	if (!_cfg.enabledFeatures.joinmessages) { return }
+
 	if (evt.d.guild_id != '392830469500043266') {
+		if (!_cfg.msgs.joinPublic) { return }
+		if (!_cfg.msgs.joinPrivate) { return }
+		if (!_cfg.enabledFeatures.joinmessages) { return }
 		try {
 			bot.sendMessage({
 				to: evt.d.guild_id,
@@ -196,10 +196,13 @@ bot.on('guildMemberAdd', function (member, evt) {
 			message: _cfg.msgs.joinPrivate.replace('{USER}', evt.d.user.id)
 		});
 	} else {
-		bot.sendMessage({
-			to: evt.d.user.id,
-			message: "Hey, welcome to NHS! As you can see, there aren't many open channels. This is to keep the majority of the server secure against raids and trolling; we're a very friendly server, and we don't want that to be taken advantage of. If you want to be automatically allowed in, please use the `>nhs email <email address>` command in this DM so I can make sure you're from our school. Please use your school-provided email address. Thanks, and I hope to see you in the server!"
-		});
+		try {
+			bot.addToRole({ serverID: evt.d.guild_id, userID: evt.d.user.id, roleID: roleSearchByName(evt, 'New Recruit') }, function (err) { if (err != null && err.statusMessage != 'NOT FOUND') { console.log(err); } });
+			bot.sendMessage({
+				to: evt.d.user.id,
+				message: "Hey, welcome to NHS! As you can see, there aren't many open channels. This is to keep the majority of the server secure against raids and trolling; we're a very friendly server, and we don't want that to be taken advantage of. If you want to be automatically allowed in, please use the `>nhs email <email address>` command in this DM so I can make sure you're from our school. Please use your school-provided email address. Thanks, and I hope to see you in the server!"
+			});
+	    } catch (e) {}
 	}
 
 });

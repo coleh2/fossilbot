@@ -46,7 +46,7 @@ function updateActivity(evt) {
 		
 		db.prepare('INSERT OR IGNORE INTO channelactivity (guild_id, channel_id , day, messages) VALUES (?, ?, ?, 0)').run([evt.d.guild_id, evt.d.channel_id, today]);
 		
-		db.prepare('UPDATE channelactivity SET messages = messages + 1 WHERE channel_id = ? AND guild_id = ? AND day = ?').run([evt.d.guild_id, evt.d.channel_id, today]);
+		db.prepare('UPDATE channelactivity SET messages = messages + 1 WHERE guild_id = ? AND channel_id = ? AND day = ?').run([evt.d.guild_id, evt.d.channel_id, today]);
 		
 	} else if (evt.t == 'PRESENCE_UPDATE') {
 		
