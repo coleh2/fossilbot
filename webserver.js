@@ -351,13 +351,19 @@ app.get('/data', function (req, resp) {
 });
 
 app.get('/validate_email', (req, res) => {
-	if (!req.query.userid || !req.query.serverid || !req.query.code) return res.sendStatus(400)
+
+	function notAuth(statusCode) {
+		res.status(statusCode);
+		res.sendFile(__dirname + '/webserver/pages/email_response_failure.html');
+	}
+
+	if (!req.query.userid || !req.query.serverid || !req.query.code) return notAuth(400)
 
 	var cacheObject = cache.JSON();
 	var cacheContents = cacheObject.cache;
 	var userRecord = cacheContents.find(x => { return x.discord.id.id == req.query.userid });
-	if (!userRecord) return res.sendStatus(404)
-	if (userRecord.emailConnectCode != req.query.code) return res.sendStatus(401)
+	if (!userRecord) return notAuth(404)
+	if (userRecord.emailConnectCode != req.query.code) return notAuth(401)
 
 	userRecord.email_address = userRecord.allegedEmail;
 

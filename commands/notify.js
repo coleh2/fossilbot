@@ -7,7 +7,7 @@ module.exports = function (evt, args, _cfg, bot, db) {
     if(!memberStoredData) {memberStoredData = {notifybudget: 0}; }
 
     if (!specificNotifRole) {
-        if(_cfg.notifyBudget === -1) {_cfg.notifyBudget = Infinity;}
+        if(_cfg.notifyBudget == undefined || _cfg.notifyBudget < 0) { _cfg.notifyBudget = Infinity; }
         if(_cfg.notifyBudget - memberStoredData.notifybudget > 0) {
             bot.createRole(evt.d.guild_id, function (err, resp) {
                 if (err) { console.log(err); return; }
@@ -23,6 +23,10 @@ module.exports = function (evt, args, _cfg, bot, db) {
                     });
                 }
             });
+            bot.sendMessage({
+                to: evt.d.channel_id,
+                message: 'You\'ve been added to the notification role for `' + ((args.slice(0, 3).join(' ').substring(0, 32)) || "Annoying People") + '`'
+            });
         } else {
             bot.sendMessage({
                 to: evt.d.channel_id,
@@ -35,11 +39,12 @@ module.exports = function (evt, args, _cfg, bot, db) {
             userID: evt.d.author.id,
             roleID: specificNotifRole
         });
+        bot.sendMessage({
+            to: evt.d.channel_id,
+            message: 'You\'ve been added to the notification role for `' + ((args.slice(0, 3).join(' ').substring(0, 32)) || "Annoying People") + '`'
+        });
     }
-    bot.sendMessage({
-        to: evt.d.channel_id,
-        message: 'You\'ve been added to the notification role for `' + ((args.slice(0, 3).join(' ').substring(0, 32)) || "Annoying People") + '`'
-    });
+
     //utility method
     function roleSearchByName(evt, q) {
         if (!bot.servers[evt.d.guild_id]) { return null; }

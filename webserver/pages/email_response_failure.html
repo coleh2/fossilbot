@@ -1,0 +1,49 @@
+<DOCTYPE HTML>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<style>
+body {
+margin: 0px;
+padding: 0px;
+background: #dedede;
+font-family: 'Source Sans Pro', sans-serif;
+}
+#page {
+font-size: 3em;
+width: 100vw;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+code {
+    background: #cdcdcd;
+    padding: 1px;
+    border-radius: 1px;
+}
+</style>
+<script>
+var searchParams = new URLSearchParams(window.location.search);
+var status = searchParams.get("error");
+
+var codeDescriptions = {
+    "404": "User Not Found",
+    "400": "Incorrect Request",
+    "401": "Incorrect Authentication"
+};
+
+window.addEventListener("load", function() {
+    document.getElementById("statusdisplay").innerText = status + " " + (codeDescriptions[status] || "");
+});
+</script>
+</head>
+<body>
+<div id="page">
+<div>
+Sorry! There was an error in authenticating you.<br> <code id="statusdisplay"></code>
+</div>
+</div>
+</body>
+</html>
