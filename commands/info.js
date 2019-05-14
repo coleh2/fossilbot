@@ -1,10 +1,10 @@
-module.exports = function(evt,args,_cfg,bot) {
+module.exports = function(evt,args,_cfg,bot,db) {
     var thatUser;
     if (evt.d.mentions[0]) {
         thatUser = bot.servers[evt.d.guild_id].members[evt.d.mentions[0].id].id
-    } else if (args[0].split('#').length == 2) {
-        if (Object.values(bot.servers[evt.d.guild_id].members).find(x => { return bot.users[x.id].username == args[0].split('#')[0] && bot.users[x.id].discriminator == args[0].split('#')[1] })) {
-            thatUser = Object.values(bot.servers[evt.d.guild_id].members).find(x => { return bot.users[x.id].username == args[0].split('#')[0] && bot.users[x.id].discriminator == args[0].split('#')[1] }).id
+    } else if (args.join(' ').split('#').length == 2) {
+        if (Object.values(bot.servers[evt.d.guild_id].members).find(x => { return bot.users[x.id].username == args.join(' ').split('#')[0] && bot.users[x.id].discriminator == args.join(' ').split('#')[1] })) {
+            thatUser = Object.values(bot.servers[evt.d.guild_id].members).find(x => { return bot.users[x.id].username == args.join(' ').split('#')[0] && bot.users[x.id].discriminator == args.join(' ').split('#')[1] }).id
         }
     }
     if (thatUser) {
@@ -31,11 +31,6 @@ module.exports = function(evt,args,_cfg,bot) {
                     {
                         "name": "Roles",
                         "value": tMO.roles.length ? '<@&' + tMO.roles.join('>, <@&') + '>' : '',
-                        "inline": true
-                    },
-                    {
-                        "name": "Name",
-                        "value": db.JSON().users[tUO.id] ? db.JSON().users[tUO.id] : 'Unknown',
                         "inline": true
                     },
                     {

@@ -143,9 +143,12 @@ app.post('/adminAction', function (req, resp) {
 			});
 			if (JSON.parse(b).owner_id != authHeadSplit[1] && !serverRolesArr.find(x => { return ~rolesArr.indexOf(x.id) })) { notAuth(); return }
 			//now that all that validation's aside, let's get down to bid-ness.
+
+			if (!req.body.enabledFeatures) { return resp.sendStatus(400) }
+
 			console.log('yeah seems legit');
 
-				if (!req.body.enabledFeatures) { return resp.sendStatus(400) }
+				
 				try {
 					db.prepare('INSERT OR REPLACE INTO serverconfig (id, cooldown_g, cooldown_e, cooldown_e_t, cooldown_s, cooldown_s_t, cooldown_m, colldown_m_t, spam_time_mins, autoorder_category_name, game_emoji, name_color_roles, msgs, enabled_getme, enabled_autoorder, enabled_notify, enabled_addmeto, enabled_voicechannelgameemojis, enabled_experience, enabled_antispam, enabled_autoresponse, enabled_namecolor, enabled_namecolorhex, auto_resp, notifybudget) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)').run([
 						req.body.guild_id, req.body.cooldown_g, req.body.cooldown_e, req.body.cooldown_e_t, req.body.cooldown_s, req.body.cooldown_s_t, req.body.cooldown_m, req.body.cooldown_m_t, req.body.spam_time_mins, req.body.autoorder_category_name, JSON.stringify(req.body.gameEmoji), JSON.stringify(req.body.nameColorRoles), JSON.stringify(req.body.msgs), +req.body.enabledFeatures.getme, +req.body.enabledFeatures.autoorder, +req.body.enabledFeatures.notify, +req.body.enabledFeatures.addmeto, +req.body.enabledFeatures.voicechannelgameemojis, +req.body.enabledFeatures.experience, +req.body.enabledFeatures.antispam, +req.body.enabledFeatures.autoresponse, +req.body.enabledFeatures.namecolor, +req.body.enabledFeatures.namecolor_hex, JSON.stringify(req.body.autoResp), req.body.notifyBudget
