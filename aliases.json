@@ -7,5 +7,15 @@
         "getme",
         "picture",
         "pic"
+    ],
+    "steam": [
+        "steamsearch",
+        "game",
+        "games",
+        "gamesearch",
+        "steamgame",
+        "searchgame",
+        "searchgames",
+        "searchsteam"
     ]
 }
