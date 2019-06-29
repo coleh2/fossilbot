@@ -1,5 +1,5 @@
-var classPeriods = require("../classperiods.json");
-var schedules = require('../nhs_sched_store.json');
+var classPeriods = require("../nhs_resources/classperiods.json");
+var schedules = require('../nhs_resources/nhs_sched_store.json');
 
 module.exports = function(evt,args,_cfg,bot) {
     //process arguments
