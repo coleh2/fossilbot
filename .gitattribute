@@ -1,1 +1,1 @@
-webserver/pages/* linguist-vendored
+webserver/pages/* linguist-detectable=false
