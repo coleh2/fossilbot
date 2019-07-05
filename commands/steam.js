@@ -4,6 +4,7 @@ module.exports = function (evt, args, _cfg, bot) {
     if(args[0].length == 0) return bot.sendMessage({to: evt.d.channel_id, message: "Please include a game title to search!"});
     if(args.join(' ').length < 2) return bot.sendMessage({to: evt.channel_id, message: "To prevent abuse, you must enter more than 2 characters to search for. Please try again!"});
     bot.sendMessage({to: evt.d.channel_id, message: "<a:load:593253216741883904> Seaching Steam for games..."}, function(err, resp) {
+        if(err) {return false;}
         var protoMessageId = resp.id;
         var localData = require(__dirname + "/../dat/steamapps.json").applist.apps.app;
         var filteredData = localData.filter(x => {return x.name.toLowerCase().includes(args.join(' ').toLowerCase())});

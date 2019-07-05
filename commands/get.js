@@ -9,7 +9,7 @@ var hpchars = require('../getme_context_data/harry_potter_chars.json');
 var request = require('request');
 
 var jsdom = require("jsdom");
-const { JSDOM } = jsdom;
+var { JSDOM } = jsdom;
 
 module.exports = function(evt,args,_cfg,bot) {
     if (!_cfg.enabledFeatures.getme) { bot.sendMessage({ to: evt.d.channel_id, message: "Sorry, but that feature isn't enabled on this server." }); return }
@@ -20,10 +20,14 @@ module.exports = function(evt,args,_cfg,bot) {
     if (indx) { query = query.replace(/(?:(?:number)|#) *(\d+)/i, '') }
 
     if (!query) { return }
-    bingGetPic(query, bot, evt.d.channel_id, evt, indx);
+
+    bot.sendMessage({to: evt.d.channel_id, message: "<a:load:593253216741883904> Googling..."}, function(err, resp) {
+        if(err) { return false; }
+        bingGetPic(query, bot, evt.d.channel_id, evt, indx, resp.id);
+    });
 
 
-    function bingGetPic(q, bot, channelID, evt, number) {
+    function bingGetPic(q, bot, channelID, evt, number, protoMessageId) {
         var cisnsfw = bot.servers[evt.d.guild_id].channels[channelID].nsfw;
 
         if (number == 0) {
@@ -71,7 +75,9 @@ module.exports = function(evt,args,_cfg,bot) {
                 console.log(pkmnTypes[pkmnItem.type1_id] + pkmnTypes[pkmnItem.type2_id]);
                 console.log(pkmnItem.type1_id + pkmnItem.type2_id);
                 var data = {
-                    "to": channelID,
+                    "messageID": protoMessageId,
+                    "channelID": evt.d.channel_id,
+                    "message": "",
                     "embed": {
                         "title": pkmnItem.name + ':',
                         "description": pkmnItem.species + ' Pokemon *Pokedex #' + pkmnItem.ndex + '*',
@@ -100,7 +106,9 @@ module.exports = function(evt,args,_cfg,bot) {
 
             } else if (cityItem) {
                 var data = {
-                    "to": channelID,
+                    "messageID": protoMessageId,
+                    "channelID": evt.d.channel_id,
+                    "message": "",
                     "embed": {
                         "title": cityItem.city + ':',
                         "description": '',
@@ -129,7 +137,9 @@ module.exports = function(evt,args,_cfg,bot) {
 
             } else if (houseItem) {
                 var data = {
-                    "to": channelID,
+                    "messageID": protoMessageId,
+                    "channelID": evt.d.channel_id,
+                    "message": "",
                     "embed": {
                         "title": 'House ' + houseItem.House + ':',
                         "description": '',
@@ -168,7 +178,9 @@ module.exports = function(evt,args,_cfg,bot) {
 
             } else if (hpcharItem) {
                 var data = {
-                    "to": channelID,
+                    "messageID": protoMessageId,
+                    "channelID": evt.d.channel_id,
+                    "message": "",
                     "embed": {
                         "title": hpcharItem.First + ' ' + hpcharItem.Last + ':',
                         "description": '',
@@ -220,12 +232,15 @@ module.exports = function(evt,args,_cfg,bot) {
             } else {
                 if (doLinkInstead) {
                     var data = {
-                        "to": channelID,
+                        "messageID": protoMessageId,
+                        "channelID": evt.d.channel_id,
                         "message": decodeURIComponent(finalUrl.substring(7).split('&')[0])
                     };
                 } else {
                     var data = {
-                        "to": channelID,
+                        "messageID": protoMessageId,
+                        "channelID": evt.d.channel_id,
+                        "message": "",
                         "embed": {
                             "color": color,
                             "image": {
@@ -236,7 +251,7 @@ module.exports = function(evt,args,_cfg,bot) {
                 }
 
             }
-            bot.sendMessage(data);
+            bot.editMessage(data);
         });
     }
 }
