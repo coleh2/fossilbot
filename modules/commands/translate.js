@@ -1,5 +1,5 @@
 var languages = require(__dirname + '/../../data/language_codes.json'),
-    translateapi = require('yandex-translate')(require(__dirname + '/../..auth/translatekey.json'));
+    translateapi = require('yandex-translate')(require(__dirname + '/../../.data/translatekey.json'));
 
 
 module.exports = function(evt,args,_cfg,bot) {
