@@ -1,5 +1,5 @@
-var classPeriods = require("../nhs_resources/classperiods.json");
-var schedules = require('../nhs_resources/nhs_sched_store.json');
+var classPeriods = require(__dirname + "/../../.data/classperiods.json");
+var yearSchedule = require(__dirname + '/../../data/nhs_sched_store.json');
 
 module.exports = function(evt,args,_cfg,bot) {
     //process arguments
@@ -23,7 +23,7 @@ module.exports = function(evt,args,_cfg,bot) {
     //fetch the schedule object for today and use it as the lunch block (if we don't have any specified)
     if(usingTodayAsSchedule === undefined) {
         var todayDate = (new Date(day)).setUTCHours(0,0,0,0);
-        var scheduleObject = schedules.find(function(x) { return x.t == todayDate; });
+        var scheduleObject = yearSchedule.find(function(x) { return x.t == todayDate; });
         if(!scheduleObject) {
             return bot.sendMessage({to: evt.d.channel_id, message: "Oops! There was an error with getting today's schedule. Please contact <@297151429087592449>"});
         }

@@ -201,7 +201,7 @@ bot.on('guildMemberAdd', function (member, evt) {
 			bot.addToRole({ serverID: evt.d.guild_id, userID: evt.d.user.id, roleID: roleSearchByName(evt, 'New Recruit') }, function (err) { if (err != null && err.statusMessage != 'NOT FOUND') { console.log(err); } });
 			bot.sendMessage({
 				to: evt.d.user.id,
-				message: "Hey, welcome to NHS! As you can see, there aren't many open channels. This is to keep the majority of the server secure against raids and trolling; we're a very friendly server, and we don't want that to be taken advantage of. If you want to be automatically allowed in, please use the `>nhs email <email address>` command in this DM so I can make sure you're from our school. Please use your school-provided email address. Thanks, and I hope to see you in the server!"
+				message: "Hey, welcome to NHS! As you can see, there aren't many open channels. This is to keep the majority of the server secure against trolling; we're a very friendly server, and we don't want that to be taken advantage of. If you want to be automatically allowed in, please use the `>nhs email <email address>` command in this DM so I can make sure you're from our school. Please use your school-provided email address. Thanks, and I hope to see you in the server!"
 			});
 	    } catch (e) {}
 	}
