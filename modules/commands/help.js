@@ -1,4 +1,4 @@
-var strdoc = require('../doc.json');
+var strdoc = require(__dirname + '/../../data/doc.json');
 
 module.exports = function (evt, args, _cfg, bot) {
     bot.sendMessage({

@@ -1,5 +1,5 @@
 var Discord = require('discord.io');
-var auth = require(__dirname + '/.auth/auth.json');
+var auth = require(__dirname + '/.data/auth.json');
 const db = require('better-sqlite3')(__dirname + '/.data/sqlite.db');
 
 //initialize sql tables
@@ -214,7 +214,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		//deny commands in DMs
 		if (!bot.servers[evt.d.guild_id]) {
 			if (message.split(' ')[0] == '>help') {
-				var strdoc = require(__dirname + '/dat_public/doc.json');
+				var strdoc = require(__dirname + '/data	/doc.json');
 				var helpdochere = strdoc.help.main
 				if (message.split(' ')[1] && strdoc.help[message.split(' ')[1]]) { helpdochere = strdoc.help[message.split(' ')[1]] }
 				bot.sendMessage({
