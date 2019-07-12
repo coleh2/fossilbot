@@ -1,5 +1,5 @@
 var bot, db;
-var botToken = require('./auth.json');
+var botToken = require(__dirname + '/../../.data/auth.json');
 var request = require('request');
 
 var lastOrderingTimestamp = {};
