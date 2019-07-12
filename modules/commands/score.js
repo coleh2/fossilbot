@@ -1,7 +1,7 @@
 var fs = require('fs');
 
 module.exports = function(evt,args,_cfg,bot) {
-    fs.readFile('./webserver/db/webcache.json', 'utf8', function (err, data) {
+    fs.readFile(__dirname + '/modules/webserver/db/webcache.json', 'utf8', function (err, data) {
 
         if (err) return
 

@@ -1,6 +1,6 @@
 var Discord = require('discord.io');
-var auth = require('./auth.json');
-const db = require('better-sqlite3')('./.data/sqlite.db');
+var auth = require(__dirname + '/.auth/auth.json');
+const db = require('better-sqlite3')(__dirname + '/.data/sqlite.db');
 
 //initialize sql tables
 db.prepare('CREATE TABLE IF NOT EXISTS serverconfig (id TEXT PRIMARY KEY, cooldown_g NUMERIC, cooldown_e NUMERIC, cooldown_e_t NUMERIC, cooldown_s NUMERIC, cooldown_s_t NUMERIC, cooldown_m NUMERIC, colldown_m_t NUMERIC, spam_time_mins NUMERIC, autoorder_category_name TEXT, game_emoji TEXT, name_color_roles TEXT, msgs TEXT, enabled_getme INTEGER, enabled_autoorder INTEGER, enabled_notify INTEGER, enabled_addmeto INTEGER, enabled_voicechannelgameemojis INTEGER, enabled_experience INTEGER, enabled_antispam INTEGER, enabled_autoresponse INTEGER, enabled_namecolor INTEGER, auto_resp TEXT, notifybudget INTEGER)').run();
@@ -8,10 +8,10 @@ db.prepare('CREATE TABLE IF NOT EXISTS channelactivity (channel_id TEXT, guild_i
 db.prepare('CREATE TABLE IF NOT EXISTS userknown (id TEXT PRIMARY KEY, email TEXT)').run();
 
 var voiceSessions = {};
-const webserver = require(`./webserver.js`)(db);
-var channelActivity = require('./channelactivity.js')(bot, db); 
-var antiSpam = require('./antispam.js');
-var commandManager = require('./commandmanager.js');
+const webserver = require(__dirname + `/modules/webserver/webserver.js`)(db);
+var channelActivity = require(__dirname + '/modules/channelactivity/channelactivity.js')(bot, db); 
+var antiSpam = require(__dirname + '/modules/antispam/antispam.js');
+var commandManager = require(__dirname + '/modules/commandmanager/commandmanager.js');
 
 var cfg = {
 	cooldown_g: 30,
@@ -214,7 +214,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		//deny commands in DMs
 		if (!bot.servers[evt.d.guild_id]) {
 			if (message.split(' ')[0] == '>help') {
-				var strdoc = require('./doc.json');
+				var strdoc = require(__dirname + '/dat_public/doc.json');
 				var helpdochere = strdoc.help.main
 				if (message.split(' ')[1] && strdoc.help[message.split(' ')[1]]) { helpdochere = strdoc.help[message.split(' ')[1]] }
 				bot.sendMessage({
@@ -236,7 +236,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 						to: userID,
 						message: "Okay, I'm sending an email with a validation code to you now..."
 					}, function (e, r) {
-						console.log(webserver);
 						webserver.email({ evt: evt, email_address: email }, function (r) {
 							bot.sendMessage({
 								to: userID,

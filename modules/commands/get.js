@@ -1,10 +1,10 @@
-var pokemon = require('../getme_context_data/pokemon.json');
+var pokemon = require(__dirname +'/data/pokemon.json');
 pokemon = pokemon.pokemon;
-var citiesdata = require('../getme_context_data/us_cities.json');
+var citiesdata = require(__dirname +'/data/us_cities.json');
 citiesdata = citiesdata.cities;
-var gothouses = require('../getme_context_data/got_noble_houses.json');
+var gothouses = require(__dirname +'/data/got_noble_houses.json');
 gothouses = gothouses.Noble_Houses;
-var hpchars = require('../getme_context_data/harry_potter_chars.json');
+var hpchars = require(__dirname + '/data/harry_potter_chars.json');
 
 var request = require('request');
 
