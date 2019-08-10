@@ -1,0 +1,5830 @@
+[
+    {
+        "t": 1536105600000,
+        "d": 3,
+        "o": 0,
+        "h": "Wed Sep 05 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "Preschool Orientation",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1536192000000,
+        "d": 4,
+        "o": 1,
+        "h": "Thu Sep 06 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "First Day of Preschool & KASE",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1536278400000,
+        "d": 5,
+        "o": 2,
+        "h": "Fri Sep 07 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1536364800000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Sep 08 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1536451200000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Sep 09 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1536537600000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Sep 10 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "Rosh Hashanah - No School",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1536624000000,
+        "d": 2,
+        "o": 3,
+        "h": "Tue Sep 11 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1536710400000,
+        "d": 3,
+        "o": 4,
+        "h": "Wed Sep 12 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1536796800000,
+        "d": 4,
+        "o": 5,
+        "h": "Thu Sep 13 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1536883200000,
+        "d": 5,
+        "o": 6,
+        "h": "Fri Sep 14 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1536969600000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Sep 15 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1537056000000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Sep 16 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1537142400000,
+        "d": 1,
+        "o": 0,
+        "h": "Mon Sep 17 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1537228800000,
+        "d": 2,
+        "o": 1,
+        "h": "Tue Sep 18 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1537315200000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Sep 19 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "Yom Kippur - No School",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1537401600000,
+        "d": 4,
+        "o": 2,
+        "h": "Thu Sep 20 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1537488000000,
+        "d": 5,
+        "o": 3,
+        "h": "Fri Sep 21 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1537574400000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Sep 22 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1537660800000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Sep 23 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1537747200000,
+        "d": 1,
+        "o": 4,
+        "h": "Mon Sep 24 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1537833600000,
+        "d": 2,
+        "o": 5,
+        "h": "Tue Sep 25 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "PreK-8 Early Release",
+        "l": 5,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1537920000000,
+        "d": 3,
+        "o": 6,
+        "h": "Wed Sep 26 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1538006400000,
+        "d": 4,
+        "o": 0,
+        "h": "Thu Sep 27 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1538092800000,
+        "d": 5,
+        "o": 1,
+        "h": "Fri Sep 28 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1538179200000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Sep 29 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1538265600000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Sep 30 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1538352000000,
+        "d": 1,
+        "o": 2,
+        "h": "Mon Oct 01 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1538438400000,
+        "d": 2,
+        "o": 3,
+        "h": "Tue Oct 02 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1538524800000,
+        "d": 3,
+        "o": 4,
+        "h": "Wed Oct 03 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1538611200000,
+        "d": 4,
+        "o": 5,
+        "h": "Thu Oct 04 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1538697600000,
+        "d": 5,
+        "o": 6,
+        "h": "Fri Oct 05 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1538784000000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Oct 06 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1538870400000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Oct 07 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1538956800000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Oct 08 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "Columbus Day - No School",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1539043200000,
+        "d": 2,
+        "o": 0,
+        "h": "Tue Oct 09 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1539129600000,
+        "d": 3,
+        "o": 1,
+        "h": "Wed Oct 10 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1539216000000,
+        "d": 4,
+        "o": 2,
+        "h": "Thu Oct 11 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1539302400000,
+        "d": 5,
+        "o": 3,
+        "h": "Fri Oct 12 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1539388800000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Oct 13 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1539475200000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Oct 14 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1539561600000,
+        "d": 1,
+        "o": 4,
+        "h": "Mon Oct 15 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1539648000000,
+        "d": 2,
+        "o": 5,
+        "h": "Tue Oct 16 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1539734400000,
+        "d": 3,
+        "o": 6,
+        "h": "Wed Oct 17 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1539820800000,
+        "d": 4,
+        "o": 0,
+        "h": "Thu Oct 18 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1539907200000,
+        "d": 5,
+        "o": 1,
+        "h": "Fri Oct 19 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1539993600000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Oct 20 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1540080000000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Oct 21 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1540166400000,
+        "d": 1,
+        "o": 2,
+        "h": "Mon Oct 22 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1540252800000,
+        "d": 2,
+        "o": 3,
+        "h": "Tue Oct 23 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1540339200000,
+        "d": 3,
+        "o": 4,
+        "h": "Wed Oct 24 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1540425600000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Oct 25 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "PreK-12 Early Release",
+        "l": 2,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1540512000000,
+        "d": 5,
+        "o": 5,
+        "h": "Fri Oct 26 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1540598400000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Oct 27 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1540684800000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Oct 28 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1540771200000,
+        "d": 1,
+        "o": 6,
+        "h": "Mon Oct 29 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1540857600000,
+        "d": 2,
+        "o": 0,
+        "h": "Tue Oct 30 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1540944000000,
+        "d": 3,
+        "o": 1,
+        "h": "Wed Oct 31 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1541030400000,
+        "d": 4,
+        "o": 2,
+        "h": "Thu Nov 01 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1541116800000,
+        "d": 5,
+        "o": 3,
+        "h": "Fri Nov 02 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1541203200000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Nov 03 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1541289600000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Nov 04 2018 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1541376000000,
+        "d": 1,
+        "o": 4,
+        "h": "Mon Nov 05 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1541462400000,
+        "d": 2,
+        "o": 5,
+        "h": "Tue Nov 06 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "PreK-8 Delayed Opening Election",
+        "l": 4,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1541548800000,
+        "d": 3,
+        "o": 6,
+        "h": "Wed Nov 07 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1541635200000,
+        "d": 4,
+        "o": 0,
+        "h": "Thu Nov 08 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1541721600000,
+        "d": 5,
+        "o": 1,
+        "h": "Fri Nov 09 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1541808000000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Nov 10 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1541894400000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Nov 11 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1541980800000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Nov 12 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "Veterans' Day Observed No School",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1542067200000,
+        "d": 2,
+        "o": 2,
+        "h": "Tue Nov 13 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1542153600000,
+        "d": 3,
+        "o": 3,
+        "h": "Wed Nov 14 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1542240000000,
+        "d": 4,
+        "o": 4,
+        "h": "Thu Nov 15 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1542326400000,
+        "d": 5,
+        "o": 5,
+        "h": "Fri Nov 16 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1542412800000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Nov 17 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1542499200000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Nov 18 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1542585600000,
+        "d": 1,
+        "o": 6,
+        "h": "Mon Nov 19 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1542672000000,
+        "d": 2,
+        "o": 0,
+        "h": "Tue Nov 20 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1542758400000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Nov 21 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "No School- Prof Development",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1542844800000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Nov 22 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "Thanksgiving Recess",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1542931200000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Nov 23 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "Thanksgiving Recess",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1543017600000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Nov 24 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1543104000000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Nov 25 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1543190400000,
+        "d": 1,
+        "o": 1,
+        "h": "Mon Nov 26 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1543276800000,
+        "d": 2,
+        "o": 2,
+        "h": "Tue Nov 27 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1543363200000,
+        "d": 3,
+        "o": 3,
+        "h": "Wed Nov 28 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1543449600000,
+        "d": 4,
+        "o": 4,
+        "h": "Thu Nov 29 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1543536000000,
+        "d": 5,
+        "o": 5,
+        "h": "Fri Nov 30 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1543622400000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Dec 01 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1543708800000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Dec 02 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1543795200000,
+        "d": 1,
+        "o": 6,
+        "h": "Mon Dec 03 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1543881600000,
+        "d": 2,
+        "o": 0,
+        "h": "Tue Dec 04 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1543968000000,
+        "d": 3,
+        "o": 1,
+        "h": "Wed Dec 05 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1544054400000,
+        "d": 4,
+        "o": 2,
+        "h": "Thu Dec 06 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1544140800000,
+        "d": 5,
+        "o": 3,
+        "h": "Fri Dec 07 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1544227200000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Dec 08 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1544313600000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Dec 09 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1544400000000,
+        "d": 1,
+        "o": 4,
+        "h": "Mon Dec 10 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1544486400000,
+        "d": 2,
+        "o": 5,
+        "h": "Tue Dec 11 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1544572800000,
+        "d": 3,
+        "o": 6,
+        "h": "Wed Dec 12 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "PreK-8 Delayed Opening",
+        "l": 4,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1544659200000,
+        "d": 4,
+        "o": 0,
+        "h": "Thu Dec 13 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1544745600000,
+        "d": 5,
+        "o": 1,
+        "h": "Fri Dec 14 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1544832000000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Dec 15 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1544918400000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Dec 16 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1545004800000,
+        "d": 1,
+        "o": 2,
+        "h": "Mon Dec 17 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1545091200000,
+        "d": 2,
+        "o": 3,
+        "h": "Tue Dec 18 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1545177600000,
+        "d": 3,
+        "o": 4,
+        "h": "Wed Dec 19 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1545264000000,
+        "d": 4,
+        "o": 5,
+        "h": "Thu Dec 20 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1545350400000,
+        "d": 5,
+        "o": 6,
+        "h": "Fri Dec 21 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1545436800000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Dec 22 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1545523200000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Dec 23 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1545609600000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Dec 24 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "Winter Recess",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1545696000000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Dec 25 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "Winter Recess",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1545782400000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Dec 26 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "Winter Recess",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1545868800000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Dec 27 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "Winter Recess",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1545955200000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Dec 28 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "Winter Recess",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1546041600000,
+        "d": 6,
+        "s": "Winter Recess",
+        "l": 0,
+        "h": "Sat Dec 29 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1546128000000,
+        "d": 0,
+        "s": "Winter Recess",
+        "l": 0,
+        "h": "Sun Dec 30 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1546214400000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Dec 31 2018 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "Winter Recess",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1546300800000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Jan 01 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "Winter Recess",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1546387200000,
+        "d": 3,
+        "o": 0,
+        "h": "Wed Jan 02 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "Classes Resume",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1546473600000,
+        "d": 4,
+        "o": 1,
+        "h": "Thu Jan 03 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1546560000000,
+        "d": 5,
+        "o": 2,
+        "h": "Fri Jan 04 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1546646400000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Jan 05 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1546732800000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Jan 06 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1546819200000,
+        "d": 1,
+        "o": 3,
+        "h": "Mon Jan 07 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1546905600000,
+        "d": 2,
+        "o": 4,
+        "h": "Tue Jan 08 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1546992000000,
+        "d": 3,
+        "o": 5,
+        "h": "Wed Jan 09 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1547078400000,
+        "d": 4,
+        "o": 6,
+        "h": "Thu Jan 10 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1547164800000,
+        "d": 5,
+        "o": 0,
+        "h": "Fri Jan 11 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1547251200000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Jan 12 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1547337600000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Jan 13 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1547424000000,
+        "d": 1,
+        "o": 1,
+        "h": "Mon Jan 14 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1547510400000,
+        "d": 2,
+        "o": 2,
+        "h": "Tue Jan 15 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1547596800000,
+        "d": 3,
+        "o": 3,
+        "h": "Wed Jan 16 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1547683200000,
+        "d": 4,
+        "o": 4,
+        "h": "Thu Jan 17 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1547769600000,
+        "d": 5,
+        "o": 5,
+        "h": "Fri Jan 18 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1547856000000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Jan 19 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1547942400000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Jan 20 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1548028800000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Jan 21 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "Martin Luther King Jr.- No School",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1548115200000,
+        "d": 2,
+        "o": 6,
+        "h": "Tue Jan 22 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1548201600000,
+        "d": 3,
+        "o": 0,
+        "h": "Wed Jan 23 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1548288000000,
+        "d": 4,
+        "o": 1,
+        "h": "Thu Jan 24 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1548374400000,
+        "d": 5,
+        "o": 2,
+        "h": "Fri Jan 25 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1548460800000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Jan 26 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1548547200000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Jan 27 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1548633600000,
+        "d": 1,
+        "o": 3,
+        "h": "Mon Jan 28 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1548720000000,
+        "d": 2,
+        "o": 4,
+        "h": "Tue Jan 29 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1548806400000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Jan 30 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "PreK-12 Early Release",
+        "l": 2,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1548892800000,
+        "d": 4,
+        "o": 5,
+        "h": "Thu Jan 31 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1548979200000,
+        "d": 5,
+        "o": 6,
+        "h": "Fri Feb 01 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1549065600000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Feb 02 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1549152000000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Feb 03 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1549238400000,
+        "d": 1,
+        "o": 0,
+        "h": "Mon Feb 04 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1549324800000,
+        "d": 2,
+        "o": 1,
+        "h": "Tue Feb 05 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1549411200000,
+        "d": 3,
+        "o": 2,
+        "h": "Wed Feb 06 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1549497600000,
+        "d": 4,
+        "o": 3,
+        "h": "Thu Feb 07 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1549584000000,
+        "d": 5,
+        "o": 4,
+        "h": "Fri Feb 08 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1549670400000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Feb 09 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1549756800000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Feb 10 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1549843200000,
+        "d": 1,
+        "o": 5,
+        "h": "Mon Feb 11 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1549929600000,
+        "d": 2,
+        "o": 6,
+        "h": "Tue Feb 12 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "PreK-8 Early Release",
+        "l": 5,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1550016000000,
+        "d": 3,
+        "o": 0,
+        "h": "Wed Feb 13 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1550102400000,
+        "d": 4,
+        "o": 1,
+        "h": "Thu Feb 14 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1550188800000,
+        "d": 5,
+        "o": 2,
+        "h": "Fri Feb 15 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1550275200000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Feb 16 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1550361600000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Feb 17 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1550448000000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Feb 18 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "February Recess",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1550534400000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Feb 19 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "February Recess",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1550620800000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Feb 20 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "February Recess",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1550707200000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Feb 21 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "February Recess",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1550793600000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Feb 22 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "February Recess",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1550880000000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Feb 23 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1550966400000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Feb 24 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1551052800000,
+        "d": 1,
+        "o": 3,
+        "h": "Mon Feb 25 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "Classes Resume",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1551139200000,
+        "d": 2,
+        "o": 4,
+        "h": "Tue Feb 26 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1551225600000,
+        "d": 3,
+        "o": 5,
+        "h": "Wed Feb 27 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1551312000000,
+        "d": 4,
+        "o": 6,
+        "h": "Thu Feb 28 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1551398400000,
+        "d": 5,
+        "o": 0,
+        "h": "Fri Mar 01 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1551484800000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Mar 02 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1551571200000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Mar 03 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1551657600000,
+        "d": 1,
+        "o": 1,
+        "h": "Mon Mar 04 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1551744000000,
+        "d": 2,
+        "o": 2,
+        "h": "Tue Mar 05 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1551830400000,
+        "d": 3,
+        "o": 3,
+        "h": "Wed Mar 06 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1551916800000,
+        "d": 4,
+        "o": 4,
+        "h": "Thu Mar 07 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1552003200000,
+        "d": 5,
+        "o": 5,
+        "h": "Fri Mar 08 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1552089600000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Mar 09 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1552176000000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Mar 10 2019 00:00:00 GMT-0500 (Eastern Standard Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1552262400000,
+        "d": 1,
+        "o": 6,
+        "h": "Mon Mar 11 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1552348800000,
+        "d": 2,
+        "o": 0,
+        "h": "Tue Mar 12 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1552435200000,
+        "d": 3,
+        "o": 1,
+        "h": "Wed Mar 13 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "PreK-8 Early Release",
+        "l": 5,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1552521600000,
+        "d": 4,
+        "o": 2,
+        "h": "Thu Mar 14 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1552608000000,
+        "d": 5,
+        "o": 3,
+        "h": "Fri Mar 15 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1552694400000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Mar 16 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1552780800000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Mar 17 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1552867200000,
+        "d": 1,
+        "o": 4,
+        "h": "Mon Mar 18 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1552953600000,
+        "d": 2,
+        "o": 5,
+        "h": "Tue Mar 19 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1553040000000,
+        "d": 3,
+        "o": 6,
+        "h": "Wed Mar 20 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1553126400000,
+        "d": 4,
+        "o": 0,
+        "h": "Thu Mar 21 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1553212800000,
+        "d": 5,
+        "o": 1,
+        "h": "Fri Mar 22 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1553299200000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Mar 23 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1553385600000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Mar 24 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1553472000000,
+        "d": 1,
+        "o": 2,
+        "h": "Mon Mar 25 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1553558400000,
+        "d": 2,
+        "o": 3,
+        "h": "Tue Mar 26 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1553644800000,
+        "d": 3,
+        "o": 4,
+        "h": "Wed Mar 27 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1553731200000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Mar 28 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "PreK-12 Early Release",
+        "l": 2,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1553817600000,
+        "d": 5,
+        "o": 5,
+        "h": "Fri Mar 29 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1553904000000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Mar 30 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1553990400000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Mar 31 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1554076800000,
+        "d": 1,
+        "o": 6,
+        "h": "Mon Apr 01 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1554163200000,
+        "d": 2,
+        "o": 0,
+        "h": "Tue Apr 02 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1554249600000,
+        "d": 3,
+        "o": 1,
+        "h": "Wed Apr 03 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1554336000000,
+        "d": 4,
+        "o": 2,
+        "h": "Thu Apr 04 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1554422400000,
+        "d": 5,
+        "o": 3,
+        "h": "Fri Apr 05 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1554508800000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Apr 06 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1554595200000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Apr 07 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1554681600000,
+        "d": 1,
+        "o": 4,
+        "h": "Mon Apr 08 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1554768000000,
+        "d": 2,
+        "o": 5,
+        "h": "Tue Apr 09 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "PreK-8 Delayed Opening",
+        "l": 4,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1554854400000,
+        "d": 3,
+        "o": 6,
+        "h": "Wed Apr 10 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1554940800000,
+        "d": 4,
+        "o": 0,
+        "h": "Thu Apr 11 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1555027200000,
+        "d": 5,
+        "o": 1,
+        "h": "Fri Apr 12 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1555113600000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Apr 13 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1555200000000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Apr 14 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1555286400000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Apr 15 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "April Recess",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1555372800000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Apr 16 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "April Recess",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1555459200000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Apr 17 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "April Recess",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1555545600000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Apr 18 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "April Recess",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1555632000000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Apr 19 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "April Recess",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1555718400000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Apr 20 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1555804800000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Apr 21 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1555891200000,
+        "d": 1,
+        "o": 2,
+        "h": "Mon Apr 22 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "Classes Resume",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1555977600000,
+        "d": 2,
+        "o": 3,
+        "h": "Tue Apr 23 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1556064000000,
+        "d": 3,
+        "o": 4,
+        "h": "Wed Apr 24 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1556150400000,
+        "d": 4,
+        "o": 5,
+        "h": "Thu Apr 25 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1556236800000,
+        "d": 5,
+        "o": 6,
+        "h": "Fri Apr 26 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1556323200000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Apr 27 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1556409600000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Apr 28 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1556496000000,
+        "d": 1,
+        "o": 0,
+        "h": "Mon Apr 29 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1556582400000,
+        "d": 2,
+        "o": 1,
+        "h": "Tue Apr 30 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1556668800000,
+        "d": 3,
+        "o": 2,
+        "h": "Wed May 01 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1556755200000,
+        "d": 4,
+        "o": 3,
+        "h": "Thu May 02 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1556841600000,
+        "d": 5,
+        "o": 4,
+        "h": "Fri May 03 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1556928000000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat May 04 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1557014400000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun May 05 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1557100800000,
+        "d": 1,
+        "o": 5,
+        "h": "Mon May 06 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1557187200000,
+        "d": 2,
+        "o": 6,
+        "h": "Tue May 07 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1557273600000,
+        "d": 3,
+        "o": 0,
+        "h": "Wed May 08 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1557360000000,
+        "d": 4,
+        "o": 1,
+        "h": "Thu May 09 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1557446400000,
+        "d": 5,
+        "o": 2,
+        "h": "Fri May 10 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1557532800000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat May 11 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1557619200000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun May 12 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1557705600000,
+        "d": 1,
+        "o": 3,
+        "h": "Mon May 13 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1557792000000,
+        "d": 2,
+        "o": 4,
+        "h": "Tue May 14 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1557878400000,
+        "d": 3,
+        "o": 5,
+        "h": "Wed May 15 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1557964800000,
+        "d": 4,
+        "o": 6,
+        "h": "Thu May 16 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1558051200000,
+        "d": 5,
+        "o": 0,
+        "h": "Fri May 17 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1558137600000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat May 18 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1558224000000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun May 19 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1558310400000,
+        "d": 1,
+        "o": 1,
+        "h": "Mon May 20 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1558396800000,
+        "d": 2,
+        "o": 2,
+        "h": "Tue May 21 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1558483200000,
+        "d": 3,
+        "o": 3,
+        "h": "Wed May 22 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1558569600000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu May 23 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "PreK-12 Early Release",
+        "l": 2,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1558656000000,
+        "d": 5,
+        "o": 4,
+        "h": "Fri May 24 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1558742400000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat May 25 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1558828800000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun May 26 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1558915200000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon May 27 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "Memorial Day - No School",
+        "l": 3,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1559001600000,
+        "d": 2,
+        "o": 5,
+        "h": "Tue May 28 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1559088000000,
+        "d": 3,
+        "o": 6,
+        "h": "Wed May 29 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1559174400000,
+        "d": 4,
+        "o": 0,
+        "h": "Thu May 30 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1559260800000,
+        "d": 5,
+        "o": 1,
+        "h": "Fri May 31 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1559347200000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Jun 01 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1559433600000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Jun 02 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1559520000000,
+        "d": 1,
+        "o": 2,
+        "h": "Mon Jun 03 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "Graduation",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1559606400000,
+        "d": 2,
+        "o": 3,
+        "h": "Tue Jun 04 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1559692800000,
+        "d": 3,
+        "o": 4,
+        "h": "Wed Jun 05 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1559779200000,
+        "d": 4,
+        "o": 5,
+        "h": "Thu Jun 06 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1559865600000,
+        "d": 5,
+        "o": 6,
+        "h": "Fri Jun 07 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1559952000000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Jun 08 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1560038400000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Jun 09 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1560124800000,
+        "d": 1,
+        "o": 0,
+        "h": "Mon Jun 10 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1560211200000,
+        "d": 2,
+        "o": 1,
+        "h": "Tue Jun 11 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "PreK-8 Early Release",
+        "l": 5,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1560297600000,
+        "d": 3,
+        "o": 2,
+        "h": "Wed Jun 12 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1560384000000,
+        "d": 4,
+        "o": 3,
+        "h": "Thu Jun 13 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1560470400000,
+        "d": 5,
+        "o": 4,
+        "h": "Fri Jun 14 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1560556800000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Jun 15 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1560643200000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Jun 16 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1560729600000,
+        "d": 1,
+        "o": 5,
+        "h": "Mon Jun 17 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1560816000000,
+        "d": 2,
+        "o": 6,
+        "h": "Tue Jun 18 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "Last day if no snow days-ER",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1560902400000,
+        "d": 3,
+        "o": 0,
+        "h": "Wed Jun 19 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1560988800000,
+        "d": 4,
+        "o": 1,
+        "h": "Thu Jun 20 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1561075200000,
+        "d": 5,
+        "o": 2,
+        "h": "Fri Jun 21 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1561161600000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Jun 22 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1561248000000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Jun 23 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1561334400000,
+        "d": 1,
+        "o": 3,
+        "h": "Mon Jun 24 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1561420800000,
+        "d": 2,
+        "o": 4,
+        "h": "Tue Jun 25 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "Last day 5 snow days-ER",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1561507200000,
+        "d": 3,
+        "o": 5,
+        "h": "Wed Jun 26 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1561593600000,
+        "d": 4,
+        "o": 6,
+        "h": "Thu Jun 27 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1561680000000,
+        "d": 5,
+        "o": 0,
+        "h": "Fri Jun 28 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1561766400000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Jun 29 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1561852800000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Jun 30 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1561939200000,
+        "d": 1,
+        "o": 1,
+        "h": "Mon Jul 01 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1562025600000,
+        "d": 2,
+        "o": 2,
+        "h": "Tue Jul 02 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1562112000000,
+        "d": 3,
+        "o": 3,
+        "h": "Wed Jul 03 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 0
+    },
+    {
+        "t": 1562198400000,
+        "d": 4,
+        "o": 4,
+        "h": "Thu Jul 04 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 1
+    },
+    {
+        "t": 1562284800000,
+        "d": 5,
+        "o": 5,
+        "h": "Fri Jul 05 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 2
+    },
+    {
+        "t": 1562371200000,
+        "d": 6,
+        "l": 0,
+        "h": "Sat Jul 06 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1562457600000,
+        "d": 0,
+        "l": 0,
+        "h": "Sun Jul 07 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "o": -1,
+        "m": -1,
+        "e": -1
+    },
+    {
+        "t": 1562544000000,
+        "d": 1,
+        "o": 6,
+        "h": "Mon Jul 08 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 0
+    },
+    {
+        "t": 1562630400000,
+        "d": 2,
+        "o": 0,
+        "h": "Tue Jul 09 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 1,
+        "e": 1
+    },
+    {
+        "t": 1562716800000,
+        "d": 3,
+        "o": 1,
+        "h": "Wed Jul 10 2019 00:00:00 GMT-0400 (Eastern Daylight Time)",
+        "l": 1,
+        "m": 0,
+        "e": 2
+    },
+    {
+        "t": 1567468800000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Sep 02 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1567555200000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Sep 03 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1567641600000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Sep 04 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1567728000000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Sep 05 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1567814400000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Sep 06 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1567900800000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Sep 07 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1567987200000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Sep 08 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1568073600000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Sep 09 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1568160000000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Sep 10 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1568246400000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Sep 11 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1568332800000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Sep 12 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1568419200000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Sep 13 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1568505600000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Sep 14 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1568592000000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Sep 15 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1568678400000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Sep 16 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1568764800000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Sep 17 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1568851200000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Sep 18 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1568937600000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Sep 19 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1569024000000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Sep 20 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1569110400000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Sep 21 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1569196800000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Sep 22 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1569283200000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Sep 23 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1569369600000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Sep 24 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1569456000000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Sep 25 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1569542400000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Sep 26 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1569628800000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Sep 27 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1569715200000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Sep 28 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "All Staff Meeting/Professional Development",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1569801600000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Sep 29 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1569888000000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Sep 30 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1569974400000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Oct 01 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1570060800000,
+        "d": 3,
+        "o": 2,
+        "h": "Wed Oct 02 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "Labor Day - No School",
+        "l": 3,
+        "e": 0,
+        "m": 0
+    },
+    {
+        "t": 1570147200000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Oct 03 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "First Day of School",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1570233600000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Oct 04 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "Kindergarten begins/Preschool Orientation",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1570320000000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Oct 05 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1570406400000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Oct 06 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1570492800000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Oct 07 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1570579200000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Oct 08 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1570665600000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Oct 09 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1570752000000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Oct 10 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1570838400000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Oct 11 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1570924800000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Oct 12 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1571011200000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Oct 13 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1571097600000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Oct 14 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1571184000000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Oct 15 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1571270400000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Oct 16 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1571356800000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Oct 17 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1571443200000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Oct 18 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1571529600000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Oct 19 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1571616000000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Oct 20 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1571702400000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Oct 21 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1571788800000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Oct 22 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1571875200000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Oct 23 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1571961600000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Oct 24 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1572048000000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Oct 25 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "Pre-K-8 Early Release",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1572134400000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Oct 26 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1572220800000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Oct 27 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1572307200000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Oct 28 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1572393600000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Oct 29 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1572480000000,
+        "d": 3,
+        "o": 5,
+        "h": "Wed Oct 30 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "Rosh Hashanah - No School",
+        "l": 3,
+        "e": 1,
+        "m": 0
+    },
+    {
+        "t": 1572566400000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Oct 31 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1572652800000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Nov 01 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1572739200000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Nov 02 2019 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1572825600000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Nov 03 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1572912000000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Nov 04 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1572998400000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Nov 05 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1573084800000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Nov 06 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1573171200000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Nov 07 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1573257600000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Nov 08 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1573344000000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Nov 09 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "Yom Kippur",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1573430400000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Nov 10 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1573516800000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Nov 11 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1573603200000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Nov 12 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1573689600000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Nov 13 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1573776000000,
+        "d": 4,
+        "o": 6,
+        "h": "Thu Nov 14 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "Columbus Day - No School",
+        "l": 3,
+        "e": 1,
+        "m": 1
+    },
+    {
+        "t": 1573862400000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Nov 15 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1573948800000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Nov 16 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1574035200000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Nov 17 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1574121600000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Nov 18 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1574208000000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Nov 19 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1574294400000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Nov 20 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1574380800000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Nov 21 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1574467200000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Nov 22 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1574553600000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Nov 23 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "PreK-12 Early Release",
+        "l": 2,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1574640000000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Nov 24 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1574726400000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Nov 25 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1574812800000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Nov 26 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1574899200000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Nov 27 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1574985600000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Nov 28 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1575072000000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Nov 29 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1575158400000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Nov 30 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1575244800000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Dec 01 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1575331200000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Dec 02 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1575417600000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Dec 03 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1575504000000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Dec 04 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1575590400000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Dec 05 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1575676800000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Dec 06 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "Pre-K-8 Early Release",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1575763200000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Dec 07 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1575849600000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Dec 08 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1575936000000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Dec 09 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1576022400000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Dec 10 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1576108800000,
+        "d": 3,
+        "o": 5,
+        "h": "Wed Dec 11 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "Veterans' Day  No School",
+        "l": 3,
+        "e": 1,
+        "m": 0
+    },
+    {
+        "t": 1576195200000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Dec 12 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1576281600000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Dec 13 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1576368000000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Dec 14 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1576454400000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Dec 15 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1576540800000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Dec 16 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1576627200000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Dec 17 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1576713600000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Dec 18 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1576800000000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Dec 19 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1576886400000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Dec 20 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1576972800000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Dec 21 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1577059200000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Dec 22 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1577145600000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Dec 23 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1577232000000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Dec 24 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1577318400000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Dec 25 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1577404800000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Dec 26 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1577491200000,
+        "d": 5,
+        "o": 0,
+        "h": "Fri Dec 27 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "No School- Professional Development",
+        "l": 3,
+        "e": 2,
+        "m": 0
+    },
+    {
+        "t": 1577577600000,
+        "d": 6,
+        "o": 1,
+        "h": "Sat Dec 28 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "Thanksgiving Recess",
+        "l": 3,
+        "e": 0,
+        "m": 1
+    },
+    {
+        "t": 1577664000000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Dec 29 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1577750400000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Dec 30 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1577836800000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Dec 31 2019 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1577923200000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Jan 01 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1578009600000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Jan 02 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1578096000000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Jan 03 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1578182400000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Jan 04 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1578268800000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Jan 05 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1578355200000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Jan 06 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1578441600000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Jan 07 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1578528000000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Jan 08 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1578614400000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Jan 09 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1578700800000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Jan 10 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1578787200000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Jan 11 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1578873600000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Jan 12 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1578960000000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Jan 13 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1579046400000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Jan 14 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1579132800000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Jan 15 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1579219200000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Jan 16 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1579305600000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Jan 17 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1579392000000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Jan 18 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1579478400000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Jan 19 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1579564800000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Jan 20 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1579651200000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Jan 21 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1579737600000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Jan 22 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1579824000000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Jan 23 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1579910400000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Jan 24 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1579996800000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Jan 25 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1580083200000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Jan 26 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1580169600000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Jan 27 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1580256000000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Jan 28 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1580342400000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Jan 29 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1580428800000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Jan 30 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1580515200000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Jan 31 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1580601600000,
+        "d": 6,
+        "o": 1,
+        "h": "Sat Feb 01 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "Winter Recess",
+        "l": 3,
+        "e": 2,
+        "m": 0
+    },
+    {
+        "t": 1580688000000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Feb 02 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1580774400000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Feb 03 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1580860800000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Feb 04 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1580947200000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Feb 05 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1581033600000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Feb 06 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1581120000000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Feb 07 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1581206400000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Feb 08 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1581292800000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Feb 09 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1581379200000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Feb 10 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1581465600000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Feb 11 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1581552000000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Feb 12 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1581638400000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Feb 13 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1581724800000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Feb 14 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1581811200000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Feb 15 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1581897600000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Feb 16 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1581984000000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Feb 17 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1582070400000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Feb 18 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1582156800000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Feb 19 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1582243200000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Feb 20 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1582329600000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Feb 21 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1582416000000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Feb 22 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1582502400000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Feb 23 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1582588800000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Feb 24 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1582675200000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Feb 25 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1582761600000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Feb 26 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1582848000000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Feb 27 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1582934400000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Feb 28 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1583020800000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Feb 29 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1583107200000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Mar 01 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1583193600000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Mar 02 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1583280000000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Mar 03 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1583366400000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Mar 04 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1583452800000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Mar 05 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1583539200000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Mar 06 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1583625600000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Mar 07 2020 19:00:00 GMT-0500 (Eastern Standard Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1583712000000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Mar 08 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1583798400000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Mar 09 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1583884800000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Mar 10 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1583971200000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Mar 11 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1584057600000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Mar 12 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "PreK-12 Early Release",
+        "l": 2,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1584144000000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Mar 13 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1584230400000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Mar 14 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1584316800000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Mar 15 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1584403200000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Mar 16 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1584489600000,
+        "d": 2,
+        "o": 4,
+        "h": "Tue Mar 17 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "February Recess",
+        "l": 3,
+        "e": 2,
+        "m": 1
+    },
+    {
+        "t": 1584576000000,
+        "d": 3,
+        "o": 5,
+        "h": "Wed Mar 18 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "February Recess",
+        "l": 3,
+        "e": 0,
+        "m": 0
+    },
+    {
+        "t": 1584662400000,
+        "d": 4,
+        "o": 6,
+        "h": "Thu Mar 19 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "February Recess",
+        "l": 3,
+        "e": 1,
+        "m": 1
+    },
+    {
+        "t": 1584748800000,
+        "d": 5,
+        "o": 0,
+        "h": "Fri Mar 20 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "February Recess",
+        "l": 3,
+        "e": 2,
+        "m": 0
+    },
+    {
+        "t": 1584835200000,
+        "d": 6,
+        "o": 1,
+        "h": "Sat Mar 21 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "February Recess",
+        "l": 3,
+        "e": 0,
+        "m": 1
+    },
+    {
+        "t": 1584921600000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Mar 22 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1585008000000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Mar 23 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1585094400000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Mar 24 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1585180800000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Mar 25 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1585267200000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Mar 26 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1585353600000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Mar 27 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1585440000000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Mar 28 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1585526400000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Mar 29 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1585612800000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Mar 30 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1585699200000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Mar 31 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1585785600000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Apr 01 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1585872000000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Apr 02 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1585958400000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Apr 03 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1586044800000,
+        "d": 6,
+        "o": 1,
+        "h": "Sat Apr 04 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "PreK-8 Early Release",
+        "l": 5,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1586131200000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Apr 05 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1586217600000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Apr 06 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1586304000000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Apr 07 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1586390400000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Apr 08 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1586476800000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Apr 09 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1586563200000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Apr 10 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1586649600000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Apr 11 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1586736000000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Apr 12 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1586822400000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Apr 13 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1586908800000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Apr 14 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1586995200000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Apr 15 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1587081600000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Apr 16 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1587168000000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Apr 17 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1587254400000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Apr 18 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "PreK-12 Early Release",
+        "l": 2,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1587340800000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Apr 19 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1587427200000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Apr 20 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1587513600000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Apr 21 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1587600000000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Apr 22 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1587686400000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Apr 23 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1587772800000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Apr 24 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1587859200000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Apr 25 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1587945600000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Apr 26 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1588032000000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Apr 27 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1588118400000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Apr 28 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1588204800000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Apr 29 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1588291200000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Apr 30 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1588377600000,
+        "d": 5,
+        "o": 0,
+        "h": "Fri May 01 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "PreK-8 Early Release",
+        "l": 5,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1588464000000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat May 02 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1588550400000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun May 03 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1588636800000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon May 04 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1588723200000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue May 05 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1588809600000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed May 06 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1588896000000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu May 07 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1588982400000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri May 08 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1589068800000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat May 09 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1589155200000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun May 10 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1589241600000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon May 11 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1589328000000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue May 12 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1589414400000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed May 13 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1589500800000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu May 14 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1589587200000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri May 15 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1589673600000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat May 16 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1589760000000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun May 17 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1589846400000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon May 18 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1589932800000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue May 19 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1590019200000,
+        "d": 3,
+        "o": 5,
+        "h": "Wed May 20 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "April Recess",
+        "l": 3,
+        "e": 0,
+        "m": 1
+    },
+    {
+        "t": 1590105600000,
+        "d": 4,
+        "o": 6,
+        "h": "Thu May 21 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "April Recess",
+        "l": 3,
+        "e": 1,
+        "m": 0
+    },
+    {
+        "t": 1590192000000,
+        "d": 5,
+        "o": 0,
+        "h": "Fri May 22 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "April Recess",
+        "l": 3,
+        "e": 2,
+        "m": 1
+    },
+    {
+        "t": 1590278400000,
+        "d": 6,
+        "o": 1,
+        "h": "Sat May 23 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "April Recess",
+        "l": 3,
+        "e": 0,
+        "m": 0
+    },
+    {
+        "t": 1590364800000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun May 24 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1590451200000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon May 25 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1590537600000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue May 26 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1590624000000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed May 27 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1590710400000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu May 28 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1590796800000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri May 29 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1590883200000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat May 30 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1590969600000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun May 31 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1591056000000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Jun 01 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1591142400000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Jun 02 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1591228800000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Jun 03 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1591315200000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Jun 04 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1591401600000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Jun 05 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1591488000000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Jun 06 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "PreK-12 Early Release",
+        "l": 2,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1591574400000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Jun 07 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1591660800000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Jun 08 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1591747200000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Jun 09 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1591833600000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Jun 10 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1591920000000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Jun 11 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1592006400000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Jun 12 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1592092800000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Jun 13 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1592179200000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Jun 14 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1592265600000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Jun 15 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1592352000000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Jun 16 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1592438400000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Jun 17 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1592524800000,
+        "d": 4,
+        "o": -1,
+        "h": "Thu Jun 18 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1592611200000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Jun 19 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1592697600000,
+        "d": 6,
+        "o": 1,
+        "h": "Sat Jun 20 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "PreK-8 Early Release",
+        "l": 5,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1592784000000,
+        "d": 0,
+        "o": -1,
+        "h": "Sun Jun 21 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 0,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1592870400000,
+        "d": 1,
+        "o": -1,
+        "h": "Mon Jun 22 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1592956800000,
+        "d": 2,
+        "o": -1,
+        "h": "Tue Jun 23 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1593043200000,
+        "d": 3,
+        "o": -1,
+        "h": "Wed Jun 24 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1593129600000,
+        "d": 4,
+        "o": 6,
+        "h": "Thu Jun 25 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "Memorial Day -  No School",
+        "l": 3,
+        "e": 0,
+        "m": 1
+    },
+    {
+        "t": 1593216000000,
+        "d": 5,
+        "o": -1,
+        "h": "Fri Jun 26 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    },
+    {
+        "t": 1593302400000,
+        "d": 6,
+        "o": -1,
+        "h": "Sat Jun 27 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
+        "s": "",
+        "l": 1,
+        "e": -1,
+        "m": -1
+    }
+]

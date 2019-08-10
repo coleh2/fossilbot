@@ -8,7 +8,7 @@ var request = require('request');
 var fs = require('fs');
 var nodemailer = require('nodemailer');
 var jsonDb = require('simple-json-db');
-var cache = new jsonDb(__dirname + '/db/webcache.json');
+var cache = new jsonDb(__dirname + '/modules/webserver/db/webcache.json');
 var botAuth = require(__dirname + '/../../.data/auth.json');
 
 var callbacks = {};
@@ -418,7 +418,7 @@ var emailCodeGenerateAndSend = (m, cb) => {
 		port: 587,
 		auth: {
 			user: 'fossilbot-donotreply@coleh.net',
-			pass: require(__dirname + '/.data/email_auth.json')
+			pass: require(__dirname + '/../../.data/email_auth.json')
 		}
 	});
 
