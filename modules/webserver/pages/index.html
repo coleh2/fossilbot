@@ -43,7 +43,7 @@
                 position: relative;
             }
             #account-text img {
-                height: 1em;
+                height: 1.5em;
             }
             #account-dropdown {
                 position: absolute;
@@ -54,7 +54,6 @@
                 background: #3b413c;
                 z-index: 1;
                 box-shadow: #3b413c 0px 0px 5px;
-                display: none;
             }
             #account-dropdown::before {
                 content: "";
@@ -136,7 +135,7 @@
                 justify-content: center;
             }
         </style>
-        <script src="../assets/scripts/index.js"></script>
+        <script src="/scripts/index.js"></script>
     </head>
     <body>
         <header>
@@ -144,7 +143,7 @@
                 <h1><img src="./icon.svg" alt="Fossilbot"></h1>
                 <div id="account-nav">
                     <a href="javascript:void(0)" id="account-text">Log In</a>
-                    <div id="account-dropdown">
+                    <div id="account-dropdown" hidden>
                         <nav>
                             <ul>
                                 <li>

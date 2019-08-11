@@ -2,6 +2,8 @@ window.addEventListener("load", function () {
     var myAccountLink = document.getElementById("account-nav");
     myAccountLink.addEventListener("click", openAccountMenu);
     document.getElementById("account-dropdown").addEventListener("click",stopEventPropagation);
+
+    if(localStorage.getItem("connectCode")) displayUserInLoginText();
 });
 
 var openAccountMenu = function() {
@@ -9,7 +11,9 @@ var openAccountMenu = function() {
     if(!isLoggedIn) {
         openLogin();
     } else {
-        document.getElementById("account-dropdown").style.display = 'initial';
+        var dropdown = document.getElementById("account-dropdown");
+        if(dropdown.hidden) dropdown.hidden = false;
+
         document.body.addEventListener("click",closeAccountMenu);
     }
 }
@@ -19,7 +23,9 @@ var stopEventPropagation = function(event) {
 }
 
 var closeAccountMenu = function() {
-    document.getElementById("account-dropdown").style.display = 'none';
+    var dropdown = document.getElementById("account-dropdown");
+    if(!dropdown.hidden) dropdown.hidden = true;
+    
     document.body.removeEventListener("click", closeAccountMenu);
 }
 
@@ -31,7 +37,14 @@ var openLogin = function () {
         sendCodeSync(event.data);
     });
 }
-
+var displayUserInLoginText = function() {
+    var userData = JSON.parse("discordMyAccount");
+    var accountLinkText = document.getElementById('account-text');
+    accountLinkText.style.display = "flex"
+    accountLinkText.classList.add("loggedin");
+    accountLinkText.style.justifyContent = "center"
+    accountLinkText.innerHTML = '<span style="margin-right:0.25em">' + userData.username + ' </span> <img src="' + function (x) { if (x.avatar) { return 'https://cdn.discordapp.com/avatars/' + x.id + '/' + x.avatar } else { return 'https://cdn.discordapp.com/embed/avatars/' + (x.discriminator % 5) + '.png' } }(userData) + '" style="height:24px;border-radius:100%;overflow:hidden;" alt="yourpfp">'
+}
 var sendCodeSync = function (code) {
     var xhr = ((window.XMLHttpRequest) ? (new XMLHttpRequest()) : (new ActiveXObject("Microsoft.XMLHTTP")));
 
@@ -42,11 +55,7 @@ var sendCodeSync = function (code) {
             localStorage.setItem('connectCode', parsedResponse.code);
             localStorage.setItem('discordMyAccount', JSON.stringify(parsedResponse.user));
             
-            var accountLinkText = document.getElementById('account-text');
-            accountLinkText.style.display = "flex"
-            accountLinkText.style.justifyContent = "center"
-            accountLinkText.innerHTML = '<span style="margin-right:0.25em">' + parsedResponse.user.username + ' </span> <img src="' + function (x) { if (x.avatar) { return 'https://cdn.discordapp.com/avatars/' + x.id + '/' + x.avatar } else { return 'https://cdn.discordapp.com/embed/avatars/' + (x.discriminator % 5) + '.png' } }(parsedResponse.user) + '" style="height:24px;border-radius:100%;overflow:hidden;" alt="yourpfp">'
-
+            displayUserInLoginText();
             openAccountMenu();
         }
     };
