@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Fossilbot</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            body {
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                margin: 0px;
+                color: #3b413c;
+            }
+            header {
+                padding: 0.6em;
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+                background: #3b413c;
+                color: #daf0ee;
+            }
+            nav {
+                display: flex;
+                align-items: center;
+            }
+            nav h2 {
+                margin: 0px;
+                margin-right: 1em;
+            }
+            nav h1 {
+                margin: 0px;
+                margin-right: 0.75em;
+            }
+            nav img {
+                height: 2em;
+            }
+            #account-nav {
+                margin-left: auto;
+            }
+            main {
+                overflow: hidden;
+            }
+            #fp-splash {
+                height: 80vh;
+                background-color: #94d1be;
+                position: relative;
+                margin-bottom: 3em;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding: 1em;
+                text-align: center;
+            }
+            #fp-splash h1 {
+                margin-bottom: 1em;
+                margin-top: 5px;
+            }
+            #fp-splash img {
+                flex-grow: 1;
+                flex-shrink: 1;
+            }
+            #fp-splash a {
+                background: transparent;
+                border: 1px solid #3b413c;
+                font: inherit;
+                padding: 5px;
+                border-radius: 10px;
+                color: inherit;
+                text-decoration: none;
+            }
+            #fp-splash::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                bottom: -3em;
+                height: 3em;
+                background: #94d1be;
+                border-bottom-right-radius: 100%;
+                border: 0px solid transparent;
+            }
+            ul {
+                list-style-type: none;
+                padding: 0px;
+            }
+            li {
+                margin: 1em;
+                min-width: 50%;
+                max-width: 100%;
+            }
+            li:nth-of-type(even) {
+                
+                float: right;
+                clear: both;
+            }
+            li:nth-of-type(odd) {
+                text-align: right;
+                float: left;
+                clear: both;
+            }
+            footer {
+                position: relative;
+                padding: 10px;
+                background: #3b413c;
+                display: flex;
+                justify-content: center;
+            }
+        </style>
+        <script>
+        
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <h1><img src="./icon.svg" alt="Fossilbot"></h1>
+                <div id="account-nav">Your Account</div>
+            </nav>
+        </header>
+        <main>
+            <div id="fp-splash">
+                <img src="./icon.svg" alt="Fossilbot logo">
+                <h1>Fossilbot</h1>
+                <p>Fossilbot is a fully-customizable server utility Discord bot.</p>
+                <h1><a href="https://discordapp.com/oauth2/authorize?client_id=387963766798811136&permissions=335760448&scope=bot">Get Fossilbot</a> <a href="#fp-features">Fossilbot Features</a></h1>
+
+            </div>
+            <div id="fp-features">
+                <ul>
+                    <li>
+                        <h1>Channel Organization</h1>
+                        <p>Enable Channel Organization on any server category to automatically sort your most active channels to the top!</p>
+                        <img>
+                    </li>
+                    <li>
+                        <h1>Anti-Spam</h1>
+                        <p>Fossilbot can block anything; naughty words, ping-spamming, or mass pinging.</p>
+                    </li>
+                    <li>
+                        <h1>Nametag Colors</h1>
+                        <p>Allow users to pick from a list of nametag colors-- or let them choose any color they want! Colors can be restricted to rewards roles.</p>
+                    </li>
+                    <li>
+                        <h1>Notification System</h1>
+                        <p>Users can use the <code>notify</code> command to add themselves to a Notification Role, which can be pinged to gather a group!</p>
+                    </li>
+                    <li>
+                        <h1>Hamburger Watermelon</h1>
+                        <p>Equal number of features in the list. This is a selling point.</p>
+                    </li>
+                    <li>
+                        <h1>Voice Channel Emojis</h1>
+                        <p>Know at a glance what game your friends are playing with automatic emoji labels!</p>
+                    </li>
+                    <li>
+                            <h1>Utility Commands</h1>
+                            <p>Grab an image from Google Images, look up a game on Steam, or translate messages into another language!</p>
+                        </li>
+                    <li>
+                        <h1>Fully Custom</h1>
+                        <p>Don't like a feature? Just turn it off in the Fossilbot Server Settings!</p>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <footer>
+            <p>
+                <a href="https://github.com/coleh2/fossilbot"><img src="./github.png" alt="View Fossilbot on GitHub!   "></a>
+            </p>
+        </footer>
+    </body>
