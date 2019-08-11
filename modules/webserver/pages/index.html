@@ -16,8 +16,9 @@
                 padding-right: 0.5em;
                 background: #3b413c;
                 color: #daf0ee;
+                overflow: show;
             }
-            nav {
+            header > nav {
                 display: flex;
                 align-items: center;
             }
@@ -31,9 +32,40 @@
             }
             nav img {
                 height: 2em;
+                max-width: 80vw;
+            }
+            nav a {
+                color: inherit;
+                text-decoration: none;
             }
             #account-nav {
                 margin-left: auto;
+                position: relative;
+            }
+            #account-text img {
+                height: 1em;
+            }
+            #account-dropdown {
+                position: absolute;
+                min-width: 2in;
+                max-width: 90vw;
+                top: 2.75em;
+                right: -0.5em;
+                background: #3b413c;
+                z-index: 1;
+                box-shadow: #3b413c 0px 0px 5px;
+                display: none;
+            }
+            #account-dropdown::before {
+                content: "";
+                position: absolute;
+                right: 0.5em;
+                top: -0.5em;
+                width: 1em;
+                height: 1em;
+                transform: rotate(45deg);
+                background: #3b413c;
+                box-shadow: #3b413c 0px 0px 5px;
             }
             main {
                 overflow: hidden;
@@ -77,21 +109,21 @@
                 border-bottom-right-radius: 100%;
                 border: 0px solid transparent;
             }
-            ul {
+            #feature-list {
                 list-style-type: none;
                 padding: 0px;
             }
-            li {
+            #feature-list > li {
                 margin: 1em;
                 min-width: 50%;
                 max-width: 100%;
             }
-            li:nth-of-type(even) {
+            #feature-list > li:nth-of-type(even) {
                 
                 float: right;
                 clear: both;
             }
-            li:nth-of-type(odd) {
+            #feature-list > li:nth-of-type(odd) {
                 text-align: right;
                 float: left;
                 clear: both;
@@ -104,15 +136,27 @@
                 justify-content: center;
             }
         </style>
-        <script>
-        
-        </script>
+        <script src="../assets/scripts/index.js"></script>
     </head>
     <body>
         <header>
             <nav>
                 <h1><img src="./icon.svg" alt="Fossilbot"></h1>
-                <div id="account-nav">Your Account</div>
+                <div id="account-nav">
+                    <a href="javascript:void(0)" id="account-text">Log In</a>
+                    <div id="account-dropdown">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="/sl">Your Server List</a>
+                                </li>
+                                <li>
+
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
             </nav>
         </header>
         <main>
@@ -124,7 +168,7 @@
 
             </div>
             <div id="fp-features">
-                <ul>
+                <ul id="feature-list">
                     <li>
                         <h1>Channel Organization</h1>
                         <p>Enable Channel Organization on any server category to automatically sort your most active channels to the top!</p>

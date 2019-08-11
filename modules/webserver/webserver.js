@@ -59,7 +59,7 @@ app.get('/discordoauthresponse', function (req, resp) {
 });
 // http://expressjs.com/en/starter/basic-routing.html
 app.get('/', function (req, resp) {
-	resp.send('');
+	resp.sendFile(__dirname + '/pages/index.html');
 });// http://expressjs.com/en/starter/basic-routing.html
 app.get('/lb/:serverId', function (req, resp) {
 	resp.sendFile(__dirname + '/pages/lb.html');
