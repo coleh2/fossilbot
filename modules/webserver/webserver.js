@@ -8,7 +8,7 @@ var request = require('request');
 var fs = require('fs');
 var nodemailer = require('nodemailer');
 var jsonDb = require('simple-json-db');
-var cache = new jsonDb(__dirname + '/modules/webserver/db/webcache.json');
+var cache = new jsonDb(__dirname + '/db/webcache.json');
 var botAuth = require(__dirname + '/../../.data/auth.json');
 
 var callbacks = {};
@@ -55,21 +55,21 @@ app.use(express.json());
 
 
 app.get('/discordoauthresponse', function (req, resp) {
-	resp.sendFile(__dirname + '/modules/webserver/assets/discordoauthredirect.html');
+	resp.sendFile(__dirname + '/assets/discordoauthredirect.html');
 });
 // http://expressjs.com/en/starter/basic-routing.html
 app.get('/', function (req, resp) {
 	resp.send('');
 });// http://expressjs.com/en/starter/basic-routing.html
 app.get('/lb/:serverId', function (req, resp) {
-	resp.sendFile(__dirname + '/modules/webserver/pages/lb.html');
+	resp.sendFile(__dirname + '/pages/lb.html');
 });
 app.get('/cp/:serverId', function (req, resp) {
-	resp.sendFile(__dirname + '/modules/webserver/pages/cp.html');
+	resp.sendFile(__dirname + '/pages/cp.html');
 });
 app.get('/sd/:serverId/:fileName', function (req, resp) {
 	try {
-		resp.sendFile(__dirname + '/modules/webserver/pages/sd/' + req.params.serverId + req.params.fileName + '.html');
+		resp.sendFile(__dirname + '/pages/sd/' + req.params.serverId + req.params.fileName + '.html');
 	} catch (e) { }
 });
 
@@ -356,7 +356,7 @@ app.get('/validate_email', (req, res) => {
 
 	function notAuth(statusCode) {
 		res.status(statusCode);
-		res.sendFile(__dirname + '/modules/webserver/pages/email_response_failure.html');
+		res.sendFile(__dirname + '/pages/email_response_failure.html');
 	}
 
 	if (!req.query.userid || !req.query.serverid || !req.query.code) return notAuth(400)
@@ -374,10 +374,10 @@ app.get('/validate_email', (req, res) => {
 
 	callbacks.onEmailAuth({ userid: req.query.userid, guild_id: req.query.serverid, email: userRecord.email_address });
 
-	res.sendFile(__dirname + '/modules/webserver/pages/email_response.html');
+	res.sendFile(__dirname + '/pages/email_response.html');
 });
 
-app.use(express.static(__dirname + '/modules/webserver/assets'));
+app.use(express.static(__dirname + '/assets'));
 
 var emailCodeGenerateAndSend = (m, cb) => {
 	var evt = m.evt;
@@ -430,7 +430,7 @@ var emailCodeGenerateAndSend = (m, cb) => {
 		html: `<!DOCTYPE HTML><html><head></head><body style=\"padding: 3em; margin: 0px; color: #000000; background: #dedede;font-family: sans-serif;\">\r\n <div style=\"padding: 10px; background: #fefefe; \">\r\n    <h1 style=\"width: 100%; display: block; height: 2em; position: relative;\">\r\n\t    <img src=\"cid:fossilbotlogo\" style=\"width: 2em;border-radius:100%; width: 2em;\" alt=\"Fossilbot logo\">\r\n\t\t<span style=\"display: inline-block; position: absolute; top: 0px; left: 2.5em; line-height: 2em; vertical-align: middle;\">Email Verification<\/span>\r\n\t<\/h1>\r\n\t<div style=\"padding:10px;\">\r\n\t\t<p>Hey there! Someone wanted to use this email address to access the <b>NHS</b> Discord server. If it was you, click on the button below.<\/p>\r\n\t    <div style=\"background: #dedede; padding: 10px; border-radius: 4px; font-size: 2em;\">\r\n\t\t\t<button style=\"margin: auto; display:block; background: #61B774; outline: none; border: none; padding: 0.5em; padding-left: 0.75em; padding-right: 0.75em; font-size: 1.25em; color: white; border-radius: 0.25em; width: auto; cursor: pointer; overflow: hidden; transition: width 10s linear;\">\r\n\t\t\t    <a style=\"text-decoration:none;color:black;\" href="https://fossilbot.cf/validate_email?userid=${user_id}&serverid=${guild_id}&code=${code}&action=verify">Verify Email<\/a>\r\n\t\t\t<\/button>\r\n\t\t<\/div>\r\n\t\t<p>If you didn\'t request this email, please click <a href=\"mailto:coleh@coleh.net\" style=\"color: #3333cc;\">here<\/a> to notify  a human about that.<\/p>\r\n\t\t\r\n\t<\/div>\r\n\r\n <\/div>\r\n<div style=\"background: #cecece; padding: 10px; position: relative; text-align: center;\">\r\n\t<i><span style=\"white-space: nowrap;\"><a href=\"https:\/\/discordapp.com\/oauth2\/authorize?client_id=387963766798811136&permissions=335760448&scope=bot\" style=\"color: #3333cc;\">Get Fossilbot for your server<\/a><\/span> &bull; <span style=\"white-space: nowrap;\"><a href=\"mailto:coleh@coleh.net\" style=\"color: #3333cc;\">Contact me<\/a><\/span> <\/i>\r\n<\/div>\r\n<\/body></html>`,
 		attachments: [{
 			filename: 'fossilbotlogo.png',
-			path: __dirname + '/modules/webserver/assets/emailicon.png',
+			path: __dirname + '/assets/emailicon.png',
 			cid: 'fossilbotlogo'
 		}]
 	};
