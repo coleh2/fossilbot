@@ -25,7 +25,7 @@ var stopEventPropagation = function(event) {
 var closeAccountMenu = function() {
     var dropdown = document.getElementById("account-dropdown");
     if(!dropdown.hidden) dropdown.hidden = true;
-    
+
     document.body.removeEventListener("click", closeAccountMenu);
 }
 
@@ -38,7 +38,7 @@ var openLogin = function () {
     });
 }
 var displayUserInLoginText = function() {
-    var userData = JSON.parse("discordMyAccount");
+    var userData = JSON.parse(localStorage.getItem("discordMyAccount");
     var accountLinkText = document.getElementById('account-text');
     accountLinkText.style.display = "flex"
     accountLinkText.classList.add("loggedin");
