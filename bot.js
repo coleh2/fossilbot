@@ -5,7 +5,7 @@ const db = require('better-sqlite3')(__dirname + '/.data/sqlite.db');
 //initialize sql tables
 db.prepare('CREATE TABLE IF NOT EXISTS serverconfig (id TEXT PRIMARY KEY, cooldown_g NUMERIC, cooldown_e NUMERIC, cooldown_e_t NUMERIC, cooldown_s NUMERIC, cooldown_s_t NUMERIC, cooldown_m NUMERIC, colldown_m_t NUMERIC, spam_time_mins NUMERIC, autoorder_category_name TEXT, game_emoji TEXT, name_color_roles TEXT, msgs TEXT, enabled_getme INTEGER, enabled_autoorder INTEGER, enabled_notify INTEGER, enabled_addmeto INTEGER, enabled_voicechannelgameemojis INTEGER, enabled_experience INTEGER, enabled_antispam INTEGER, enabled_autoresponse INTEGER, enabled_namecolor INTEGER, auto_resp TEXT, notifybudget INTEGER)').run();
 db.prepare('CREATE TABLE IF NOT EXISTS channelactivity (channel_id TEXT, guild_id TEXT, day INTEGER, messages INTEGER, UNIQUE(channel_id, guild_id, day))').run();
-db.prepare('CREATE TABLE IF NOT EXISTS userknown (id TEXT PRIMARY KEY, email TEXT)').run();
+db.prepare('CREATE TABLE IF NOT EXISTS userknown (id TEXT PRIMARY KEY, email TEXT, pgscore INTEGER)').run();
 
 var voiceSessions = {};
 const webserver = require(__dirname + `/modules/webserver/webserver.js`)(db);
@@ -84,7 +84,8 @@ webserver.onEmailAuth(function (m) {
 		serverID: m.guild_id,
 		userID: m.userid,
 		nick: nick
-	})
+	});
+	db.prepare("INSERT OR REPLACE INTO userknown (id, email) VALUES (?, ?)", [m.userid, m.email]).run();
 
 });
 webserver.onSnowDayAnnounced(function(m) {
@@ -214,7 +215,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 		//deny commands in DMs
 		if (!bot.servers[evt.d.guild_id]) {
 			if (message.split(' ')[0] == '>help') {
-				var strdoc = require(__dirname + '/data	/doc.json');
+				var strdoc = require(__dirname + '/data/doc.json');
 				var helpdochere = strdoc.help.main
 				if (message.split(' ')[1] && strdoc.help[message.split(' ')[1]]) { helpdochere = strdoc.help[message.split(' ')[1]] }
 				bot.sendMessage({
@@ -253,6 +254,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 
 		//if the user is a bot, stop ALL of this stuff
 		if (evt.d.author.bot) return
+
+
 		//antispam section
 		if (_cfg.enabledFeatures.antispam) {
 			antiSpam.update(evt, _cfg);
@@ -315,7 +318,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 				reaction: '❤'
 			})
 		}
-		//user commands
+		//commands
 		if (message.substring(0, 1) === cmdprefix) {
 
 			var args = message.substring(1).split(' ');
@@ -323,27 +326,8 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 			args = args.splice(1);
 
 			//find the command; if it exists, run it
-			if (commandManager[cmd]) {
-				commandManager[cmd](evt, args, _cfg, bot, db);
-			} else {
-
-				//this'll be removed later-- basically a 'this has been removed' note for concancated-word commands
-				var recentlyChangedCommands = {
-					"getme": "get",
-					"joinchannel": "join",
-					"leavechannel": "leave",
-					"notifyroles": "notifiers",
-					"notifylist": "notified",
-					"namecolor": "nametag",
-
-				}
-
-				if (recentlyChangedCommands[cmd]) {
-					bot.sendMessage({
-						to: channelID,
-						message: "That command has been renamed. Use `>" + recentlyChangedCommands[cmd] + "` instead, please. Thank you! =)"
-					});
-				}
+			if (commandManager.commands[cmd]) {
+				commandManager.commands[cmd](evt, args, _cfg, bot, db);
 			}
 
 			return true

@@ -5,3 +5,4 @@ channelDb.json
 .pm2/
 /node_modules/
 /nhs_resources/
+webserver/db

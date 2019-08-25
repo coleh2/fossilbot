@@ -17,5 +17,8 @@
         "searchgame",
         "searchgames",
         "searchsteam"
+    ],
+    "periodgame": [
+        "pg"
     ]
 }
