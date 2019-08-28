@@ -44,5 +44,8 @@
     "yandex-translate": "^2.1.2",
     "youtube-search-list": "^1.0.0",
     "ytdl-core": "^0.28.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.2.2"
   }
 }

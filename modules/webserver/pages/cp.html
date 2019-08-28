@@ -1,345 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Control Panel - Fossilbot</title>
-    <meta name="description" content="Fossilbot's control panel">
-    <link id="favicon" rel="icon" href="https://cdn.discordapp.com/icons/443917592084873236/b64f9e7e746eb12481f1dc42f4f6e920.png" type="image/png">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Work+Sans" rel="stylesheet">
-    <style>
-	iframe#discordLogin {
-	width: 100vw;
-	height: 100vh;
-	position: absolute;
-	animation: 1s forwards slideup;
-	}
-	#logindude {
-	background: #373A3D;
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	z-index: 100;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	}
-	#logindude > svg {
-    min-width: 0.5in;
-	width: 20%;
-	}
-	#logindude > a {
-	color: white;
-	text-decoration: none;
-	margin: 5%;
-	font-size: 5vmin;
-	text-align: center;
-	}
-	body {
-	margin:0px;
-	color: white;
-	font-family: 'Work Sans', sans-serif;
-	background: #313437;
-	display: flex; 
-	justify-content: center;
-	}
-	main {
-	   width: 75%;
-	   min-width: 4in;
-	   background: #373A3D;
-	   overflow-x: hidden;
-	   padding: 10px;
-	   min-height: 100vh;
-	}
-	@keyframes slideup {
-	from { top: 100vh; }
-	to { top: 0%; }
-	}
-	input[type="checkbox"] {
-	  position: relative;
-	  width: 4.4em;
-	  height: 2.4em;
-	}
-	input:checked {
-	  display: initial;
-	}
-	input[type="checkbox"]::after {
-	  height: 1.6em;
-	  position: absolute;
-	  background: #fff;
-	  content:" ";
-	  left: 0.4em;
-	  top: 0.4em;
-	  width: 1.6em;
-	  z-index: 2;
-	  transition: all 0.1s ease-out;
-	  cursor: pointer;
-	}
-	input:checked::after {
-	  left:2.4em;
-	  transition: all 0.1s ease-out;
-	}
-	input[type="checkbox"]::before {
-	  height: 2.4em;
-	  width: 4.4em;
-	  position: absolute;
-	  background: #CCC;
-	  content:" ";
-	  top: 0px;
-	  left: 0px;
-	  z-index: 1;
-	  cursor: pointer;
-	}
-	input:checked::before {
-	  background:#7289DA;
-	}
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Control Panel - Fossilbot</title>
+	<meta name="description" content="Fossilbot's control panel">
+	<link id="favicon" rel="icon"
+		href="https://cdn.discordapp.com/icons/443917592084873236/b64f9e7e746eb12481f1dc42f4f6e920.png"
+		type="image/png">
 
-	input {
-	  height: 2.4em;
-	  border: none;
-	  border-bottom: solid 5px #7E878C;
-	  background: #ddd;
-    padding-left: 0.2em;
-    padding-right: 0.2em;
-	}
-	input:focus {
-	  border-bottom: solid 5px #7289DA;
-      outline: #7289DA;
-	}
-	input:not(:valid) {
-	  border-bottom: solid 5px #B37373 !important;
-      outline: #B37373;
-	}
-	code {
-	font-family: 'IBM Plex Mono', monospace;
-	display: inline;
-	}
-	section > div {
-	display: flex; 
-	align-items: center;
-	margin-left: 2em;
-	margin-right: 2em;
-	flex-wrap: wrap;
-	border-top: 1px solid #cccccc;
-	}
-	section > div:first-child {
-	border-top: none;
-	}
-	a:link {
-	color: #C4D1FF;
-	
-	}
-	a:visited {
-	color: #C4D1FF;
-	}
-	#popup {
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	background: #373A3D;
-	z-index: 1000;
-	display: none;
-	box-sizing: content-box;
-	left: 0px;
-	top: 0px;
-	bottom: 0px;
-	right: 0px;
-    overflow-y: auto;
-	}
-	#popupcont {
-	padding: 5vmin;
-	position: relative;
-	}
-	.editContext {
-	margin-left: 10%;
-	margin-right: 0%;
-	display: flex;
-	box-sizing: content-box;
-	padding-left: 2em;
-	padding-right: 2em;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	text-align: center;
-	align-content: center;
-	position: relative;
-    fill: #fff;
-	}
-	.spacer1 {
-	width: 30%;
-	flex-grow: 100;
-	height: 10px;
-	margin-left: auto;
-	}
-	button {
-	background: #61B774;
-	outline: none;
-	  border: none;
-	  padding: 0.5em;
-	  padding-left: 0.75em;
-	  padding-right: 0.75em;
-	  font-size: 1.25em;
-	  color: white;
-	  border-radius: 0.25em;
-      width: auto;
-	  cursor: pointer;
-	  overflow: hidden;
-      transition: width 10s linear;
-    }
-    button:focus {
-    background: #4D915B;
-    box-sizing: border-box;
-    }
-	.noteditablecover {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	height: 100%;
-	width: 100%;
-	background: #373A3D88;
-	z-index: -1;
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	}
-    ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    }
-    li {
-    margin-top: 0.5em;
-    }
-    .deletebutton {
-    border-radius: 100%;
-    border: 1px solid #B37373;
-    width: 1em;
-    height: 1em;
-    background: #B3737344;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    color: #B37373;
-    text-decoration: none;
-    margin-left: 0.5em;
-    }
-    .deletebutton::before {
-    content: "\D7";
-    color: #B37373;
-    text-decoration: none;
-    }
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		#login-splash {
+			background: #94d1be;
+			display: flex;
+			position: fixed;
+			width: 100vw;
+			height: 100vh;
+			justify-content: center;
+			align-items: center;
+			z-index: 3;
+		}
+
+		#login-splash a {
+			color: inherit;
+			text-decoration: none;
+			padding: 5px;
+			border-radius: 10px;
+			border: 2px #3b413c solid;
+		}
+
+		#root {
+			display: flex;
+			position: relative;
+			flex-direction: row;
+			height: 95vh;
+		}
+
+		body {
+			margin: 0px;
+			color: #3b413c;
+			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+		}
+
+		header {
+			width: 100vw;
+			background: #A9DACB;
+			z-index: 1;
+			padding: 10px;
+			height: 10vh;
+			overflow: hidden;
+			display: flex;
+			align-content: center;
+			justify-content: space-between;
+		}
+
+		header a {
+			color: inherit;
+			font-size: 1.5em;
+			text-decoration: none;
+		}
+
+		header h1 {
+			font-size: 1.5em;
+			margin: 0px;
+			white-space: nowrap;
+		}
+
+		aside {
+			display: none;
+			width: 3in;
+			position: fixed;
+			background: #94d1be;
+			height: 90vh;
+			z-index: 2;
+		}
+
+		aside nav hr {
+			border: 1px solid #A9DACB;
+		}
+
+		aside nav ul {
+			list-style-type: none;
+			font-size: 1.25em;
+			margin: 0px;
+			padding: 10px;
+		}
+
+		aside li {
+			border-radius: 4px;
+			border: 1px solid #94d1be;
+		}
+
+		aside li:hover {
+			background: #a5d8c8;
+		}
+
+		aside li:active,
+		aside li:focus-within {
+
+			border: solid 1px #76A798;
+		}
+
+		aside li.selected {
+			color: #263732;
+			background: #9cd1c0;
+			font-weight: bold;
+		}
+
+		aside li.disabled {
+			color: #638c80;
+		}
+
+		aside nav a {
+			padding: 4px;
+			color: inherit;
+			text-decoration: none;
+			width: 100%;
+			display: inline-block;
+			outline: none;
+		}
+
+		main {
+			height: 100%;
+			overflow: hidden;
+			flex-grow: 1;
+		}
+
+		.tab {
+			height: 100%;
+			padding: 10px;
+		}
+
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		input[type=number] {
+			-moz-appearance: textfield;
+		}
+
+		select {
+			background: white;
+			border: 1px solid #B6B6B3;
+		}
+
+		option {
+			background: inherit;
+			color: inherit;
+		}
+
+		.snackbar {
+			position: fixed;
+			background: #ffffff;
+			padding: 1em;
+			z-index: 101;
+			width: auto;
+			max-width: 100vw;
+			text-align: center;
+			box-shadow: 0px 1px 2px 2px #00000079;
+			animation: fall-in 0.2s;
+			border-top: solid 5px #ffffff;
+			top: 5vh;
+			left: 50%;
+			transform: translate(-50%, 0);
+		}
+		.snackbar button {
+			background: transparent;
+			border: none;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		@media (min-width: 5in) {
+			header {
+				display: block;
+				width: 3in;
+				height: 5vh;
+			}
+
+			#open-menu-button {
+				display: none;
+			}
+
+			main {
+				height: 100vh;
+				position: relative;
+				top: -5vh;
+			}
+
+			.tab h2 {
+				margin-bottom: 0px;
+			}
+
+			aside {
+				height: 95vh;
+				position: relative;
+				display: initial;
+			}
+		}
+		@keyframes fall-in {
+			from {top: -200vh; opacity: 0; }
+			to {top: 0px; opacity: 1; }
+		}
 	</style>
-	
-    <script src="/scripts/cp.js"></script>
-  </head>
-  <body>
-    <div id="logindude">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20vmin" height="20vmin" fill="#B37373" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm7 14h-14v-4h14v4z"/></svg>
-    <a onclick="openLogin()" href="javascript:void(0)">You aren't logged in. Click here to log in.</a>
-    </div>
-    <main id="main">
-      <section style="height: 3em;overflow:hidden;margin-bottom:1.5em">
-	      <div id="saveDiv" style="background:#292B2D; border-radius:5px; height: 0px;display:flex;position:relative;align-items:end;justify-content:center;transition: height 0.2s linear;overflow:hidden;">
-	          <button id="sendButton" onclick="sendEdits()" style="z-index:2;margin-bottom:0.1em;margin-top:0.1em;">Save Changes</button>
-			  
-			  <div id="hgebjkhgrkujeab">
-			  </div>
-		  </div>
-		  <style>@keyframes shrinkVert { from { height: 3em; } to { height: 0px; } } @keyframes expand { 0% { width: 0%; left: 50%; } 23% { width: 100%; left: 0%; } 25% { width: 96%; left: 2%; } 27% { width: 100%; left: 0%; } 40% { width: 100%; left: 0%; } } #hgebjkhgrkujeab { position: absolute; top: 0%; left: 50%; background: #373A3Dee; border-radius:5px; transition: all 1s linear; height: 100%; width: 0%; } .expandHor { animation: expand 6s ease-in both infinite }</style>
-	  </section>
-<section id="enableCommands">
-<div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> &gt;getme</code><div class="editContext">
-<div class="noteditablecover"></div>
-<!--<a href="javascript:void(0)" onclick="editProps('getme','edit')">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
 
-</a>-->
-</div></div>
-<div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> &gt;notify</code><div class="editContext">
-<div class="noteditablecover"></div>
-<a href="javascript:void(0)" onclick="editProps('notify','edit')">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
+	<script src="/scripts/cp.js"></script>
 
-</a>
-</div></div>
-<div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> &gt;addmeto</code><div class="editContext">
-<div class="noteditablecover"></div>
-<!--<a href="javascript:void(0)" onclick="editProps('addmeto','edit')">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
+</head>
 
-</a>-->
-</div></div>
-<div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> voice channel game emojis</code><div class="editContext">
-<div class="noteditablecover"></div>
-<a href="javascript:void(0)" onclick="editProps('emojis','edit')">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
-
-</a>
-</div></div>
-<div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> experience</code><div class="editContext">
-<div class="noteditablecover"></div>
-<!--<a href="javascript:void(0)" onclick="editProps('xp','edit')">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
-
-</a>-->
-</div></div>
-<div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> auto-order</code><div class="editContext">
-  <div class="noteditablecover"></div>
-  <a href="javascript:void(0)" onclick="editProps('sort','edit')">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
-  
-  </a>
-  </div></div>
-<div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> anti-spam</code><div class="editContext">
-<div class="noteditablecover"></div>
-<a href="javascript:void(0)" onclick="editProps('spam','edit')">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
-
-</a>
-</div></div>
-<div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> auto-response</code><div class="editContext">
-<div class="noteditablecover"></div>
-<a href="javascript:void(0)" onclick="editProps('resp','edit')">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
-
-</a>
-</div></div>
-<div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> join messages</code><div class="editContext">
-<div class="noteditablecover"></div>
-<a href="javascript:void(0)" onclick="editProps('joinm','edit')">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
-
-</a>
-</div></div>
-<div style="font-size:2em;"><input type="checkbox" class="enableCommandsCheck"><code> &gt;namecolor</code><div class="editContext">
-<div class="noteditablecover"></div>
-<a href="javascript:void(0)" onclick="editProps('namecolor','edit')">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z"/></svg>
-
-</a>
-</div></div>
-</section>
-
-    </main>
-
-	
-	<div id="popup">
-	<div id="popupcont">
-	<a href="javascript:void(0)" class="exitbutton" onclick="document.getElementById('popup').style.display = 'none'" style="float: right; display: block; font-size: 0.5in; text-decoration: none;"></a><style>#popupcont > a.exitbutton::before { content: "\D7"}</style>
-	<div style="clear: both;"></div>
-     <h1><span id="pu-action-elem">Editing</span>: <code id="pu-editing-elem">&gt;getme</code></h1>
-	 
-	 <ul id="pu-props-list">
-     
-     
-     </ul>
+<body>
+	<div id="login-splash">
+		<h2><a id="login-link" href="javascript:void(0)">Log In</a></h2>
 	</div>
+	<header>
+		<a id="open-menu-button" aria-role="button" aria-pressed="false">
+			<span class="fa fa-bars" aria-hidden="true"></span>
+		</a>
+		<h1>Configuration</h1>
+	</header>
+	<div id="root">
+
+		<aside id="side-menu" aria-hidden="true" style="display: block;">
+			<nav>
+				<ul aria-role="menu">
+					<li aria-role="menuitem" class="selected">
+						<a href="#modules">
+							<span class="fa fa-puzzle-piece" aria-hidden="true"></span>
+							<span>Enable Modules</span>
+						</a>
+					</li>
+					<hr>
+					<li aria-role="menuitem" class="">
+						<a href="#notify">
+							<span class="fa fa-bell" aria-hidden="true"></span>
+							<span>Notification Roles</span>
+						</a>
+					</li>
+					<li aria-role="menuitem">
+						<a href="#getme">
+							<span class="fa fa-camera" aria-hidden="true"></span>
+							<span>Getting Pictures</span>
+						</a>
+					</li>
+					<li aria-role="menuitem">
+						<a href="#voicechannelgameemojis">
+							<span class="fa fa-volume-up" aria-hidden="true"></span>
+							<span>Game Label Emojis</span>
+						</a>
+					</li>
+					<li aria-role="menuitem">
+						<a href="#addmeto">
+							<span class="fa fa-hand-point-right" aria-hidden="true"></span>
+							<span>Channel Joining</span>
+						</a>
+					</li>
+					<li aria-role="menuitem">
+						<a href="#autoorder">
+							<span class="fa fa-stream" aria-hidden="true"></span>
+							<span>Auto-Channel Ordering</span>
+						</a>
+					</li>
+					<li aria-role="menuitem">
+						<a href="#antispam">
+							<span class="fa fa-mail-bulk" aria-hidden="true"></span>
+							<span>Anti-Spam</span>
+						</a>
+					</li>
+					<li aria-role="menuitem">
+						<a href="#autoresponse">
+							<span class="fa fa-comments" aria-hidden="true"></span>
+							<span>Auto-Response</span>
+						</a>
+					</li>
+					<li aria-role="menuitem">
+						<a href="#namecolor">
+							<span class="fa fa-palette" aria-hidden="true"></span>
+							<span>Nametag Colors</span>
+						</a>
+					</li>
+					<li aria-role="menuitem">
+						<a href="#joinmessages">
+							<span class="fa fa-door-open" aria-hidden="true"></span>
+							<span>Join Messages</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</aside>
+		<main>
+			<div class="tab" id="modules" aria-role="tabpanel">
+				<h2>Enable Modules</h2>
+				<i>Turn on / off features</i>
+				<ul>
+					<li><label><input type="checkbox" class="enable-module-checkbox config-input"
+								data-config-key="enabledFeatures.notify" name="notify">Notification Roles</label></li>
+					<li><label><input type="checkbox" class="enable-module-checkbox config-input"
+								data-config-key="enabledFeatures.getme" name="getme">Getting Pictures</label></li>
+					<li><label><input type="checkbox" class="enable-module-checkbox config-input"
+								data-config-key="enabledFeatures.voicechannelgameemojis"
+								name="voicechannelgameemojis">Game Label Emojis</label></li>
+					<li><label><input type="checkbox" class="enable-module-checkbox config-input"
+								data-config-key="enabledFeatures.addmeto" name="addmeto">Channel Joining</label></li>
+					<li><label><input type="checkbox" class="enable-module-checkbox config-input"
+								data-config-key="enabledFeatures.autoorder" name="autoorder">Auto-Channel
+							Ordering</label></li>
+					<li><label><input type="checkbox" class="enable-module-checkbox config-input"
+								data-config-key="enabledFeatures.antispam" name="antispam">Anti-Spam</label></li>
+					<li><label><input type="checkbox" class="enable-module-checkbox config-input"
+								data-config-key="enabledFeatures.autoresponse" name="autoresponse">Auto-Response</label>
+					</li>
+					<li><label><input type="checkbox" class="enable-module-checkbox config-input"
+								data-config-key="enabledFeatures.namecolor" name="namecolor">Nametag Colors</label></li>
+					<li><label><input type="checkbox" class="enable-module-checkbox config-input"
+								data-config-key="enabledFeatures.joinmessages" name="joinmessages">Join Messages</label>
+					</li>
+				</ul>
+			</div>
+			<div class="tab" id="notify" aria-role="tabpanel" hidden>
+				<h2>Notification Roles</h2>
+				<i>Let users create pingable roles.</i>
+				<ul>
+					<li>Each person may create up to <input type="number" min="0" class="config-input"
+							data-config-key="notifyBudget"> roles. <i>This does not limit the amount of roles that
+							people may join.</i></li>
+				</ul>
+			</div>
+			<div class="tab" id="getme" aria-role="tabpanel" hidden>
+				<h2>Getting Pictures</h2>
+				<i>Quickly get a reaction image, reference, etc.</i>
+				<ul>
+					<li>Allow NSFW images: <select>
+							<option>Never</option>
+							<option>In NSFW channels only</option>
+							<option>Always</option>
+						</select></li>
+					<li>Image Search Engine: <select>
+							<option>Google</option>
+						</select></li>
+					<li>Image Embed Color: <input type="color"></li>
+				</ul>
+
+			</div>
+			<div class="tab" id="voicechannelgameemojis" aria-role="tabpanel" hidden>
+				<h2>Game Label Emojis</h2>
+				<i>Label a voice channel with its occupants' current game</i>
+			</div>
+			<div class="tab" id="addmeto" aria-role="tabpanel" hidden>
+
+			</div>
+			<div class="tab" id="autoorder" aria-role="tabpanel" hidden>
+
+			</div>
+			<div class="tab" id="antispam" aria-role="tabpanel" hidden>
+
+			</div>
+			<div class="tab" id="autoresponse" aria-role="tabpanel" hidden>
+
+			</div>
+			<div class="tab" id="namecolor" aria-role="tabpanel" hidden>
+
+			</div>
+			<div class="tab" id="joinmessages" aria-role="tabpanel" hidden>
+
+			</div>
+		</main>
 	</div>
 
-    <script>init();setTimer();</script>
 
-	
-	
-  </body>
+</body>
+
 </html>
