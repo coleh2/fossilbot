@@ -3,7 +3,7 @@ var { createCanvas } = require('canvas');
 module.exports = function(evt,args,_cfg,bot) {
     if (!_cfg.enabledFeatures.namecolor) { bot.sendMessage({ to: evt.d.channel_id, message: "Sorry, but that feature isn't enabled on this server." }); return }
     var c = roleName(evt, args.join(' ').toLowerCase());
-    var accpt = (_cfg.nameColorRoles[(args.join(' ') || 'None').toLowerCase()]);
+    var accpt = (_cfg.nameColorRoles[(args.join(' ') || '__none').toLowerCase()]);
     if (!bot.servers[evt.d.guild_id]) {
         c = null
         bot.sendMessage({

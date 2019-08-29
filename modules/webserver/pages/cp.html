@@ -137,11 +137,11 @@
 		.tab {
 			height: 100%;
 			padding: 10px;
+			overflow: auto;
 		}
 
 		input::-webkit-outer-spin-button,
 		input::-webkit-inner-spin-button {
-
 			-webkit-appearance: none;
 			margin: 0;
 		}
@@ -149,6 +149,7 @@
 		input[type=number] {
 			-moz-appearance: textfield;
 		}
+		
 
 		select {
 			background: white;
@@ -182,6 +183,36 @@
 			cursor: pointer;
 		}
 
+		.config-keyvalue-editor table {
+			list-style-type: none;
+			margin: 0px;
+			padding: 0px;
+			border-collapse: collapse;
+		}
+		.config-keyvalue-editor td,
+		.config-keyvalue-editor th {
+			border: 1px solid #94d1be;
+			text-align: center;
+		}
+		.config-keyvalue-editor a {
+			color: inherit;
+			text-decoration: none;
+			font-weight: bold;
+			outline: none;
+			display: inline-block;
+			width: 100%;
+		}
+		.config-keyvalue-editor input {
+			padding: 0px;
+			max-width: 15em;
+		}
+		code {
+			background: #cccccc;
+		}
+
+		.array-editor input {
+			-moz-appearance: textfield;
+		}
 		@media (min-width: 5in) {
 			header {
 				display: block;
@@ -215,7 +246,7 @@
 		}
 	</style>
 
-	<script src="/scripts/cp.js"></script>
+	<script src="../assets/scripts/cp.js"></script>
 
 </head>
 
@@ -254,7 +285,7 @@
 						</a>
 					</li>
 					<li aria-role="menuitem">
-						<a href="#voicechannelgameemojis">
+						<a href="#gameEmoji">
 							<span class="fa fa-volume-up" aria-hidden="true"></span>
 							<span>Game Label Emojis</span>
 						</a>
@@ -308,8 +339,8 @@
 					<li><label><input type="checkbox" class="enable-module-checkbox config-input"
 								data-config-key="enabledFeatures.getme" name="getme">Getting Pictures</label></li>
 					<li><label><input type="checkbox" class="enable-module-checkbox config-input"
-								data-config-key="enabledFeatures.voicechannelgameemojis"
-								name="voicechannelgameemojis">Game Label Emojis</label></li>
+								data-config-key="enabledFeatures.gameEmoji"
+								name="gameEmoji">Game Label Emojis</label></li>
 					<li><label><input type="checkbox" class="enable-module-checkbox config-input"
 								data-config-key="enabledFeatures.addmeto" name="addmeto">Channel Joining</label></li>
 					<li><label><input type="checkbox" class="enable-module-checkbox config-input"
@@ -340,36 +371,67 @@
 				<h2>Getting Pictures</h2>
 				<i>Quickly get a reaction image, reference, etc.</i>
 				<ul>
-					<li>Allow NSFW images: <select>
-							<option>Never</option>
-							<option>In NSFW channels only</option>
-							<option>Always</option>
-						</select></li>
-					<li>Image Search Engine: <select>
-							<option>Google</option>
-						</select></li>
-					<li>Image Embed Color: <input type="color"></li>
+					<li>Allow NSFW images: <input type="checkbox" class="config-input" data-config-key="allowNSFW"></li>
+					<li>Image Embed Color: <input type="color" class="config-input" data-config-key="getmeColor" data-config-processor="hexToDiscordColor"></li>
 				</ul>
 
 			</div>
-			<div class="tab" id="voicechannelgameemojis" aria-role="tabpanel" hidden>
+			<div class="tab" id="gameEmoji" aria-role="tabpanel" hidden>
 				<h2>Game Label Emojis</h2>
 				<i>Label a voice channel with its occupants' current game</i>
+				<div class="config-keyvalue-editor" data-config-header="Game,Emoji" data-config-key="gameEmoji"></div>
 			</div>
 			<div class="tab" id="addmeto" aria-role="tabpanel" hidden>
-
+				<h2>Channel Joining</h2>
+				<i>Let people join channels</i>
+				<p>Actually, there's not much to configure for this one. Just make roles in Discord that end with <code>&nbsp;Channel</code> (e.g. <code>Kitchen Channel</code>), and the command will automatically detect them.</p>
 			</div>
 			<div class="tab" id="autoorder" aria-role="tabpanel" hidden>
-
+				<h2>Auto-Order</h2>
+				<i>Select a category to automatically sort by activity</i>
+				<ul>
+					<li>Auto-Sort Category Name: <input class="config-input" data-config-key="autoorder_category_name"></li>
+				</ul>
 			</div>
 			<div class="tab" id="antispam" aria-role="tabpanel" hidden>
-
+				<h2>Anti-Spam</h2>
+				<i>Prevent persistant pinging.</i>
+				<ul>
+					<li>
+						<u>Specific Pinging</u><br>
+						Allow someone to ping the same person <input type="number" class="input-config" data-config-key="cooldown_s"> times within <input type="number" class="input-config" data-config-key="cooldown_s_t" data-config-processor="millisecondsToMinutes"> minutes. 
+					</li>
+					<li>
+						<u>Mass Pinging</u><br>
+						Allow someone to ping people <input type="number" class="input-config" data-config-key="cooldown_m"> times within <input type="number" class="input-config" data-config-key="cooldown_m_t" data-config-processor="millisecondsToMinutes"> minutes.
+					</li>
+					<li>
+						<u>@everyone Pinging</u><br>
+						People can ping @everyone <input type="number" class="input-config" data-config-key="cooldown_e"> times, which resets every <input type="number" class="input-config" data-config-key="cooldown_e_t" data-config-processor="millisecondsToMinutes"> minutes.<sup><i>Note: reaching this limit only denies @everyone permissions and does not mute the person.</i></sup>
+					</li>
+					<li>
+						<u>Single-Message Spam</u><br>
+						It is automatically spam if someone includes more than <input type="number" class="input-config" data-config-key="cooldown_g"> pings in the same message.
+					</li>
+					<li>
+						<u>Consequences</u><br>
+						When someone spams, they will be muted for <input type="number" class="input-config" data-config-key="spam_time_mins"> minutes.
+					</li>
+				</ul>
 			</div>
 			<div class="tab" id="autoresponse" aria-role="tabpanel" hidden>
-
+				<h2>Auto-Response</h2>
+				<i>Have Fossilbot respond to phrases</i>
+				<div class="config-keyvalue-editor" data-config-header="Phrase,Response" data-config-key="autoResp"></div>
 			</div>
 			<div class="tab" id="namecolor" aria-role="tabpanel" hidden>
-
+				<h2>Nametag Colors</h2>
+				<i>Let users pick their own colors!</i>
+				<p>This feature requires you to create roles that end with <code>&nbsp;Nametag</code> (e.g. <code>Blue Nametag</code>). Any role that fits this pattern will be automatically added. Unfortunately, at this time there is no way to use roles that do not fit this pattern.</p>
+				<p>Allow Hex Codes (let users pick any color that they want): <input type="checkbox" class="input-config" data-config-key="enabledFeatures.namecolor_hex"></p>
+				<h3>Restrictions</h3>
+				<p>In the table below, you can set rules in order to limit colors. Any color that doesn't have an entry will be accessible to everyone.</p>
+				<div class="config-keyvalue-editor" data-config-header="Color,Roles with Access" data-config-key="nameColorRoles" data-config-valuetype="array" data-config-processor="lowercase"></div>
 			</div>
 			<div class="tab" id="joinmessages" aria-role="tabpanel" hidden>
 

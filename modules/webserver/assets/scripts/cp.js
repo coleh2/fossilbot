@@ -1,5 +1,23 @@
 var cfgLocal = {};
 var changesMade = 0;
+
+var CHANGES_THRESHOLD_KEYVALUE = 0;
+var CHANGES_THRESHOLD_NORMAL = 0;
+
+var inputProcessors = {
+    hexToDiscordColor: function(direction, hex) {
+        if(direction) return parseInt(hex.substring(1), 16);
+        else return "#" + hex.toString(16);
+    },
+    millisecondsToMinutes: function (direction, ms) {
+        if(direction) return ms * 60000;
+        else return ms / 60000;
+    },
+    lowercase: function (direction, text) {
+        return text.toLowerCase();
+    }
+};
+
 function snackbar(opts) {
     if(opts === undefined) opts = {};
     var colors = {
@@ -53,7 +71,148 @@ function snackbar(opts) {
         }, opts.duration || 3000 );
     }
 }
+function editKeyInObject(object, key, newKey) {
+    object[newKey] = object[key];
+    delete object[key];
+}
+function emptyKeyValueEditorRow(editorElem, editorObject,processorFunc, isArr) {
+    let row = document.createElement("tr");
+    row.classList.add("emptyRow");
+    
+    let addButton = document.createElement("a");
+    addButton.innerHTML = "&plus;";
+    addButton.href = "javascript:void(0)";
+    addButton.addEventListener("click", function() {
+        editorElem.insertBefore(normalKeyValueEditorRow(editorElem,editorObject,"","",processorFunc,isArr),row);
+    });
+    let buttonTableCell = document.createElement("td"); 
+    buttonTableCell.colSpan = 3;
+    buttonTableCell.appendChild(addButton);
+    row.appendChild(buttonTableCell);
 
+    return row;
+}
+function normalKeyValueEditorRow(editorElem, editorObject, key, value, processorFunc,isArr) {
+    let rowElem = document.createElement("tr");
+
+    let keyTableCell = document.createElement("td");
+    let keyEditElem = document.createElement("input");
+    keyEditElem.value = key;
+    keyEditElem.addEventListener("input", function() {
+        let val = keyEditElem.value;
+        if(processorFunc) val = processorFunc(val);
+        editKeyInObject(editorObject, key, val);
+        key = keyEditElem.val;
+        changesMade++;
+        if(changesMade > CHANGES_THRESHOLD_KEYVALUE) sendEdits();
+    });
+    keyTableCell.appendChild(keyEditElem);
+    rowElem.appendChild(keyTableCell);
+
+    let valueTableCell = document.createElement("td");
+    if(isArr) valueTableCell.appendChild(arrayKeyValueEditElem(value || []));
+    else {
+        let valueEditElem = document.createElement("input");
+        if(typeof value == "number") valueEditElem.type = "number";
+        if(typeof value == "boolean") valueEditElem.type = "checkbox";
+        valueEditElem.value = value;
+        valueEditElem.addEventListener("input", function() {
+            let val = valueEditElem.type === "checkbox" ? valueEditElem.checked : valueEditElem.value;
+            if(processorFunc) val = processorFunc(val);
+            editorObject[key] = val;
+            changesMade++;
+            if(changesMade > CHANGES_THRESHOLD_KEYVALUE) sendEdits();
+        });
+        valueTableCell.appendChild(valueEditElem);
+    }
+    rowElem.appendChild(valueTableCell);
+
+    let deleteTableCell = document.createElement("td");
+    let deleteKeyElem = document.createElement("a");
+    deleteKeyElem.href = "javascript:void(0)";
+    deleteKeyElem.innerHTML = "&times;";
+    deleteKeyElem.addEventListener("click", function() {
+        delete editorObject[key];
+        editorElem.removeChild(rowElem);
+    });
+    deleteTableCell.appendChild(deleteKeyElem);
+    rowElem.appendChild(deleteTableCell);
+
+    return rowElem;
+}
+function arrayKeyValueEditElem(array) {
+    let elem = document.createElement("details");
+    elem.classList.add("array-editor");
+    
+    let elemSum = document.createElement("summary");
+    elemSum.innerText = "Edit List...";
+    elem.appendChild(elemSum);
+
+    function arrayRow(value,index) {
+        let row = document.createElement("div");
+        let input = document.createElement("input");
+        input.value = value === undefined ? "" : value;
+        input.addEventListener("input", function() {
+            array[index] = input.value;
+        });
+        row.appendChild(input);
+        let deleteLink = document.createElement("a");
+        deleteLink.href = "javascript:void(0)";
+        deleteLink.innerHTML = "&times;";
+        deleteLink.addEventListener("click", function() {
+            delete array[index];
+            row.parentElement.removeChild(row);
+        });
+        row.appendChild(deleteLink);
+        return row;
+    } 
+    for(let i = 0; i < array.length; i++) {
+        elem.appendChild(arrayRow(array[i], i));
+    }
+
+    let lastRow = document.createElement("a");
+    lastRow.innerHTML = "+";
+    lastRow.href = "javascript:void(0)";
+    lastRow.addEventListener("click",function() {
+        elem.insertBefore(arrayRow("", array.length++), lastRow);
+    });
+    elem.appendChild(lastRow);
+
+    return elem;
+}
+function headerKeyValueEditorRow(keyHeader, valueHeader) {
+    let row = document.createElement("tr");
+
+    let keyTH = document.createElement("th");
+    keyTH.innerText = keyHeader;
+    row.appendChild(keyTH);
+    
+    let valueTH = document.createElement("th");
+    valueTH.innerText = valueHeader;
+    row.appendChild(valueTH);
+
+    let placeHolderHeader = document.createElement("th");
+    placeHolderHeader.innerHTML = "&nbsp;";
+    row.appendChild(placeHolderHeader);
+
+    return row;
+}
+function keyValueEditor(editedObject,keyHeader,valueHeader,processorFunc,isArr) {
+    var editorElem = document.createElement("table");
+    editorElem.classList.add("key-value-editor-container");
+
+    editorElem.appendChild(headerKeyValueEditorRow(keyHeader||"Key", valueHeader || "Value"));
+    var keys = Object.keys(editedObject);
+    var values = Object.values(editedObject);
+
+    for(let i = 0; i < keys.length; i++) {
+        if(typeof values[i] === "number" || typeof values[i] === "string" || (values[i].constructor == Array && isArr)) editorElem.appendChild(normalKeyValueEditorRow(editorElem, editedObject, keys[i], values[i], processorFunc,isArr));
+    }
+
+    editorElem.appendChild(emptyKeyValueEditorRow(editorElem,editedObject,processorFunc,isArr));
+
+    return editorElem;
+}
 function openSubpage(pageID) {
 
 
@@ -86,8 +245,9 @@ function setRelativeDotNotationValue(object, dotNotation, value) {
     }
     changesMade++;
 
-    if(changesMade > 0) sendEdits();
+    if(changesMade > CHANGES_THRESHOLD_NORMAL) sendEdits();
 }
+
 function getRelativeDotNotationValue(object, dotNotation) {
     var keys = dotNotation.split(".");
     var target = object;
@@ -98,14 +258,17 @@ function getRelativeDotNotationValue(object, dotNotation) {
         else target = target[keys[i]];
     }
 }
+
 function handleEventConfigInputChange(event) {
     var elem = event.target;
     var configKey = elem.getAttribute("data-config-key");
-    if(elem.checked !== undefined) {
-        setRelativeDotNotationValue(cfgLocal, configKey, elem.checked);
-    } else {
-        setRelativeDotNotationValue(cfgLocal, configKey, elem.value);
-    }
+    var value = elem.value;
+    var processorKey = elem.getAttribute("data-config-processor");
+
+    if(elem.type == "checkbox") value = elem.checked;
+    if(processorKey) value = inputProcessors[processorKey](true, value);
+
+    setRelativeDotNotationValue(cfgLocal, configKey, value);
 }
 function updateInputCurrentValues(configObject) {
     var inputs = document.getElementsByClassName("config-input");
@@ -113,10 +276,35 @@ function updateInputCurrentValues(configObject) {
     for(var i = 0; i < inputs.length; i++) {
         var configKey = inputs[i].getAttribute("data-config-key");
         var configValue = getRelativeDotNotationValue(configObject, configKey);
+        var processorKey = inputs[i].getAttribute("data-config-processor");
         var inputType = inputs[i].type;
+
+        if(processorKey) configValue = inputProcessors[processorKey](false, configValue);    
+
         if(inputType == "checkbox") inputs[i].checked = configValue;
         else inputs[i].value = configValue;
     }
+
+    var keyValueContainers = document.getElementsByClassName("config-keyvalue-editor");
+
+    for(let i = 0; i < keyValueContainers.length; i++) {
+        let containerElem = keyValueContainers[i];
+        let subObjectOfConfig = getRelativeDotNotationValue(configObject,containerElem.getAttribute("data-config-key"));
+        let headers = containerElem.getAttribute("data-config-header").split(",");
+        let processorKey = containerElem.getAttribute("data-config-processor");
+        let tableIsOfArrays = containerElem.getAttribute("data-config-valuetype") == "array";
+        removeAllChildrenOfElement(containerElem);
+
+        console.log(subObjectOfConfig);
+        let editorElement = keyValueEditor(subObjectOfConfig,headers[0],headers[1],inputProcessors[processorKey],tableIsOfArrays);
+        containerElem.appendChild(editorElement);
+    }
+}
+
+function removeAllChildrenOfElement(element) {
+    while(element.firstChild) {
+        element.removeChild(element.firstChild);
+    } 
 }
 function updateEnabledModuleButtons(configObject) {
     var links = document.querySelectorAll("aside a");
@@ -228,9 +416,12 @@ window.addEventListener("load", function() {
     var configInputs = document.getElementsByClassName("config-input");
     for(let i = 0; i < configInputs.length; i++) {
         let configInput = configInputs[i];
+
         configInput.addEventListener("change", handleEventConfigInputChange);
         configInput.addEventListener("input", handleEventConfigInputChange);
+
     }
+
     var enableModuleCheckboxes = document.getElementsByClassName("enable-module-checkbox");
     for(let i = 0; i < enableModuleCheckboxes.length; i++) {
         enableModuleCheckboxes[i].addEventListener("change", function(event) {
