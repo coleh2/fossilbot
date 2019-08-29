@@ -335,6 +335,9 @@ app.get('/data', function (req, resp) {
 					console.log('yeah seems legit');
 					var data = db.prepare('SELECT * FROM serverconfig WHERE id = ?').get([q.mode])
 
+                                        //workaround for now
+                                        data.getmeColor = 16777215;
+
 					if (!data) { resp.sendStatus(404); return }
 					resp.send(toLegacyConfigSchema(data));
 				});
