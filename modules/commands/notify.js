@@ -11,7 +11,7 @@ module.exports = function (evt, args, _cfg, bot, db) {
         if(_cfg.notifyBudget - memberStoredData.notifybudget > 0) {
             bot.createRole(evt.d.guild_id, function (err, resp) {
                 if (err) { console.log(err); return; }
-                db.prepare('INSERT OR REPLACE INTO members (id, guild_id, notifybudget) VAULES (?, ?, ?)').run([evt.d.author.id, evt.d.guild_id, memberStoredData.notifybudget + 1]);
+                db.prepare('REPLACE INTO members (id, guild_id, notifybudget) VAULES (?, ?, ?)').run([evt.d.author.id, evt.d.guild_id, (memberStoredData.notifybudget||0) + 1]);
                 specificNotifRole = resp.id;
                 console.log(specificNotifRole);
                 bot.editRole({ serverID: evt.d.guild_id, roleID: specificNotifRole, name: ((args.slice(0, 3).join(' ').substring(0, 32)) || "Annoying People") + ' Notifications', mentionable: true });
