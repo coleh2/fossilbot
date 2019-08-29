@@ -1,5 +1,5 @@
 var PERIOD_GAME_CHANNEL_ID = "";
-var PERIOD_GAME_ROLE_NAME = "period game";
+var PERIOD_GAME_ROLE_NAME = ". Notifications";
 
 var currentlyPlayingGame = false;
 var players = [];
@@ -11,7 +11,7 @@ var bot;
 var db;
 
 var exportFuncs = {
-    message: function (evt, args, _cfg) {
+    message: function (evt, _cfg) {
         var messageText = evt.d.content;
 
         if (evt.d.channel_id == PERIOD_GAME_CHANNEL_ID) {

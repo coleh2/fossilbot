@@ -6,6 +6,7 @@ const db = require("better-sqlite3")(__dirname + "/.data/sqlite.db");
 db.prepare("CREATE TABLE IF NOT EXISTS serverconfig (id TEXT PRIMARY KEY, cooldown_g NUMERIC, cooldown_e NUMERIC, cooldown_e_t NUMERIC, cooldown_s NUMERIC, cooldown_s_t NUMERIC, cooldown_m NUMERIC, colldown_m_t NUMERIC, spam_time_mins NUMERIC, autoorder_category_name TEXT, game_emoji TEXT, name_color_roles TEXT, msgs TEXT, enabled_getme INTEGER, enabled_autoorder INTEGER, enabled_notify INTEGER, enabled_addmeto INTEGER, enabled_voicechannelgameemojis INTEGER, enabled_experience INTEGER, enabled_antispam INTEGER, enabled_autoresponse INTEGER, enabled_namecolor INTEGER, auto_resp TEXT, notifybudget INTEGER)").run();
 db.prepare("CREATE TABLE IF NOT EXISTS channelactivity (channel_id TEXT, guild_id TEXT, day INTEGER, messages INTEGER, UNIQUE(channel_id, guild_id, day))").run();
 db.prepare("CREATE TABLE IF NOT EXISTS userknown (id TEXT PRIMARY KEY, email TEXT, pgscore INTEGER)").run();
+db.prepare("CREATE TABLE IF NOT EXISTS members (id TEXT PRIMARY KEY, guild_id TEXT, notifybudget INTEGER, UNIQUE(id, guild_id))").run();
 
 var voiceSessions = {};
 const webserver = require(__dirname + "/modules/webserver/webserver.js")(db);
