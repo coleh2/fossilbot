@@ -335,8 +335,8 @@ app.get('/data', function (req, resp) {
 					console.log('yeah seems legit');
 					var data = db.prepare('SELECT * FROM serverconfig WHERE id = ?').get([q.mode])
 
-                                        //workaround for now
-                                        data.getmeColor = 16777215;
+					//workaround for now
+					data.getmeColor = 16777215;
 
 					if (!data) { resp.sendStatus(404); return }
 					resp.send(toLegacyConfigSchema(data));
@@ -539,7 +539,8 @@ function toLegacyConfigSchema(data) {
 		"autoResp": JSON.parse(data.auto_resp),
 		"guild_id": data.id,
 		"autoorder_category_name": data.autoorder_category_name,
-		"notifyBudget": data.notifybudget
+		"notifyBudget": data.notifybudget,
+		"getmeColor": data.getmeColor
 	};
 }
 var server = app.listen(5555, function () {

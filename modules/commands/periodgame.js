@@ -18,7 +18,7 @@ module.exports = function (evt, args, _cfg, bot, db) {
         periodGameManager.setPlayState(args[1] == "start", evt);
         bot.sendMessage({
             to: evt.d.channel_id,
-            message: `Game ${(args[1] == start) ? "Started" : "Stopped"}`
+            message: `Game ${(args[1] == "start") ? "Started" : "Stopped"}`
         });
     }
 }

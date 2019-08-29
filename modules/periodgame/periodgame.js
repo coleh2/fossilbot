@@ -14,6 +14,7 @@ var exportFuncs = {
     message: function (evt, _cfg) {
         var messageText = evt.d.content;
 
+        if(evt.d.author.id == bot.id) return;
         if (evt.d.channel_id == PERIOD_GAME_CHANNEL_ID) {
 
 
@@ -29,6 +30,9 @@ var exportFuncs = {
                     bot.deleteMessage({ channelID: evt.d.channel_id, messageID: evt.d.id });
                 }
 
+                if(isTimeToStartNewRound(players.length, currentRoundPlayerCount)) startNewRound(evt);
+                failExpiredUsers();
+
                 if (!isPlaying(evt.d.author.id)) return youFailed(true);
                 if (messageText != ".") return youFailed(false);
 
@@ -42,9 +46,7 @@ var exportFuncs = {
                 resetLastMessageCount(evt.d.author.id);
                 lastPerson = evt.d.author.id;
                 increaseLastMessageCounts();
-                failExpiredUsers();
-
-                if(isTimeToStartNewRound(players.length, currentRoundPlayerCount)) startNewRound(evt);
+                
 
             } else {
                 sendTemporaryMessage("Sorry, but the game isn't active at the moment!", evt.d.channel_id);
@@ -56,7 +58,8 @@ var exportFuncs = {
         currentlyPlayingGame = state;
         if(state) {
             players = getPlayingList(evt);
-            startNewRound();
+            console.log(players);
+            startNewRound(evt);
         }
         
     },
@@ -86,8 +89,8 @@ function isTimeToStartNewRound(currentPlayers, roundPlayers) {
 function startNewRound(evt) {
     currentRoundPlayerCount = players.length;
     currentBounds = calculateBounds(players.length);
-    if(currentRoundPlayerCount == 1) return endGame();
-    else bot.sendMessage({to: evt.d.channel_id, message: `New round! After ${currentBounds.more}, before ${currentBounds.less}. In the game are: ${getPlayerListString()}`})
+    if(currentRoundPlayerCount == 1) endGame();
+    else bot.sendMessage({to: PERIOD_GAME_CHANNEL_ID, message: `New round! After ${currentBounds.more}, before ${currentBounds.less}. In the game are: ${getPlayerListString()}`})
 }
 function calculateBounds(playerCount) {
     return {
@@ -96,18 +99,18 @@ function calculateBounds(playerCount) {
     };
 }
 function endGame() {
-    bot.sendMessage({to: evt.d.channel_id, message: `Game complete! The winner is ${players[0].name}`});
+    bot.sendMessage({to: PERIOD_GAME_CHANNEL_ID, message: `Game complete! The winner is ${players[0].name}`});
     awardWinner(players[0].id);
     currentlyPlayingGame = false;
 }
 function isPlaying(userId) {
-    for (var i = 0; i < players; i++) {
+    for (var i = 0; i < players.length; i++) {
         if (players[i].id == userId) return true;
     }
     return false;
 }
 function failUser(userId) {
-    for (var i = 0; i < players; i++) {
+    for (var i = 0; i < players.length; i++) {
         if (players[i].id == userId) {
             delete players[i];
             break;
@@ -115,7 +118,7 @@ function failUser(userId) {
     }
 }
 function failExpiredUsers() {
-    for (var i = 0; i < players; i++) {
+    for (var i = 0; i < players.length; i++) {
         if (players[i].last > currentBounds.less) {
             delete players[i];
         }
@@ -130,23 +133,23 @@ function awardWinner(playerId) {
 }
 function getPlayerListString() {
     var endMsg = "";
-    for(var i = 0; i < players; i++) {
-        endMsg += "\n> " + players[i].name;
+    for(var i = 0; i < players.length; i++) {
+        endMsg = endMsg + "\n> " + players[i].name;
     }
     return endMsg;
 }
 function getPlayer(playerId) {
-    for (var i = 0; i < players; i++) {
+    for (var i = 0; i < players.length; i++) {
         if (players[i].id == playerId) return players[i];
     }
 }
 function resetLastMessageCount(playerId) {
-    for (var i = 0; i < players; i++) {
+    for (var i = 0; i < players.length; i++) {
         if (players[i].id == playerId) return players[i].last = -1;
     }
 }
 function increaseLastMessageCounts() {
-    for (var i = 0; i < players; i++) {
+    for (var i = 0; i < players.length; i++) {
         if (players[i].last === null) players[i].last = null;
         else players[i].last++;
     }
@@ -172,7 +175,7 @@ function getPlayingList(evt) {
         }
 
         return end;
-    }
+    } else throw "No role found for period game";
 
 }
 
