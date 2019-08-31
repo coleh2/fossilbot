@@ -1,10 +1,10 @@
-module.exports = function(evt,args,_cfg,bot,db) {
+module.exports = function(evt,args,_cfg,bot) {
     var thatUser;
     if (evt.d.mentions[0]) {
-        thatUser = bot.servers[evt.d.guild_id].members[evt.d.mentions[0].id].id
-    } else if (args.join(' ').split('#').length == 2) {
-        if (Object.values(bot.servers[evt.d.guild_id].members).find(x => { return bot.users[x.id].username == args.join(' ').split('#')[0] && bot.users[x.id].discriminator == args.join(' ').split('#')[1] })) {
-            thatUser = Object.values(bot.servers[evt.d.guild_id].members).find(x => { return bot.users[x.id].username == args.join(' ').split('#')[0] && bot.users[x.id].discriminator == args.join(' ').split('#')[1] }).id
+        thatUser = bot.servers[evt.d.guild_id].members[evt.d.mentions[0].id].id;
+    } else if (args.join(" ").split("#").length == 2) {
+        if (Object.values(bot.servers[evt.d.guild_id].members).find(x => { return bot.users[x.id].username == args.join(" ").split("#")[0] && bot.users[x.id].discriminator == args.join(" ").split("#")[1]; })) {
+            thatUser = Object.values(bot.servers[evt.d.guild_id].members).find(x => { return bot.users[x.id].username == args.join(" ").split("#")[0] && bot.users[x.id].discriminator == args.join(" ").split("#")[1]; }).id;
         }
     }
     if (thatUser) {
@@ -13,7 +13,7 @@ module.exports = function(evt,args,_cfg,bot,db) {
         var messageDat = {
             to: evt.d.channel_id,
             embed: {
-                "title": 'Data on ' + tUO.username + ":",
+                "title": "Data on " + tUO.username + ":",
                 "image": {
                     "url": tUO.avatar ? "https://cdn.discordapp.com/avatars/" + tUO.id + "/" + tUO.avatar : "https://cdn.discordapp.com/embed/avatars/" + (tUO.discriminator % 5) + ".png"
                 },
@@ -30,18 +30,18 @@ module.exports = function(evt,args,_cfg,bot,db) {
                     },
                     {
                         "name": "Roles",
-                        "value": tMO.roles.length ? '<@&' + tMO.roles.join('>, <@&') + '>' : '',
+                        "value": tMO.roles.length ? "<@&" + tMO.roles.join(">, <@&") + ">" : "",
                         "inline": true
                     },
                     {
                         "name": "Join Place",
-                        "value": ((Object.values(bot.servers[evt.d.guild_id].members)).sort(function (a, b) { return a.joined_at - b.joined_at }).findIndex(x => { return x.id == tMO.id })) + 1,
+                        "value": ((Object.values(bot.servers[evt.d.guild_id].members)).sort(function (a, b) { return a.joined_at - b.joined_at; }).findIndex(x => { return x.id == tMO.id; })) + 1,
                         "inline": true
                     }
                 ]
 
             }
-        }
+        };
         bot.sendMessage(messageDat);
     } else {
         bot.sendMessage({
@@ -49,4 +49,4 @@ module.exports = function(evt,args,_cfg,bot,db) {
             message: "I didn't find anyone from that search. Please be sure to include both the user's Discord Username and Tag (e.g. `username#0000`)"
         });
     }
-}
+};

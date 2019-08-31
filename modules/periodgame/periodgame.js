@@ -11,7 +11,7 @@ var bot;
 var db;
 
 var exportFuncs = {
-    message: function (evt, _cfg) {
+    message: function (evt) {
         var messageText = evt.d.content;
 
         if(evt.d.author.id == bot.id) return;
@@ -19,28 +19,17 @@ var exportFuncs = {
 
 
             if (currentlyPlayingGame) {
-                function youFailed(isAlreadyOut) {
-                    if (isAlreadyOut) {
-                        sendTemporaryMessage("You're already out of the game! Please wait until the next round :)", evt.d.channel_id);
-                    } else {
-                        failUser(evt.d.author.id);
-                        sendTemporaryMessage("You're out of the game!", evt.d.channel_id);
-                    }
-
-                    bot.deleteMessage({ channelID: evt.d.channel_id, messageID: evt.d.id });
-                }
-
-                if(isTimeToStartNewRound(players.length, currentRoundPlayerCount)) startNewRound(evt);
+                if(isTimeToStartNewRound(players.length, currentRoundPlayerCount)) startNewRound();
                 failExpiredUsers();
 
-                if (!isPlaying(evt.d.author.id)) return youFailed(true);
-                if (messageText != ".") return youFailed(false);
+                if (!isPlaying(evt.d.author.id)) return youFailed(true,evt);
+                if (messageText != ".") return youFailed(false,evt);
 
                 var playerRecord = getPlayer(evt.d.author.id);
-                if (lastPerson == evt.d.author.id) return youFailed(false);
+                if (lastPerson == evt.d.author.id) return youFailed(false,evt);
                 if (playerRecord.last !== null) {
-                    if (playerRecord.last < currentBounds.more) return youFailed(false);
-                    if (playerRecord.last > currentBounds.less) return youFailed(false);
+                    if (playerRecord.last < currentBounds.more) return youFailed(false,evt);
+                    if (playerRecord.last > currentBounds.less) return youFailed(false,evt);
                 }
 
                 resetLastMessageCount(evt.d.author.id);
@@ -58,8 +47,7 @@ var exportFuncs = {
         currentlyPlayingGame = state;
         if(state) {
             players = getPlayingList(evt);
-            console.log(players);
-            startNewRound(evt);
+            startNewRound();
         }
         
     },
@@ -79,9 +67,18 @@ module.exports = function (_bot, _db) {
     db = _db;
 
     return exportFuncs;
+};
+
+function youFailed(isAlreadyOut, evt) {
+    if (isAlreadyOut) {
+        sendTemporaryMessage("You're already out of the game! Please wait until the next round :)", evt.d.channel_id);
+    } else {
+        failUser(evt.d.author.id);
+        sendTemporaryMessage("You're out of the game!", evt.d.channel_id);
+    }
+
+    bot.deleteMessage({ channelID: evt.d.channel_id, messageID: evt.d.id });
 }
-
-
 
 function isTimeToStartNewRound(currentPlayers, roundPlayers) {
     return 0.25 * Math.pow(currentPlayers, 2) < roundPlayers; 
@@ -90,9 +87,13 @@ function startNewRound(evt) {
     currentRoundPlayerCount = players.length;
     currentBounds = calculateBounds(players.length);
     if(currentRoundPlayerCount == 1) endGame();
-    else bot.sendMessage({to: PERIOD_GAME_CHANNEL_ID, message: `New round! After ${currentBounds.more}, before ${currentBounds.less}. In the game are: ${getPlayerListString()}`})
+    else bot.sendMessage({to: PERIOD_GAME_CHANNEL_ID||evt.d.channel_id, message: `New round! After ${currentBounds.more}, before ${currentBounds.less}. In the game are: ${getPlayerListString()}`});
 }
 function calculateBounds(playerCount) {
+    if(playerCount == 2) return {
+        more: 0,
+        less: 2,      
+    };
     return {
         more: Math.floor(Math.sqrt(playerCount)),
         less: Math.max(Math.ceil(playerCount - Math.log(playerCount)), 3),
@@ -112,7 +113,7 @@ function isPlaying(userId) {
 function failUser(userId) {
     for (var i = 0; i < players.length; i++) {
         if (players[i].id == userId) {
-            delete players[i];
+            players.splice(i,1);
             break;
         }
     }
@@ -120,16 +121,16 @@ function failUser(userId) {
 function failExpiredUsers() {
     for (var i = 0; i < players.length; i++) {
         if (players[i].last > currentBounds.less) {
-            delete players[i];
+            players.splice(i,1);
         }
     }
 }
 function awardWinner(playerId) {
-    var currentPlayerSave = db.prepare("SELECT * FROM userknown WHERE id = ?", [playerId]).get();
+    var currentPlayerSave = db.prepare("SELECT * FROM userknown WHERE id = ?").get([playerId]);
     var scoreToBe;
     if(currentPlayerSave == null) scoreToBe = 1;
     else scoreToBe = currentPlayerSave.pgscore + 1;
-    db.prepare("INSERT OR REPLACE INTO userknown (id, pgscore) VALUES (?, ?)", [playerId, scoreToBe]).run();
+    db.prepare("INSERT OR REPLACE INTO userknown (id, pgscore) VALUES (?, ?)").run([playerId, scoreToBe]);
 }
 function getPlayerListString() {
     var endMsg = "";
@@ -158,7 +159,7 @@ function getPlayingList(evt) {
     var roleId = roleSearchByName(evt, PERIOD_GAME_ROLE_NAME);
     if (roleId) {
         var usrs = bot.servers[evt.d.guild_id].members;
-        if (!usrs) { return }
+        if (!usrs) { return; }
         usrs = Object.values(usrs);
         usrs = usrs.filter(x => {
             return x.roles.includes(roleId);
@@ -196,10 +197,10 @@ function sendTemporaryMessage(messageText, channelId, cb) {
 
 //utility method
 function roleSearchByName(evt, q) {
-    if (!bot.servers[evt.d.guild_id]) { return null }
+    if (!bot.servers[evt.d.guild_id]) { return null; }
     var r = (Object.keys(bot.servers[evt.d.guild_id].roles).find(function (key) {
         var res = bot.servers[evt.d.guild_id].roles[key].name;
-        if (res.toLowerCase() == q.toLowerCase()) { return true } else { }
+        if (res.toLowerCase() == q.toLowerCase()) { return true; }
     }));
-    if (r != null) { return r } else { return null }
+    if (r != null) { return r; } else { return null; }
 }

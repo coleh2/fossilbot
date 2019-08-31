@@ -1,5 +1,5 @@
 var classPeriods = require(__dirname + "/../../.data/classperiods.json");
-var yearSchedule = require(__dirname + '/../../data/nhs_sched_store.json');
+var yearSchedule = require(__dirname + "/../../data/nhs_sched_store.json");
 
 module.exports = function(evt,args,_cfg,bot) {
     //process arguments
@@ -60,12 +60,12 @@ module.exports = function(evt,args,_cfg,bot) {
     var stringToSend = "";
 
     for(var i = 0; i < peopleInThatLunch.length; i++) {
-        stringToSend = stringToSend + (i==0?"":(i==peopleInThatLunch.length-1?", and ":", ")) + peopleInThatLunch[i].name.replace('_', ' ');
+        stringToSend = stringToSend + (i==0?"":(i==peopleInThatLunch.length-1?", and ":", ")) + peopleInThatLunch[i].name.replace("_", " ");
     }
-    if(!stringToSend) {stringToSend = "Sorry, I don't know of anyone in that lunch."} else {stringToSend = stringToSend + " are in Lunch " + (searchedLunch+1) +  (usingTodayAsSchedule?" today.":" during " + ((['A','B','C','D','E','F','G'])[searchedBlock])+ " block.")}
+    if(!stringToSend) {stringToSend = "Sorry, I don't know of anyone in that lunch.";} else {stringToSend = stringToSend + " are in Lunch " + (searchedLunch+1) +  (usingTodayAsSchedule?" today.":" during " + ((["A","B","C","D","E","F","G"])[searchedBlock])+ " block.");}
 
     bot.sendMessage({
         to: evt.d.channel_id,
         message: stringToSend
     });
-}
+};

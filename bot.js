@@ -10,7 +10,7 @@ db.prepare("CREATE TABLE IF NOT EXISTS members (id TEXT PRIMARY KEY, guild_id TE
 
 var voiceSessions = {};
 const webserver = require(__dirname + "/modules/webserver/webserver.js")(db);
-var channelActivity = require(__dirname + "/modules/channelactivity/channelactivity.js")(bot, db); 
+var channelActivity = require(__dirname + "/modules/channelactivity/channelactivity.js")(db);
 var antiSpam = require(__dirname + "/modules/antispam/antispam.js");
 var commandManager = require(__dirname + "/modules/commandmanager/commandmanager.js");
 

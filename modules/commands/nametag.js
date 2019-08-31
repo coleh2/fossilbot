@@ -1,14 +1,14 @@
-var { createCanvas } = require('canvas');
+var { createCanvas } = require("canvas");
 
 module.exports = function(evt,args,_cfg,bot) {
-    if (!_cfg.enabledFeatures.namecolor) { bot.sendMessage({ to: evt.d.channel_id, message: "Sorry, but that feature isn't enabled on this server." }); return }
-    var c = roleName(evt, args.join(' ').toLowerCase());
-    var accpt = (_cfg.nameColorRoles[(args.join(' ') || '__none').toLowerCase()]);
+    if (!_cfg.enabledFeatures.namecolor) { bot.sendMessage({ to: evt.d.channel_id, message: "Sorry, but that feature isn't enabled on this server." }); return; }
+    var c = roleName(evt, args.join(" ").toLowerCase());
+    var accpt = (_cfg.nameColorRoles[(args.join(" ") || "__none").toLowerCase()]);
     if (!bot.servers[evt.d.guild_id]) {
-        c = null
+        c = null;
         bot.sendMessage({
             to: evt.d.channel_id,
-            message: 'An error occured! Try again in another server!'
+            message: "An error occured! Try again in another server!"
         });
 
     }
@@ -22,30 +22,30 @@ module.exports = function(evt,args,_cfg,bot) {
                 if (aR) {
                     console.log(bot.servers[evt.d.guild_id].members[evt.d.author.id].roles[aR]);
                     if (!bot.servers[evt.d.guild_id].members[evt.d.author.id].roles[aR]) {
-                        nocpt++
+                        nocpt++;
 
                     }
                 }
             }
-            if (nocpt > 0) { iscpt = false } else { iscpt = true }
+            if (nocpt > 0) { iscpt = false; } else { iscpt = true; }
             console.log(iscpt);
-        } else { iscpt = true }
+        } else { iscpt = true; }
         console.log({ iscpt: iscpt, accpt: accpt, nocpt: nocpt });
         if (!iscpt) {
             bot.sendMessage({
                 to: evt.d.channel_id,
-                message: 'Sorry, but you are not permitted to have that color'
+                message: "Sorry, but you are not permitted to have that color"
             });
         } else if (iscpt) {
             evt.d.member.roles.find(function (key) {
                 var res = bot.servers[evt.d.guild_id].roles[key].name;
-                if (res.substring(res.length - 8, res.length).toLowerCase() == ' nametag' && key != c) { bot.removeFromRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: key }); } else { }
+                if (res.substring(res.length - 8, res.length).toLowerCase() == " nametag" && key != c) { bot.removeFromRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: key }); }
             });
-            console.log("🖌️ Nametag Color on server " + evt.d.guild_id + " for " + evt.d.author.username + "#" + evt.d.author.discriminator + " changed to " + args.join(' ') + " (" + c + ")");
+            console.log("🖌️ Nametag Color on server " + evt.d.guild_id + " for " + evt.d.author.username + "#" + evt.d.author.discriminator + " changed to " + args.join(" ") + " (" + c + ")");
             bot.addToRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: c });
             bot.sendMessage({
                 to: evt.d.channel_id,
-                message: 'Your nametag color has been set!'
+                message: "Your nametag color has been set!"
 
             });
         }
@@ -63,34 +63,14 @@ module.exports = function(evt,args,_cfg,bot) {
                     message: "Okay, if you're seeing this error, something has gone VERY WRONG. DM coleh#1346 ASAP",
                 });
             } else {
-                console.log('hexCode: ' + hexCode);
+                console.log("hexCode: " + hexCode);
                 evt.d.member.roles.find(function (key) {
                     var res = bot.servers[evt.d.guild_id].roles[key].name;
-                    if (res.substring(res.length - 8, res.length).toLowerCase() == ' nametag' && key != c) { bot.removeFromRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: key }); }
+                    if (res.substring(res.length - 8, res.length).toLowerCase() == " nametag" && key != c) { bot.removeFromRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: key }); }
                 });
 
                 var hexDecNum = parseInt(hexCode, 16);
-                function hexColorDelta(hex1, hex2) {
-                    // get red/green/blue int values of hex1
-                    var r1 = parseInt(hex1.substring(0, 2), 16);
-                    var g1 = parseInt(hex1.substring(2, 4), 16);
-                    var b1 = parseInt(hex1.substring(4, 6), 16);
-                    // get red/green/blue int values of hex2
-                    var r2 = parseInt(hex2.substring(0, 2), 16);
-                    var g2 = parseInt(hex2.substring(2, 4), 16);
-                    var b2 = parseInt(hex2.substring(4, 6), 16);
-                    // calculate differences between reds, greens and blues
-                    var r = 255 - Math.abs(r1 - r2);
-                    var g = 255 - Math.abs(g1 - g2);
-                    var b = 255 - Math.abs(b1 - b2);
-                    // limit differences between 0 and 1
-                    r /= 255;
-                    g /= 255;
-                    b /= 255;
-                    // 0 means opposit colors, 1 means same colors
-                    return (r + g + b) / 3;
-                }
-                if (hexColorDelta(hexCode, '140A02') < 0.95) {
+                if (hexColorDelta(hexCode, "140A02") < 0.95) {
                     bot.createRole(evt.d.guild_id, function (err, resp) {
                         if (err) {
                             if(err.statusCode == 403 && err.response) {
@@ -98,15 +78,15 @@ module.exports = function(evt,args,_cfg,bot) {
                                     bot.sendMessage({
                                         to: evt.d.channel_id,
                                         message: "Looks like I can't do that; I don't have the required permissions! Please ask an admin to make sure that I have the `Manage Permissions` permission. "
-                                    })
+                                    });
                                 }
                             }
                             
-                            console.log(err); return 
+                            console.log(err); return; 
                         }
                         //console.log(resp);
                         var JustMadeRole = resp.id;
-                        bot.editRole({ serverID: evt.d.guild_id, roleID: JustMadeRole, name: '#' + hexCode + ' Nametag', color: hexDecNum });
+                        bot.editRole({ serverID: evt.d.guild_id, roleID: JustMadeRole, name: "#" + hexCode + " Nametag", color: hexDecNum });
                         if (JustMadeRole) {
                             bot.addToRole({
                                 serverID: evt.d.guild_id,
@@ -115,7 +95,7 @@ module.exports = function(evt,args,_cfg,bot) {
                             });
                             bot.sendMessage({
                                 to: evt.d.channel_id,
-                                message: 'Your nametag color has been set!'
+                                message: "Your nametag color has been set!"
 
                             });
                         }
@@ -136,29 +116,30 @@ module.exports = function(evt,args,_cfg,bot) {
         }
     } else if (colorRoleList(evt).length > 0) {
         var clrRoleList = colorRoleList(evt);
-        if (args.length > 0 && (args[0] != 'none' && args[0] != 'clear')) {
-            if(args[0] == 'list') { var missingColorErrorMesssage = "I'll DM you a list of colors right away!" }
-            else { var missingColorErrorMesssage = "That's not a valid color here! I'll DM you a list of colors that work on this server."; }
+        if (args.length > 0 && (args[0] != "none" && args[0] != "clear")) {
+            var missingColorErrorMessage;
+            if(args[0] == "list") missingColorErrorMessage = "I'll DM you a list of colors right away!";
+            else missingColorErrorMessage = "That's not a valid color here! I'll DM you a list of colors that work on this server.";
             bot.sendMessage({
                 to: evt.d.channel_id,
-                message: missingColorErrorMesssage,
+                message: missingColorErrorMessage,
             });
             //Generate image of colors 
 
             var canvas = createCanvas(100, (clrRoleList.length * 40));
-            var ctx = canvas.getContext('2d');
+            var ctx = canvas.getContext("2d");
             var colorRObjs = colorRoleObjList(evt);
-            ctx.font = '12px Arial';
-            for (var i = 0; i < colorRObjs.length; i++) {
+            ctx.font = "12px Arial";
+            for (let i = 0; i < colorRObjs.length; i++) {
                 ctx.beginPath();
-                ctx.fillStyle = '#' + colorRObjs[i].color.toString(16);
+                ctx.fillStyle = "#" + colorRObjs[i].color.toString(16);
                 ctx.rect(0, i * 40, 100, 40);
                 ctx.fill();
                 ctx.beginPath();
-                ctx.fillStyle = colorRObjs[i].color > 3355443 ? '#000000' : '#ffffff';
-                var _name = colorRObjs[i].name.split(' Nametag')[0]
+                ctx.fillStyle = colorRObjs[i].color > 3355443 ? "#000000" : "#ffffff";
+                var _name = colorRObjs[i].name.split(" Nametag")[0];
                 if (_name.length > 16) {
-                    _name = _name.substring(0, 16) + '...';
+                    _name = _name.substring(0, 16) + "...";
                 }
                 ctx.fillText(_name, 5, (i * 40) + 15);
 
@@ -166,15 +147,15 @@ module.exports = function(evt,args,_cfg,bot) {
             //console.log(canvas.toDataURL());
             bot.uploadFile({
                 to: evt.d.author.id,
-                message: 'Colors: \n' + clrRoleList.join('\n'),
+                message: "Colors: \n" + clrRoleList.join("\n"),
                 file: canvas.toBuffer(),
-                filename: 'colorRole.png'
+                filename: "colorRole.png"
             });
 
-        } else if (args[0] == 'none' || args[0] == 'clear') {
+        } else if (args[0] == "none" || args[0] == "clear") {
             evt.d.member.roles.find(function (key) {
                 var res = bot.servers[evt.d.guild_id].roles[key].name;
-                if (res.substring(res.length - 8, res.length).toLowerCase() == ' nametag') { bot.removeFromRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: key }); } else { }
+                if (res.substring(res.length - 8, res.length).toLowerCase() == " nametag") { bot.removeFromRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: key }); }
             });
             bot.sendMessage({
                 to: evt.d.channel_id,
@@ -183,12 +164,12 @@ module.exports = function(evt,args,_cfg,bot) {
         } else {
             bot.sendMessage({
                 to: evt.d.channel_id,
-                message: 'You need to include a color!',
+                message: "You need to include a color!",
             });
         }
         evt.d.member.roles.find(function (key) {
             var res = bot.servers[evt.d.guild_id].roles[key].name;
-            if (res.substring(res.length - 8, res.length).toLowerCase() == ' nametag') { bot.removeFromRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: key }); } else { }
+            if (res.substring(res.length - 8, res.length).toLowerCase() == " nametag") { bot.removeFromRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: key }); }
         });
     } else {
         bot.sendMessage({
@@ -199,41 +180,62 @@ module.exports = function(evt,args,_cfg,bot) {
 
     //utility functions to find ids from names, list colors, etc.
     function roleName(evt, q) {
-        if (!bot.servers[evt.d.guild_id]) { return null }
+        if (!bot.servers[evt.d.guild_id]) { return null; }
         var r = (Object.keys(bot.servers[evt.d.guild_id].roles).find(function (key) {
             var res = bot.servers[evt.d.guild_id].roles[key].name;
-            if(!res) {res = '___________________________'; }
-            if (res.substring(0, res.length - 8).toLowerCase() == q.toLowerCase() && res.substring(res.length - 8, res.length).toLowerCase() == ' nametag') { return true } else { }
+            if(!res) {res = "___________________________"; }
+            if (res.substring(0, res.length - 8).toLowerCase() == q.toLowerCase() && res.substring(res.length - 8, res.length).toLowerCase() == " nametag") { return true; }
         }));
-        if (r != null) { return r } else { return null }
+        if (r != null) { return r; } else { return null; }
     }
     
     function roleSearchByName(evt, q) {
-        if (!bot.servers[evt.d.guild_id]) { return null }
+        if (!bot.servers[evt.d.guild_id]) { return null; }
         var r = (Object.keys(bot.servers[evt.d.guild_id].roles).find(function (key) {
             var res = bot.servers[evt.d.guild_id].roles[key].name;
-            if (res.toLowerCase() == q.toLowerCase()) { return true } else { }
+            if (res.toLowerCase() == q.toLowerCase()) { return true; }
         }));
-        if (r != null) { return r } else { return null }
+        if (r != null) { return r; } else { return null; }
     }
     
     function colorRoleList(evt) {
-        if (!bot.servers[evt.d.guild_id]) { return null }
+        if (!bot.servers[evt.d.guild_id]) { return null; }
         var e = [];
-        var r = (Object.keys(bot.servers[evt.d.guild_id].roles).find(function (key) {
+        Object.keys(bot.servers[evt.d.guild_id].roles).find(function (key) {
             var res = bot.servers[evt.d.guild_id].roles[key].name;
-            if(!res) {res = 'foo'}
-            if (res.substring(res.length - 8, res.length).toLowerCase() == ' nametag' && res.substring(0,1) != '#') { e.push(res.substring(0, res.length - 8)) } else { }
-        }));
-        return e
+            if(!res) {res = "foo";}
+            if (res.substring(res.length - 8, res.length).toLowerCase() == " nametag" && res.substring(0,1) != "#") { e.push(res.substring(0, res.length - 8)); }
+        });
+        return e;
     }
     function colorRoleObjList(evt) {
-        if (!bot.servers[evt.d.guild_id]) { return null }
+        if (!bot.servers[evt.d.guild_id]) { return null; }
         var e = [];
-        var r = (Object.keys(bot.servers[evt.d.guild_id].roles).find(function (key) {
+        Object.keys(bot.servers[evt.d.guild_id].roles).find(function (key) {
             var res = bot.servers[evt.d.guild_id].roles[key].name;
-            if (res.substring(res.length - 8, res.length).toLowerCase() == ' nametag' && res.substring(0,1) != '#') { e.push(bot.servers[evt.d.guild_id].roles[key]) } else { }
-        }));
-        return e
+            if (res.substring(res.length - 8, res.length).toLowerCase() == " nametag" && res.substring(0,1) != "#") { e.push(bot.servers[evt.d.guild_id].roles[key]); }
+        });
+        return e;
     }
+};
+
+function hexColorDelta(hex1, hex2) {
+    // get red/green/blue int values of hex1
+    var r1 = parseInt(hex1.substring(0, 2), 16);
+    var g1 = parseInt(hex1.substring(2, 4), 16);
+    var b1 = parseInt(hex1.substring(4, 6), 16);
+    // get red/green/blue int values of hex2
+    var r2 = parseInt(hex2.substring(0, 2), 16);
+    var g2 = parseInt(hex2.substring(2, 4), 16);
+    var b2 = parseInt(hex2.substring(4, 6), 16);
+    // calculate differences between reds, greens and blues
+    var r = 255 - Math.abs(r1 - r2);
+    var g = 255 - Math.abs(g1 - g2);
+    var b = 255 - Math.abs(b1 - b2);
+    // limit differences between 0 and 1
+    r /= 255;
+    g /= 255;
+    b /= 255;
+    // 0 means opposit colors, 1 means same colors
+    return (r + g + b) / 3;
 }

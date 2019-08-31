@@ -2,7 +2,7 @@ var periodGameManager;
 
 module.exports = function (evt, args, _cfg, bot, db) {
     if (!periodGameManager) {
-        periodGameManager = require(__dirname + '/../periodgame/periodgame.js')(bot, db);
+        periodGameManager = require(__dirname + "/../periodgame/periodgame.js")(bot, db);
         bot.on("message", function (user, userID, channelID, message, evt) {
             periodGameManager.message(evt, _cfg);
         });
@@ -21,4 +21,4 @@ module.exports = function (evt, args, _cfg, bot, db) {
             message: `Game ${(args[1] == "start") ? "Started" : "Stopped"}`
         });
     }
-}
+};
