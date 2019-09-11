@@ -20,7 +20,7 @@
 
 		#login-splash {
 			background: #94d1be;
-			display: flex;
+			display: none;
 			position: fixed;
 			width: 100vw;
 			height: 100vh;
@@ -41,7 +41,9 @@
 			display: flex;
 			position: relative;
 			flex-direction: row;
-			height: 95vh;
+			height: 90vh;
+			position: absolute;
+			bottom: 0px;
 		}
 
 		body {
@@ -58,8 +60,9 @@
 			height: 10vh;
 			overflow: hidden;
 			display: flex;
-			align-content: center;
-			justify-content: space-between;
+			align-items: center;
+			position: fixed;
+
 		}
 
 		header a {
@@ -72,15 +75,27 @@
 			font-size: 1.5em;
 			margin: 0px;
 			white-space: nowrap;
+			margin-left: 1em;
 		}
-
+		
+		header #open-menu-button {
+			cursor: pointer;
+		}
 		aside {
 			display: none;
 			width: 3in;
+			max-width: 90vw;
 			position: fixed;
+			bottom: 0px;
 			background: #94d1be;
 			height: 90vh;
 			z-index: 2;
+			left: 0px;
+			transition: 0.1s left;
+		}
+
+		aside.disabled {
+			left: -3in;
 		}
 
 		aside nav hr {
@@ -131,7 +146,6 @@
 		main {
 			height: 100%;
 			overflow: hidden;
-			flex-grow: 1;
 		}
 
 		.tab {
@@ -213,6 +227,10 @@
 		.array-editor input {
 			-moz-appearance: textfield;
 		}
+		.tab h2 {
+			margin-top: 0px;
+		}
+
 		@media (min-width: 5in) {
 			header {
 				display: block;
@@ -231,6 +249,7 @@
 			}
 
 			.tab h2 {
+				margin-top: initial;
 				margin-bottom: 0px;
 			}
 
@@ -324,6 +343,13 @@
 						<a href="#joinmessages">
 							<span class="fa fa-door-open" aria-hidden="true"></span>
 							<span>Join Messages</span>
+						</a>
+					</li>
+					<hr>
+					<li aria-role="menuitem">
+						<a href="#logout">
+							<span class="fa fa-sign-out-alt" aria-hidden="true"></span>
+							<span>Log Out</span>
 						</a>
 					</li>
 				</ul>

@@ -394,6 +394,10 @@ function sendEdits() {
     req.send(JSON.stringify(cfgLocal));
 }
 
+function logOut() {
+    localStorage.clear();
+    window.location.reload();
+}
 window.addEventListener("load", function() {
     var pageSelectors = document.querySelectorAll("aside a");
     for(let i = 0; i < pageSelectors.length; i++) {
@@ -404,9 +408,14 @@ window.addEventListener("load", function() {
             }
 
             let pageID = link.getAttribute("href").substring(1);
-            openSubpage(pageID);
+            if(pageID == "logout") logOut();
+            else openSubpage(pageID);
         });
     }
+
+    document.getElementById("open-menu-button").addEventListener("click", function() {
+        document.getElementById("side-menu").classList.toggle("disabled");
+    });
 
     var openLink = document.getElementById((window.location.hash || "#modules").substring(1));
     if(openLink) {
