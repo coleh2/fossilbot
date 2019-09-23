@@ -134,6 +134,9 @@ function normalKeyValueEditorRow(editorElem, editorObject, key, value, processor
     deleteKeyElem.addEventListener("click", function() {
         delete editorObject[key];
         editorElem.removeChild(rowElem);
+
+        changesMade++;
+        if(changesMade > CHANGES_THRESHOLD_NORMAL) sendEdits();
     });
     deleteTableCell.appendChild(deleteKeyElem);
     rowElem.appendChild(deleteTableCell);
@@ -361,7 +364,9 @@ function requireLogin() {
     }
 }
 function openLogin() {
-    window.open("https://discordapp.com/oauth2/authorize?client_id=387963766798811136&redirect_uri=http%3A%2F%2Ffossilbot.cf%2Fdiscordoauthresponse&response_type=token&scope=identify%20guilds%20connections&state=" + encodeURIComponent(window.location.pathname), "DiscordAuthWindow","toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=400,height=600"); 
+    var windowUrl = "https://discordapp.com/oauth2/authorize?client_id=387963766798811136&redirect_uri=http%3A%2F%2Ffossilbot.cf%2Fdiscordoauthresponse&response_type=token&scope=identify%20guilds%20connections&state=" + encodeURIComponent(window.location.pathname);
+    if(location.protocol == "https:") windowUrl = "https://discordapp.com/oauth2/authorize?client_id=387963766798811136&redirect_uri=https%3A%2F%2Ffossilbot.cf%2Fdiscordoauthresponse&response_type=token&scope=identify%20guilds%20connections&state=" + encodeURIComponent(window.location.pathname);
+    window.open(windowUrl, "DiscordAuthWindow","toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=400,height=600"); 
     window.addEventListener("message", function(event) {
         localStorage.setItem("discordToken",event.data);
         event.source.close();
@@ -416,6 +421,9 @@ window.addEventListener("load", function() {
     document.getElementById("open-menu-button").addEventListener("click", function() {
         document.getElementById("side-menu").classList.toggle("disabled");
     });
+    document.getElementById("side-menu-shadowbox").addEventListener("click", function() {
+        document.getElementById("side-menu").classList.toggle("disabled");
+    })
 
     var openLink = document.getElementById((window.location.hash || "#modules").substring(1));
     if(openLink) {

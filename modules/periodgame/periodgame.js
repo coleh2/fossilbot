@@ -1,4 +1,4 @@
-var PERIOD_GAME_CHANNEL_ID = "";
+var PERIOD_GAME_CHANNEL_ID = "512675043159965719";
 var PERIOD_GAME_ROLE_NAME = ". Notifications";
 
 var currentlyPlayingGame = false;

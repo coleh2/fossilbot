@@ -9,13 +9,18 @@ var cache = new jsonDb(__dirname + "/db/webcache.json");
 var botAuth = require(__dirname + "/../../.data/auth.json");
 
 var callbacks = {};
+var preparedTwanhsPosts = {};
 
-var db;
+var twanhsChannelId = "485200425176268824";
+var isaacAccountId = "286639503660285953";
+var colehAccountId = "297151429087592449";
+var db, bot;
 
 
-module.exports = function (_db) {
-    if (!_db) return false;
+module.exports = function (_db, _bot) {
+    if (!_db || !_bot) return false;
     db = _db;
+    bot = _bot;
     return exportFunctions;
 };
 
@@ -40,6 +45,20 @@ Date.prototype.getWeek = function () {
     return 1 + Math.round(((date.getTime() - week1.getTime()) / 86400000
         - 3 + (week1.getDay() + 6) % 7) / 7);
 };
+
+setInterval(function() {
+    var postArr = Object.values(preparedTwanhsPosts);
+    for(var i = 0; i < postArr.length; i++) {
+        if(Math.abs(Date.now() - postArr[i].timeAt) < 2000) {
+            bot.sendMessage({
+                to: twanhsChannelId,
+                embed: postArr[i].embed
+            });
+            delete preparedTwanhsPosts[Object.keys(preparedTwanhsPosts)[i]];
+            break;
+        }
+    }
+}, 2000);
 
 if (cache.JSON().cache === undefined) {
     cache.JSON({ "cache": [], "stats": {} });
@@ -87,7 +106,47 @@ app.post("/gutekanstTweet", function(req,resp) {
         if(~req.body.text.toLowerCase().indexOf(arrayOfPhrasesWhichIndicateASnowDay[i])) { callbacks.onSnowDayAnnounced(req.body); break;}
     }
 });
+app.post("/twanhs/:action", function(req, res) {
+    var notAuth = function () {
+        console.log("notAuth executed");
+        res.status(401);
+        res.send("\"Not Authorized\"");
+    };
 
+    //console.log(req.headers['authorization']);
+    if (!req.headers["authorization"]) { notAuth(); return; }
+    var authHead = req.headers["authorization"];
+    var authHeadSplit = authHead.split("|");
+    if (authHeadSplit.length != 2) { notAuth(); return; }
+
+    var _usUser = cache.JSON().cache.find(x => { return (x.discord.id.id == authHeadSplit[1]); });
+    console.log(_usUser.discord.auth);
+    if (!_usUser) { notAuth(); return; }
+    if (!_usUser.discord) { notAuth(); return; }
+    if (_usUser.discord.auth != authHead) { notAuth(); return; }
+    if(authHeadSplit[1] !== isaacAccountId && authHeadSplit[1] !== colehAccountId) return notAuth();
+
+    if(req.params.action == "post") {
+        var newPostId = Date.now().toString(36);
+        while(preparedTwanhsPosts[newPostId]) newPostId += "1";
+        if(!req.body) return res.sendStatus("400");
+        if(!req.body.timeAt) return res.sendStatus("400");
+        if(req.body.timeAt < Date.now()) return res.status("400").send("past");
+
+        preparedTwanhsPosts[newPostId] = req.body;
+
+        res.status("201").send(newPostId);
+    } else if(req.params.action == "edit") {
+        if(!preparedTwanhsPosts[req.query.id]) return res.sendStatus("404");
+        preparedTwanhsPosts[req.query.id] = req.body;
+        res.sendStatus("200");
+    } else if(req.params.action == "delete") {
+        delete preparedTwanhsPosts[req.query.id];
+        res.sendStatus("200");
+    } else if(req.rarams.action == "list") {
+        res.send(JSON.stringify(preparedTwanhsPosts));
+    } else res.sendStatus("404");
+});
 app.post("/adminAction", function (req, resp) {
 
     var notAuth = function () {
@@ -327,6 +386,7 @@ app.get("/data", function (req, resp) {
                     var serverRolesArr;
                     //console.log(b);
                     try { serverRolesArr = JSON.parse(b).roles; } catch (e) { if (e) { notAuth(); return; } }
+                    if(!serverRolesArr) return notAuth();
                     serverRolesArr = serverRolesArr.filter(x => {
                         return (0x8 & x.permissions);
                     });

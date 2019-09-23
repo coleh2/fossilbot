@@ -9,7 +9,12 @@ db.prepare("CREATE TABLE IF NOT EXISTS userknown (id TEXT PRIMARY KEY, email TEX
 db.prepare("CREATE TABLE IF NOT EXISTS members (id TEXT PRIMARY KEY, guild_id TEXT, notifybudget INTEGER, UNIQUE(id, guild_id))").run();
 
 var voiceSessions = {};
-const webserver = require(__dirname + "/modules/webserver/webserver.js")(db);
+
+var bot = new Discord.Client({
+    token: auth
+});
+
+const webserver = require(__dirname + "/modules/webserver/webserver.js")(db,bot);
 var channelActivity = require(__dirname + "/modules/channelactivity/channelactivity.js")(db);
 var antiSpam = require(__dirname + "/modules/antispam/antispam.js");
 var commandManager = require(__dirname + "/modules/commandmanager/commandmanager.js");
@@ -110,9 +115,6 @@ webserver.onSnowDayAnnounced(function(m) {
     });
 });
 // Initialize Discord Bot
-var bot = new Discord.Client({
-    token: auth
-});
 bot.connect();
 
 //on bot ready

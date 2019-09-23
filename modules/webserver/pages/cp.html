@@ -20,7 +20,7 @@
 
 		#login-splash {
 			background: #94d1be;
-			display: none;
+			display: flex;
 			position: fixed;
 			width: 100vw;
 			height: 100vh;
@@ -86,7 +86,7 @@
 			width: 3in;
 			max-width: 90vw;
 			position: fixed;
-			bottom: 0px;
+			top: 10vh;
 			background: #94d1be;
 			height: 90vh;
 			z-index: 2;
@@ -144,6 +144,8 @@
 		}
 
 		main {
+			top: 10vh;
+			position: absolute;
 			height: 100%;
 			overflow: hidden;
 		}
@@ -230,8 +232,23 @@
 		.tab h2 {
 			margin-top: 0px;
 		}
-
+		#side-menu-shadowbox {
+       width: 100vw;
+      height: 110vh;
+      position: absolute;
+      left: 100%;
+      top: 0px;
+      z-index: -2;
+      background: #0004;
+    }
+    aside.disabled #side-menu-shadowbox {
+      display: none;
+    }
 		@media (min-width: 5in) {
+			html {
+				overflow: hidden;
+			}
+			
 			header {
 				display: block;
 				width: 3in;
@@ -257,6 +274,11 @@
 				height: 95vh;
 				position: relative;
 				display: initial;
+				top: 0px;
+			}
+
+			#side-menu-shadowbox {
+				display: none;
 			}
 		}
 		@keyframes fall-in {
@@ -282,6 +304,7 @@
 	<div id="root">
 
 		<aside id="side-menu" aria-hidden="true" style="display: block;">
+			<div id="side-menu-shadowbox"></div>
 			<nav>
 				<ul aria-role="menu">
 					<li aria-role="menuitem" class="selected">
