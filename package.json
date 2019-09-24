@@ -19,12 +19,15 @@
     "cycle": "^1.0.3",
     "discord.io": "github:woor/discord.io#gateway_v6",
     "discord.js": "^11.4.2",
+    "eslint-plugin-json": "^1.4.0",
+    "eslint-plugin-require-path-exists": "^1.1.9",
     "express": "^4.16.3",
     "eyes": "^0.1.8",
     "fast-html-parser": "^1.0.2",
     "fs": "^0.0.2",
     "image-search": "^0.0.1",
     "import-scripts": "^1.0.2",
+    "is-regex": "^1.0.4",
     "isstream": "^0.1.2",
     "jsdom": "^13.0.0",
     "nodemailer": "^5.1.1",
@@ -46,6 +49,6 @@
     "ytdl-core": "^0.28.0"
   },
   "devDependencies": {
-    "eslint": "^6.2.2"
+    "eslint": "^6.4.0"
   }
 }
