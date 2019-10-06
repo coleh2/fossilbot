@@ -423,7 +423,7 @@ window.addEventListener("load", function() {
     });
     document.getElementById("side-menu-shadowbox").addEventListener("click", function() {
         document.getElementById("side-menu").classList.toggle("disabled");
-    })
+    });
 
     var openLink = document.getElementById((window.location.hash || "#modules").substring(1));
     if(openLink) {

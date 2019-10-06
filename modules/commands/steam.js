@@ -6,7 +6,7 @@ module.exports = function (evt, args, _cfg, bot) {
     bot.sendMessage({to: evt.d.channel_id, message: "<a:load:593253216741883904> Seaching Steam for games..."}, function(err, resp) {
         if(err) {return false;}
         var protoMessageId = resp.id;
-        var localData = require(__dirname + "/data/steamapps.json").applist.apps.app;
+        var localData = require(__dirname + "/../../data/steamapps.json").applist.apps.app;
         var filteredData = localData.filter(x => {return x.name.toLowerCase().includes(args.join(" ").toLowerCase());});
 
         if(filteredData.length == 0) {return bot.editMessage({channelID: evt.d.channel_id, messageID: protoMessageId, message: ":x: Could not find any games with your search term."});}

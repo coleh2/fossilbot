@@ -6,13 +6,15 @@ var request = require("request");
 var nodemailer = require("nodemailer");
 var jsonDb = require("simple-json-db");
 var cache = new jsonDb(__dirname + "/db/webcache.json");
+var twanhsDb = new jsonDb(__dirname + "/db/twanhs.json")
 var botAuth = require(__dirname + "/../../.data/auth.json");
 
 var callbacks = {};
-var preparedTwanhsPosts = {};
+var preparedTwanhsPosts = twanhsDb.JSON() || {};
 
 var twanhsChannelId = "485200425176268824";
-var isaacAccountId = "286639503660285953";
+var isaacAccountId = "464959638048210953";
+var isaacOtherAccountId = "286639503660285953";
 var colehAccountId = "297151429087592449";
 var db, bot;
 
@@ -52,9 +54,12 @@ setInterval(function() {
         if(Math.abs(Date.now() - postArr[i].timeAt) < 2000) {
             bot.sendMessage({
                 to: twanhsChannelId,
+                message: "<@&516614364837445633> New TW@NHS!",
                 embed: postArr[i].embed
-            });
+            }, function(e,b) {console.log(e,b)});
             delete preparedTwanhsPosts[Object.keys(preparedTwanhsPosts)[i]];
+            twanhsDb.JSON(preparedTwanhsPosts);
+            twanhsDb.sync();
             break;
         }
     }
@@ -124,26 +129,36 @@ app.post("/twanhs/:action", function(req, res) {
     if (!_usUser) { notAuth(); return; }
     if (!_usUser.discord) { notAuth(); return; }
     if (_usUser.discord.auth != authHead) { notAuth(); return; }
-    if(authHeadSplit[1] !== isaacAccountId && authHeadSplit[1] !== colehAccountId) return notAuth();
+    if(authHeadSplit[1] !== isaacAccountId && authHeadSplit[1] !== isaacOtherAccountId && authHeadSplit[1] !== colehAccountId) return notAuth();
 
+    if(!req.params) return res.sendStatus(500);
     if(req.params.action == "post") {
-        var newPostId = Date.now().toString(36);
-        while(preparedTwanhsPosts[newPostId]) newPostId += "1";
+        var newPostId = req.body.timeAt.toString(36);
+        if(preparedTwanhsPosts[newPostId]) return res.sendStatus("409");
         if(!req.body) return res.sendStatus("400");
         if(!req.body.timeAt) return res.sendStatus("400");
         if(req.body.timeAt < Date.now()) return res.status("400").send("past");
 
         preparedTwanhsPosts[newPostId] = req.body;
+        twanhsDb.JSON(preparedTwanhsPosts);
+        twanhsDb.sync();
 
         res.status("201").send(newPostId);
     } else if(req.params.action == "edit") {
         if(!preparedTwanhsPosts[req.query.id]) return res.sendStatus("404");
         preparedTwanhsPosts[req.query.id] = req.body;
+        twanhsDb.JSON(preparedTwanhsPosts);
+        twanhsDb.sync();
+
         res.sendStatus("200");
     } else if(req.params.action == "delete") {
+        if(!preparedTwanhsPosts[req.query.id]) return res.sendStatus("404");
         delete preparedTwanhsPosts[req.query.id];
+        twanhsDb.JSON(preparedTwanhsPosts);
+        twanhsDb.sync();
+
         res.sendStatus("200");
-    } else if(req.rarams.action == "list") {
+    } else if(req.params.action == "list") {
         res.send(JSON.stringify(preparedTwanhsPosts));
     } else res.sendStatus("404");
 });
@@ -502,6 +517,14 @@ var emailCodeGenerateAndSend = (m, cb) => {
         cb({ err: error, email: m.email_address, resp: info });
     });
 };
+
+
+app.use((err, req, res, next) => {
+    if (err instanceof SyntaxError && err.body) return res.status(400).send("invalid json");
+
+    console.error(err);
+    res.status(500).send();
+});
 
 var incrementXpFunc = (m) => {
     if (m.cmd) {
