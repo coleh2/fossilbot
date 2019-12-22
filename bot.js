@@ -18,6 +18,7 @@ const webserver = require(__dirname + "/modules/webserver/webserver.js")(db,bot)
 var channelActivity = require(__dirname + "/modules/channelactivity/channelactivity.js")(db);
 var antiSpam = require(__dirname + "/modules/antispam/antispam.js");
 var commandManager = require(__dirname + "/modules/commandmanager/commandmanager.js");
+var pcpartpicker = require(__dirname + "/modules/pcpartpicker/pcpartpicker.js");
 
 var cfg = {
     cooldown_g: 30,
@@ -305,6 +306,9 @@ bot.on("message", function (user, userID, channelID, message, evt) {
                 }
             }
         }
+        //embedding of pcpartpicker lists
+        pcpartpicker(evt, _cfg, bot);
+
         //exp management section
         if (_cfg.enabledFeatures.experience) {
             //add a random number between 10 and 25 to the score
