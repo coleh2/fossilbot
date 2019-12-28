@@ -4,7 +4,7 @@ module.exports = function (evt, args, _cfg, bot) {
     if(args[0].length == 0) return bot.sendMessage({to: evt.d.channel_id, message: "Please include a game title to search!"});
     if(args.join(" ").length < 2) return bot.sendMessage({to: evt.channel_id, message: "To prevent abuse, you must enter more than 2 characters to search for. Please try again!"});
     bot.sendMessage({to: evt.d.channel_id, message: "<a:load:593253216741883904> Seaching Steam for games..."}, function(err, resp) {
-        if(err) {return false;}
+        if(err) return 0;
         var protoMessageId = resp.id;
         var localData = require(__dirname + "/../../data/steamapps.json").applist.apps.app;
         var filteredData = localData.filter(x => {return x.name.toLowerCase().includes(args.join(" ").toLowerCase());});
@@ -16,46 +16,47 @@ module.exports = function (evt, args, _cfg, bot) {
 
         bot.editMessage({channelID: evt.d.channel_id, messageID: protoMessageId, message: "<a:load:593253216741883904> Found game! Getting details from Steam servers..."});
 
-        request("https://store.steampowered.com/api/appdetails?appids=" + game.appid, function(err, resp, body) {
+        request("https:\/\/store.steampowered.com/api/appdetails?appids=" + game.appid, function(err, resp, body) {
             if(err) return bot.editMessage({channelID: evt.d.channel_id, messageID: protoMessageId, message: ":x: Error in requesting game..."});
             body = JSON.parse(body)[game.appid];
             if(!body.success) return bot.editMessage({channelID: evt.d.channel_id, messageID: protoMessageId, message: ":x: Something happened! Please DM coleh#1346 about this."});
 
             var data = body.data;
-            bot.editMessage({channelID: evt.d.channel_id, messageID: protoMessageId, message: "", embed: {
-                description: data.short_description,
-                title: data.name,
+
+            bot.editMessage({channelID: evt.d.channel_id, messageID: protoMessageId, message: "---", embed: {
+                description: data.short_description.substring(0,2048) || "---",
+                title: data.name.substring(0,256) || "---",
                 thumbnail: {
-                    url: data.header_image
+                    url: data.header_image || "https:\/\/bluegadgettooth.com/wp-content/uploads/2017/10/ap_currently_not_in_use.png"
                 },
-                url: "https://store.steampowered.com/app/" + game.appid,
+                url: "https:\/\/store.steampowered.com/app/" + game.appid,
                 color: 1779768,
                 fields: [
                     {
                         name: "Price",
-                        value: data.is_free?"Free":data.price_overview.discount_percent?("~~"+data.price_overview.initial_formatted+"~~ " + data.price_overview.final_formatted + " ("+data.price_overview.discount_percent+"% off)"):(data.price_overview.initial_formatted),
+                        value: "" + (data.is_free?"Free":(!data.price_overview?"N/A":(data.price_overview.discount_percent?("~~"+data.price_overview.initial_formatted+"~~ " + data.price_overview.final_formatted + " ("+data.price_overview.discount_percent+"% off)"):(data.price_overview.initial_formatted||data.price_overview.final_formatted)))) || "--",
                         inline: true
                     },
                     {
                         name: "Release Date",
-                        value: data.release_date.date,
+                        value: "" + (data.release_date.date || "Unknown"),
                         inline: true
                     },
                     {
                         name: "Developer" + (data.developers.length > 1?"s":""),
-                        value: data.developers.join(", "),
+                        value: "" + (data.developers.join(", ") || "--"),
                         inline: true
                     },
                     {
                         name: "Publisher" + (data.publishers.length > 1?"s":""),
-                        value: data.publishers.join(", "),
+                        value: "" + (data.publishers.join(", ") || "--"),
                         inline: true
                     },
                     {
                         name: "Minimum Age",
-                        value: data.required_age,
+                        value: "" + (data.required_age || "--"),
                         inline: true
-                    },
+                    }
 
                 ],
                 footer: {
@@ -64,7 +65,8 @@ module.exports = function (evt, args, _cfg, bot) {
                 timestamp: (new Date()).toISOString()
 
 
-            }});
+            }}, function(err, res) {
+            });
         });
         
     });    

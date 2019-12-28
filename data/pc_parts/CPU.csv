@@ -1,0 +1,1207 @@
+Type,Part Number,Brand,Model,Rank,Benchmark,Samples,URL
+CPU,BX80684I99900KS,Intel,Core i9-9900KS,1,106,1607,https://cpu.userbenchmark.com/SpeedTest/929964/IntelR-CoreTM-i9-9900KS-CPU---400GHz
+CPU,BX80684I99900K,Intel,Core i9-9900K,2,99.9,128832,https://cpu.userbenchmark.com/Intel-Core-i9-9900K/Rating/4028
+CPU,BX80684I99900KF,Intel,Core i9-9900KF,3,99.7,4355,https://cpu.userbenchmark.com/SpeedTest/764533/IntelR-CoreTM-i9-9900KF-CPU---360GHz
+CPU,BX80684I79700K,Intel,Core i7-9700K,4,99.3,117415,https://cpu.userbenchmark.com/Intel-Core-i7-9700K/Rating/4030
+CPU,BX80684I79700KF,Intel,Core i7-9700KF,5,97.3,1436,https://cpu.userbenchmark.com/SpeedTest/710154/IntelR-CoreTM-i7-9700KF-CPU---360GHz
+CPU,BX80684I99900,Intel,Core i9-9900,6,95.8,892,https://cpu.userbenchmark.com/SpeedTest/816115/IntelR-CoreTM-i9-9900-CPU---310GHz
+CPU,BX80684I78086K,Intel,Core i7-8086K,7,95.7,20773,https://cpu.userbenchmark.com/SpeedTest/516988/IntelR-CoreTM-i7-8086K-CPU---400GHz
+CPU,100-100000010WOF,AMD,Ryzen TR 3960X,8,95.4,75,https://cpu.userbenchmark.com/SpeedTest/969111/AMD-Ryzen-Threadripper-3960X-24-Core-Processor
+CPU,100-100000025BOX,AMD,Ryzen 7 3800X,9,95,15184,https://cpu.userbenchmark.com/AMD-Ryzen-7-3800X/Rating/4047
+CPU,BX80684I79700,Intel,Core i7-9700,10,94.9,6367,https://cpu.userbenchmark.com/SpeedTest/816180/IntelR-CoreTM-i7-9700-CPU---300GHz
+CPU,100-100000023BOX,AMD,Ryzen 9 3900X,11,94.9,25741,https://cpu.userbenchmark.com/AMD-Ryzen-9-3900X/Rating/4044
+CPU,100-0000051BOX,AMD,Ryzen 9 3950X,12,94.9,694,https://cpu.userbenchmark.com/AMD-Ryzen-9-3950X/Rating/4057
+CPU,100-100000011WOF,AMD,Ryzen TR 3970X,13,94.7,42,https://cpu.userbenchmark.com/SpeedTest/970030/AMD-Ryzen-Threadripper-3970X-32-Core-Processor
+CPU,BX80684I79700F,Intel,Core i7-9700F,14,94.7,2141,https://cpu.userbenchmark.com/SpeedTest/816132/IntelR-CoreTM-i7-9700F-CPU---300GHz
+CPU,BX80684I59600K,Intel,Core i5-9600K,15,93.6,77317,https://cpu.userbenchmark.com/Intel-Core-i5-9600K/Rating/4031
+CPU,BX80684I59600KF,Intel,Core i5-9600KF,16,93.5,2878,https://cpu.userbenchmark.com/SpeedTest/772658/IntelR-CoreTM-i5-9600KF-CPU---370GHz
+CPU,BX80684I78700K,Intel,Core i7-8700K,17,92.8,379173,https://cpu.userbenchmark.com/Intel-Core-i7-8700K/Rating/3937
+CPU,100-100000071BOX,AMD,Ryzen 7 3700X,18,92.8,79952,https://cpu.userbenchmark.com/AMD-Ryzen-7-3700X/Rating/4043
+CPU,BX8069510900X,Intel,Core i9-10900X,19,92.3,27,https://cpu.userbenchmark.com/SpeedTest/969950/IntelR-CoreTM-i9-10900X-CPU---370GHz
+CPU,BX80684I59600,Intel,Core i5-9600,20,91.8,127,https://cpu.userbenchmark.com/SpeedTest/853186/IntelR-CoreTM-i5-9600-CPU---310GHz
+CPU,BX80684I39350KF,Intel,Core i3-9350KF,21,91.5,131,https://cpu.userbenchmark.com/Intel-Core-i3-9350KF/Rating/4055
+CPU,100-100000022BOX,AMD,Ryzen 5 3600X,22,91.4,29552,https://cpu.userbenchmark.com/AMD-Ryzen-5-3600X/Rating/4041
+CPU,BX80673I99920X,Intel,Core i9-9920X,23,90.9,432,https://cpu.userbenchmark.com/SpeedTest/656219/IntelR-CoreTM-i9-9920X-CPU---350GHz
+CPU,BX80684I58600K,Intel,Core i5-8600K,24,90,132445,https://cpu.userbenchmark.com/Intel-Core-i5-8600K/Rating/3941
+CPU,BX8069510920X,Intel,Core i9-10920X,25,89.9,9,https://cpu.userbenchmark.com/SpeedTest/931866/IntelR-CoreTM-i9-10920X-CPU---350GHz
+CPU,BX80673I99940X,Intel,Core i9-9940X,26,89.7,471,https://cpu.userbenchmark.com/SpeedTest/641326/IntelR-CoreTM-i9-9940X-CPU---330GHz
+CPU,BX80673I79800X,Intel,Core i7-9800X,27,89.1,1100,https://cpu.userbenchmark.com/SpeedTest/651256/IntelR-CoreTM-i7-9800X-CPU---380GHz
+CPU,100-1000000158,AMD,Ryzen 5 3500X,28,89,211,https://cpu.userbenchmark.com/AMD-Ryzen-5-3500X/Rating/4052
+CPU,BX80673I99900X,Intel,Core i9-9900X,29,88.8,1273,https://cpu.userbenchmark.com/SpeedTest/639130/IntelR-CoreTM-i9-9900X-CPU---350GHz
+CPU,BX80673I99960X,Intel,Core i9-9960X,30,88.8,236,https://cpu.userbenchmark.com/SpeedTest/653060/IntelR-CoreTM-i9-9960X-CPU---310GHz
+CPU,BX8069510980XE,Intel,Core i9-10980XE,31,88.8,11,https://cpu.userbenchmark.com/SpeedTest/935899/IntelR-CoreTM-i9-10980XE-CPU---300GHz
+CPU,BX80684I59500,Intel,Core i5-9500,32,88.5,544,https://cpu.userbenchmark.com/SpeedTest/825467/IntelR-CoreTM-i5-9500-CPU---300GHz
+CPU,BX80684I78700,Intel,Core i7-8700,33,88.4,135773,https://cpu.userbenchmark.com/Intel-Core-i7-8700/Rating/3940
+CPU,BX80673I97900X,Intel,Core i9-7900X,34,88.4,10169,https://cpu.userbenchmark.com/Intel-Core-i9-7900X/Rating/3936
+CPU,100-100000031BOX,AMD,Ryzen 5 3600,35,88.1,106348,https://cpu.userbenchmark.com/AMD-Ryzen-5-3600/Rating/4040
+CPU,100-1000000050,AMD,Ryzen 5 3500,36,87.4,232,https://cpu.userbenchmark.com/AMD-Ryzen-5-3500/Rating/4053
+CPU,BX80677I77700K,Intel,Core i7-7700K,37,87.4,385561,https://cpu.userbenchmark.com/Intel-Core-i7-7700K/Rating/3647
+CPU,BX80673I97940X,Intel,Core i9-7940X,38,87.3,2367,https://cpu.userbenchmark.com/SpeedTest/353078/IntelR-CoreTM-i9-7940X-CPU---310GHz
+CPU,BX80673I77820X,Intel,Core i7-7820X,39,87.2,13544,https://cpu.userbenchmark.com/Intel-Core-i7-7820X/Rating/3928
+CPU,BX80673I99980X,Intel,Core i9-9980XE,40,86.8,753,https://cpu.userbenchmark.com/SpeedTest/652504/IntelR-CoreTM-i9-9980XE-CPU---300GHz
+CPU,BX80677I77740X,Intel,Core i7-7740X,41,86.6,3227,https://cpu.userbenchmark.com/SpeedTest/304932/IntelR-CoreTM-i7-7740X-CPU---430GHz
+CPU,,Intel,Core i9-9980HK,42,86.5,1418,https://cpu.userbenchmark.com/SpeedTest/797907/IntelR-CoreTM-i9-9980HK-CPU---240GHz
+CPU,BX80677I57640X,Intel,Core i5-7640X,43,86.3,1271,https://cpu.userbenchmark.com/SpeedTest/310543/IntelR-CoreTM-i5-7640X-CPU---400GHz
+CPU,BX80673I99820X,Intel,Core i9-9820X,44,86.1,633,https://cpu.userbenchmark.com/SpeedTest/651318/IntelR-CoreTM-i9-9820X-CPU---330GHz
+CPU,BX80673I97920X,Intel,Core i9-7920X,45,86,2528,https://cpu.userbenchmark.com/SpeedTest/278103/IntelR-CoreTM-i9-7920X-CPU---350GHz
+CPU,BX80673I97960X,Intel,Core i9-7960X,46,85.4,1277,https://cpu.userbenchmark.com/SpeedTest/357952/IntelR-CoreTM-i9-7960X-CPU---280GHz
+CPU,BX80684I58600,Intel,Core i5-8600,47,85.2,8282,https://cpu.userbenchmark.com/SpeedTest/477251/IntelR-CoreTM-i5-8600-CPU---310GHz
+CPU,YD292XA8AFWOF,AMD,Ryzen TR 2920X,48,84,1149,https://cpu.userbenchmark.com/SpeedTest/625966/AMD-Ryzen-Threadripper-2920X-12-Core-Processor
+CPU,YD295XA8UGAAF,AMD,Ryzen TR 2950X,49,83.5,5083,https://cpu.userbenchmark.com/SpeedTest/569025/AMD-Ryzen-Threadripper-2950X-16-Core-Processor
+CPU,BX80673I77800X,Intel,Core i7-7800X,50,83.4,10092,https://cpu.userbenchmark.com/SpeedTest/304816/IntelR-CoreTM-i7-7800X-CPU---350GHz
+CPU,BX80677I57600K,Intel,Core i5-7600K,51,83.3,124559,https://cpu.userbenchmark.com/Intel-Core-i5-7600K/Rating/3885
+CPU,BX80673I97980X,Intel,Core i9-7980XE,52,83.2,2305,https://cpu.userbenchmark.com/SpeedTest/352013/IntelR-CoreTM-i9-7980XE-CPU---260GHz
+CPU,CL8068404069006,Intel,Core i9-9880H,53,82.8,1445,https://cpu.userbenchmark.com/SpeedTest/750169/IntelR-CoreTM-i9-9880H-CPU---230GHz
+CPU,BX80684I59400F,Intel,Core i5-9400F,54,82.8,43294,https://cpu.userbenchmark.com/Intel-Core-i5-9400F/Rating/4051
+CPU,BX8069510940X,Intel,Core i9-10940X,55,82.7,2,https://cpu.userbenchmark.com/SpeedTest/932085/IntelR-CoreTM-i9-10940X-CPU---330GHz
+CPU,BX80684I59400,Intel,Core i5-9400,56,82.6,2829,https://cpu.userbenchmark.com/SpeedTest/735306/IntelR-CoreTM-i5-9400-CPU---290GHz
+CPU,BX80684I58500,Intel,Core i5-8500,57,82.5,16190,https://cpu.userbenchmark.com/SpeedTest/447884/IntelR-CoreTM-i5-8500-CPU---300GHz
+CPU,YD270XBGAFBOX,AMD,Ryzen 7 2700X,58,81.9,205014,https://cpu.userbenchmark.com/AMD-Ryzen-7-2700X/Rating/3958
+CPU,BX80684I38350K,Intel,Core i3-8350K,59,81.7,15381,https://cpu.userbenchmark.com/Intel-Core-i3-8350K/Rating/3935
+CPU,,Intel,Core i7-9850H,60,81.5,1024,https://cpu.userbenchmark.com/SpeedTest/826055/IntelR-CoreTM-i7-9850H-CPU---260GHz
+CPU,FH8068403419332,Intel,Core i7-8559U,61,81.3,1049,https://cpu.userbenchmark.com/SpeedTest/543591/IntelR-CoreTM-i7-8559U-CPU---270GHz
+CPU,BX80662I76700K,Intel,Core i7-6700K,62,81,351790,https://cpu.userbenchmark.com/Intel-Core-i7-6700K/Rating/3502
+CPU,BX80684I39100,Intel,Core i3-9100,63,80.9,487,https://cpu.userbenchmark.com/SpeedTest/806339/IntelR-CoreTM-i3-9100-CPU---360GHz
+CPU,BX80671I76850K,Intel,Core i7-6850K,64,80.9,17294,https://cpu.userbenchmark.com/Intel-Core-i7-6850K/Rating/3606
+CPU,BX80671I76900K,Intel,Core i7-6900K,65,80,4497,https://cpu.userbenchmark.com/Intel-Core-i7-6900K/Rating/3605
+CPU,BX80684I39100F,Intel,Core i3-9100F,66,79.9,6781,https://cpu.userbenchmark.com/Intel-Core-i3-9100F/Rating/4054
+CPU,BX80684I58400,Intel,Core i5-8400,67,79.7,129372,https://cpu.userbenchmark.com/Intel-Core-i5-8400/Rating/3939
+CPU,YD260XBCAFBOX,AMD,Ryzen 5 2600X,68,79.5,139795,https://cpu.userbenchmark.com/AMD-Ryzen-5-2600X/Rating/3956
+CPU,BX80646I74790K,Intel,Core i7-4790K,69,78.2,269431,https://cpu.userbenchmark.com/Intel-Core-i7-4790K/Rating/2384
+CPU,YD190XA8AEWOF,AMD,Ryzen TR 1900X,70,78,2719,https://cpu.userbenchmark.com/SpeedTest/340638/AMD-Ryzen-Threadripper-1900X-8-Core-Processor
+CPU,,Intel,Core i7-1065G7,71,77.7,1823,https://cpu.userbenchmark.com/SpeedTest/888368/IntelR-CoreTM-i7-1065G7-CPU---130GHz
+CPU,CM8068403358413,Intel,Core i7-8700T,72,77.6,1672,https://cpu.userbenchmark.com/SpeedTest/480804/IntelR-CoreTM-i7-8700T-CPU---240GHz
+CPU,BX80662I56600K,Intel,Core i5-6600K,73,77.2,235551,https://cpu.userbenchmark.com/Intel-Core-i5-6600K/Rating/3503
+CPU,BX80671I76950X,Intel,Core i7-6950X,74,77,3969,https://cpu.userbenchmark.com/Intel-Core-i7-6950X/Rating/3604
+CPU,YD192XA8AEWOF,AMD,Ryzen TR 1920X,75,76.9,3921,https://cpu.userbenchmark.com/AMD-Ryzen-TR-1920X/Rating/3934
+CPU,CL8068403805708,Intel,Core i9-8950HK,76,76.9,6557,https://cpu.userbenchmark.com/SpeedTest/486215/IntelR-CoreTM-i9-8950HK-CPU---290GHz
+CPU,,Intel,Core i5-9400H,77,76.7,60,https://cpu.userbenchmark.com/SpeedTest/843530/IntelR-CoreTM-i5-9400H-CPU---250GHz
+CPU,CL8068404121817,Intel,Core i7-9750H,78,76.5,47626,https://cpu.userbenchmark.com/SpeedTest/766364/IntelR-CoreTM-i7-9750H-CPU---260GHz
+CPU,YD195XA8AEWOF,AMD,Ryzen TR 1950X,79,76.4,14344,https://cpu.userbenchmark.com/AMD-Ryzen-TR-1950X/Rating/3932
+CPU,,Intel,Core i7-8809G,80,76.3,1846,https://cpu.userbenchmark.com/SpeedTest/422264/IntelR-CoreTM-i7-8809G-CPU---310GHz
+CPU,YD297XAZAFWOF,AMD,Ryzen TR 2970WX,81,76.3,427,https://cpu.userbenchmark.com/SpeedTest/626249/AMD-Ryzen-Threadripper-2970WX-24-Core-Processor
+CPU,BX80677I77700,Intel,Core i7-7700,82,76.3,124616,https://cpu.userbenchmark.com/Intel-Core-i7-7700/Rating/3887
+CPU,BX80658i75775C,Intel,Core i7-5775C,83,76.3,914,https://cpu.userbenchmark.com/SpeedTest/30276/IntelR-CoreTM-i7-5775C-CPU---330GHz
+CPU,YD180XBCAEWOF,AMD,Ryzen 7 1800X,84,76,56455,https://cpu.userbenchmark.com/AMD-Ryzen-7-1800X/Rating/3916
+CPU,BX80648I75930K,Intel,Core i7-5930K,85,75.9,24166,https://cpu.userbenchmark.com/Intel-Core-i7-5930K/Rating/2578
+CPU,CL8068403359725,Intel,Core i7-8850H,86,75.9,8621,https://cpu.userbenchmark.com/SpeedTest/485626/IntelR-CoreTM-i7-8850H-CPU---260GHz
+CPU,,Intel,Xeon E3-1270 v6,87,75.8,326,https://cpu.userbenchmark.com/SpeedTest/278175/IntelR-XeonR-CPU-E3-1270-v6---380GHz
+CPU,BX80671I76800K,Intel,Core i7-6800K,88,75.6,27843,https://cpu.userbenchmark.com/Intel-Core-i7-6800K/Rating/3607
+CPU,,Intel,Xeon E3-1245 v6,89,75.5,265,https://cpu.userbenchmark.com/SpeedTest/299743/IntelR-XeonR-CPU-E3-1245-v6---370GHz
+CPU,YD3400C5FHBOX,AMD,Ryzen 5 3400G,90,75.3,6756,https://cpu.userbenchmark.com/SpeedTest/825156/AMD-Ryzen-5-3400G-with-Radeon-Vega-Graphics
+CPU,CM8068403358708,Intel,Core i5-8600T,91,75.2,75,https://cpu.userbenchmark.com/SpeedTest/506080/IntelR-CoreTM-i5-8600T-CPU---230GHz
+CPU,YD2600BBAFBOX,AMD,Ryzen 5 2600,92,75,280718,https://cpu.userbenchmark.com/AMD-Ryzen-5-2600/Rating/3955
+CPU,BX80677I57600,Intel,Core i5-7600,93,74.8,19885,https://cpu.userbenchmark.com/Intel-Core-i5-7600/Rating/3890
+CPU,BX80648I75960X,Intel,Core i7-5960X,94,74.7,9399,https://cpu.userbenchmark.com/Intel-Core-i7-5960X/Rating/2580
+CPU,,Intel,Core i5-1035G7,95,74.5,325,https://cpu.userbenchmark.com/SpeedTest/920409/IntelR-CoreTM-i5-1035G7-CPU---120GHz
+CPU,YD299XAZAFWOF,AMD,Ryzen TR 2990WX,96,74.4,1665,https://cpu.userbenchmark.com/SpeedTest/560423/AMD-Ryzen-Threadripper-2990WX-32-Core-Processor
+CPU,YD160XBCAEWOF,AMD,Ryzen 5 1600X,97,74,83996,https://cpu.userbenchmark.com/AMD-Ryzen-5-1600X/Rating/3920
+CPU,BX80648I75820K,Intel,Core i7-5820K,98,73.8,65884,https://cpu.userbenchmark.com/Intel-Core-i7-5820K/Rating/2579
+CPU,BX80658i55675C,Intel,Core i5-5675C,99,73.8,593,https://cpu.userbenchmark.com/SpeedTest/31828/IntelR-CoreTM-i5-5675C-CPU---310GHz
+CPU,BX80646I54690K,Intel,Core i5-4690K,100,73.7,144429,https://cpu.userbenchmark.com/Intel-Core-i5-4690K/Rating/2432
+CPU,CL8068403373614,Intel,Core i5-8400H,101,73.3,514,https://cpu.userbenchmark.com/SpeedTest/524256/IntelR-CoreTM-i5-8400H-CPU---250GHz
+CPU,CL8068403359524,Intel,Core i7-8750H,102,73.1,181165,https://cpu.userbenchmark.com/SpeedTest/470418/IntelR-CoreTM-i7-8750H-CPU---220GHz
+CPU,,Intel,Core i5-1035G1,103,73,570,https://cpu.userbenchmark.com/SpeedTest/895407/IntelR-CoreTM-i5-1035G1-CPU---100GHz
+CPU,BX80684I38300,Intel,Core i3-8300,104,72.8,1009,https://cpu.userbenchmark.com/SpeedTest/484077/IntelR-CoreTM-i3-8300-CPU---370GHz
+CPU,,Intel,Core i7-5775R,105,72.7,114,https://cpu.userbenchmark.com/SpeedTest/39919/IntelR-CoreTM-i7-5775R-CPU---330GHz
+CPU,YD170XBCAEWOF,AMD,Ryzen 7 1700X,106,72.5,78462,https://cpu.userbenchmark.com/AMD-Ryzen-7-1700X/Rating/3915
+CPU,,Intel,Xeon E3-1286 v3,107,72.4,18,https://cpu.userbenchmark.com/SpeedTest/33047/IntelR-XeonR-CPU-E3-1286-v3---370GHz
+CPU,,Intel,Xeon E5-1650 v3,108,72.4,2785,https://cpu.userbenchmark.com/SpeedTest/16320/IntelR-XeonR-CPU-E5-1650-v3---350GHz
+CPU,YD3200C5FHBOX,AMD,Ryzen 3 3200G,109,72.3,5077,https://cpu.userbenchmark.com/SpeedTest/824486/AMD-Ryzen-3-3200G-with-Radeon-Vega-Graphics
+CPU,,Intel,Core i5-8279U,110,72.3,40,https://cpu.userbenchmark.com/SpeedTest/807756/IntelR-CoreTM-i5-8279U-CPU---240GHz
+CPU,YD2700BBAFBOX,AMD,Ryzen 7 2700,111,72.2,48901,https://cpu.userbenchmark.com/AMD-Ryzen-7-2700/Rating/3957
+CPU,BX80633I74960X,Intel,Core i7-4960X,112,72.1,2923,https://cpu.userbenchmark.com/Intel-Core-i7-4960X/Rating/1977
+CPU,,Intel,Core i7-10710U,113,72.1,236,https://cpu.userbenchmark.com/SpeedTest/900004/IntelR-CoreTM-i7-10710U-CPU---110GHz
+CPU,BX80646I54670K,Intel,Core i5-4670K,114,72,95273,https://cpu.userbenchmark.com/Intel-Core-i5-4670K/Rating/1538
+CPU,,Intel,Core i7-10510U,115,71.4,1572,https://cpu.userbenchmark.com/SpeedTest/891469/IntelR-CoreTM-i7-10510U-CPU---180GHz
+CPU,YD250XBBM4KAF,AMD,Ryzen 5 2500X,116,71.4,484,https://cpu.userbenchmark.com/SpeedTest/567224/AMD-Ryzen-5-2500X-Quad-Core-Processor
+CPU,BX80646I74770K,Intel,Core i7-4770K,117,71.3,106670,https://cpu.userbenchmark.com/Intel-Core-i7-4770K/Rating/1537
+CPU,,Intel,Core i5-1035G4,118,70.9,847,https://cpu.userbenchmark.com/SpeedTest/921077/IntelR-CoreTM-i5-1035G4-CPU---110GHz
+CPU,BX80684I38100,Intel,Core i3-8100,119,70.7,57196,https://cpu.userbenchmark.com/Intel-Core-i3-8100/Rating/3942
+CPU,BX80677I57600T,Intel,Core i5-7600T,120,70.6,204,https://cpu.userbenchmark.com/SpeedTest/246226/IntelR-CoreTM-i5-7600T-CPU---280GHz
+CPU,FH8067703417418,Intel,Core i7-8706G,121,70.5,102,https://cpu.userbenchmark.com/SpeedTest/518066/IntelR-CoreTM-i7-8706G-CPU---310GHz
+CPU,,Intel,Core i7-5950HQ,122,70.2,136,https://cpu.userbenchmark.com/SpeedTest/29765/IntelR-CoreTM-i7-5950HQ-CPU---290GHz
+CPU,FH8068403419522,Intel,Core i5-8259U,123,70,1133,https://cpu.userbenchmark.com/SpeedTest/543736/IntelR-CoreTM-i5-8259U-CPU---230GHz
+CPU,,Intel,Core i5-10210U,124,69.8,952,https://cpu.userbenchmark.com/SpeedTest/819403/IntelR-CoreTM-i5-10210U-CPU---160GHz
+CPU,,Intel,Xeon E3-1271 v3,125,69.8,618,https://cpu.userbenchmark.com/SpeedTest/17463/IntelR-XeonR-CPU-E3-1271-v3---360GHz
+CPU,BX80646E31276V3,Intel,Xeon E3-1276 v3,126,69.8,169,https://cpu.userbenchmark.com/SpeedTest/25180/IntelR-XeonR-CPU-E3-1276-v3---360GHz
+CPU,BX80633I74930K,Intel,Core i7-4930K,127,69.8,12939,https://cpu.userbenchmark.com/Intel-Core-i7-4930K/Rating/1976
+CPU,,Intel,Xeon E5-1650 v2,128,69.8,3724,https://cpu.userbenchmark.com/SpeedTest/7574/IntelR-XeonR-CPU-E5-1650-v2---350GHz
+CPU,BX80677I57500,Intel,Core i5-7500,129,69.7,80197,https://cpu.userbenchmark.com/Intel-Core-i5-7500/Rating/3648
+CPU,YD1600BBAEBOX,AMD,Ryzen 5 1600,130,69.5,223524,https://cpu.userbenchmark.com/AMD-Ryzen-5-1600/Rating/3919
+CPU,BX80662I76700,Intel,Core i7-6700,131,69.4,132043,https://cpu.userbenchmark.com/Intel-Core-i7-6700/Rating/3515
+CPU,BX80662I56600,Intel,Core i5-6600,132,69.3,48155,https://cpu.userbenchmark.com/Intel-Core-i5-6600/Rating/3514
+CPU,YD1700BBAEBOX,AMD,Ryzen 7 1700,133,69.3,134314,https://cpu.userbenchmark.com/AMD-Ryzen-7-1700/Rating/3917
+CPU,,Intel,Core i5-9300H,134,69.2,12479,https://cpu.userbenchmark.com/SpeedTest/744904/IntelR-CoreTM-i5-9300H-CPU---240GHz
+CPU,,Intel,Xeon E3-1230 v6,135,69.1,254,https://cpu.userbenchmark.com/SpeedTest/268848/IntelR-XeonR-CPU-E3-1230-v6---350GHz
+CPU,,Intel,Core i7-3970X,136,69.1,1770,https://cpu.userbenchmark.com/SpeedTest/6794/IntelR-CoreTM-i7-3970X-CPU---350GHz
+CPU,BX80637I53570K,Intel,Core i5-3570K,137,68.7,128477,https://cpu.userbenchmark.com/Intel-Core-i5-3570K/Rating/1316
+CPU,BX80646I74790,Intel,Core i7-4790,138,68.7,140109,https://cpu.userbenchmark.com/Intel-Core-i7-4790/Rating/2293
+CPU,BX80646I54690,Intel,Core i5-4690,139,68.5,44345,https://cpu.userbenchmark.com/Intel-Core-i5-4690/Rating/2311
+CPU,,Intel,Xeon E3-1230 v5,140,68.5,1267,https://cpu.userbenchmark.com/SpeedTest/72554/IntelR-XeonR-CPU-E3-1230-v5---340GHz
+CPU,YD130XBBAEBOX,AMD,Ryzen 3 1300X,141,68.4,22591,https://cpu.userbenchmark.com/AMD-Ryzen-3-1300X/Rating/3930
+CPU,BX80646E31241V3,Intel,Xeon E3-1241 v3,142,68.4,1792,https://cpu.userbenchmark.com/SpeedTest/15164/IntelR-XeonR-CPU-E3-1241-v3---350GHz
+CPU,,Intel,Xeon E3-1275 v3,143,68.3,166,https://cpu.userbenchmark.com/SpeedTest/5652/IntelR-XeonR-CPU-E3-1275-v3---350GHz
+CPU,BX80619I73960X,Intel,Core i7-3960X,144,68.3,1245,https://cpu.userbenchmark.com/Intel-Core-i7-3960X/Rating/1973
+CPU,YD2200C5FBBOX,AMD,Ryzen 3 2200G,145,68.3,82116,https://cpu.userbenchmark.com/SpeedTest/441832/AMD-Ryzen-3-2200G-with-Radeon-Vega-Graphics
+CPU,CL8068403373522,Intel,Core i5-8300H,146,68,61380,https://cpu.userbenchmark.com/SpeedTest/425634/IntelR-CoreTM-i5-8300H-CPU---230GHz
+CPU,,Intel,Core i5-4670,147,67.9,25570,https://cpu.userbenchmark.com/SpeedTest/630/IntelR-CoreTM-i5-4670-CPU---340GHz
+CPU,CM8068403362509,Intel,Core i5-8500T,148,67.8,1187,https://cpu.userbenchmark.com/SpeedTest/532888/IntelR-CoreTM-i5-8500T-CPU---210GHz
+CPU,BX80637I73770K,Intel,Core i7-3770K,149,67.8,96686,https://cpu.userbenchmark.com/Intel-Core-i7-3770K/Rating/1317
+CPU,BX80646I74770,Intel,Core i7-4770,150,67.7,85646,https://cpu.userbenchmark.com/Intel-Core-i7-4770/Rating/1978
+CPU,BX80677I37350K,Intel,Core i3-7350K,151,67.6,2354,https://cpu.userbenchmark.com/Intel-Core-i3-7350K/Rating/3889
+CPU,,Intel,Core i7-8705G,152,67.6,3285,https://cpu.userbenchmark.com/SpeedTest/453718/IntelR-CoreTM-i7-8705G-CPU---310GHz
+CPU,BX80646I74771,Intel,Core i7-4771,153,67.6,5856,https://cpu.userbenchmark.com/Intel-Core-i7-4771/Rating/2008
+CPU,,Intel,Xeon E3-1270 v3,154,67.5,585,https://cpu.userbenchmark.com/SpeedTest/11395/IntelR-XeonR-CPU-E3-1270-v3---350GHz
+CPU,BX80646E31246V3,Intel,Xeon E3-1246 v3,155,67.3,1211,https://cpu.userbenchmark.com/SpeedTest/11023/IntelR-XeonR-CPU-E3-1246-v3---350GHz
+CPU,,Intel,Core i7-8665U,156,67.3,926,https://cpu.userbenchmark.com/SpeedTest/740553/IntelR-CoreTM-i7-8665U-CPU---190GHz
+CPU,,Intel,Core i7-7820HK,157,67.1,9456,https://cpu.userbenchmark.com/SpeedTest/224965/IntelR-CoreTM-i7-7820HK-CPU---290GHz
+CPU,,Intel,Xeon E3-1226 v3,158,67.1,1005,https://cpu.userbenchmark.com/SpeedTest/18482/IntelR-XeonR-CPU-E3-1226-v3---330GHz
+CPU,,Intel,Core i7-7920HQ,159,66.8,764,https://cpu.userbenchmark.com/SpeedTest/243546/IntelR-CoreTM-i7-7920HQ-CPU---310GHz
+CPU,BX80619I73930K,Intel,Core i7-3930K,160,66.8,22401,https://cpu.userbenchmark.com/Intel-Core-i7-3930K/Rating/1487
+CPU,,Intel,Core i7-4790S,161,66.8,7357,https://cpu.userbenchmark.com/SpeedTest/13424/IntelR-CoreTM-i7-4790S-CPU---320GHz
+CPU,YD150XBBAEBOX,AMD,Ryzen 5 1500X,162,66.7,32113,https://cpu.userbenchmark.com/AMD-Ryzen-5-1500X/Rating/3921
+CPU,,Intel,Xeon E3-1245 v3,163,66.7,1188,https://cpu.userbenchmark.com/SpeedTest/4697/IntelR-XeonR-CPU-E3-1245-v3---340GHz
+CPU,,Intel,Core i5-6600T,164,66.6,425,https://cpu.userbenchmark.com/SpeedTest/37851/IntelR-CoreTM-i5-6600T-CPU---270GHz
+CPU,,Intel,Core i5-8365U,165,66.5,652,https://cpu.userbenchmark.com/SpeedTest/774761/IntelR-CoreTM-i5-8365U-CPU---160GHz
+CPU,BX80646I54590,Intel,Core i5-4590,166,66.4,68087,https://cpu.userbenchmark.com/Intel-Core-i5-4590/Rating/2604
+CPU,,Intel,Core i5-4670S,167,66.4,611,https://cpu.userbenchmark.com/SpeedTest/5523/IntelR-CoreTM-i5-4670S-CPU---310GHz
+CPU,BX80677I77700T,Intel,Core i7-7700T,168,66.3,3446,https://cpu.userbenchmark.com/SpeedTest/232624/IntelR-CoreTM-i7-7700T-CPU---290GHz
+CPU,,Intel,Xeon E3-1240 v3,169,66.3,1325,https://cpu.userbenchmark.com/SpeedTest/4602/IntelR-XeonR-CPU-E3-1240-v3---340GHz
+CPU,BX80677I37320,Intel,Core i3-7320,170,66.1,254,https://cpu.userbenchmark.com/Intel-Core-i3-7320/Rating/3888
+CPU,BX80646E31231V3,Intel,Xeon E3-1231 v3,171,66,10667,https://cpu.userbenchmark.com/SpeedTest/11040/IntelR-XeonR-CPU-E3-1231-v3---340GHz
+CPU,,Intel,Xeon E3-1220 v5,172,66,560,https://cpu.userbenchmark.com/SpeedTest/139116/IntelR-XeonR-CPU-E3-1220-v5---300GHz
+CPU,YD2400C5FBBOX,AMD,Ryzen 5 2400G,173,66,61010,https://cpu.userbenchmark.com/SpeedTest/433194/AMD-Ryzen-5-2400G-with-Radeon-Vega-Graphics
+CPU,BX80633I74820K,Intel,Core i7-4820K,174,65.3,12533,https://cpu.userbenchmark.com/Intel-Core-i7-4820K/Rating/1675
+CPU,CM8068403358913,Intel,Core i5-8400T,175,65.2,1142,https://cpu.userbenchmark.com/SpeedTest/475176/IntelR-CoreTM-i5-8400T-CPU---170GHz
+CPU,,Intel,Core i3-7101E,176,65.2,8,https://cpu.userbenchmark.com/SpeedTest/325269/IntelR-CoreTM-i3-7101E-CPU---390GHz
+CPU,,Intel,Core i5-3570,177,65.1,49475,https://cpu.userbenchmark.com/SpeedTest/793/IntelR-CoreTM-i5-3570-CPU---340GHz
+CPU,FJ8068404064405,Intel,Core i7-8565U,178,65.1,16129,https://cpu.userbenchmark.com/SpeedTest/591977/IntelR-CoreTM-i7-8565U-CPU---180GHz
+CPU,,Intel,Core i7-4770S,179,64.9,6631,https://cpu.userbenchmark.com/SpeedTest/2123/IntelR-CoreTM-i7-4770S-CPU---310GHz
+CPU,CM8066201920202,Intel,Core i7-6700T,180,64.7,4703,https://cpu.userbenchmark.com/SpeedTest/36439/IntelR-CoreTM-i7-6700T-CPU---280GHz
+CPU,BX80662I56500,Intel,Core i5-6500,181,64.6,133562,https://cpu.userbenchmark.com/Intel-Core-i5-6500/Rating/3513
+CPU,BX80623I72700K,Intel,Core i7-2700K,182,64.3,11464,https://cpu.userbenchmark.com/Intel-Core-i7-2700K/Rating/1985
+CPU,BX80646I54570,Intel,Core i5-4570,183,64.3,63126,https://cpu.userbenchmark.com/Intel-Core-i5-4570/Rating/2770
+CPU,BX80646E31230V3,Intel,Xeon E3-1230 v3,184,64.2,4308,https://cpu.userbenchmark.com/SpeedTest/2171/IntelR-XeonR-CPU-E3-1230-v3---330GHz
+CPU,,Intel,Core i5-4590S,185,64.2,5159,https://cpu.userbenchmark.com/SpeedTest/13459/IntelR-CoreTM-i5-4590S-CPU---300GHz
+CPU,,Intel,Xeon E3-1225 v3,186,64.1,2495,https://cpu.userbenchmark.com/SpeedTest/12983/IntelR-XeonR-CPU-E3-1225-v3---320GHz
+CPU,,Intel,Core i5-2550K,187,64.1,1802,https://cpu.userbenchmark.com/SpeedTest/5474/IntelR-CoreTM-i5-2550K-CPU---340GHz
+CPU,,Intel,Xeon E3-1270 V2,188,64,1386,https://cpu.userbenchmark.com/SpeedTest/11264/IntelR-XeonR-CPU-E3-1270-V2---350GHz
+CPU,,Intel,Xeon E5-1650 0,189,64,4497,https://cpu.userbenchmark.com/SpeedTest/7093/IntelR-XeonR-CPU-E5-1650-0---320GHz
+CPU,BX80623I52500K,Intel,Core i5-2500K,190,64,114709,https://cpu.userbenchmark.com/Intel-Core-i5-2500K/Rating/619
+CPU,BX80637I73770,Intel,Core i7-3770,191,63.9,133993,https://cpu.userbenchmark.com/Intel-Core-i7-3770/Rating/1979
+CPU,,Intel,Core i5-8305G,192,63.7,193,https://cpu.userbenchmark.com/SpeedTest/483074/IntelR-CoreTM-i5-8305G-CPU---280GHz
+CPU,BX80677I57400,Intel,Core i5-7400,193,63.7,117779,https://cpu.userbenchmark.com/Intel-Core-i5-7400/Rating/3886
+CPU,,Intel,Xeon E3-1275 V2,194,63.7,167,https://cpu.userbenchmark.com/SpeedTest/4507/IntelR-XeonR-CPU-E3-1275-V2---350GHz
+CPU,,Intel,Xeon E3-1505M v6,195,63.5,1952,https://cpu.userbenchmark.com/SpeedTest/233404/IntelR-XeonR-CPU-E3-1505M-v6---300GHz
+CPU,,Intel,Xeon E5-1620 v2,196,63.5,4258,https://cpu.userbenchmark.com/SpeedTest/8354/IntelR-XeonR-CPU-E5-1620-v2---370GHz
+CPU,,Intel,Core i7-4940MX,197,63.5,1097,https://cpu.userbenchmark.com/SpeedTest/9756/IntelR-CoreTM-i7-4940MX-CPU---310GHz
+CPU,,Intel,Core i7-5850HQ,198,63.3,32,https://cpu.userbenchmark.com/SpeedTest/35099/IntelR-CoreTM-i7-5850HQ-CPU---270GHz
+CPU,,Intel,Core i5-3550,199,63.1,12307,https://cpu.userbenchmark.com/SpeedTest/846/IntelR-CoreTM-i5-3550-CPU---330GHz
+CPU,,Intel,Core i7-7820HQ,200,63,6648,https://cpu.userbenchmark.com/SpeedTest/185229/IntelR-CoreTM-i7-7820HQ-CPU---290GHz
+CPU,BX80677I37300,Intel,Core i3-7300,201,63,752,https://cpu.userbenchmark.com/Intel-Core-i3-7300/Rating/3893
+CPU,BX80623I72600K,Intel,Core i7-2600K,202,63,81531,https://cpu.userbenchmark.com/Intel-Core-i7-2600K/Rating/621
+CPU,,Intel,Core i7-4790T,203,62.9,496,https://cpu.userbenchmark.com/SpeedTest/13586/IntelR-CoreTM-i7-4790T-CPU---270GHz
+CPU,BX80684G5600,Intel,Pentium Gold G5600,204,62.6,368,https://cpu.userbenchmark.com/SpeedTest/469126/IntelR-PentiumR-Gold-G5600-CPU---390GHz
+CPU,FJ8068404064604,Intel,Core i5-8265U,205,62.6,12722,https://cpu.userbenchmark.com/SpeedTest/566107/IntelR-CoreTM-i5-8265U-CPU---160GHz
+CPU,,Intel,Xeon E3-1240 V2,206,62.5,2066,https://cpu.userbenchmark.com/SpeedTest/5484/IntelR-XeonR-CPU-E3-1240-V2---340GHz
+CPU,,Intel,Xeon E3-1245 V2,207,62.5,779,https://cpu.userbenchmark.com/SpeedTest/5622/IntelR-XeonR-CPU-E3-1245-V2---340GHz
+CPU,,Intel,Core i7-4930MX,208,62.5,759,https://cpu.userbenchmark.com/SpeedTest/2453/IntelR-CoreTM-i7-4930MX-CPU---300GHz
+CPU,,AMD,Ryzen 7 2800H,209,62.2,23,https://cpu.userbenchmark.com/SpeedTest/667422/AMD-Ryzen-7-2800H-with-Radeon-Vega-Graphics
+CPU,,AMD,Ryzen 5 2600H,210,62.2,90,https://cpu.userbenchmark.com/SpeedTest/617618/AMD-Ryzen-5-2600H-with-Radeon-Vega-Graphics
+CPU,CM8068403377415,Intel,Core i3-8100T,211,62,531,https://cpu.userbenchmark.com/SpeedTest/509371/IntelR-CoreTM-i3-8100T-CPU---310GHz
+CPU,,Intel,Xeon W3690,212,62,2516,https://cpu.userbenchmark.com/SpeedTest/9677/IntelR-XeonR-CPU-----------W3690----347GHz
+CPU,,Intel,Core i7-3820,213,61.9,24574,https://cpu.userbenchmark.com/SpeedTest/739/IntelR-CoreTM-i7-3820-CPU---360GHz
+CPU,,Intel,Core i7-7700HQ,214,61.8,263516,https://cpu.userbenchmark.com/SpeedTest/211019/IntelR-CoreTM-i7-7700HQ-CPU---280GHz
+CPU,BX80677I57500T,Intel,Core i5-7500T,215,61.8,2150,https://cpu.userbenchmark.com/SpeedTest/218898/IntelR-CoreTM-i5-7500T-CPU---270GHz
+CPU,BX80662I36320,Intel,Core i3-6320,216,61.8,1048,https://cpu.userbenchmark.com/Intel-Core-i3-6320/Rating/3535
+CPU,,Intel,Core i5-4570S,217,61.7,4578,https://cpu.userbenchmark.com/SpeedTest/5965/IntelR-CoreTM-i5-4570S-CPU---290GHz
+CPU,YD1200BBAEBOX,AMD,Ryzen 3 1200,218,61.7,44473,https://cpu.userbenchmark.com/AMD-Ryzen-3-1200/Rating/3931
+CPU,,Intel,Core i7-6820HK,219,61.7,12587,https://cpu.userbenchmark.com/SpeedTest/36404/IntelR-CoreTM-i7-6820HK-CPU---270GHz
+CPU,,Intel,Core i7-5700HQ,220,61.7,8549,https://cpu.userbenchmark.com/SpeedTest/30103/IntelR-CoreTM-i7-5700HQ-CPU---270GHz
+CPU,,Intel,Xeon E3-1220 v3,221,61.6,1786,https://cpu.userbenchmark.com/SpeedTest/5983/IntelR-XeonR-CPU-E3-1220-v3---310GHz
+CPU,,Intel,Core i7 X 990,222,61.6,2561,https://cpu.userbenchmark.com/SpeedTest/2590/IntelR-CoreTM-i7-CPU-------X-990----347GHz
+CPU,,Intel,Xeon E5-2687W 0,223,61.6,434,https://cpu.userbenchmark.com/SpeedTest/8860/IntelR-XeonR-CPU-E5-2687W-0---310GHz
+CPU,,Intel,Core i7-6920HQ,224,61.5,1357,https://cpu.userbenchmark.com/SpeedTest/56225/IntelR-CoreTM-i7-6920HQ-CPU---290GHz
+CPU,,Intel,Core i7-3770S,225,61.4,4872,https://cpu.userbenchmark.com/SpeedTest/2218/IntelR-CoreTM-i7-3770S-CPU---310GHz
+CPU,,Intel,Xeon E3-1225 V2,226,61.2,1227,https://cpu.userbenchmark.com/SpeedTest/5015/IntelR-XeonR-CPU-E3-1225-V2---320GHz
+CPU,BX80637I53470,Intel,Core i5-3470,227,61,100270,https://cpu.userbenchmark.com/Intel-Core-i5-3470/Rating/2771
+CPU,,Intel,Core i7-8650U,228,61,19403,https://cpu.userbenchmark.com/SpeedTest/353957/IntelR-CoreTM-i7-8650U-CPU---190GHz
+CPU,,Intel,Xeon E3-1265L v3,229,60.8,97,https://cpu.userbenchmark.com/SpeedTest/20266/IntelR-XeonR-CPU-E3-1265L-v3---250GHz
+CPU,,Intel,Xeon E5-1620 0,230,60.8,7195,https://cpu.userbenchmark.com/SpeedTest/2930/IntelR-XeonR-CPU-E5-1620-0---360GHz
+CPU,,Intel,Xeon X5690,231,60.7,1777,https://cpu.userbenchmark.com/SpeedTest/16752/IntelR-XeonR-CPU-----------X5690----347GHz
+CPU,,Intel,Core i7-7567U,232,60.7,1160,https://cpu.userbenchmark.com/SpeedTest/219709/IntelR-CoreTM-i7-7567U-CPU---350GHz
+CPU,,Intel,Xeon E5-2690 v2,233,60.6,407,https://cpu.userbenchmark.com/SpeedTest/13436/IntelR-XeonR-CPU-E5-2690-v2---300GHz
+CPU,BX80677I37100,Intel,Core i3-7100,234,60.6,41979,https://cpu.userbenchmark.com/Intel-Core-i3-7100/Rating/3891
+CPU,,Intel,Core i7 X 000,235,60.4,90,https://cpu.userbenchmark.com/SpeedTest/2446/IntelR-CoreTM-i7-CPU-------X-000----333GHz
+CPU,,Intel,Xeon E3-1230 V2,236,60.3,3851,https://cpu.userbenchmark.com/SpeedTest/652/IntelR-XeonR-CPU-E3-1230-V2---330GHz
+CPU,YD1400BBAEBOX,AMD,Ryzen 5 1400,237,60.2,40379,https://cpu.userbenchmark.com/AMD-Ryzen-5-1400/Rating/3922
+CPU,,Intel,Core i7-4960HQ,238,60.2,204,https://cpu.userbenchmark.com/SpeedTest/9629/IntelR-CoreTM-i7-4960HQ-CPU---260GHz
+CPU,BX80684G5500,Intel,Pentium Gold G5500,239,60.2,458,https://cpu.userbenchmark.com/SpeedTest/484140/IntelR-PentiumR-Gold-G5500-CPU---380GHz
+CPU,,Intel,Core i5-8350U,240,60,6736,https://cpu.userbenchmark.com/SpeedTest/388461/IntelR-CoreTM-i5-8350U-CPU---170GHz
+CPU,,Intel,Core i7-4910MQ,241,60,3231,https://cpu.userbenchmark.com/SpeedTest/9700/IntelR-CoreTM-i7-4910MQ-CPU---290GHz
+CPU,,AMD,Ryzen 7 3750H,242,60,4744,https://cpu.userbenchmark.com/SpeedTest/786211/AMD-Ryzen-7-3750H-with-Radeon-Vega-Mobile-Gfx
+CPU,BX80647I74900MQ,Intel,Core i7-4900MQ,243,59.9,3344,https://cpu.userbenchmark.com/Intel-Core-i7-4900MQ/Rating/1994
+CPU,,Intel,Xeon W3680,244,59.8,2454,https://cpu.userbenchmark.com/SpeedTest/12335/IntelR-XeonR-CPU-----------W3680----333GHz
+CPU,BX80662I56400,Intel,Core i5-6400,245,59.7,97768,https://cpu.userbenchmark.com/Intel-Core-i5-6400/Rating/3512
+CPU,BX80646I54460,Intel,Core i5-4460,246,59.6,146104,https://cpu.userbenchmark.com/Intel-Core-i5-4460/Rating/2310
+CPU,,Intel,Core i3-10110U,247,59.5,74,https://cpu.userbenchmark.com/SpeedTest/915083/IntelR-CoreTM-i3-10110U-CPU---210GHz
+CPU,,Intel,Core i7-3920XM,248,59.5,397,https://cpu.userbenchmark.com/SpeedTest/5061/IntelR-CoreTM-i7-3920XM-CPU---290GHz
+CPU,,Intel,Core i7-4770T,249,59.4,365,https://cpu.userbenchmark.com/SpeedTest/4415/IntelR-CoreTM-i7-4770T-CPU---250GHz
+CPU,,Intel,Core i7-3940XM,250,59.3,848,https://cpu.userbenchmark.com/SpeedTest/7092/IntelR-CoreTM-i7-3940XM-CPU---300GHz
+CPU,,Intel,Core i5-3450,251,59.3,19899,https://cpu.userbenchmark.com/SpeedTest/161/IntelR-CoreTM-i5-3450-CPU---310GHz
+CPU,,Intel,Core i7-4810MQ,252,59.3,14820,https://cpu.userbenchmark.com/SpeedTest/7168/IntelR-CoreTM-i7-4810MQ-CPU---280GHz
+CPU,BX80662I36300,Intel,Core i3-6300,253,59.2,2431,https://cpu.userbenchmark.com/Intel-Core-i3-6300/Rating/3536
+CPU,,Intel,Core i7-6820HQ,254,59.1,13935,https://cpu.userbenchmark.com/SpeedTest/43500/IntelR-CoreTM-i7-6820HQ-CPU---270GHz
+CPU,,Intel,Core i5-2500,255,59,43017,https://cpu.userbenchmark.com/SpeedTest/517/IntelR-CoreTM-i5-2500-CPU---330GHz
+CPU,BX80677G4620,Intel,Pentium G4620,256,58.9,2085,https://cpu.userbenchmark.com/Intel-Pentium-G4620/Rating/3895
+CPU,,Intel,Core i5-3475S,257,58.8,622,https://cpu.userbenchmark.com/SpeedTest/10117/IntelR-CoreTM-i5-3475S-CPU---290GHz
+CPU,,Intel,Core i7 980,258,58.8,1065,https://cpu.userbenchmark.com/SpeedTest/3336/IntelR-CoreTM-i7-CPU---------980----333GHz
+CPU,BX80684G5400,Intel,Pentium Gold G5400,259,58.6,5580,https://cpu.userbenchmark.com/SpeedTest/484278/IntelR-PentiumR-Gold-G5400-CPU---370GHz
+CPU,,Intel,Core i7 X 980,260,58.6,4306,https://cpu.userbenchmark.com/SpeedTest/1822/IntelR-CoreTM-i7-CPU-------X-980----333GHz
+CPU,BX80623I72600,Intel,Core i7-2600,261,58.5,97007,https://cpu.userbenchmark.com/Intel-Core-i7-2600/Rating/620
+CPU,,Intel,Core i7-8550U,262,58.5,88459,https://cpu.userbenchmark.com/SpeedTest/320742/IntelR-CoreTM-i7-8550U-CPU---180GHz
+CPU,,Intel,Core i5-7300HQ,263,58.5,91624,https://cpu.userbenchmark.com/SpeedTest/223877/IntelR-CoreTM-i5-7300HQ-CPU---250GHz
+CPU,,Intel,Xeon E31270,264,58.4,1175,https://cpu.userbenchmark.com/SpeedTest/5604/IntelR-XeonR-CPU-E31270---340GHz
+CPU,,Intel,Core i5-8250U,265,58.4,110438,https://cpu.userbenchmark.com/SpeedTest/338266/IntelR-CoreTM-i5-8250U-CPU---160GHz
+CPU,,Intel,Core i7-4800MQ,266,58.2,13883,https://cpu.userbenchmark.com/SpeedTest/3437/IntelR-CoreTM-i7-4800MQ-CPU---270GHz
+CPU,FH8068403419422,Intel,Core i3-8109U,267,58.1,531,https://cpu.userbenchmark.com/SpeedTest/609620/IntelR-CoreTM-i3-8109U-CPU---300GHz
+CPU,BX80646I54440,Intel,Core i5-4440,268,58.1,39237,https://cpu.userbenchmark.com/Intel-Core-i5-4440/Rating/1993
+CPU,,Intel,Core i5-3470S,269,57.9,5519,https://cpu.userbenchmark.com/SpeedTest/6387/IntelR-CoreTM-i5-3470S-CPU---290GHz
+CPU,,Intel,Xeon E3-1220 V2,270,57.9,1373,https://cpu.userbenchmark.com/SpeedTest/3482/IntelR-XeonR-CPU-E3-1220-V2---310GHz
+CPU,BX80662I36100,Intel,Core i3-6100,271,57.7,65405,https://cpu.userbenchmark.com/Intel-Core-i3-6100/Rating/3511
+CPU,,AMD,Ryzen 5 3550H,272,57.6,6486,https://cpu.userbenchmark.com/SpeedTest/718601/AMD-Ryzen-5-3550H-with-Radeon-Vega-Mobile-Gfx
+CPU,BX80677I37300T,Intel,Core i3-7300T,273,57.5,38,https://cpu.userbenchmark.com/SpeedTest/230231/IntelR-CoreTM-i3-7300T-CPU---350GHz
+CPU,,Intel,Core i5-4460S,274,57.2,5013,https://cpu.userbenchmark.com/SpeedTest/14679/IntelR-CoreTM-i5-4460S-CPU---290GHz
+CPU,BX80646I34370,Intel,Core i3-4370,275,57.1,1072,https://cpu.userbenchmark.com/Intel-Core-i3-4370/Rating/2817
+CPU,,Intel,Core i5-4570R,276,56.6,567,https://cpu.userbenchmark.com/SpeedTest/6445/IntelR-CoreTM-i5-4570R-CPU---270GHz
+CPU,BX80637I53450S,Intel,Core i5-3450S,277,56.6,812,https://cpu.userbenchmark.com/SpeedTest/2071/IntelR-CoreTM-i5-3450S-CPU---280GHz
+CPU,,Intel,Xeon E3-1240,278,56.4,1114,https://cpu.userbenchmark.com/SpeedTest/5243/IntelR-XeonR-CPU-E31240---330GHz
+CPU,,Intel,Core i3-8145U,279,56.2,1619,https://cpu.userbenchmark.com/SpeedTest/616038/IntelR-CoreTM-i3-8145U-CPU---210GHz
+CPU,,Intel,Core i5-2450P,280,56.2,130,https://cpu.userbenchmark.com/SpeedTest/2795/IntelR-CoreTM-i5-2450P-CPU---320GHz
+CPU,BX80677G4600,Intel,Pentium G4600,281,56.1,10740,https://cpu.userbenchmark.com/Intel-Pentium-G4600/Rating/3894
+CPU,,Intel,Core i7-4720HQ,282,56,51928,https://cpu.userbenchmark.com/SpeedTest/20045/IntelR-CoreTM-i7-4720HQ-CPU---260GHz
+CPU,,Intel,Core i7-4710HQ,283,56,47032,https://cpu.userbenchmark.com/SpeedTest/11499/IntelR-CoreTM-i7-4710HQ-CPU---250GHz
+CPU,YD3000C6FHBOX,AMD,Athlon 3000G,284,55.9,34,https://cpu.userbenchmark.com/SpeedTest/968952/AMD-Athlon-3000G-with-Radeon-Vega-Graphics
+CPU,,Intel,Core i5-4430,285,55.9,13733,https://cpu.userbenchmark.com/SpeedTest/1920/IntelR-CoreTM-i5-4430-CPU---300GHz
+CPU,,Intel,Xeon X5660,286,55.9,3687,https://cpu.userbenchmark.com/SpeedTest/17750/IntelR-XeonR-CPU-----------X5660----280GHz
+CPU,,Intel,Core i7-3840QM,287,55.8,2959,https://cpu.userbenchmark.com/SpeedTest/2451/IntelR-CoreTM-i7-3840QM-CPU---280GHz
+CPU,,Intel,Core i7-4770HQ,288,55.7,978,https://cpu.userbenchmark.com/SpeedTest/18784/IntelR-CoreTM-i7-4770HQ-CPU---220GHz
+CPU,,Intel,Core i7-3820QM,289,55.5,1800,https://cpu.userbenchmark.com/SpeedTest/4339/IntelR-CoreTM-i7-3820QM-CPU---270GHz
+CPU,,Intel,Core i7-6700HQ,290,55.5,205950,https://cpu.userbenchmark.com/SpeedTest/34954/IntelR-CoreTM-i7-6700HQ-CPU---260GHz
+CPU,,Intel,Core i3-6098P,291,55.4,2925,https://cpu.userbenchmark.com/SpeedTest/80177/IntelR-CoreTM-i3-6098P-CPU---360GHz
+CPU,,Intel,Core i7 970,292,55.4,2320,https://cpu.userbenchmark.com/SpeedTest/8374/IntelR-CoreTM-i7-CPU---------970----320GHz
+CPU,,Intel,Xeon E5-2643 0,293,55.2,402,https://cpu.userbenchmark.com/SpeedTest/3389/IntelR-XeonR-CPU-E5-2643-0---330GHz
+CPU,,Intel,Core i5-3350P,294,55.1,13699,https://cpu.userbenchmark.com/SpeedTest/3018/IntelR-CoreTM-i5-3350P-CPU---310GHz
+CPU,,Intel,Xeon E31225,295,55.1,1542,https://cpu.userbenchmark.com/SpeedTest/4210/IntelR-XeonR-CPU-E31225---310GHz
+CPU,,Intel,Core i7-4850HQ,296,55.1,569,https://cpu.userbenchmark.com/SpeedTest/7877/IntelR-CoreTM-i7-4850HQ-CPU---230GHz
+CPU,BX80623I52400,Intel,Core i5-2400,297,55.1,83232,https://cpu.userbenchmark.com/Intel-Core-i5-2400/Rating/803
+CPU,YD240GC6FBBOX,AMD,Athlon 240GE,298,55,168,https://cpu.userbenchmark.com/SpeedTest/705151/AMD-Athlon-240GE-with-Radeon-Vega-Graphics
+CPU,,Intel,Xeon E31230,299,55,1071,https://cpu.userbenchmark.com/SpeedTest/6750/IntelR-XeonR-CPU-E31230---320GHz
+CPU,,Intel,Core i7-4722HQ,300,55,148,https://cpu.userbenchmark.com/SpeedTest/32895/IntelR-CoreTM-i7-4722HQ-CPU---240GHz
+CPU,,Intel,Xeon E31220,301,54.8,1326,https://cpu.userbenchmark.com/SpeedTest/6171/IntelR-XeonR-CPU-E31220---310GHz
+CPU,,Intel,Core i5-3340,302,54.8,4574,https://cpu.userbenchmark.com/SpeedTest/2710/IntelR-CoreTM-i5-3340-CPU---310GHz
+CPU,,Intel,Core i7-3740QM,303,54.7,8450,https://cpu.userbenchmark.com/SpeedTest/2919/IntelR-CoreTM-i7-3740QM-CPU---270GHz
+CPU,,Intel,Core i7-4710MQ,304,54.7,15317,https://cpu.userbenchmark.com/SpeedTest/9397/IntelR-CoreTM-i7-4710MQ-CPU---250GHz
+CPU,BX80677I57400T,Intel,Core i5-7400T,305,54.6,1664,https://cpu.userbenchmark.com/SpeedTest/244917/IntelR-CoreTM-i5-7400T-CPU---240GHz
+CPU,,Intel,Core i7-4700HQ,306,54.6,27223,https://cpu.userbenchmark.com/Intel-Core-i7-4700HQ/Rating/2728
+CPU,,AMD,Ryzen 5 3500U,307,54.5,6619,https://cpu.userbenchmark.com/SpeedTest/760067/AMD-Ryzen-5-3500U-with-Radeon-Vega-Mobile-Gfx
+CPU,BX80646I34360,Intel,Core i3-4360,308,54.5,1145,https://cpu.userbenchmark.com/Intel-Core-i3-4360/Rating/2819
+CPU,,Intel,Core i7-3720QM,309,54.4,7284,https://cpu.userbenchmark.com/SpeedTest/1619/IntelR-CoreTM-i7-3720QM-CPU---260GHz
+CPU,,Intel,Core i7-7660U,310,54.3,1960,https://cpu.userbenchmark.com/SpeedTest/274151/IntelR-CoreTM-i7-7660U-CPU---250GHz
+CPU,BX80646I34170,Intel,Core i3-4170,311,54.2,24856,https://cpu.userbenchmark.com/SpeedTest/28214/IntelR-CoreTM-i3-4170-CPU---370GHz
+CPU,,AMD,Ryzen 3 3300U,312,54.1,223,https://cpu.userbenchmark.com/SpeedTest/827713/AMD-Ryzen-3-3300U-with-Radeon-Vega-Mobile-Gfx
+CPU,CW8064701470702,Intel,Core i7-4700MQ,313,53.9,46312,https://cpu.userbenchmark.com/Intel-Core-i7-4700MQ/Rating/2727
+CPU,BX80677G4560,Intel,Pentium G4560,314,53.9,46545,https://cpu.userbenchmark.com/Intel-Pentium-G4560/Rating/3892
+CPU,,AMD,Ryzen 7 3700U,315,53.8,1701,https://cpu.userbenchmark.com/SpeedTest/765724/AMD-Ryzen-7-3700U-with-Radeon-Vega-Mobile-Gfx
+CPU,BX80646I34350,Intel,Core i3-4350,316,53.7,323,https://cpu.userbenchmark.com/Intel-Core-i3-4350/Rating/2433
+CPU,,Intel,Core i5-3330,317,53.6,27677,https://cpu.userbenchmark.com/SpeedTest/10/IntelR-CoreTM-i5-3330-CPU---300GHz
+CPU,,Intel,Xeon X5650,318,53.5,7697,https://cpu.userbenchmark.com/SpeedTest/355/IntelR-XeonR-CPU-----------X5650----267GHz
+CPU,BX80646I34160,Intel,Core i3-4160,319,53.5,23454,https://cpu.userbenchmark.com/Intel-Core-i3-4160/Rating/2816
+CPU,,Intel,Core i5-6300HQ,320,53.4,32779,https://cpu.userbenchmark.com/SpeedTest/38166/IntelR-CoreTM-i5-6300HQ-CPU---230GHz
+CPU,BX80662I36300T,Intel,Core i3-6300T,321,53.4,73,https://cpu.userbenchmark.com/SpeedTest/75733/IntelR-CoreTM-i3-6300T-CPU---330GHz
+CPU,,Intel,Xeon E5-2630 v3,322,53.2,674,https://cpu.userbenchmark.com/SpeedTest/22651/IntelR-XeonR-CPU-E5-2630-v3---240GHz
+CPU,BX80646I34340,Intel,Core i3-4340,323,53.2,506,https://cpu.userbenchmark.com/Intel-Core-i3-4340/Rating/2877
+CPU,BX80621E52670,Intel,Xeon E5-2670,324,53.2,2620,https://cpu.userbenchmark.com/SpeedTest/18501/IntelR-XeonR-CPU-E5-2670-0---260GHz
+CPU,YD220GC6FBBOX,AMD,Athlon 220GE,325,53.1,133,https://cpu.userbenchmark.com/SpeedTest/700311/AMD-Athlon-220GE-with-Radeon-Vega-Graphics
+CPU,,Intel,Core i5-7260U,326,53.1,1400,https://cpu.userbenchmark.com/SpeedTest/269906/IntelR-CoreTM-i5-7260U-CPU---220GHz
+CPU,,Intel,Xeon W3570,327,53,284,https://cpu.userbenchmark.com/SpeedTest/12630/IntelR-XeonR-CPU-----------W3570----320GHz
+CPU,BX80677I37100T,Intel,Core i3-7100T,328,52.8,1102,https://cpu.userbenchmark.com/SpeedTest/230301/IntelR-CoreTM-i3-7100T-CPU---340GHz
+CPU,,Intel,Core i5-2320,329,52.8,20517,https://cpu.userbenchmark.com/SpeedTest/1735/IntelR-CoreTM-i5-2320-CPU---300GHz
+CPU,,Intel,Core i7 975,330,52.7,1722,https://cpu.userbenchmark.com/SpeedTest/941/IntelR-CoreTM-i7-CPU---------975----333GHz
+CPU,FD9590FHHKWOF,AMD,FX-9590,331,52.7,17824,https://cpu.userbenchmark.com/AMD-FX-9590/Rating/1812
+CPU,,Intel,Core i7-7600U,332,52.5,5879,https://cpu.userbenchmark.com/SpeedTest/220838/IntelR-CoreTM-i7-7600U-CPU---280GHz
+CPU,,Intel,Core i7-7560U,333,52.3,933,https://cpu.userbenchmark.com/SpeedTest/262014/IntelR-CoreTM-i7-7560U-CPU---240GHz
+CPU,BX80662G4520,Intel,Pentium G4520,334,51.8,209,https://cpu.userbenchmark.com/Intel-Pentium-G4520/Rating/3537
+CPU,,Intel,Xeon W3565,335,51.7,3588,https://cpu.userbenchmark.com/SpeedTest/6324/IntelR-XeonR-CPU-----------W3565----320GHz
+CPU,,Intel,Core i7-2600S,336,51.7,1613,https://cpu.userbenchmark.com/SpeedTest/6489/IntelR-CoreTM-i7-2600S-CPU---280GHz
+CPU,BX80646I34150,Intel,Core i3-4150,337,51.3,21704,https://cpu.userbenchmark.com/Intel-Core-i3-4150/Rating/2309
+CPU,,Intel,Core i7 880,338,51.3,369,https://cpu.userbenchmark.com/SpeedTest/15321/IntelR-CoreTM-i7-CPU---------880----307GHz
+CPU,,Intel,Core i5-2500S,339,51.2,1370,https://cpu.userbenchmark.com/SpeedTest/1699/IntelR-CoreTM-i5-2500S-CPU---270GHz
+CPU,AW8063801106200,Intel,Core i7-3630QM,340,51.2,40407,https://cpu.userbenchmark.com/Intel-Core-i7-3630QM/Rating/626
+CPU,,Intel,Xeon X5667,341,51.2,193,https://cpu.userbenchmark.com/SpeedTest/21709/IntelR-XeonR-CPU-----------X5667----307GHz
+CPU,BX80646I34330,Intel,Core i3-4330,342,51.1,3607,https://cpu.userbenchmark.com/Intel-Core-i3-4330/Rating/2876
+CPU,,Intel,Core i7-5557U,343,51.1,1002,https://cpu.userbenchmark.com/SpeedTest/27386/IntelR-CoreTM-i7-5557U-CPU---310GHz
+CPU,,Intel,Core i5-2310,344,51.1,8862,https://cpu.userbenchmark.com/SpeedTest/2055/IntelR-CoreTM-i5-2310-CPU---290GHz
+CPU,,Intel,Core i7-7500U,345,50.9,74318,https://cpu.userbenchmark.com/SpeedTest/171274/IntelR-CoreTM-i7-7500U-CPU---270GHz
+CPU,,Intel,Core i7-6567U,346,50.8,283,https://cpu.userbenchmark.com/SpeedTest/150864/IntelR-CoreTM-i7-6567U-CPU---330GHz
+CPU,BX80662I36100T,Intel,Core i3-6100T,347,50.8,2756,https://cpu.userbenchmark.com/SpeedTest/40317/IntelR-CoreTM-i3-6100T-CPU---320GHz
+CPU,CM8068403377713,Intel,Pentium G5500T,348,50.7,21,https://cpu.userbenchmark.com/SpeedTest/519437/IntelR-PentiumR-Gold-G5500T-CPU---320GHz
+CPU,,Intel,Xeon X3470,349,50.7,3853,https://cpu.userbenchmark.com/SpeedTest/24530/IntelR-XeonR-CPU-----------X3470----293GHz
+CPU,,AMD,Ryzen 5 2500U,350,50.5,30241,https://cpu.userbenchmark.com/SpeedTest/378273/AMD-Ryzen-5-2500U-with-Radeon-Vega-Mobile-Gfx
+CPU,,Intel,Core i7 960,351,50.2,10281,https://cpu.userbenchmark.com/SpeedTest/778/IntelR-CoreTM-i7-CPU---------960----320GHz
+CPU,,Intel,Core i5-3330S,352,50.2,2126,https://cpu.userbenchmark.com/SpeedTest/4366/IntelR-CoreTM-i5-3330S-CPU---270GHz
+CPU,,Intel,Core i7-4750HQ,353,50.2,3548,https://cpu.userbenchmark.com/SpeedTest/3709/IntelR-CoreTM-i7-4750HQ-CPU---200GHz
+CPU,,Intel,Core i5-7300U,354,50.2,10493,https://cpu.userbenchmark.com/SpeedTest/223355/IntelR-CoreTM-i5-7300U-CPU---260GHz
+CPU,,Intel,Core i7-4712HQ,355,50.2,3431,https://cpu.userbenchmark.com/SpeedTest/10973/IntelR-CoreTM-i7-4712HQ-CPU---230GHz
+CPU,FD9370FHHKWOF,AMD,FX-9370,356,50.1,6768,https://cpu.userbenchmark.com/AMD-FX-9370/Rating/2005
+CPU,,Intel,Core i5-2300,357,50,9994,https://cpu.userbenchmark.com/SpeedTest/291/IntelR-CoreTM-i5-2300-CPU---280GHz
+CPU,,AMD,Ryzen 3 2300U,358,49.9,1451,https://cpu.userbenchmark.com/SpeedTest/511816/AMD-Ryzen-3-2300U-with-Radeon-Vega-Mobile-Gfx
+CPU,AW8063801013511,Intel,Core i7-3610QM,359,49.9,22431,https://cpu.userbenchmark.com/Intel-Core-i7-3610QM/Rating/2730
+CPU,,Intel,Core i5-4570T,360,49.9,2242,https://cpu.userbenchmark.com/SpeedTest/6853/IntelR-CoreTM-i5-4570T-CPU---290GHz
+CPU,,Intel,Core i7-4702MQ,361,49.8,13143,https://cpu.userbenchmark.com/SpeedTest/2674/IntelR-CoreTM-i7-4702MQ-CPU---220GHz
+CPU,,Intel,Xeon X5570,362,49.8,713,https://cpu.userbenchmark.com/SpeedTest/12230/IntelR-XeonR-CPU-----------X5570----293GHz
+CPU,,Intel,Core i7 K 875,363,49.8,1584,https://cpu.userbenchmark.com/SpeedTest/476/IntelR-CoreTM-i7-CPU-------K-875----293GHz
+CPU,YD200GC6FBBOX,AMD,Athlon 200GE,364,49.8,3938,https://cpu.userbenchmark.com/SpeedTest/592714/AMD-Athlon-200GE-with-Radeon-Vega-Graphics
+CPU,BX80646I34130,Intel,Core i3-4130,365,49.8,25108,https://cpu.userbenchmark.com/Intel-Core-i3-4130/Rating/1621
+CPU,FD8370FRHKBOX,AMD,FX-8370,366,49.7,25753,https://cpu.userbenchmark.com/AMD-FX-8370/Rating/2983
+CPU,,Intel,Xeon W3550,367,49.5,3934,https://cpu.userbenchmark.com/SpeedTest/3628/IntelR-XeonR-CPU-----------W3550----307GHz
+CPU,CM8068403360212,Intel,Pentium G5400T,368,49.5,41,https://cpu.userbenchmark.com/SpeedTest/528812/IntelR-PentiumR-Gold-G5400T-CPU---310GHz
+CPU,,Intel,Core i7-4600M,369,49.3,3377,https://cpu.userbenchmark.com/SpeedTest/4429/IntelR-CoreTM-i7-4600M-CPU---290GHz
+CPU,,Intel,Core i7-4610M,370,49.3,2085,https://cpu.userbenchmark.com/SpeedTest/11649/IntelR-CoreTM-i7-4610M-CPU---300GHz
+CPU,,Intel,Pentium G3470,371,49.2,95,https://cpu.userbenchmark.com/SpeedTest/28614/IntelR-PentiumR-CPU-G3470---360GHz
+CPU,,AMD,Ryzen 7 2700U,372,49.2,3744,https://cpu.userbenchmark.com/SpeedTest/432558/AMD-Ryzen-7-2700U-with-Radeon-Vega-Mobile-Gfx
+CPU,FD8350FRHKBOX,AMD,FX-8350,373,49.2,231783,https://cpu.userbenchmark.com/AMD-FX-8350/Rating/1489
+CPU,,Intel,Core i7-4702HQ,374,49,2378,https://cpu.userbenchmark.com/SpeedTest/297/IntelR-CoreTM-i7-4702HQ-CPU---220GHz
+CPU,,Intel,Core i7 965,375,48.9,1012,https://cpu.userbenchmark.com/SpeedTest/4036/IntelR-CoreTM-i7-CPU---------965----320GHz
+CPU,,Intel,Core i7-2960XM,376,48.7,481,https://cpu.userbenchmark.com/SpeedTest/2390/IntelR-CoreTM-i7-2960XM-CPU---270GHz
+CPU,FJ8067703282227,Intel,Core i3-8130U,377,48.6,10149,https://cpu.userbenchmark.com/SpeedTest/468020/IntelR-CoreTM-i3-8130U-CPU---220GHz
+CPU,BX80601950,Intel,Core i7-950,378,48.6,24743,https://cpu.userbenchmark.com/Intel-Core-i7-950/Rating/617
+CPU,,Intel,Core i7-3615QM,379,48.4,1711,https://cpu.userbenchmark.com/SpeedTest/806/IntelR-CoreTM-i7-3615QM-CPU---230GHz
+CPU,,Intel,Core i7 870,380,48.3,22690,https://cpu.userbenchmark.com/SpeedTest/961/IntelR-CoreTM-i7-CPU---------870----293GHz
+CPU,BX80662G4500,Intel,Pentium G4500,381,48.2,1951,https://cpu.userbenchmark.com/Intel-Pentium-G4500/Rating/3538
+CPU,,Intel,Core i7-6650U,382,48.2,3517,https://cpu.userbenchmark.com/SpeedTest/40238/IntelR-CoreTM-i7-6650U-CPU---220GHz
+CPU,,Intel,Core i7-2920XM,383,48.2,540,https://cpu.userbenchmark.com/SpeedTest/459/IntelR-CoreTM-i7-2920XM-CPU---250GHz
+CPU,AD9800AUABBOX,AMD,A12-9800 APU (2016 M.BR),384,48,2082,https://cpu.userbenchmark.com/SpeedTest/283761/AMD-A12-9800-RADEON-R7-12-COMPUTE-CORES-4C-8G
+CPU,BX80646G3258,Intel,Pentium G3258,385,48,16942,https://cpu.userbenchmark.com/Intel-Pentium-G3258/Rating/2434
+CPU,,Intel,Core i7-3632QM,386,47.6,16150,https://cpu.userbenchmark.com/SpeedTest/36/IntelR-CoreTM-i7-3632QM-CPU---220GHz
+CPU,,Intel,Xeon E5-1603 0,387,47.5,1549,https://cpu.userbenchmark.com/SpeedTest/9880/IntelR-XeonR-CPU-E5-1603-0---280GHz
+CPU,,Intel,Xeon X3460,388,47.4,466,https://cpu.userbenchmark.com/SpeedTest/3739/IntelR-XeonR-CPU-----------X3460----280GHz
+CPU,,Intel,Core i3-3250,389,47.4,2185,https://cpu.userbenchmark.com/SpeedTest/4950/IntelR-CoreTM-i3-3250-CPU---350GHz
+CPU,,Intel,Xeon X3440,390,47.3,3272,https://cpu.userbenchmark.com/SpeedTest/6655/IntelR-XeonR-CPU-----------X3440----253GHz
+CPU,,Intel,Core i5-5287U,391,47.3,259,https://cpu.userbenchmark.com/SpeedTest/25610/IntelR-CoreTM-i5-5287U-CPU---290GHz
+CPU,,Intel,Xeon E5-2670 v2,392,47.1,210,https://cpu.userbenchmark.com/SpeedTest/18414/IntelR-XeonR-CPU-E5-2670-v2---250GHz
+CPU,,Intel,Core i7-3635QM,393,47.1,1988,https://cpu.userbenchmark.com/SpeedTest/2465/IntelR-CoreTM-i7-3635QM-CPU---240GHz
+CPU,,Intel,Xeon X5560,394,47,318,https://cpu.userbenchmark.com/SpeedTest/16614/IntelR-XeonR-CPU-----------X5560----280GHz
+CPU,,Intel,Core i7-6600U,395,46.9,15888,https://cpu.userbenchmark.com/SpeedTest/36828/IntelR-CoreTM-i7-6600U-CPU---260GHz
+CPU,,Intel,Core i3-7167U,396,46.8,24,https://cpu.userbenchmark.com/SpeedTest/357115/IntelR-CoreTM-i3-7167U-CPU---280GHz
+CPU,,Intel,Xeon X3450,397,46.7,1455,https://cpu.userbenchmark.com/SpeedTest/10439/IntelR-XeonR-CPU-----------X3450----267GHz
+CPU,,Intel,Core i7-2860QM,398,46.6,2633,https://cpu.userbenchmark.com/SpeedTest/103/IntelR-CoreTM-i7-2860QM-CPU---250GHz
+CPU,,Intel,Core i3-3240,399,46.5,17933,https://cpu.userbenchmark.com/SpeedTest/2133/IntelR-CoreTM-i3-3240-CPU---340GHz
+CPU,,Intel,Pentium G3460,400,46.3,789,https://cpu.userbenchmark.com/Intel-Pentium-G3460/Rating/2818
+CPU,,Intel,Core i5 760,401,46.3,20823,https://cpu.userbenchmark.com/SpeedTest/717/IntelR-CoreTM-i5-CPU---------760----280GHz
+CPU,,Intel,Core i5-2405S,402,46.3,121,https://cpu.userbenchmark.com/SpeedTest/10048/IntelR-CoreTM-i5-2405S-CPU---250GHz
+CPU,,Intel,Xeon L5639,403,46.1,81,https://cpu.userbenchmark.com/SpeedTest/5958/IntelR-XeonR-CPU-----------L5639----213GHz
+CPU,,Intel,Core i5-2400S,404,46.1,5138,https://cpu.userbenchmark.com/SpeedTest/304/IntelR-CoreTM-i5-2400S-CPU---250GHz
+CPU,,Intel,Core i5-7200U,405,45.8,117198,https://cpu.userbenchmark.com/SpeedTest/153577/IntelR-CoreTM-i5-7200U-CPU---250GHz
+CPU,AD845XACKASBX,AMD,Athlon X4 845,406,45.8,4240,https://cpu.userbenchmark.com/SpeedTest/84491/AMD-Athlontm-X4-845-Quad-Core-Processor
+CPU,,Intel,Core i7-3612QM,407,45.8,7522,https://cpu.userbenchmark.com/SpeedTest/329/IntelR-CoreTM-i7-3612QM-CPU---210GHz
+CPU,,Intel,Core i5-3470T,408,45.7,1541,https://cpu.userbenchmark.com/SpeedTest/2220/IntelR-CoreTM-i5-3470T-CPU---290GHz
+CPU,CM8067703016117,Intel,Pentium G4560T,409,45.6,209,https://cpu.userbenchmark.com/SpeedTest/467086/IntelR-PentiumR-CPU-G4560T---290GHz
+CPU,,Intel,Core i5-4300M,410,45.5,6471,https://cpu.userbenchmark.com/SpeedTest/5215/IntelR-CoreTM-i5-4300M-CPU---260GHz
+CPU,,Intel,Core i7-5550U,411,45.5,71,https://cpu.userbenchmark.com/SpeedTest/203876/IntelR-CoreTM-i7-5550U-CPU---200GHz
+CPU,,Intel,Core i7-5600U,412,45.5,10430,https://cpu.userbenchmark.com/SpeedTest/22612/IntelR-CoreTM-i7-5600U-CPU---260GHz
+CPU,,Intel,Core i5-4200H,413,45.4,6846,https://cpu.userbenchmark.com/SpeedTest/8854/IntelR-CoreTM-i5-4200H-CPU---280GHz
+CPU,,Intel,Xeon W3530,414,45.4,3040,https://cpu.userbenchmark.com/SpeedTest/3000/IntelR-XeonR-CPU-----------W3530----280GHz
+CPU,,Intel,Core i3-3220,415,45.3,38041,https://cpu.userbenchmark.com/SpeedTest/272/IntelR-CoreTM-i3-3220-CPU---330GHz
+CPU,,AMD,FX-6350 Six-Core,416,45.2,17262,https://cpu.userbenchmark.com/SpeedTest/713/AMD-FXtm-6350-Six-Core-Processor
+CPU,,Intel,Core i7-5650U,417,45.2,119,https://cpu.userbenchmark.com/SpeedTest/26818/IntelR-CoreTM-i7-5650U-CPU---220GHz
+CPU,AD789KXDJCHBX,AMD,A10-7890K APU (2014 D.Ka),418,45.2,4254,https://cpu.userbenchmark.com/SpeedTest/118648/AMD-A10-7890K-Radeon-R7-12-Compute-Cores-4C-8G
+CPU,BX80662G4400,Intel,Pentium G4400,419,45.1,21249,https://cpu.userbenchmark.com/Intel-Pentium-G4400/Rating/3539
+CPU,,Intel,Core i7-3520M,420,45,11423,https://cpu.userbenchmark.com/SpeedTest/50/IntelR-CoreTM-i7-3520M-CPU---290GHz
+CPU,,Intel,Core i7 930,421,45,15920,https://cpu.userbenchmark.com/SpeedTest/79/IntelR-CoreTM-i7-CPU---------930----280GHz
+CPU,,Intel,Core i5-5257U,422,45,1512,https://cpu.userbenchmark.com/SpeedTest/25441/IntelR-CoreTM-i5-5257U-CPU---270GHz
+CPU,,Intel,Core i5 680,423,44.9,447,https://cpu.userbenchmark.com/SpeedTest/3693/IntelR-CoreTM-i5-CPU---------680----360GHz
+CPU,,Intel,Core i7-2760QM,424,44.9,6100,https://cpu.userbenchmark.com/SpeedTest/949/IntelR-CoreTM-i7-2760QM-CPU---240GHz
+CPU,,Intel,Core i7 860,425,44.9,29250,https://cpu.userbenchmark.com/SpeedTest/841/IntelR-CoreTM-i7-CPU---------860----280GHz
+CPU,,Intel,Core i7-3540M,426,44.9,3442,https://cpu.userbenchmark.com/SpeedTest/921/IntelR-CoreTM-i7-3540M-CPU---300GHz
+CPU,BX80605I5750,Intel,Core i5-750,427,44.9,31893,https://cpu.userbenchmark.com/Intel-Core-i5-750/Rating/2773
+CPU,,Intel,Core i3-2130,428,44.8,4269,https://cpu.userbenchmark.com/SpeedTest/424/IntelR-CoreTM-i3-2130-CPU---340GHz
+CPU,,AMD,Phenom II X4 980,429,44.7,819,https://cpu.userbenchmark.com/SpeedTest/5445/AMD-Phenomtm-II-X4-980-Processor
+CPU,,Intel,Core i5-3380M,430,44.7,1476,https://cpu.userbenchmark.com/SpeedTest/5308/IntelR-CoreTM-i5-3380M-CPU---290GHz
+CPU,BX80637I33225,Intel,Core i3-3225,431,44.5,1868,https://cpu.userbenchmark.com/Intel-Core-i3-3225/Rating/1488
+CPU,FD8320FRHKBOX,AMD,FX-8320,432,44.5,84890,https://cpu.userbenchmark.com/AMD-FX-8320/Rating/1983
+CPU,,Intel,Xeon E5-2630 0,433,44.4,516,https://cpu.userbenchmark.com/SpeedTest/6512/IntelR-XeonR-CPU-E5-2630-0---230GHz
+CPU,,Intel,Pentium G3450,434,44.3,718,https://cpu.userbenchmark.com/SpeedTest/24201/IntelR-PentiumR-CPU-G3450---340GHz
+CPU,,Intel,Core i7-6500U,435,44.2,62397,https://cpu.userbenchmark.com/SpeedTest/36930/IntelR-CoreTM-i7-6500U-CPU---250GHz
+CPU,AD680KWOHLBOX,AMD,A10-6800K APU (2013 D.Ri),436,44,9455,https://cpu.userbenchmark.com/AMD-A10-6800K-APU-2013-DRi/Rating/2936
+CPU,FD8150FRGUBOX,AMD,FX-8150,437,44,12996,https://cpu.userbenchmark.com/AMD-FX-8150/Rating/2006
+CPU,AD9700AGABBOX,AMD,A10-9700 APU (2016 M.BR),438,44,4864,https://cpu.userbenchmark.com/SpeedTest/262171/AMD-A10-9700-RADEON-R7-10-COMPUTE-CORES-4C-6G
+CPU,,Intel,Core i7 940,439,43.9,1393,https://cpu.userbenchmark.com/SpeedTest/606/IntelR-CoreTM-i7-CPU---------940----293GHz
+CPU,BX80646G3440,Intel,Pentium G3440,440,43.9,369,https://cpu.userbenchmark.com/Intel-Pentium-G3440/Rating/2435
+CPU,AD880KXBJCSBX,AMD,Athlon X4 880K,441,43.9,6201,https://cpu.userbenchmark.com/SpeedTest/121029/AMD-Athlontm-X4-880K-Quad-Core-Processor
+CPU,,AMD,Ryzen 3 3200U,442,43.8,1936,https://cpu.userbenchmark.com/SpeedTest/771805/AMD-Ryzen-3-3200U-with-Radeon-Vega-Mobile-Gfx
+CPU,,Intel,Xeon E5-2680 v2,443,43.8,43,https://cpu.userbenchmark.com/SpeedTest/17083/IntelR-XeonR-CPU-E5-2680-v2---280GHz
+CPU,,Intel,Core i3-2125,444,43.7,387,https://cpu.userbenchmark.com/SpeedTest/3545/IntelR-CoreTM-i3-2125-CPU---330GHz
+CPU,,Intel,Core i3-3210,445,43.6,3640,https://cpu.userbenchmark.com/SpeedTest/3090/IntelR-CoreTM-i3-3210-CPU---320GHz
+CPU,,Intel,Core i7-2820QM,446,43.5,3549,https://cpu.userbenchmark.com/SpeedTest/3145/IntelR-CoreTM-i7-2820QM-CPU---230GHz
+CPU,,Intel,Core i7-4558U,447,43.4,518,https://cpu.userbenchmark.com/SpeedTest/4092/IntelR-CoreTM-i7-4558U-CPU---280GHz
+CPU,BX80684G4900,Intel,Celeron G4900,448,43.3,768,https://cpu.userbenchmark.com/SpeedTest/482751/IntelR-CeleronR-G4900-CPU---310GHz
+CPU,FD4350FRHKBOX,AMD,FX-4350,449,43.3,8011,https://cpu.userbenchmark.com/AMD-FX-4350/Rating/2880
+CPU,HDE00ZFBGRBOX,AMD,Phenom II X6 1100T,450,43.3,9587,https://cpu.userbenchmark.com/AMD-Phenom-II-X6-1100T/Rating/2004
+CPU,,Intel,Core i5-3360M,451,43.3,3446,https://cpu.userbenchmark.com/SpeedTest/701/IntelR-CoreTM-i5-3360M-CPU---280GHz
+CPU,,Intel,Xeon W3520,452,43.2,3868,https://cpu.userbenchmark.com/SpeedTest/3585/IntelR-XeonR-CPU-----------W3520----267GHz
+CPU,BX80646G3430,Intel,Pentium G3430,453,43.2,165,https://cpu.userbenchmark.com/Intel-Pentium-G3430/Rating/1969
+CPU,BX80601920,Intel,Core i7-920,454,43.2,42927,https://cpu.userbenchmark.com/Intel-Core-i7-920/Rating/1981
+CPU,,Intel,Core i5-6300U,455,43.2,24185,https://cpu.userbenchmark.com/SpeedTest/27864/IntelR-CoreTM-i5-6300U-CPU---240GHz
+CPU,,AMD,FX-8300,456,43.2,30211,https://cpu.userbenchmark.com/SpeedTest/7163/AMD-FXtm-8300-Eight-Core-Processor
+CPU,,Intel,Core i3-2120,457,43,41063,https://cpu.userbenchmark.com/SpeedTest/2227/IntelR-CoreTM-i3-2120-CPU---330GHz
+CPU,,Intel,Pentium G3260,458,42.9,5197,https://cpu.userbenchmark.com/SpeedTest/31434/IntelR-PentiumR-CPU-G3260---330GHz
+CPU,,Intel,Core i5-6260U,459,42.9,1221,https://cpu.userbenchmark.com/SpeedTest/37385/IntelR-CoreTM-i5-6260U-CPU---180GHz
+CPU,AD787KXDJCBOX,AMD,A10-7870K APU (2014 D.Ka),460,42.9,7453,https://cpu.userbenchmark.com/SpeedTest/29728/AMD-A10-7870K-Radeon-R7-12-Compute-Cores-4C-8G
+CPU,,AMD,Ryzen 3 2200U,461,42.8,5959,https://cpu.userbenchmark.com/SpeedTest/480281/AMD-Ryzen-3-2200U-with-Radeon-Vega-Mobile-Gfx
+CPU,,Intel,Core i5-4210M,462,42.8,8291,https://cpu.userbenchmark.com/SpeedTest/12839/IntelR-CoreTM-i5-4210M-CPU---260GHz
+CPU,,AMD,A10-6790K APU (2013 D.Ri),463,42.7,1399,https://cpu.userbenchmark.com/SpeedTest/13499/AMD-A10-6790K-APU-with-Radeontm-HD-Graphics
+CPU,BX80677G3950,Intel,Celeron G3950,464,42.7,134,https://cpu.userbenchmark.com/SpeedTest/242877/IntelR-CeleronR-CPU-G3950---300GHz
+CPU,AD870KXBJCSBX,AMD,Athlon II X4 870K,465,42.7,1107,https://cpu.userbenchmark.com/SpeedTest/83847/AMD-Athlontm-X4-870K-Quad-Core-Processor
+CPU,,AMD,Phenom II X4 975,466,42.6,853,https://cpu.userbenchmark.com/SpeedTest/3020/AMD-Phenomtm-II-X4-975-Processor
+CPU,,AMD,FX-4170 Quad-Core,467,42.6,3459,https://cpu.userbenchmark.com/SpeedTest/114/AMD-FXtm-4170-Quad-Core-Processor
+CPU,,AMD,A10-5800B APU (2012 D.Tr),468,42.5,399,https://cpu.userbenchmark.com/SpeedTest/14080/AMD-A10-5800B-APU-with-Radeontm-HD-Graphics
+CPU,BX80646G3420,Intel,Pentium G3420,469,42.4,2827,https://cpu.userbenchmark.com/Intel-Pentium-G3420/Rating/1968
+CPU,AD785KXBJABOX,AMD,A10-7850K APU (2014 D.Ka),470,42.4,12266,https://cpu.userbenchmark.com/AMD-A10-7850K-APU-2014-DKa/Rating/2937
+CPU,,Intel,Xeon X5470,471,42.4,1194,https://cpu.userbenchmark.com/SpeedTest/14102/IntelR-XeonR-CPU-----------X5470----333GHz
+CPU,FD837EWMHKBOX,AMD,FX-8370E,472,42.4,2982,https://cpu.userbenchmark.com/AMD-FX-8370E/Rating/2984
+CPU,FD6300WMHKBOX,AMD,FX-6300,473,42.3,173940,https://cpu.userbenchmark.com/AMD-FX-6300/Rating/1555
+CPU,,AMD,Phenom II X6 1090T,474,42.3,18399,https://cpu.userbenchmark.com/SpeedTest/417/AMD-Phenomtm-II-X6-1090T-Processor
+CPU,AD9800AHABBOX,AMD,A12-9800E APU (2016 M.BR),475,42.3,207,https://cpu.userbenchmark.com/SpeedTest/345210/AMD-A12-9800E-RADEON-R7-12-COMPUTE-CORES-4C-8G
+CPU,AD6700OKHLBOX,AMD,A10-6700 APU (2013 D.Ri),476,42.2,7110,https://cpu.userbenchmark.com/AMD-A10-6700-APU-2013-DRi/Rating/2938
+CPU,,AMD,FX-8310,477,42.2,1082,https://cpu.userbenchmark.com/SpeedTest/18534/AMD-FXtm-8310-Eight-Core-Processor
+CPU,,Intel,Core i3-4130T,478,42.1,2655,https://cpu.userbenchmark.com/SpeedTest/13080/IntelR-CoreTM-i3-4130T-CPU---290GHz
+CPU,,AMD,FX-6200 Six-Core,479,42.1,3183,https://cpu.userbenchmark.com/SpeedTest/2658/AMD-FXtm-6200-Six-Core-Processor
+CPU,,Intel,Core i3-6167U,480,42.1,15,https://cpu.userbenchmark.com/SpeedTest/175469/IntelR-CoreTM-i3-6167U-CPU---270GHz
+CPU,,Intel,Core i7-2720QM,481,42.1,5413,https://cpu.userbenchmark.com/SpeedTest/532/IntelR-CoreTM-i7-2720QM-CPU---220GHz
+CPU,AD860KXBJASBX,AMD,Athlon II X4 860K,482,42.1,18745,https://cpu.userbenchmark.com/AMD-Athlon-II-X4-860K/Rating/3265
+CPU,,Intel,Core i5-3340M,483,42,7414,https://cpu.userbenchmark.com/SpeedTest/1915/IntelR-CoreTM-i5-3340M-CPU---270GHz
+CPU,,AMD,Phenom II X4 970,484,42,2015,https://cpu.userbenchmark.com/SpeedTest/2231/AMD-Phenomtm-II-X4-970-Processor
+CPU,,Intel,Pentium G3250,485,41.9,6003,https://cpu.userbenchmark.com/SpeedTest/18077/IntelR-PentiumR-CPU-G3250---320GHz
+CPU,,Intel,Xeon E5540,486,41.9,301,https://cpu.userbenchmark.com/SpeedTest/13822/IntelR-XeonR-CPU-----------E5540----253GHz
+CPU,,Intel,Core i3-7130U,487,41.7,1829,https://cpu.userbenchmark.com/SpeedTest/376899/IntelR-CoreTM-i3-7130U-CPU---270GHz
+CPU,,AMD,A8-6600K APU,488,41.6,13426,https://cpu.userbenchmark.com/SpeedTest/3344/AMD-A8-6600K-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Core i7-5500U,489,41.6,49319,https://cpu.userbenchmark.com/SpeedTest/22316/IntelR-CoreTM-i7-5500U-CPU---240GHz
+CPU,FH8068003067415,Intel,Pentium Silver J5005,490,41.5,669,https://cpu.userbenchmark.com/SpeedTest/487063/IntelR-PentiumR-Silver-J5005-CPU---150GHz
+CPU,,Intel,Core i7-2670QM,491,41.5,30337,https://cpu.userbenchmark.com/Intel-Core-i7-2670QM/Rating/1982
+CPU,,AMD,Athlon II X4 760K (2013 D.Ri),492,41.5,3362,https://cpu.userbenchmark.com/SpeedTest/9072/AMD-Athlontm-X4-760K-Quad-Core-Processor
+CPU,FD832EWMHKBOX,AMD,FX-8320E,493,41.4,21412,https://cpu.userbenchmark.com/AMD-FX-8320E/Rating/2985
+CPU,,Intel,Core i5-3320M,494,41.4,25387,https://cpu.userbenchmark.com/SpeedTest/402/IntelR-CoreTM-i5-3320M-CPU---260GHz
+CPU,,Intel,Core i5 660,495,41.2,3259,https://cpu.userbenchmark.com/SpeedTest/2846/IntelR-CoreTM-i5-CPU---------660----333GHz
+CPU,,Intel,Core2 Extreme X9770,496,41.1,251,https://cpu.userbenchmark.com/SpeedTest/10543/IntelR-CoreTM2-Extreme-CPU-X9770----320GHz
+CPU,,Intel,Core i5-4200M,497,41.1,19807,https://cpu.userbenchmark.com/SpeedTest/2341/IntelR-CoreTM-i5-4200M-CPU---250GHz
+CPU,,Intel,Core i5-5300U,498,41,11853,https://cpu.userbenchmark.com/SpeedTest/16790/IntelR-CoreTM-i5-5300U-CPU---230GHz
+CPU,,Intel,Core i7-4600U,499,41,13840,https://cpu.userbenchmark.com/SpeedTest/2752/IntelR-CoreTM-i7-4600U-CPU---210GHz
+CPU,,Intel,Xeon X3430,500,40.9,1928,https://cpu.userbenchmark.com/SpeedTest/5225/IntelR-XeonR-CPU-----------X3430----240GHz
+CPU,,Intel,Xeon E5-2620 v2,501,40.8,696,https://cpu.userbenchmark.com/SpeedTest/4718/IntelR-XeonR-CPU-E5-2620-v2---210GHz
+CPU,,Intel,Core i5 661,502,40.8,1156,https://cpu.userbenchmark.com/SpeedTest/548/IntelR-CoreTM-i5-CPU---------661----333GHz
+CPU,,AMD,Phenom II X4 B65,503,40.8,151,https://cpu.userbenchmark.com/SpeedTest/6054/AMD-Phenomtm-II-X4-B65-Processor
+CPU,AD580KWOHJBOX,AMD,A10-5800K APU (2012 D.Tr),504,40.8,11471,https://cpu.userbenchmark.com/AMD-A10-5800K-APU-2012-DTr/Rating/2007
+CPU,,AMD,A8-7670K APU (2014 D.Ka),505,40.7,1252,https://cpu.userbenchmark.com/SpeedTest/37178/AMD-A8-7670K-Radeon-R7-10-Compute-Cores-4C-6G
+CPU,,Intel,Pentium G2130,506,40.7,1127,https://cpu.userbenchmark.com/SpeedTest/9126/IntelR-PentiumR-CPU-G2130---320GHz
+CPU,,Intel,Core i5-4258U,507,40.7,825,https://cpu.userbenchmark.com/SpeedTest/5904/IntelR-CoreTM-i5-4258U-CPU---240GHz
+CPU,HDZ965FBGMBOX,AMD,Phenom II X4 965,508,40.6,32876,https://cpu.userbenchmark.com/AMD-Phenom-II-X4-965/Rating/606
+CPU,,Intel,Core i7-2640M,509,40.6,7842,https://cpu.userbenchmark.com/SpeedTest/791/IntelR-CoreTM-i7-2640M-CPU---280GHz
+CPU,,Intel,Core i5 K 655,510,40.6,259,https://cpu.userbenchmark.com/SpeedTest/9077/IntelR-CoreTM-i5-CPU-------K-655----320GHz
+CPU,BX80646G3240 ,Intel,Pentium G3240,511,40.6,5794,https://cpu.userbenchmark.com/Intel-Pentium-G3240/Rating/2820
+CPU,AW8063801208001,Intel,Core i5-3230M,512,40.6,36320,https://cpu.userbenchmark.com/Intel-Core-i5-3230M/Rating/2772
+CPU,AD9600AGABBOX,AMD,A8-9600 APU (2016 D.BR),513,40.6,4331,https://cpu.userbenchmark.com/SpeedTest/339630/AMD-A8-9600-RADEON-R7-10-COMPUTE-CORES-4C-6G
+CPU,,AMD,FX-6120 Six-Core,514,40.4,1057,https://cpu.userbenchmark.com/SpeedTest/7026/AMD-FXtm-6120-Six-Core-Processor
+CPU,AD9700AHABBOX,AMD,A10-9700E APU (2016 D.BR),515,40.4,143,https://cpu.userbenchmark.com/SpeedTest/348934/AMD-A10-9700E-RADEON-R7-10-COMPUTE-CORES-4C-6G
+CPU,AD786KYBJCSBX,AMD,A10-7860K APU (2014 D.Ka),516,40.2,8312,https://cpu.userbenchmark.com/SpeedTest/83781/AMD-A10-7860K-Radeon-R7-12-Compute-Cores-4C-8G
+CPU,,AMD,A10-7700K APU (2014 D.Ka),517,40.2,6511,https://cpu.userbenchmark.com/SpeedTest/9888/AMD-A10-7700K-APU-with-RadeonTM-R7-Graphics
+CPU,BX80677G3930,Intel,Celeron G3930,518,40.2,4240,https://cpu.userbenchmark.com/SpeedTest/235058/IntelR-CeleronR-CPU-G3930---290GHz
+CPU,,Intel,Core i3-2100,519,40.1,33551,https://cpu.userbenchmark.com/SpeedTest/41/IntelR-CoreTM-i3-2100-CPU---310GHz
+CPU,,Intel,Core i5-6200U,520,40,79500,https://cpu.userbenchmark.com/SpeedTest/36796/IntelR-CoreTM-i5-6200U-CPU---230GHz
+CPU,,AMD,Phenom II X4 B60,521,39.9,1036,https://cpu.userbenchmark.com/SpeedTest/8154/AMD-Phenomtm-II-X4-B60-Processor
+CPU,,Intel,Core i3-2105,522,39.9,647,https://cpu.userbenchmark.com/SpeedTest/2747/IntelR-CoreTM-i3-2105-CPU---310GHz
+CPU,,AMD,Phenom II X6 1075T,523,39.8,2107,https://cpu.userbenchmark.com/SpeedTest/913/AMD-Phenomtm-II-X6-1075T-Processor
+CPU,,Intel,Core i7-4510U,524,39.8,37529,https://cpu.userbenchmark.com/SpeedTest/10660/IntelR-CoreTM-i7-4510U-CPU---200GHz
+CPU,,Intel,Core i5 650,525,39.7,25978,https://cpu.userbenchmark.com/SpeedTest/340/IntelR-CoreTM-i5-CPU---------650----320GHz
+CPU,,AMD,FX-8120,526,39.7,16355,https://cpu.userbenchmark.com/SpeedTest/173/AMD-FXtm-8120-Eight-Core-Processor
+CPU,,AMD,A8-6500 APU,527,39.7,4093,https://cpu.userbenchmark.com/SpeedTest/5272/AMD-A8-6500-APU-with-Radeontm-HD-Graphics
+CPU,FD4300WMHKBOX,AMD,FX-4300,528,39.6,37338,https://cpu.userbenchmark.com/AMD-FX-4300/Rating/2879
+CPU,BX80646G3220,Intel,Pentium G3220,529,39.5,9916,https://cpu.userbenchmark.com/Intel-Pentium-G3220/Rating/1967
+CPU,,AMD,A8-7600 APU (2014 D.Ka),530,39.5,18506,https://cpu.userbenchmark.com/SpeedTest/14050/AMD-A8-7600-Radeon-R7-10-Compute-Cores-4C-6G
+CPU,,Intel,Xeon E5-2609 0,531,39.3,415,https://cpu.userbenchmark.com/SpeedTest/2762/IntelR-XeonR-CPU-E5-2609-0---240GHz
+CPU,FM983PAEY44AB,AMD,FX-9830P APU (2016 M.BR),532,39.3,2129,https://cpu.userbenchmark.com/SpeedTest/215072/AMD-FX-9830P-RADEON-R7-12-COMPUTE-CORES-4C-8G
+CPU,,Intel,Core i7-2620M,533,39.3,9429,https://cpu.userbenchmark.com/SpeedTest/643/IntelR-CoreTM-i7-2620M-CPU---270GHz
+CPU,,AMD,A8-7500 APU (2014 M.Ka),534,39.1,144,https://cpu.userbenchmark.com/SpeedTest/60388/AMD-A8-7500-Radeon-R7-10-Compute-Cores-4C-6G
+CPU,,AMD,A10-7800 APU (2014 D.Ka),535,39.1,9476,https://cpu.userbenchmark.com/SpeedTest/13491/AMD-A10-7800-Radeon-R7-12-Compute-Cores-4C-8G
+CPU,AD750KWOHJBOX,AMD,Athlon II X4 750K,536,39.1,3673,https://cpu.userbenchmark.com/AMD-Athlon-II-X4-750K/Rating/1548
+CPU,AD765KXBJABOX,AMD,A8-7650K APU (2014 D.Ka),537,39,8615,https://cpu.userbenchmark.com/SpeedTest/27184/AMD-A8-7650K-Radeon-R7-10-Compute-Cores-4C-6G
+CPU,,AMD,Phenom II X4 B55,538,39,3341,https://cpu.userbenchmark.com/SpeedTest/878/AMD-Phenomtm-II-X4-B55-Processor
+CPU,,Intel,Core i3 550,539,38.9,9293,https://cpu.userbenchmark.com/SpeedTest/632/IntelR-CoreTM-i3-CPU---------550----320GHz
+CPU,BX80662G3900,Intel,Celeron G3900,540,38.9,3189,https://cpu.userbenchmark.com/SpeedTest/86156/IntelR-CeleronR-CPU-G3900---280GHz
+CPU,,Intel,Xeon E5-2620 0,541,38.8,1082,https://cpu.userbenchmark.com/SpeedTest/5895/IntelR-XeonR-CPU-E5-2620-0---200GHz
+CPU,FF8062700837005,Intel,Core i7-2630QM,542,38.8,23713,https://cpu.userbenchmark.com/Intel-Core-i7-2630QM/Rating/2729
+CPU,,Intel,Xeon E5530,543,38.8,394,https://cpu.userbenchmark.com/SpeedTest/4018/IntelR-XeonR-CPU-----------E5530----240GHz
+CPU,AW8063801032301,Intel,Core i5-3210M,544,38.7,48610,https://cpu.userbenchmark.com/Intel-Core-i5-3210M/Rating/2719
+CPU,,Intel,Pentium G2120,545,38.7,1077,https://cpu.userbenchmark.com/SpeedTest/448/IntelR-PentiumR-CPU-G2120---310GHz
+CPU,,AMD,Phenom II X4 850,546,38.7,772,https://cpu.userbenchmark.com/SpeedTest/3577/AMD-Phenomtm-II-X4-850-Processor
+CPU,AM973PAEY44AB,AMD,A12-9730P APU (2016 M.BR),547,38.7,164,https://cpu.userbenchmark.com/SpeedTest/236011/AMD-A12-9730P-RADEON-R7-10-COMPUTE-CORES-4C-6G
+CPU,,AMD,FX-770K (2014 D.Ka),548,38.7,680,https://cpu.userbenchmark.com/SpeedTest/18603/AMD-FXtm-770K-Quad-Core-Processor
+CPU,,AMD,Athlon II X4 555,549,38.6,104,https://cpu.userbenchmark.com/SpeedTest/12528/AMD-Athlontm-II-X4-555-Processor
+CPU,,Intel,Core i7-4650U,550,38.6,2628,https://cpu.userbenchmark.com/SpeedTest/6364/IntelR-CoreTM-i7-4650U-CPU---170GHz
+CPU,,AMD,A8-5600K APU,551,38.6,9627,https://cpu.userbenchmark.com/SpeedTest/1766/AMD-A8-5600K-APU-with-Radeontm-HD-Graphics
+CPU,BX80646G1850,Intel,Celeron G1850,552,38.6,258,https://cpu.userbenchmark.com/Intel-Celeron-G1850/Rating/2850
+CPU,HDZ955FBGMBOX,AMD,Phenom II X4 955,553,38.4,29098,https://cpu.userbenchmark.com/AMD-Phenom-II-X4-955/Rating/2935
+CPU,,Intel,Core i3-3220T,554,38.3,1178,https://cpu.userbenchmark.com/SpeedTest/2602/IntelR-CoreTM-i3-3220T-CPU---280GHz
+CPU,,Intel,Core i3-6157U,555,38.3,201,https://cpu.userbenchmark.com/SpeedTest/187565/IntelR-CoreTM-i3-6157U-CPU---240GHz
+CPU,,Intel,Xeon E5620,556,38.2,1932,https://cpu.userbenchmark.com/SpeedTest/6971/IntelR-XeonR-CPU-----------E5620----240GHz
+CPU,,Intel,Core i7-3687U,557,38.2,1767,https://cpu.userbenchmark.com/SpeedTest/2934/IntelR-CoreTM-i7-3687U-CPU---210GHz
+CPU,,Intel,Core i7-2635QM,558,38.1,258,https://cpu.userbenchmark.com/SpeedTest/12770/IntelR-CoreTM-i7-2635QM-CPU---200GHz
+CPU,,Intel,Xeon X5460,559,38,6224,https://cpu.userbenchmark.com/SpeedTest/5754/IntelR-XeonR-CPU-----------X5460----316GHz
+CPU,,AMD,Phenom II X4 B50,560,38,2241,https://cpu.userbenchmark.com/SpeedTest/5205/AMD-Phenomtm-II-X4-B50-Processor
+CPU,,AMD,Phenom II X4 840,561,38,4154,https://cpu.userbenchmark.com/SpeedTest/3302/AMD-Phenomtm-II-X4-840-Processor
+CPU,,Intel,Core i7-4500U,562,38,23805,https://cpu.userbenchmark.com/Intel-Core-i7-4500U/Rating/2743
+CPU,,Intel,Core i7-3667U,563,37.9,1952,https://cpu.userbenchmark.com/SpeedTest/2815/IntelR-CoreTM-i7-3667U-CPU---200GHz
+CPU,FD6100WMGUSBX,AMD,FX-6100,564,37.9,25785,https://cpu.userbenchmark.com/AMD-FX-6100/Rating/1984
+CPU,,Intel,Core i5-4310U,565,37.9,6841,https://cpu.userbenchmark.com/SpeedTest/12941/IntelR-CoreTM-i5-4310U-CPU---200GHz
+CPU,,Intel,Core i7-2675QM,566,37.8,729,https://cpu.userbenchmark.com/SpeedTest/597/IntelR-CoreTM-i7-2675QM-CPU---220GHz
+CPU,,AMD,Phenom II X4 960T,567,37.7,2843,https://cpu.userbenchmark.com/SpeedTest/1813/AMD-Phenomtm-II-X4-960T-Processor
+CPU,,Intel,Core i5-5200U,568,37.6,69003,https://cpu.userbenchmark.com/SpeedTest/22169/IntelR-CoreTM-i5-5200U-CPU---220GHz
+CPU,HDT55TFBGRBOX,AMD,Phenom II X6 1055T,569,37.5,14166,https://cpu.userbenchmark.com/AMD-Phenom-II-X6-1055T/Rating/2003
+CPU,,AMD,FX-4130 Quad-Core,570,37.5,6376,https://cpu.userbenchmark.com/SpeedTest/2420/AMD-FXtm-4130-Quad-Core-Processor
+CPU,,Intel,Core i5-4300U,571,37.5,20692,https://cpu.userbenchmark.com/SpeedTest/4996/IntelR-CoreTM-i5-4300U-CPU---190GHz
+CPU,FH8068003067406,Intel,Pentium Silver N5000,572,37.4,3835,https://cpu.userbenchmark.com/SpeedTest/499477/IntelR-PentiumR-Silver-N5000-CPU---110GHz
+CPU,FH8068003067403,Intel,Celeron J4105,573,37.4,370,https://cpu.userbenchmark.com/SpeedTest/444211/IntelR-CeleronR-J4105-CPU---150GHz
+CPU,AD5700OKHJBOX,AMD,A10-5700 APU (2012 D.Tr),574,37.3,3776,https://cpu.userbenchmark.com/AMD-A10-5700-APU-2012-DTr/Rating/2939
+CPU,,Intel,Core i5-2540M,575,37.3,10014,https://cpu.userbenchmark.com/SpeedTest/1616/IntelR-CoreTM-i5-2540M-CPU---260GHz
+CPU,BX80646G1830,Intel,Celeron G1830,576,37.2,129,https://cpu.userbenchmark.com/Intel-Celeron-G1830/Rating/2848
+CPU,,Intel,Core i5-7Y54,577,37.2,691,https://cpu.userbenchmark.com/SpeedTest/193628/IntelR-CoreTM-i5-7Y54-CPU---120GHz
+CPU,,AMD,A8-3870 APU,578,37.2,3747,https://cpu.userbenchmark.com/SpeedTest/3870/AMD-A8-3870-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Core i5-2520M,579,37.2,26497,https://cpu.userbenchmark.com/SpeedTest/29/IntelR-CoreTM-i5-2520M-CPU---250GHz
+CPU,,Intel,Core i5-5250U,580,37.1,2389,https://cpu.userbenchmark.com/SpeedTest/24945/IntelR-CoreTM-i5-5250U-CPU---160GHz
+CPU,,AMD,Athlon II X4 651,581,36.9,652,https://cpu.userbenchmark.com/SpeedTest/3526/AMD-Athlontm-II-X4-651-Quad-Core-Processor
+CPU,,AMD,Athlon II X4 645,582,36.8,3327,https://cpu.userbenchmark.com/SpeedTest/2408/AMD-Athlontm-II-X4-645-Processor
+CPU,,Intel,Core2 Extreme X9650,583,36.8,1771,https://cpu.userbenchmark.com/SpeedTest/2662/IntelR-CoreTM2-Extreme-CPU-X9650----300GHz
+CPU,,Intel,Xeon E5450,584,36.8,8594,https://cpu.userbenchmark.com/SpeedTest/5890/IntelR-XeonR-CPU-----------E5450----300GHz
+CPU,,Intel,Xeon E7- 4870,585,36.8,23,https://cpu.userbenchmark.com/SpeedTest/8256/IntelR-XeonR-CPU-E7--4870----240GHz
+CPU,,Intel,Core i3 540,586,36.7,13033,https://cpu.userbenchmark.com/SpeedTest/2936/IntelR-CoreTM-i3-CPU---------540----307GHz
+CPU,,Intel,Pentium G2030,587,36.7,10267,https://cpu.userbenchmark.com/SpeedTest/3273/IntelR-PentiumR-CPU-G2030---300GHz
+CPU,,Intel,Pentium G870,588,36.6,761,https://cpu.userbenchmark.com/SpeedTest/9348/IntelR-PentiumR-CPU-G870---310GHz
+CPU,,AMD,Phenom II X4 B40,589,36.6,363,https://cpu.userbenchmark.com/SpeedTest/9803/AMD-Phenomtm-II-X4-B40-Processor
+CPU,,Intel,Xeon E5520,590,36.6,878,https://cpu.userbenchmark.com/SpeedTest/5884/IntelR-XeonR-CPU-----------E5520----227GHz
+CPU,,Intel,Core2 Quad Q9650,591,36.5,11209,https://cpu.userbenchmark.com/SpeedTest/1706/IntelR-CoreTM2-Quad-CPU----Q9650----300GHz
+CPU,,AMD,FX-4100,592,36.5,18535,https://cpu.userbenchmark.com/AMD-FX-4100/Rating/2878
+CPU,,AMD,Phenom II X4 945,593,36.4,8572,https://cpu.userbenchmark.com/SpeedTest/101/AMD-Phenomtm-II-X4-945-Processor
+CPU,,Intel,Core i7 X 940,594,36.4,377,https://cpu.userbenchmark.com/SpeedTest/2801/IntelR-CoreTM-i7-CPU-------X-940----213GHz
+CPU,,Intel,Core i3-7100U,595,36.4,18568,https://cpu.userbenchmark.com/SpeedTest/176913/IntelR-CoreTM-i3-7100U-CPU---240GHz
+CPU,,Intel,Core i7-3537U,596,36.4,10604,https://cpu.userbenchmark.com/SpeedTest/504/IntelR-CoreTM-i7-3537U-CPU---200GHz
+CPU,,Intel,Core i7-7Y75,597,36.3,1571,https://cpu.userbenchmark.com/SpeedTest/211988/IntelR-CoreTM-i7-7Y75-CPU---130GHz
+CPU,,AMD,Phenom II X4 B45,598,36.3,776,https://cpu.userbenchmark.com/SpeedTest/4111/AMD-Phenomtm-II-X4-B45-Processor
+CPU,,Intel,Xeon L5520,599,36.2,130,https://cpu.userbenchmark.com/SpeedTest/6285/IntelR-XeonR-CPU-----------L5520----227GHz
+CPU,,AMD,Phenom II X6 1045T,600,36.2,3714,https://cpu.userbenchmark.com/SpeedTest/1873/AMD-Phenomtm-II-X6-1045T-Processor
+CPU,,AMD,Phenom II X4 940,601,36.1,2615,https://cpu.userbenchmark.com/SpeedTest/2203/AMD-Phenomtm-II-X4-940-Processor
+CPU,BX80646G1840,Intel,Celeron G1840,602,36,4029,https://cpu.userbenchmark.com/Intel-Celeron-G1840/Rating/2849
+CPU,,AMD,Phenom II X4 20,603,36,528,https://cpu.userbenchmark.com/SpeedTest/4534/AMD-Phenomtm-II-X4-20-Processor
+CPU,,Intel,Pentium G2020,604,35.9,7850,https://cpu.userbenchmark.com/SpeedTest/3604/IntelR-PentiumR-CPU-G2020---290GHz
+CPU,,AMD,Athlon II X4 740K,605,35.9,2415,https://cpu.userbenchmark.com/SpeedTest/4559/AMD-Athlontm-X4-740-Quad-Core-Processor
+CPU,,Intel,Pentium 5405U,606,35.9,234,https://cpu.userbenchmark.com/SpeedTest/767922/IntelR-PentiumR-CPU-5405U---230GHz
+CPU,,AMD,Athlon II X4 640,607,35.8,11723,https://cpu.userbenchmark.com/SpeedTest/225/AMD-Athlontm-II-X4-640-Processor
+CPU,,Intel,Pentium G860,608,35.8,2470,https://cpu.userbenchmark.com/SpeedTest/2650/IntelR-PentiumR-CPU-G860---300GHz
+CPU,AM963PAEY44AB,AMD,A10-9630P APU (2016 M.BR),609,35.7,301,https://cpu.userbenchmark.com/SpeedTest/192670/AMD-A10-9630P-RADEON-R5-10-COMPUTE-CORES-4C-6G
+CPU,,AMD,Phenom II X4 840T,610,35.7,703,https://cpu.userbenchmark.com/SpeedTest/8545/AMD-Phenomtm-II-X4-840T-Processor
+CPU,,Intel,Xeon X5472,611,35.6,222,https://cpu.userbenchmark.com/SpeedTest/3914/IntelR-XeonR-CPU-----------X5472----300GHz
+CPU,,Intel,Xeon X5450,612,35.5,3378,https://cpu.userbenchmark.com/SpeedTest/5169/IntelR-XeonR-CPU-----------X5450----300GHz
+CPU,BX80646G1820,Intel,Celeron G1820,613,35.5,2218,https://cpu.userbenchmark.com/Intel-Celeron-G1820/Rating/1992
+CPU,,Intel,Core X 920,614,35.5,62,https://cpu.userbenchmark.com/SpeedTest/7179/IntelR-CoreTM-CPU----------X-920----200GHz
+CPU,,Intel,Xeon E5507,615,35.5,151,https://cpu.userbenchmark.com/SpeedTest/13794/IntelR-XeonR-CPU-----------E5507----227GHz
+CPU,,Intel,Pentium 4417U,616,35.4,411,https://cpu.userbenchmark.com/SpeedTest/747524/IntelR-PentiumR-CPU-4417U---230GHz
+CPU,,AMD,A8-3850 APU,617,35.3,1991,https://cpu.userbenchmark.com/SpeedTest/4311/AMD-A8-3850-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Core i3 530,618,35.2,9433,https://cpu.userbenchmark.com/SpeedTest/132/IntelR-CoreTM-i3-CPU---------530----293GHz
+CPU,,Intel,Core i3-6100U,619,35.2,15573,https://cpu.userbenchmark.com/SpeedTest/37381/IntelR-CoreTM-i3-6100U-CPU---230GHz
+CPU,,Intel,Core i3-7020U,620,35.1,6141,https://cpu.userbenchmark.com/SpeedTest/576199/IntelR-CoreTM-i3-7020U-CPU---230GHz
+CPU,,Intel,Core i7 M 640,621,35.1,2898,https://cpu.userbenchmark.com/SpeedTest/4397/IntelR-CoreTM-i7-CPU-------M-640----280GHz
+CPU,FJ8067702739932,Intel,Pentium 4415U,622,35.1,2880,https://cpu.userbenchmark.com/SpeedTest/267685/IntelR-PentiumR-CPU-4415U---230GHz
+CPU,,Intel,Core i5-2450M,623,35,27229,https://cpu.userbenchmark.com/Intel-Core-i5-2450M/Rating/2815
+CPU,,Intel,Core m3-7Y30,624,35,2453,https://cpu.userbenchmark.com/SpeedTest/196956/IntelR-CoreTM-m3-7Y30-CPU---100GHz
+CPU,,Intel,Xeon E5472,625,34.9,516,https://cpu.userbenchmark.com/SpeedTest/20269/IntelR-XeonR-CPU-----------E5472----300GHz
+CPU,,Intel,Pentium G850,626,34.9,1554,https://cpu.userbenchmark.com/SpeedTest/2522/IntelR-PentiumR-CPU-G850---290GHz
+CPU,,Intel,Core i5-4210U,627,34.9,49647,https://cpu.userbenchmark.com/SpeedTest/12662/IntelR-CoreTM-i5-4210U-CPU---170GHz
+CPU,AD5500OKHJBOX,AMD,A8-5500 APU,628,34.9,5836,https://cpu.userbenchmark.com/SpeedTest/3432/AMD-A8-5500-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,Phenom II X6 1035T,629,34.9,1611,https://cpu.userbenchmark.com/SpeedTest/1603/AMD-Phenomtm-II-X6-1035T-Processor
+CPU,,Intel,Core i7-4550U,630,34.8,200,https://cpu.userbenchmark.com/SpeedTest/6199/IntelR-CoreTM-i7-4550U-CPU---150GHz
+CPU,,Intel,Pentium G2010,631,34.6,1774,https://cpu.userbenchmark.com/SpeedTest/8691/IntelR-PentiumR-CPU-G2010---280GHz
+CPU,,AMD,Athlon II X4 641,632,34.6,626,https://cpu.userbenchmark.com/SpeedTest/1698/AMD-Athlontm-II-X4-641-Quad-Core-Processor
+CPU,,AMD,Athlon II X4 635,633,34.5,3259,https://cpu.userbenchmark.com/SpeedTest/3369/AMD-Athlontm-II-X4-635-Processor
+CPU,,AMD,Phenom II X4 925,634,34.3,3034,https://cpu.userbenchmark.com/SpeedTest/2581/AMD-Phenomtm-II-X4-925-Processor
+CPU,,Intel,Core i5-2435M,635,34.2,380,https://cpu.userbenchmark.com/SpeedTest/968/IntelR-CoreTM-i5-2435M-CPU---240GHz
+CPU,,Intel,Core2 Quad Q9550,636,34.2,21188,https://cpu.userbenchmark.com/SpeedTest/334/IntelR-CoreTM2-Quad-CPU----Q9550----283GHz
+CPU,,Intel,Core i5-2430M,637,34.2,23579,https://cpu.userbenchmark.com/SpeedTest/429/IntelR-CoreTM-i5-2430M-CPU---240GHz
+CPU,,Intel,Xeon E5440,638,34.1,2842,https://cpu.userbenchmark.com/SpeedTest/18165/IntelR-XeonR-CPU-----------E5440----283GHz
+CPU,,Intel,Pentium G645,639,34.1,3221,https://cpu.userbenchmark.com/SpeedTest/3264/IntelR-PentiumR-CPU-G645---290GHz
+CPU,,AMD,Athlon II X3 460,640,34,745,https://cpu.userbenchmark.com/SpeedTest/6695/AMD-Athlontm-II-X3-460-Processor
+CPU,,AMD,Phenom II X4 830,641,34,887,https://cpu.userbenchmark.com/SpeedTest/2164/AMD-Phenomtm-II-X4-830-Processor
+CPU,,AMD,Phenom II X4 920,642,33.9,718,https://cpu.userbenchmark.com/SpeedTest/1945/AMD-Phenomtm-II-X4-920-Processor
+CPU,,Intel,Core i3-4000M,643,33.8,4444,https://cpu.userbenchmark.com/SpeedTest/6476/IntelR-CoreTM-i3-4000M-CPU---240GHz
+CPU,,AMD,A12-9720P APU (2016 M.BR),644,33.8,7824,https://cpu.userbenchmark.com/SpeedTest/308530/AMD-A12-9720P-RADEON-R7-12-COMPUTE-CORES-4C-8G
+CPU,,Intel,Core i7 X 920,645,33.8,601,https://cpu.userbenchmark.com/SpeedTest/4179/IntelR-CoreTM-i7-CPU-------X-920----200GHz
+CPU,,Intel,Core2 Quad Q9500,646,33.7,2022,https://cpu.userbenchmark.com/SpeedTest/1778/IntelR-CoreTM2-Quad-CPU----Q9500----283GHz
+CPU,,Intel,Core i3-2120T,647,33.7,616,https://cpu.userbenchmark.com/SpeedTest/2686/IntelR-CoreTM-i3-2120T-CPU---260GHz
+CPU,,Intel,Xeon E5506,648,33.6,446,https://cpu.userbenchmark.com/SpeedTest/11152/IntelR-XeonR-CPU-----------E5506----213GHz
+CPU,,Intel,Core i5-2410M,649,33.6,25890,https://cpu.userbenchmark.com/Intel-Core-i5-2410M/Rating/2769
+CPU,,Intel,Core2 Quad Q9505,650,33.5,1332,https://cpu.userbenchmark.com/SpeedTest/3041/IntelR-CoreTM2-Quad-CPU----Q9505----283GHz
+CPU,,AMD,A6-3670 APU,651,33.5,1373,https://cpu.userbenchmark.com/SpeedTest/4657/AMD-A6-3670-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,Athlon II X4 630,652,33.5,4702,https://cpu.userbenchmark.com/SpeedTest/471/AMD-Athlontm-II-X4-630-Processor
+CPU,,Intel,Xeon E5-2660 v2,653,33.5,24,https://cpu.userbenchmark.com/SpeedTest/13068/IntelR-XeonR-CPU-E5-2660-v2---220GHz
+CPU,,Intel,Core i5 M 580,654,33.5,858,https://cpu.userbenchmark.com/SpeedTest/6113/IntelR-CoreTM-i5-CPU-------M-580----267GHz
+CPU,,Intel,Pentium G840,655,33.4,1653,https://cpu.userbenchmark.com/SpeedTest/3067/IntelR-PentiumR-CPU-G840---280GHz
+CPU,,Intel,Core i5-4250U,656,33.3,1052,https://cpu.userbenchmark.com/SpeedTest/1787/IntelR-CoreTM-i5-4250U-CPU---130GHz
+CPU,FH8068003067408,Intel,Celeron N4100,657,33.3,1173,https://cpu.userbenchmark.com/SpeedTest/407836/IntelR-CeleronR-N4100-CPU---110GHz
+CPU,,AMD,Athlon II X3 455,658,33.3,2360,https://cpu.userbenchmark.com/SpeedTest/1884/AMD-Athlontm-II-X3-455-Processor
+CPU,,Intel,Pentium G640,659,33.3,1526,https://cpu.userbenchmark.com/SpeedTest/618/IntelR-PentiumR-CPU-G640---280GHz
+CPU,,Intel,Celeron G1620,660,33.2,1638,https://cpu.userbenchmark.com/SpeedTest/6930/IntelR-CeleronR-CPU-G1620---270GHz
+CPU,,Intel,Core m5-6Y57,661,33.2,794,https://cpu.userbenchmark.com/SpeedTest/42768/IntelR-CoreTM-m5-6Y57-CPU---110GHz
+CPU,,Intel,Core i3-3120M,662,33.2,8574,https://cpu.userbenchmark.com/SpeedTest/923/IntelR-CoreTM-i3-3120M-CPU---250GHz
+CPU,,Intel,Core i5-4200U,663,33,37046,https://cpu.userbenchmark.com/Intel-Core-i5-4200U/Rating/2742
+CPU,,Intel,Core i7 M 620,664,33,5228,https://cpu.userbenchmark.com/SpeedTest/870/IntelR-CoreTM-i7-CPU-------M-620----267GHz
+CPU,,Intel,Core m5-6Y54,665,33,957,https://cpu.userbenchmark.com/SpeedTest/40602/IntelR-CoreTM-m5-6Y54-CPU---110GHz
+CPU,,Intel,Core m7-6Y75,666,32.9,1049,https://cpu.userbenchmark.com/SpeedTest/55308/IntelR-CoreTM-m7-6Y75-CPU---120GHz
+CPU,,Intel,Core i7-3517U,667,32.9,5648,https://cpu.userbenchmark.com/SpeedTest/663/IntelR-CoreTM-i7-3517U-CPU---190GHz
+CPU,,Intel,Core i5 M 560,668,32.9,7590,https://cpu.userbenchmark.com/SpeedTest/623/IntelR-CoreTM-i5-CPU-------M-560----267GHz
+CPU,,Intel,Core i5-2415M,669,32.8,433,https://cpu.userbenchmark.com/SpeedTest/4223/IntelR-CoreTM-i5-2415M-CPU---230GHz
+CPU,,Intel,Core i5-3437U,670,32.8,2110,https://cpu.userbenchmark.com/SpeedTest/4219/IntelR-CoreTM-i5-3437U-CPU---190GHz
+CPU,FM980PADY44AB,AMD,FX-9800P APU (2016 M.BR),671,32.5,1920,https://cpu.userbenchmark.com/SpeedTest/141405/AMD-FX-9800P-RADEON-R7-12-COMPUTE-CORES-4C-8G
+CPU,,Intel,Core i5-3427U,672,32.5,2422,https://cpu.userbenchmark.com/SpeedTest/909/IntelR-CoreTM-i5-3427U-CPU---180GHz
+CPU,,Intel,Xeon E5430,673,32.3,1602,https://cpu.userbenchmark.com/SpeedTest/16038/IntelR-XeonR-CPU-----------E5430----266GHz
+CPU,,Intel,Core i5 M 480,674,32.3,9767,https://cpu.userbenchmark.com/SpeedTest/3496/IntelR-CoreTM-i5-CPU-------M-480----267GHz
+CPU,,AMD,Athlon II X3 450,675,32.2,2906,https://cpu.userbenchmark.com/SpeedTest/91/AMD-Athlontm-II-X3-450-Processor
+CPU,,Intel,Core i3-3110M,676,32.1,19766,https://cpu.userbenchmark.com/SpeedTest/844/IntelR-CoreTM-i3-3110M-CPU---240GHz
+CPU,,AMD,Phenom II X4 910e,677,32.1,153,https://cpu.userbenchmark.com/SpeedTest/10427/AMD-Phenomtm-II-X4-910e-Processor
+CPU,,Intel,Core i5-3337U,678,32,18972,https://cpu.userbenchmark.com/SpeedTest/737/IntelR-CoreTM-i5-3337U-CPU---180GHz
+CPU,,AMD,A6-3650 APU,679,32,1754,https://cpu.userbenchmark.com/SpeedTest/1954/AMD-A6-3650-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,Athlon II X4 631,680,31.9,866,https://cpu.userbenchmark.com/SpeedTest/2944/AMD-Athlontm-II-X4-631-Quad-Core-Processor
+CPU,,Intel,Core2 Quad Q9450,681,31.8,4284,https://cpu.userbenchmark.com/SpeedTest/765/IntelR-CoreTM2-Quad--CPU---Q9450----266GHz
+CPU,,Intel,Xeon E5462,682,31.7,395,https://cpu.userbenchmark.com/SpeedTest/16556/IntelR-XeonR-CPU-----------E5462----280GHz
+CPU,FJ8066201930905,Intel,Pentium 4405U,683,31.7,1932,https://cpu.userbenchmark.com/SpeedTest/54474/IntelR-PentiumR-CPU-4405U---210GHz
+CPU,,AMD,A10-6700T APU (2013 D.Ri),684,31.7,50,https://cpu.userbenchmark.com/SpeedTest/5691/AMD-A10-6700T-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Pentium G630,685,31.6,6745,https://cpu.userbenchmark.com/SpeedTest/3112/IntelR-PentiumR-CPU-G630---270GHz
+CPU,AD9500AGABBOX,AMD,A6-9500 APU (2016 D.BR),686,31.5,937,https://cpu.userbenchmark.com/SpeedTest/302063/AMD-A6-9500-RADEON-R5-8-COMPUTE-CORES-2C-6G
+CPU,,Intel,Core i7 Q 840,687,31.5,752,https://cpu.userbenchmark.com/SpeedTest/2642/IntelR-CoreTM-i7-CPU-------Q-840----187GHz
+CPU,,AMD,Athlon II X3 445,688,31.4,1976,https://cpu.userbenchmark.com/SpeedTest/1775/AMD-Athlontm-II-X3-445-Processor
+CPU,,Intel,Core2 Quad Q9400,689,31.3,14967,https://cpu.userbenchmark.com/SpeedTest/244/IntelR-CoreTM2-Quad-CPU----Q9400----266GHz
+CPU,,AMD,Phenom II X4 810,690,31.3,1478,https://cpu.userbenchmark.com/SpeedTest/4242/AMD-Phenomtm-II-X4-810-Processor
+CPU,,Intel,Core2 Quad Q8400,691,31.2,9647,https://cpu.userbenchmark.com/SpeedTest/1663/IntelR-CoreTM2-Quad-CPU----Q8400----266GHz
+CPU,,Intel,Core i3-5010U,692,31.2,6393,https://cpu.userbenchmark.com/SpeedTest/23565/IntelR-CoreTM-i3-5010U-CPU---210GHz
+CPU,,AMD,Athlon II X4 620,693,31.2,3967,https://cpu.userbenchmark.com/SpeedTest/3430/AMD-Athlontm-II-X4-620-Processor
+CPU,,Intel,Xeon E5504,694,31.2,300,https://cpu.userbenchmark.com/SpeedTest/6261/IntelR-XeonR-CPU-----------E5504----200GHz
+CPU,,AMD,A10-9620P APU (2016 M.BR),695,31.2,2977,https://cpu.userbenchmark.com/SpeedTest/300068/AMD-A10-9620P-RADEON-R5-10-COMPUTE-CORES-4C-6G
+CPU,,Intel,Celeron G1610,696,31.1,2755,https://cpu.userbenchmark.com/SpeedTest/3109/IntelR-CeleronR-CPU-G1610---260GHz
+CPU,,Intel,Core i5 M 460,697,31.1,10503,https://cpu.userbenchmark.com/SpeedTest/126/IntelR-CoreTM-i5-CPU-------M-460----253GHz
+CPU,AM970PADY44AB,AMD,A12-9700P APU (2016 M.BR),698,31,3561,https://cpu.userbenchmark.com/SpeedTest/148571/AMD-A12-9700P-RADEON-R7-10-COMPUTE-CORES-4C-6G
+CPU,,AMD,Phenom II X4 905e,699,31,253,https://cpu.userbenchmark.com/SpeedTest/3420/AMD-Phenomtm-II-X4-905e-Processor
+CPU,,Intel,Pentium G620,700,31,6395,https://cpu.userbenchmark.com/SpeedTest/2636/IntelR-PentiumR-CPU-G620---260GHz
+CPU,,AMD,A6-7470K APU (2014 D.Ka),701,30.9,125,https://cpu.userbenchmark.com/SpeedTest/129200/AMD-A6-7470K-Radeon-R5-6-Compute-Cores-2C-4G
+CPU,,Intel,Pentium G6950,702,30.9,629,https://cpu.userbenchmark.com/SpeedTest/638/IntelR-PentiumR-CPU--------G6950----280GHz
+CPU,,Intel,Core i5 M 540,703,30.9,5575,https://cpu.userbenchmark.com/SpeedTest/882/IntelR-CoreTM-i5-CPU-------M-540----253GHz
+CPU,,AMD,FX-7600P APU (2014 M.Ka),704,30.8,681,https://cpu.userbenchmark.com/SpeedTest/23736/AMD-FX-7600P-Radeon-R7-12-Compute-Cores-4C-8G
+CPU,,Intel,Core M-5Y71,705,30.6,1752,https://cpu.userbenchmark.com/SpeedTest/24191/IntelR-CoreTM-M-5Y71-CPU---120GHz
+CPU,,Intel,Pentium J4205,706,30.6,500,https://cpu.userbenchmark.com/SpeedTest/221469/IntelR-PentiumR-CPU-J4205---150GHz
+CPU,,AMD,Phenom 9950,707,30.5,1320,https://cpu.userbenchmark.com/SpeedTest/2758/AMD-Phenomtm-9950-Quad-Core-Processor
+CPU,,AMD,A8-3800 APU,708,30.4,845,https://cpu.userbenchmark.com/SpeedTest/7059/AMD-A8-3800-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,Athlon II X3 440,709,30.4,1441,https://cpu.userbenchmark.com/SpeedTest/5315/AMD-Athlontm-II-X3-440-Processor
+CPU,,Intel,Core2 Extreme Q6850,710,30.3,766,https://cpu.userbenchmark.com/SpeedTest/7118/IntelR-CoreTM2-Extreme-CPU-Q6850----300GHz
+CPU,,Intel,Core i5 M 520,711,30.2,14472,https://cpu.userbenchmark.com/SpeedTest/812/IntelR-CoreTM-i5-CPU-------M-520----240GHz
+CPU,,Intel,Core i5-3317U,712,30.2,16896,https://cpu.userbenchmark.com/Intel-Core-i5-3317U/Rating/2744
+CPU,,Intel,Celeron G550,713,30.1,1084,https://cpu.userbenchmark.com/SpeedTest/5014/IntelR-CeleronR-CPU-G550---260GHz
+CPU,,Intel,Core i3-6006U,714,30.1,20802,https://cpu.userbenchmark.com/SpeedTest/214467/IntelR-CoreTM-i3-6006U-CPU---200GHz
+CPU,,Intel,Xeon L5420,715,30.1,766,https://cpu.userbenchmark.com/SpeedTest/10433/IntelR-XeonR-CPU-----------L5420----250GHz
+CPU,,Intel,Core m3-6Y30,716,30,3542,https://cpu.userbenchmark.com/SpeedTest/38171/IntelR-CoreTM-m3-6Y30-CPU---090GHz
+CPU,,Intel,Xeon E5-2603 0,717,29.8,125,https://cpu.userbenchmark.com/SpeedTest/4629/IntelR-XeonR-CPU-E5-2603-0---180GHz
+CPU,,Intel,Core i3-5015U,718,29.8,2117,https://cpu.userbenchmark.com/SpeedTest/32615/IntelR-CoreTM-i3-5015U-CPU---210GHz
+CPU,,Intel,Pentium 3550M,719,29.8,386,https://cpu.userbenchmark.com/SpeedTest/9225/IntelR-PentiumR-CPU-3550M---230GHz
+CPU,,Intel,Core i7-2637M,720,29.7,422,https://cpu.userbenchmark.com/SpeedTest/5436/IntelR-CoreTM-i7-2637M-CPU---170GHz
+CPU,,AMD,A6-6400K APU,721,29.7,6939,https://cpu.userbenchmark.com/SpeedTest/3048/AMD-A6-6400K-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Pentium N4200,722,29.7,6578,https://cpu.userbenchmark.com/SpeedTest/196248/IntelR-PentiumR-CPU-N4200---110GHz
+CPU,,Intel,Core i5 M 450,723,29.7,4991,https://cpu.userbenchmark.com/SpeedTest/2006/IntelR-CoreTM-i5-CPU-------M-450----240GHz
+CPU,,AMD,Phenom 9850,724,29.5,1464,https://cpu.userbenchmark.com/SpeedTest/2967/AMD-Phenomtm-9850-Quad-Core-Processor
+CPU,,Intel,Core2 Extreme Q9300,725,29.5,428,https://cpu.userbenchmark.com/SpeedTest/4063/IntelR-CoreTM2-Extreme-CPU-Q9300----253GHz
+CPU,,Intel,Core i3 M 390,726,29.5,529,https://cpu.userbenchmark.com/SpeedTest/8797/IntelR-CoreTM-i3-CPU-------M-390----267GHz
+CPU,,Intel,Xeon E5420,727,29.4,918,https://cpu.userbenchmark.com/SpeedTest/11278/IntelR-XeonR-CPU-----------E5420----250GHz
+CPU,,AMD,Phenom II X3 720,728,29.3,1939,https://cpu.userbenchmark.com/SpeedTest/326/AMD-Phenomtm-II-X3-720-Processor
+CPU,,Intel,Core i3-5005U,729,29.3,27840,https://cpu.userbenchmark.com/SpeedTest/24957/IntelR-CoreTM-i3-5005U-CPU---200GHz
+CPU,,Intel,Core i7-2677M,730,29.3,514,https://cpu.userbenchmark.com/SpeedTest/4939/IntelR-CoreTM-i7-2677M-CPU---180GHz
+CPU,,Intel,Core i3-2370M,731,29.3,5384,https://cpu.userbenchmark.com/SpeedTest/1959/IntelR-CoreTM-i3-2370M-CPU---240GHz
+CPU,,AMD,A6-7400K APU (2014 D.Ka),732,29.3,4810,https://cpu.userbenchmark.com/SpeedTest/16549/AMD-A6-7400K-Radeon-R5-6-Compute-Cores-2C-4G
+CPU,,Intel,Core2 Quad Q9300,733,29.2,6772,https://cpu.userbenchmark.com/SpeedTest/832/IntelR-CoreTM2-Quad--CPU---Q9300----250GHz
+CPU,,Intel,Celeron G540,734,29.2,899,https://cpu.userbenchmark.com/SpeedTest/5981/IntelR-CeleronR-CPU-G540---250GHz
+CPU,,AMD,A9-9430 APU (2016 M.SR),735,29.2,437,https://cpu.userbenchmark.com/SpeedTest/303175/AMD-A9-9430-RADEON-R5-5-COMPUTE-CORES-2C-3G
+CPU,,AMD,Athlon II X3 435,736,29.1,1141,https://cpu.userbenchmark.com/SpeedTest/2024/AMD-Athlontm-II-X3-435-Processor
+CPU,,Intel,Pentium 2020M,737,29.1,5208,https://cpu.userbenchmark.com/SpeedTest/1723/IntelR-PentiumR-CPU-2020M---240GHz
+CPU,,Intel,Core2 Quad Q8300,738,29.1,11954,https://cpu.userbenchmark.com/SpeedTest/1930/IntelR-CoreTM2-Quad-CPU----Q8300----250GHz
+CPU,AD9500AHABBOX,AMD,A6-9500E APU (2016 D.BR),739,28.9,124,https://cpu.userbenchmark.com/SpeedTest/340618/AMD-A6-9500E-RADEON-R5-6-COMPUTE-CORES-2C-4G
+CPU,,Intel,Core i7 Q 740,740,28.9,7865,https://cpu.userbenchmark.com/SpeedTest/415/IntelR-CoreTM-i7-CPU-------Q-740----173GHz
+CPU,,AMD,Phenom II X2 565,741,28.9,230,https://cpu.userbenchmark.com/SpeedTest/2173/AMD-Phenomtm-II-X2-565-Processor
+CPU,AM960PADY44AB,AMD,A10-9600P APU (2016 M.BR),742,28.9,6558,https://cpu.userbenchmark.com/SpeedTest/136279/AMD-A10-9600P-RADEON-R5-10-COMPUTE-CORES-4C-6G
+CPU,,Intel,Core i7 Q 820,743,28.9,1410,https://cpu.userbenchmark.com/SpeedTest/3571/IntelR-CoreTM-i7-CPU-------Q-820----173GHz
+CPU,,AMD,A10-5750M APU,744,28.8,5129,https://cpu.userbenchmark.com/SpeedTest/3779/AMD-A10-5750M-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Celeron J3455,745,28.6,1456,https://cpu.userbenchmark.com/SpeedTest/200485/IntelR-CeleronR-CPU-J3455---150GHz
+CPU,,Intel,Core i3 M 380,746,28.6,11643,https://cpu.userbenchmark.com/SpeedTest/919/IntelR-CoreTM-i3-CPU-------M-380----253GHz
+CPU,,Intel,Core M-5Y70,747,28.5,521,https://cpu.userbenchmark.com/SpeedTest/16573/IntelR-Processor-5Y70-CPU---110GHz
+CPU,,Intel,Core i7 L 640,748,28.4,1409,https://cpu.userbenchmark.com/SpeedTest/4880/IntelR-CoreTM-i7-CPU-------L-640----213GHz
+CPU,,Intel,Core i5 M 430,749,28.4,8638,https://cpu.userbenchmark.com/SpeedTest/34/IntelR-CoreTM-i5-CPU-------M-430----227GHz
+CPU,,Intel,Core i7-3689Y,750,28.3,34,https://cpu.userbenchmark.com/SpeedTest/4592/IntelR-CoreTM-i7-3689Y-CPU---150GHz
+CPU,,Intel,Core i3-2350M,751,28.3,13120,https://cpu.userbenchmark.com/SpeedTest/934/IntelR-CoreTM-i3-2350M-CPU---230GHz
+CPU,,AMD,A4-6320 APU,752,28.3,386,https://cpu.userbenchmark.com/SpeedTest/12932/AMD-A4-6320-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Core M-5Y10,753,28.3,367,https://cpu.userbenchmark.com/SpeedTest/17561/IntelR-Processor-5Y10-CPU---080GHz
+CPU,,Intel,Core i3-2348M,754,28.2,2603,https://cpu.userbenchmark.com/SpeedTest/2278/IntelR-CoreTM-i3-2348M-CPU---230GHz
+CPU,FH8068003067416,Intel,Celeron J4005,755,28.2,345,https://cpu.userbenchmark.com/SpeedTest/473105/IntelR-CeleronR-J4005-CPU---200GHz
+CPU,,Intel,Celeron G530,756,28.1,2131,https://cpu.userbenchmark.com/SpeedTest/229/IntelR-CeleronR-CPU-G530---240GHz
+CPU,,Intel,Xeon W3505,757,28.1,448,https://cpu.userbenchmark.com/SpeedTest/12714/IntelR-XeonR-CPU-----------W3505----253GHz
+CPU,,AMD,Phenom 9750,758,28,1379,https://cpu.userbenchmark.com/SpeedTest/2439/AMD-Phenomtm-9750-Quad-Core-Processor
+CPU,,Intel,Core i5-2557M,759,28,452,https://cpu.userbenchmark.com/SpeedTest/5422/IntelR-CoreTM-i5-2557M-CPU---170GHz
+CPU,,Intel,Core2 Duo E8600,760,28,3605,https://cpu.userbenchmark.com/SpeedTest/124/IntelR-CoreTM2-Duo-CPU-----E8600----333GHz
+CPU,,AMD,A6-3620 APU,761,27.9,1728,https://cpu.userbenchmark.com/SpeedTest/8057/AMD-A6-3620-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,Athlon II X2 265,762,27.8,436,https://cpu.userbenchmark.com/SpeedTest/986/AMD-Athlontm-II-X2-265-Processor
+CPU,,AMD,Athlon II X2 270,763,27.8,3909,https://cpu.userbenchmark.com/SpeedTest/1939/AMD-Athlontm-II-X2-270-Processor
+CPU,,AMD,A4-6300 APU,764,27.6,6907,https://cpu.userbenchmark.com/SpeedTest/10639/AMD-A4-6300-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,Phenom II X2 560,765,27.4,1204,https://cpu.userbenchmark.com/SpeedTest/5408/AMD-Phenomtm-II-X2-560-Processor
+CPU,,AMD,A8-7200P APU (2014 M.Ka),766,27.4,88,https://cpu.userbenchmark.com/SpeedTest/64755/AMD-A8-7200P-Radeon-R5-8-Compute-Cores-4C-4G
+CPU,,Intel,Core M-5Y10c,767,27.4,1829,https://cpu.userbenchmark.com/SpeedTest/23759/IntelR-CoreTM-M-5Y10c-CPU---080GHz
+CPU,,AMD,A10-7400P APU (2014 M.Ka),768,27.3,826,https://cpu.userbenchmark.com/SpeedTest/26875/AMD-A10-7400P-Radeon-R6-10-Compute-Cores-4C-6G
+CPU,,Intel,Core i3-4030U,769,27.3,13774,https://cpu.userbenchmark.com/SpeedTest/13661/IntelR-CoreTM-i3-4030U-CPU---190GHz
+CPU,,Intel,Core2 Quad Q6700,770,27.3,4042,https://cpu.userbenchmark.com/SpeedTest/3748/IntelR-CoreTM2-Quad-CPU----Q6700----266GHz
+CPU,,AMD,A6-5400K APU,771,27.2,4417,https://cpu.userbenchmark.com/SpeedTest/4113/AMD-A6-5400K-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Core2 Quad Q8200,772,27.2,11551,https://cpu.userbenchmark.com/SpeedTest/3754/IntelR-CoreTM2-Quad--CPU---Q8200----233GHz
+CPU,,AMD,Athlon II X3 425,773,27.2,897,https://cpu.userbenchmark.com/SpeedTest/2178/AMD-Athlontm-II-X3-425-Processor
+CPU,,AMD,Phenom II X2 555,774,27.1,3164,https://cpu.userbenchmark.com/SpeedTest/2917/AMD-Phenomtm-II-X2-555-Processor
+CPU,,Intel,Core M-5Y31,775,27,59,https://cpu.userbenchmark.com/SpeedTest/33034/IntelR-CoreTM-M-5Y31-CPU---090GHz
+CPU,,Intel,Core i3 M 370,776,26.9,13928,https://cpu.userbenchmark.com/SpeedTest/259/IntelR-CoreTM-i3-CPU-------M-370----240GHz
+CPU,,Intel,Core i3-2330M,777,26.8,10310,https://cpu.userbenchmark.com/SpeedTest/1853/IntelR-CoreTM-i3-2330M-CPU---220GHz
+CPU,,Intel,Pentium II processor,778,26.8,32,https://cpu.userbenchmark.com/SpeedTest/167/Intel-Pentium-II-processor
+CPU,,Intel,Pentium B980,779,26.8,2227,https://cpu.userbenchmark.com/SpeedTest/6036/IntelR-PentiumR-CPU-B980---240GHz
+CPU,,Intel,Core i7 Q 720,780,26.7,10749,https://cpu.userbenchmark.com/SpeedTest/140/IntelR-CoreTM-i7-CPU-------Q-720----160GHz
+CPU,,AMD,Phenom 9650,781,26.7,2162,https://cpu.userbenchmark.com/SpeedTest/5238/AMD-Phenomtm-9650-Quad-Core-Processor
+CPU,,AMD,A10-4600M APU,782,26.7,3279,https://cpu.userbenchmark.com/SpeedTest/1051/AMD-A10-4600M-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,Phenom II X3 710,783,26.6,623,https://cpu.userbenchmark.com/SpeedTest/2275/AMD-Phenomtm-II-X3-710-Processor
+CPU,,Intel,Xeon W3503,784,26.6,974,https://cpu.userbenchmark.com/SpeedTest/3723/IntelR-XeonR-CPU-----------W3503----240GHz
+CPU,,Intel,Celeron N3450,785,26.6,3592,https://cpu.userbenchmark.com/SpeedTest/208922/IntelR-CeleronR-CPU-N3450---110GHz
+CPU,,AMD,A10-5757M APU,786,26.6,863,https://cpu.userbenchmark.com/SpeedTest/7160/AMD-A10-5757M-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,A9-9425 APU (2016 M.SR),787,26.5,4132,https://cpu.userbenchmark.com/SpeedTest/496441/AMD-A9-9425-RADEON-R5-5-COMPUTE-CORES-2C-3G
+CPU,,AMD,Athlon II X2 260,788,26.4,3398,https://cpu.userbenchmark.com/SpeedTest/4651/AMD-Athlontm-II-X2-260-Processor
+CPU,FH8068003067417,Intel,Celeron N4000,789,26.4,3322,https://cpu.userbenchmark.com/SpeedTest/503050/IntelR-CeleronR-N4000-CPU---110GHz
+CPU,,Intel,Core M-5Y51,790,26.4,308,https://cpu.userbenchmark.com/SpeedTest/24458/IntelR-CoreTM-M-5Y51-CPU---110GHz
+CPU,,Intel,Pentium E6800,791,26.3,472,https://cpu.userbenchmark.com/SpeedTest/4231/PentiumR-Dual-Core--CPU------E6800----333GHz
+CPU,,AMD,A9-9420 APU (2016 M.SR),792,26.2,7473,https://cpu.userbenchmark.com/SpeedTest/297050/AMD-A9-9420-RADEON-R5-5-COMPUTE-CORES-2C-3G
+CPU,,Intel,Core2 Duo E8500,793,26.2,13444,https://cpu.userbenchmark.com/SpeedTest/13/IntelR-CoreTM2-Duo-CPU-----E8500----316GHz
+CPU,,AMD,Phenom II X2 550,794,26.1,2549,https://cpu.userbenchmark.com/SpeedTest/2418/AMD-Phenomtm-II-X2-550-Processor
+CPU,,AMD,Phenom 9600,795,26.1,721,https://cpu.userbenchmark.com/SpeedTest/7248/AMD-Phenomtm-9600-Quad-Core-Processor
+CPU,,AMD,A9-9410 APU (2016 M.SR),796,26.1,3529,https://cpu.userbenchmark.com/SpeedTest/137162/AMD-A9-9410-RADEON-R5-5-COMPUTE-CORES-2C-3G
+CPU,,Intel,Core i3-2328M,797,26,4369,https://cpu.userbenchmark.com/SpeedTest/2488/IntelR-CoreTM-i3-2328M-CPU---220GHz
+CPU,,Intel,Pentium E6700,798,26,2753,https://cpu.userbenchmark.com/SpeedTest/2030/PentiumR-Dual-Core--CPU------E6700----320GHz
+CPU,,AMD,Phenom 9550,799,25.8,1074,https://cpu.userbenchmark.com/SpeedTest/2319/AMD-Phenomtm-9550-Quad-Core-Processor
+CPU,,Intel,Pentium B970,800,25.8,1805,https://cpu.userbenchmark.com/SpeedTest/559/IntelR-PentiumR-CPU-B970---230GHz
+CPU,,Intel,Core i3-2310M,801,25.7,13255,https://cpu.userbenchmark.com/SpeedTest/159/IntelR-CoreTM-i3-2310M-CPU---210GHz
+CPU,,AMD,Athlon II X2 255,802,25.7,2520,https://cpu.userbenchmark.com/SpeedTest/6225/AMD-Athlontm-II-X2-255-Processor
+CPU,,Intel,Core i3 M 350,803,25.6,7901,https://cpu.userbenchmark.com/SpeedTest/572/IntelR-CoreTM-i3-CPU-------M-350----227GHz
+CPU,,AMD,A8-5550M APU,804,25.6,2038,https://cpu.userbenchmark.com/SpeedTest/5035/AMD-A8-5550M-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,A4-5300 APU,805,25.5,4038,https://cpu.userbenchmark.com/SpeedTest/3554/AMD-A4-5300-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Pentium E5800,806,25.3,5272,https://cpu.userbenchmark.com/SpeedTest/3092/PentiumR-Dual-Core--CPU------E5800----320GHz
+CPU,,Intel,Xeon E3110,807,25.2,230,https://cpu.userbenchmark.com/SpeedTest/4226/IntelR-XeonR-CPU-----------E3110----300GHz
+CPU,,AMD,Athlon 64 X2 Dual Core 6400+,808,25.2,628,https://cpu.userbenchmark.com/SpeedTest/5653/AMD-Athlontm-64-X2-Dual-Core-Processor-6400-
+CPU,,Intel,Core i7 L 620,809,25.2,265,https://cpu.userbenchmark.com/SpeedTest/952/IntelR-CoreTM-i7-CPU-------L-620----200GHz
+CPU,,AMD,Athlon II X2 250 (2013 D.Ri),810,25.2,13118,https://cpu.userbenchmark.com/SpeedTest/1064/AMD-Athlontm-II-X2-250-Processor
+CPU,,Intel,Xeon X3220,811,25.1,509,https://cpu.userbenchmark.com/SpeedTest/4801/IntelR-XeonR-CPU-----------X3220----240GHz
+CPU,,Intel,Core2 Extreme X9100,812,25.1,402,https://cpu.userbenchmark.com/SpeedTest/6202/IntelR-CoreTM2-Extreme-CPU-X9100----306GHz
+CPU,,Intel,Pentium 3805U,813,25.1,487,https://cpu.userbenchmark.com/SpeedTest/34360/IntelR-PentiumR-3805U---190GHz
+CPU,,Intel,Core2 Quad,814,25.1,3798,https://cpu.userbenchmark.com/SpeedTest/374/IntelR-CoreTM2-Quad-CPU-------------240GHz
+CPU,,Intel,Core M-5Y10a,815,25,8,https://cpu.userbenchmark.com/SpeedTest/26061/IntelR-Processor-5Y10a-CPU---080GHz
+CPU,BX80562Q6600,Intel,Core2 Quad Q6600,816,25,42383,https://cpu.userbenchmark.com/Intel-Core2-Quad-Q6600/Rating/1980
+CPU,,Intel,Core2 Duo E7600,817,24.9,2385,https://cpu.userbenchmark.com/SpeedTest/4924/IntelR-CoreTM2-Duo-CPU-----E7600----306GHz
+CPU,,AMD,Phenom II X2 545,818,24.9,697,https://cpu.userbenchmark.com/SpeedTest/8398/AMD-Phenomtm-II-X2-545-Processor
+CPU,,AMD,FX-7500 APU (2014 M.Ka),819,24.9,2359,https://cpu.userbenchmark.com/SpeedTest/16010/AMD-FX-7500-Radeon-R7-10-Compute-Cores-4C-6G
+CPU,,AMD,A8-3530MX APU,820,24.9,299,https://cpu.userbenchmark.com/SpeedTest/1796/AMD-A8-3530MX-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,Athlon II X2 B24,821,24.9,1138,https://cpu.userbenchmark.com/SpeedTest/6359/AMD-Athlontm-II-X2-B24-Processor
+CPU,,Intel,Core i5-4300Y,822,24.8,546,https://cpu.userbenchmark.com/SpeedTest/8659/IntelR-CoreTM-i5-4300Y-CPU---160GHz
+CPU,,AMD,Phenom 9500,823,24.7,1328,https://cpu.userbenchmark.com/SpeedTest/1692/AMD-Phenomtm-9500-Quad-Core-Processor
+CPU,,Intel,Core2 Duo E8400,824,24.6,48048,https://cpu.userbenchmark.com/Intel-Core2-Duo-E8400/Rating/2720
+CPU,,Intel,Pentium B960,825,24.4,7086,https://cpu.userbenchmark.com/SpeedTest/1038/IntelR-PentiumR-CPU-B960---220GHz
+CPU,,AMD,A8-3510MX APU,826,24.3,332,https://cpu.userbenchmark.com/SpeedTest/5873/AMD-A8-3510MX-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Core2 Duo T9900,827,24.2,668,https://cpu.userbenchmark.com/SpeedTest/972/IntelR-CoreTM2-Duo-CPU-----T9900----306GHz
+CPU,,AMD,Phenom II N950,828,24.2,181,https://cpu.userbenchmark.com/SpeedTest/213/AMD-Phenomtm-II-N950-Quad-Core-Processor
+CPU,,AMD,A9-9400 APU (2016 M.SR),829,24.2,1011,https://cpu.userbenchmark.com/SpeedTest/188753/AMD-A9-9400-RADEON-R5-5-COMPUTE-CORES-2C-3G
+CPU,,Intel,Pentium E6600,830,24.2,2731,https://cpu.userbenchmark.com/SpeedTest/988/PentiumR-Dual-Core--CPU------E6600----306GHz
+CPU,,Intel,Core i3-4010U,831,24.1,6865,https://cpu.userbenchmark.com/SpeedTest/4821/IntelR-CoreTM-i3-4010U-CPU---170GHz
+CPU,,AMD,Phenom II N660,832,24.1,288,https://cpu.userbenchmark.com/SpeedTest/9034/AMD-Phenomtm-II-N660-Dual-Core-Processor
+CPU,,Intel,Core i3-3227U,833,24.1,4010,https://cpu.userbenchmark.com/SpeedTest/5042/IntelR-CoreTM-i3-3227U-CPU---190GHz
+CPU,,AMD,Athlon II X2 245,834,24,4025,https://cpu.userbenchmark.com/SpeedTest/2018/AMD-Athlontm-II-X2-245-Processor
+CPU,HE8067702740018,Intel,Pentium Gold 4415Y,835,24,1013,https://cpu.userbenchmark.com/SpeedTest/549016/IntelR-PentiumR-CPU-4415Y---160GHz
+CPU,,Intel,Core i3 M 330,836,23.9,8307,https://cpu.userbenchmark.com/SpeedTest/484/IntelR-CoreTM-i3-CPU-------M-330----213GHz
+CPU,,Intel,Xeon E5345,837,23.9,208,https://cpu.userbenchmark.com/SpeedTest/10151/IntelR-XeonR-CPU-----------E5345----233GHz
+CPU,,Intel,Core2 Duo T9800,838,23.9,377,https://cpu.userbenchmark.com/SpeedTest/7044/IntelR-CoreTM2-Duo-CPU-----T9800----293GHz
+CPU,,Intel,Core i3-4005U,839,23.8,20210,https://cpu.userbenchmark.com/SpeedTest/7028/IntelR-CoreTM-i3-4005U-CPU---170GHz
+CPU,,AMD,A10-5745M APU,840,23.7,4175,https://cpu.userbenchmark.com/SpeedTest/4194/AMD-A10-5745M-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,Athlon 64 X2 Dual Core 6000+,841,23.7,4212,https://cpu.userbenchmark.com/SpeedTest/5708/AMD-Athlontm-64-X2-Dual-Core-Processor-6000-
+CPU,,Intel,Xeon E5405,842,23.7,463,https://cpu.userbenchmark.com/SpeedTest/25434/IntelR-XeonR-CPU-----------E5405----200GHz
+CPU,,AMD,A8-7410 APU (2015 M.Ca),843,23.7,15612,https://cpu.userbenchmark.com/SpeedTest/33754/AMD-A8-7410-APU-with-AMD-Radeon-R5-Graphics
+CPU,,AMD,Athlon II X2 240,844,23.6,4482,https://cpu.userbenchmark.com/SpeedTest/4133/AMD-Athlontm-II-X2-240-Processor
+CPU,,Intel,Pentium E6500,845,23.5,3110,https://cpu.userbenchmark.com/SpeedTest/720/PentiumR-Dual-Core--CPU------E6500----293GHz
+CPU,,Intel,Core2 Duo E7500,846,23.5,23140,https://cpu.userbenchmark.com/SpeedTest/987/IntelR-CoreTM2-Duo-CPU-----E7500----293GHz
+CPU,,AMD,A6-3500 APU,847,23.5,1582,https://cpu.userbenchmark.com/SpeedTest/4150/AMD-A6-3500-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,Athlon 7850,848,23.4,417,https://cpu.userbenchmark.com/SpeedTest/2660/AMD-Athlontm-7850-Dual-Core-Processor
+CPU,,Intel,Core i5-2467M,849,23.3,2341,https://cpu.userbenchmark.com/SpeedTest/854/IntelR-CoreTM-i5-2467M-CPU---160GHz
+CPU,,Intel,Core2 Duo E8300,850,23.2,944,https://cpu.userbenchmark.com/SpeedTest/1068/IntelR-CoreTM2-Duo-CPU-----E8300----283GHz
+CPU,,Intel,Core i3-3217U,851,23.2,15221,https://cpu.userbenchmark.com/SpeedTest/1643/IntelR-CoreTM-i3-3217U-CPU---180GHz
+CPU,,Intel,Core2 Quad Q9000,852,23.2,572,https://cpu.userbenchmark.com/SpeedTest/5898/IntelR-CoreTM2-Quad--CPU---Q9000----200GHz
+CPU,,Intel,Pentium E5700,853,23.1,10701,https://cpu.userbenchmark.com/SpeedTest/976/PentiumR-Dual-Core--CPU------E5700----300GHz
+CPU,,Intel,Pentium B950,854,23.1,3748,https://cpu.userbenchmark.com/SpeedTest/1968/IntelR-PentiumR-CPU-B950---210GHz
+CPU,,AMD,Athlon II X2 220,855,23,3071,https://cpu.userbenchmark.com/SpeedTest/5455/AMD-Athlontm-II-X2-220-Processor
+CPU,,AMD,Phenom 8650 Triple-Core,856,22.9,965,https://cpu.userbenchmark.com/SpeedTest/4548/AMD-Phenomtm-8650-Triple-Core-Processor
+CPU,,Intel,Core i5-4210Y,857,22.9,411,https://cpu.userbenchmark.com/SpeedTest/6358/IntelR-CoreTM-i5-4210Y-CPU---150GHz
+CPU,,AMD,Phenom II N930,858,22.8,350,https://cpu.userbenchmark.com/SpeedTest/6654/AMD-Phenomtm-II-N930-Quad-Core-Processor
+CPU,,AMD,Athlon X2 240,859,22.8,179,https://cpu.userbenchmark.com/SpeedTest/8553/AMD-Athlontm-X2-240-Processor
+CPU,HE8067702740013,Intel,Pentium 4410Y,860,22.8,43,https://cpu.userbenchmark.com/SpeedTest/315867/IntelR-PentiumR-CPU-4410Y---150GHz
+CPU,,Intel,Pentium B940,861,22.7,2053,https://cpu.userbenchmark.com/SpeedTest/2724/IntelR-PentiumR-CPU-B940---200GHz
+CPU,,AMD,A8-4500M APU,862,22.7,6171,https://cpu.userbenchmark.com/SpeedTest/758/AMD-A8-4500M-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Core2 Duo E7400,863,22.7,8920,https://cpu.userbenchmark.com/SpeedTest/2077/IntelR-CoreTM2-Duo-CPU-----E7400----280GHz
+CPU,,Intel,Celeron 1005M,864,22.7,1690,https://cpu.userbenchmark.com/SpeedTest/5234/IntelR-CeleronR-CPU-1005M---190GHz
+CPU,,AMD,A4-4000 APU,865,22.7,3601,https://cpu.userbenchmark.com/SpeedTest/8144/AMD-A4-4000-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,A8-6410 APU R5 Graphics,866,22.7,12251,https://cpu.userbenchmark.com/SpeedTest/12263/AMD-A8-6410-APU-with-AMD-Radeon-R5-Graphics
+CPU,,AMD,A6-7310 APU (2015 M.Ca),867,22.6,5542,https://cpu.userbenchmark.com/SpeedTest/42196/AMD-A6-7310-APU-with-AMD-Radeon-R4-Graphics
+CPU,,AMD,A10-4655M APU,868,22.6,1189,https://cpu.userbenchmark.com/SpeedTest/6343/AMD-A10-4655M-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,A4-3400 APU,869,22.6,1501,https://cpu.userbenchmark.com/SpeedTest/6076/AMD-A4-3400-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Core2 Duo P9700,870,22.6,316,https://cpu.userbenchmark.com/SpeedTest/3330/IntelR-CoreTM2-Duo-CPU-----P9700----280GHz
+CPU,,Intel,Pentium P6200,871,22.5,4408,https://cpu.userbenchmark.com/SpeedTest/4539/IntelR-PentiumR-CPU--------P6200----213GHz
+CPU,,AMD,Athlon 5350 APU R3,872,22.5,2505,https://cpu.userbenchmark.com/SpeedTest/10020/AMD-Athlontm-5350-APU-with-Radeontm-R3
+CPU,,Intel,Core2 Duo T9600,873,22.4,2981,https://cpu.userbenchmark.com/SpeedTest/1795/IntelR-CoreTM2-Duo-CPU-----T9600----280GHz
+CPU,,AMD,A8-3520M APU,874,22.4,827,https://cpu.userbenchmark.com/SpeedTest/6369/AMD-A8-3520M-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Pentium E6300,875,22.4,2012,https://cpu.userbenchmark.com/SpeedTest/3310/PentiumR-Dual-Core--CPU------E6300----280GHz
+CPU,,AMD,A10-7300 APU (2014 M.Ka),876,22.3,4081,https://cpu.userbenchmark.com/SpeedTest/11662/AMD-A10-7300-Radeon-R6-10-Compute-Cores-4C-6G
+CPU,,AMD,Athlon 64 X2 Dual Core 5600+,877,22.3,2284,https://cpu.userbenchmark.com/SpeedTest/2183/AMD-Athlontm-64-X2-Dual-Core-Processor-5600-
+CPU,,AMD,Athlon II X2 215,878,22.1,3151,https://cpu.userbenchmark.com/SpeedTest/885/AMD-Athlontm-II-X2-215-Processor
+CPU,AM9210AVY23AC,AMD,A6-9210 APU (2016 M.SR),879,22.1,500,https://cpu.userbenchmark.com/SpeedTest/180033/AMD-A6-9210-RADEON-R4-5-COMPUTE-CORES-2C-3G
+CPU,,Intel,Pentium E5500,880,22.1,4413,https://cpu.userbenchmark.com/SpeedTest/2012/PentiumR-Dual-Core--CPU------E5500----280GHz
+CPU,,AMD,Athlon 7750,881,22,1560,https://cpu.userbenchmark.com/SpeedTest/3774/AMD-Athlontm-7750-Dual-Core-Processor
+CPU,,AMD,Phenom II N850,882,21.9,225,https://cpu.userbenchmark.com/SpeedTest/6473/AMD-Phenomtm-II-N850-Triple-Core-Processor
+CPU,HE8066201931229,Intel,Pentium 4405Y,883,21.9,92,https://cpu.userbenchmark.com/SpeedTest/144619/IntelR-PentiumR-CPU-4405Y---150GHz
+CPU,,Intel,Core i5-4202Y,884,21.9,462,https://cpu.userbenchmark.com/SpeedTest/6438/IntelR-CoreTM-i5-4202Y-CPU---160GHz
+CPU,,AMD,A8-5545M APU,885,21.8,1817,https://cpu.userbenchmark.com/SpeedTest/9308/AMD-A8-5545M-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Pentium 2127U,886,21.8,800,https://cpu.userbenchmark.com/SpeedTest/3354/IntelR-PentiumR-CPU-2127U---190GHz
+CPU,,Intel,Core2 Duo E8200,887,21.8,2854,https://cpu.userbenchmark.com/SpeedTest/3200/IntelR-CoreTM2-Duo-CPU-----E8200----266GHz
+CPU,,Intel,Core i5-3339Y,888,21.8,205,https://cpu.userbenchmark.com/SpeedTest/3454/IntelR-CoreTM-i5-3339Y-CPU---150GHz
+CPU,,AMD,Athlon 64 X2 Dual Core 5400+,889,21.7,642,https://cpu.userbenchmark.com/SpeedTest/4069/AMD-Athlontm-64-X2-Dual-Core-Processor-5400-
+CPU,AM9220AYN23AC,AMD,A6-9220 APU (2016 M.SR),890,21.6,2619,https://cpu.userbenchmark.com/SpeedTest/300155/AMD-A6-9220-RADEON-R4-5-COMPUTE-CORES-2C-3G
+CPU,,Intel,Core2 Duo P8800,891,21.6,590,https://cpu.userbenchmark.com/SpeedTest/2429/IntelR-CoreTM2-Duo-CPU-----P8800----266GHz
+CPU,,Intel,Core2 Duo E7300,892,21.5,4782,https://cpu.userbenchmark.com/SpeedTest/2080/IntelR-CoreTM2-Duo-CPU-----E7300----266GHz
+CPU,,Intel,Celeron J3355,893,21.5,399,https://cpu.userbenchmark.com/SpeedTest/247225/IntelR-CeleronR-CPU-J3355---200GHz
+CPU,,AMD,A6-3410MX APU,894,21.4,658,https://cpu.userbenchmark.com/SpeedTest/5327/AMD-A6-3410MX-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Celeron 1000M,895,21.4,1830,https://cpu.userbenchmark.com/SpeedTest/5059/IntelR-CeleronR-CPU-1000M---180GHz
+CPU,,AMD,A6-3420M APU,896,21.3,2778,https://cpu.userbenchmark.com/SpeedTest/649/AMD-A6-3420M-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Core2 Duo T9500,897,21.3,623,https://cpu.userbenchmark.com/SpeedTest/4254/IntelR-CoreTM2-Duo-CPU-----T9500----260GHz
+CPU,,Intel,Celeron 1037U,898,21.2,1185,https://cpu.userbenchmark.com/SpeedTest/3597/IntelR-CeleronR-CPU-1037U---180GHz
+CPU,,Intel,Pentium P6100,899,21.2,3725,https://cpu.userbenchmark.com/SpeedTest/756/IntelR-PentiumR-CPU--------P6100----200GHz
+CPU,,Intel,Core2 Duo T9550,900,21.1,928,https://cpu.userbenchmark.com/SpeedTest/6301/IntelR-CoreTM2-Duo-CPU-----T9550----266GHz
+CPU,,AMD,A8-7100 APU (2014 M.Ka),901,21.1,670,https://cpu.userbenchmark.com/SpeedTest/20429/AMD-A8-7100-Radeon-R5-8-Compute-Cores-4C-4G
+CPU,,Intel,Core2 Duo E6850,902,21.1,2980,https://cpu.userbenchmark.com/SpeedTest/681/IntelR-CoreTM2-Duo-CPU-----E6850----300GHz
+CPU,,Intel,Pentium 2117U,903,21.1,2629,https://cpu.userbenchmark.com/SpeedTest/6356/IntelR-PentiumR-CPU-2117U---180GHz
+CPU,,AMD,A6-5200 APU,904,21,6084,https://cpu.userbenchmark.com/SpeedTest/4574/AMD-A6-5200-APU-with-RadeonTM-HD-Graphics
+CPU,,Intel,Pentium E5400,905,21,7618,https://cpu.userbenchmark.com/SpeedTest/4475/PentiumR-Dual-Core--CPU------E5400----270GHz
+CPU,,AMD,A4-7210 APU (2015 M.Ca),906,21,1101,https://cpu.userbenchmark.com/SpeedTest/42376/AMD-A4-7210-APU-with-AMD-Radeon-R3-Graphics
+CPU,,AMD,Phenom 9150e,907,21,611,https://cpu.userbenchmark.com/SpeedTest/7599/AMD-Phenomtm-9150e-Quad-Core-Processor
+CPU,,AMD,Phenom II P960,908,20.9,689,https://cpu.userbenchmark.com/SpeedTest/1991/AMD-Phenomtm-II-P960-Quad-Core-Processor
+CPU,,Intel,Core i5-2537M,909,20.8,313,https://cpu.userbenchmark.com/SpeedTest/3186/IntelR-CoreTM-i5-2537M-CPU---140GHz
+CPU,,AMD,Athlon 64 X2 Dual Core 5200+,910,20.8,3712,https://cpu.userbenchmark.com/SpeedTest/1721/AMD-Athlontm-64-X2-Dual-Core-Processor-5200-
+CPU,,AMD,Phenom 8450 Triple-Core,911,20.7,1171,https://cpu.userbenchmark.com/SpeedTest/3789/AMD-Phenomtm-8450-Triple-Core-Processor
+CPU,,AMD,A4-3300 APU,912,20.7,1532,https://cpu.userbenchmark.com/SpeedTest/4728/AMD-A4-3300-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Pentium E5300,913,20.7,10711,https://cpu.userbenchmark.com/SpeedTest/38/PentiumR-Dual-Core--CPU------E5300----260GHz
+CPU,,Intel,Core2 Duo P9600,914,20.6,382,https://cpu.userbenchmark.com/SpeedTest/8493/IntelR-CoreTM2-Duo-CPU-----P9600----266GHz
+CPU,,Intel,Core2 X6800,915,20.6,224,https://cpu.userbenchmark.com/SpeedTest/8640/IntelR-CoreTM2-CPU---------X6800----293GHz
+CPU,,Intel,Celeron B830,916,20.6,1836,https://cpu.userbenchmark.com/SpeedTest/8441/IntelR-CeleronR-CPU-B830---180GHz
+CPU,,AMD,Phenom II N830,917,20.4,462,https://cpu.userbenchmark.com/SpeedTest/690/AMD-Phenomtm-II-N830-Triple-Core-Processor
+CPU,,Intel,Core2 Duo E7200,918,20.4,4156,https://cpu.userbenchmark.com/SpeedTest/1876/IntelR-CoreTM2-Duo-CPU-----E7200----253GHz
+CPU,,Intel,Core2 Duo T9400,919,20.4,2050,https://cpu.userbenchmark.com/SpeedTest/3645/IntelR-CoreTM2-Duo-CPU-----T9400----253GHz
+CPU,,AMD,A8-3500M APU,920,20.3,904,https://cpu.userbenchmark.com/SpeedTest/5434/AMD-A8-3500M-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Celeron N3350,921,20.3,6419,https://cpu.userbenchmark.com/SpeedTest/197164/IntelR-CeleronR-CPU-N3350---110GHz
+CPU,AM9200AKN23AC,AMD,A6-9200 APU (2016 M.SR),922,20.2,545,https://cpu.userbenchmark.com/SpeedTest/252093/AMD-A6-9200-RADEON-R4-5-COMPUTE-CORES-2C-3G
+CPU,,Intel,Core2 Duo P9500,923,20.2,235,https://cpu.userbenchmark.com/SpeedTest/5851/IntelR-CoreTM2-Duo-CPU-----P9500----253GHz
+CPU,,Intel,Core i3-4012Y,924,20.1,336,https://cpu.userbenchmark.com/SpeedTest/12259/IntelR-CoreTM-i3-4012Y-CPU---150GHz
+CPU,,Intel,Celeron E3400,925,20.1,2427,https://cpu.userbenchmark.com/SpeedTest/5119/IntelR-CeleronR-CPU--------E3400----260GHz
+CPU,,AMD,Turion II Ultra Mobile M600,926,20.1,164,https://cpu.userbenchmark.com/SpeedTest/5449/AMD-Turiontm-II-Ultra-Dual-Core-Mobile-M600
+CPU,,AMD,A6-4400M APU,927,20,3665,https://cpu.userbenchmark.com/SpeedTest/1745/AMD-A6-4400M-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,Athlon Dual Core 4850e,928,20,466,https://cpu.userbenchmark.com/SpeedTest/3970/AMD-Athlontm-Dual-Core-Processor-4850e
+CPU,,Intel,Pentium J2900,929,20,2153,https://cpu.userbenchmark.com/SpeedTest/12727/IntelR-PentiumR-CPU--J2900----241GHz
+CPU,,AMD,Athlon 64 X2 Dual Core 5000+,930,20,3691,https://cpu.userbenchmark.com/SpeedTest/2324/AMD-Athlontm-64-X2-Dual-Core-Processor-5000-
+CPU,,AMD,Phenom II P940,931,20,65,https://cpu.userbenchmark.com/SpeedTest/12706/AMD-Phenomtm-II-P940-Quad-Core-Processor
+CPU,,Intel,Celeron 3205U,932,19.9,431,https://cpu.userbenchmark.com/SpeedTest/28911/IntelR-CeleronR-3205U---150GHz
+CPU,,Intel,Core2 Duo T9300,933,19.9,2295,https://cpu.userbenchmark.com/SpeedTest/2444/IntelR-CoreTM2-Duo-CPU-----T9300----250GHz
+CPU,,Intel,Pentium D 3.73GHz,934,19.8,44,https://cpu.userbenchmark.com/SpeedTest/10162/IntelR-PentiumR-D-CPU-373GHz
+CPU,,Intel,Xeon E5335,935,19.7,139,https://cpu.userbenchmark.com/SpeedTest/24658/IntelR-XeonR-CPU-----------E5335----200GHz
+CPU,,AMD,A4-9120 APU (2016 M.SR),936,19.7,655,https://cpu.userbenchmark.com/SpeedTest/308751/AMD-A4-9120-RADEON-R3-4-COMPUTE-CORES-2C-2G
+CPU,,Intel,Pentium N3540,937,19.7,10091,https://cpu.userbenchmark.com/SpeedTest/15842/IntelR-PentiumR-CPU--N3540----216GHz
+CPU,,Intel,Celeron E3300,938,19.7,1414,https://cpu.userbenchmark.com/SpeedTest/5787/IntelR-CeleronR-CPU--------E3300----250GHz
+CPU,,Intel,Pentium E5200,939,19.7,8825,https://cpu.userbenchmark.com/SpeedTest/1599/PentiumR-Dual-Core--CPU------E5200----250GHz
+CPU,,Intel,Core2 Duo P8700,940,19.5,4913,https://cpu.userbenchmark.com/SpeedTest/581/IntelR-CoreTM2-Duo-CPU-----P8700----253GHz
+CPU,,Intel,Core2 Duo T8300,941,19.4,1704,https://cpu.userbenchmark.com/SpeedTest/1921/IntelR-CoreTM2-Duo-CPU-----T8300----240GHz
+CPU,,Intel,Atom x7-Z8750,942,19.4,280,https://cpu.userbenchmark.com/SpeedTest/177483/IntelR-AtomTM-x7-Z8750--CPU---160GHz
+CPU,,AMD,Athlon 64 X2 Dual Core 4800+,943,19.3,1533,https://cpu.userbenchmark.com/SpeedTest/2246/AMD-Athlontm-64-X2-Dual-Core-Processor-4800-
+CPU,,AMD,A6-3400M APU,944,19.3,2189,https://cpu.userbenchmark.com/SpeedTest/491/AMD-A6-3400M-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Pentium N3710,945,19.2,6381,https://cpu.userbenchmark.com/SpeedTest/141841/IntelR-PentiumR-CPU--N3710----160GHz
+CPU,,Intel,Core2 Duo P9400,946,19.2,482,https://cpu.userbenchmark.com/SpeedTest/5017/IntelR-CoreTM2-Duo-CPU-----P9400----240GHz
+CPU,,Intel,Celeron B820,947,19.2,1674,https://cpu.userbenchmark.com/SpeedTest/7064/IntelR-CeleronR-CPU-B820---170GHz
+CPU,,AMD,Athlon II P360,948,19.1,926,https://cpu.userbenchmark.com/SpeedTest/3956/AMD-Athlontm-II-P360-Dual-Core-Processor
+CPU,,Intel,Xeon E5320,949,19.1,88,https://cpu.userbenchmark.com/SpeedTest/24377/IntelR-XeonR-CPU-----------E5320----186GHz
+CPU,,Intel,Celeron E3200,950,19.1,611,https://cpu.userbenchmark.com/SpeedTest/6422/IntelR-CeleronR-CPU--------E3200----240GHz
+CPU,,Intel,Core2 6700,951,19,1649,https://cpu.userbenchmark.com/SpeedTest/3850/IntelR-CoreTM2-CPU----------6700----266GHz
+CPU,,Intel,Pentium N3530,952,18.9,2901,https://cpu.userbenchmark.com/SpeedTest/11468/IntelR-PentiumR-CPU--N3530----216GHz
+CPU,,AMD,A4-4300M APU,953,18.9,1188,https://cpu.userbenchmark.com/SpeedTest/2001/AMD-A4-4300M-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,A4-6210 APU R3 Graphics,954,18.8,2692,https://cpu.userbenchmark.com/SpeedTest/12438/AMD-A4-6210-APU-with-AMD-Radeon-R3-Graphics
+CPU,,AMD,Athlon 64 X2 Dual Core 4600+,955,18.8,1380,https://cpu.userbenchmark.com/SpeedTest/8715/AMD-Athlontm-64-X2-Dual-Core-Processor-4600-
+CPU,,Intel,Core2 Duo E6750,956,18.8,6948,https://cpu.userbenchmark.com/SpeedTest/729/IntelR-CoreTM2-Duo-CPU-----E6750----266GHz
+CPU,,AMD,E2-7110 APU (2015 M.Ca),957,18.7,2368,https://cpu.userbenchmark.com/SpeedTest/150118/AMD-E2-7110-APU-with-AMD-Radeon-R2-Graphics
+CPU,,Intel,Celeron 1017U,958,18.7,932,https://cpu.userbenchmark.com/SpeedTest/3839/IntelR-CeleronR-CPU-1017U---160GHz
+CPU,,Intel,Core2 Duo P8600,959,18.7,5975,https://cpu.userbenchmark.com/SpeedTest/753/IntelR-CoreTM2-Duo-CPU-----P8600----240GHz
+CPU,,Intel,Atom x7-Z8700,960,18.6,1521,https://cpu.userbenchmark.com/SpeedTest/27122/IntelR-AtomTM-x7-Z8700--CPU---160GHz
+CPU,,Intel,Core i3-2375M,961,18.4,750,https://cpu.userbenchmark.com/SpeedTest/5058/IntelR-CoreTM-i3-2375M-CPU---150GHz
+CPU,,Intel,Atom x5-Z8550,962,18.4,390,https://cpu.userbenchmark.com/SpeedTest/195658/IntelR-AtomTM-x5-Z8550--CPU---144GHz
+CPU,,AMD,Athlon II P340,963,18.3,1368,https://cpu.userbenchmark.com/SpeedTest/380/AMD-Athlontm-II-P340-Dual-Core-Processor
+CPU,,AMD,A4-3330MX APU,964,18.2,631,https://cpu.userbenchmark.com/SpeedTest/6834/AMD-A4-3330MX-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Pentium N3700,965,18.2,6293,https://cpu.userbenchmark.com/SpeedTest/33474/IntelR-PentiumR-CPU--N3700----160GHz
+CPU,,Intel,Celeron J1900,966,18.2,3132,https://cpu.userbenchmark.com/SpeedTest/10898/IntelR-CeleronR-CPU--J1900----199GHz
+CPU,,Intel,Core2 Duo P7570,967,18.1,166,https://cpu.userbenchmark.com/SpeedTest/7581/IntelR-CoreTM2-Duo-CPU-----P7570----226GHz
+CPU,,Intel,Core2 Duo E4700,968,18.1,781,https://cpu.userbenchmark.com/SpeedTest/669/IntelR-CoreTM2-Duo-CPU-----E4700----260GHz
+CPU,,Intel,Core2 Duo P9300,969,18,200,https://cpu.userbenchmark.com/SpeedTest/602/IntelR-CoreTM2-Duo-CPU-----P9300----226GHz
+CPU,,AMD,A8-4555M APU,970,18,1267,https://cpu.userbenchmark.com/SpeedTest/3647/AMD-A8-4555M-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Celeron B815,971,17.9,1495,https://cpu.userbenchmark.com/SpeedTest/3210/IntelR-CeleronR-CPU-B815---160GHz
+CPU,,Intel,Core2 Duo P8400,972,17.9,4511,https://cpu.userbenchmark.com/SpeedTest/307/IntelR-CoreTM2-Duo-CPU-----P8400----226GHz
+CPU,,AMD,Athlon 64 X2 Dual Core 4400+,973,17.9,2204,https://cpu.userbenchmark.com/SpeedTest/2330/AMD-Athlontm-64-X2-Dual-Core-Processor-4400-
+CPU,,Intel,Pentium N3520,974,17.9,1179,https://cpu.userbenchmark.com/SpeedTest/7431/IntelR-PentiumR-CPU--N3520----216GHz
+CPU,,AMD,Turion II Mobile M500,975,17.8,389,https://cpu.userbenchmark.com/SpeedTest/2912/AMD-Turiontm-II-Dual-Core-Mobile-M500
+CPU,,AMD,Athlon X2 Dual Core BE-2400,976,17.8,56,https://cpu.userbenchmark.com/SpeedTest/10300/AMD-Athlontm-X2-Dual-Core-Processor-BE-2400
+CPU,,AMD,Turion II Neo N54L,977,17.7,142,https://cpu.userbenchmark.com/SpeedTest/7165/AMD-Turiontm-II-Neo-N54L-Dual-Core-Processor
+CPU,,AMD,Athlon Dual Core 4450B,978,17.7,342,https://cpu.userbenchmark.com/SpeedTest/3166/AMD-Athlontm-Dual-Core-Processor-4450B
+CPU,,AMD,Athlon Dual Core 4450e,979,17.7,336,https://cpu.userbenchmark.com/SpeedTest/9437/AMD-Athlontm-Dual-Core-Processor-4450e
+CPU,,Intel,Pentium T4500,980,17.7,5253,https://cpu.userbenchmark.com/SpeedTest/2148/PentiumR-Dual-Core-CPU-------T4500----230GHz
+CPU,,Intel,Core2 Duo T7700,981,17.6,1296,https://cpu.userbenchmark.com/SpeedTest/2770/IntelR-CoreTM2-Duo-CPU-----T7700----240GHz
+CPU,,Intel,Core2 Duo P7550,982,17.6,510,https://cpu.userbenchmark.com/SpeedTest/3099/IntelR-CoreTM2-Duo-CPU-----P7550----226GHz
+CPU,,AMD,Athlon II M320,983,17.5,585,https://cpu.userbenchmark.com/SpeedTest/4506/AMD-Athlontm-II-Dual-Core-M320
+CPU,,Intel,Atom Z3775,984,17.4,687,https://cpu.userbenchmark.com/SpeedTest/12464/IntelR-AtomTM-CPU--Z3775----146GHz
+CPU,,Intel,Core2 Duo T6670,985,17.4,1225,https://cpu.userbenchmark.com/SpeedTest/2964/IntelR-CoreTM2-Duo-CPU-----T6670----220GHz
+CPU,,Intel,Celeron 2957U,986,17.4,1559,https://cpu.userbenchmark.com/SpeedTest/12071/IntelR-CeleronR-2957U---140GHz
+CPU,,AMD,E2-9010 APU (2016 M.SR),987,17.4,120,https://cpu.userbenchmark.com/SpeedTest/175091/AMD-E2-9010-RADEON-R2-4-COMPUTE-CORES-2C-2G
+CPU,,Intel,Celeron 1007U,988,17.3,3022,https://cpu.userbenchmark.com/SpeedTest/3995/IntelR-CeleronR-CPU-1007U---150GHz
+CPU,,Intel,Celeron 887,989,17.3,352,https://cpu.userbenchmark.com/SpeedTest/24/IntelR-CeleronR-CPU-887---150GHz
+CPU,,AMD,Athlon II P320,990,17.3,2039,https://cpu.userbenchmark.com/SpeedTest/1942/AMD-Athlontm-II-P320-Dual-Core-Processor
+CPU,,Intel,Xeon E5310,991,17.2,25,https://cpu.userbenchmark.com/SpeedTest/21579/IntelR-XeonR-CPU-----------E5310----160GHz
+CPU,,Intel,Atom Z3770,992,17.2,162,https://cpu.userbenchmark.com/SpeedTest/5592/IntelR-AtomTM-CPU--Z3770----146GHz
+CPU,,AMD,A4-3305M APU,993,17.2,908,https://cpu.userbenchmark.com/SpeedTest/6638/AMD-A4-3305M-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,Athlon 64 X2 Dual Core 4200+,994,17.1,2723,https://cpu.userbenchmark.com/SpeedTest/3258/AMD-Athlontm-64-X2-Dual-Core-Processor-4200-
+CPU,,Intel,Core2 6600,995,17.1,6355,https://cpu.userbenchmark.com/SpeedTest/984/IntelR-CoreTM2-CPU----------6600----240GHz
+CPU,,Intel,Pentium T4400,996,17.1,4226,https://cpu.userbenchmark.com/SpeedTest/1886/PentiumR-Dual-Core-CPU-------T4400----220GHz
+CPU,,Intel,Core i3-2367M,997,17,1300,https://cpu.userbenchmark.com/SpeedTest/526/IntelR-CoreTM-i3-2367M-CPU---140GHz
+CPU,,Intel,Core2 Duo T6600,998,17,5100,https://cpu.userbenchmark.com/SpeedTest/242/IntelR-CoreTM2-Duo-CPU-----T6600----220GHz
+CPU,,AMD,Opteron 4171 HE,999,17,28,https://cpu.userbenchmark.com/SpeedTest/5977/AMD-Opterontm-Processor-4171-HE
+CPU,,Intel,Celeron N3160,1000,16.9,840,https://cpu.userbenchmark.com/SpeedTest/166661/IntelR-CeleronR-CPU--N3160----160GHz
+CPU,,AMD,E2-9000 APU (2016 M.SR),1001,16.9,708,https://cpu.userbenchmark.com/SpeedTest/339888/AMD-E2-9000-RADEON-R2-4-COMPUTE-CORES-2C-2G
+CPU,,Intel,Core2 Duo L9600,1002,16.8,90,https://cpu.userbenchmark.com/SpeedTest/1700/IntelR-CoreTM2-Duo-CPU-----L9600----213GHz
+CPU,,Intel,Core i5 U 470,1003,16.7,238,https://cpu.userbenchmark.com/SpeedTest/6244/IntelR-CoreTM-i5-CPU-------U-470----133GHz
+CPU,,Intel,Celeron B800,1004,16.6,1335,https://cpu.userbenchmark.com/SpeedTest/6775/IntelR-CeleronR-CPU-B800---150GHz
+CPU,,AMD,A6-7000 APU (2014 M.Ka),1005,16.6,159,https://cpu.userbenchmark.com/SpeedTest/27400/AMD-A6-7000-Radeon-R4-5-Compute-Cores-2C-3G
+CPU,,Intel,Atom x5-Z8500,1006,16.6,562,https://cpu.userbenchmark.com/SpeedTest/38612/IntelR-AtomTM-x5-Z8500--CPU---144GHz
+CPU,,Intel,Core2 Duo P7450,1007,16.6,1690,https://cpu.userbenchmark.com/SpeedTest/1597/IntelR-CoreTM2-Duo-CPU-----P7450----213GHz
+CPU,,Intel,Core2 Duo E4600,1008,16.6,4031,https://cpu.userbenchmark.com/SpeedTest/2191/IntelR-CoreTM2-Duo-CPU-----E4600----240GHz
+CPU,,AMD,A4-3300M APU,1009,16.5,1145,https://cpu.userbenchmark.com/SpeedTest/12812/AMD-A4-3300M-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Core2 Duo T8100,1010,16.5,1680,https://cpu.userbenchmark.com/SpeedTest/2334/IntelR-CoreTM2-Duo-CPU-----T8100----210GHz
+CPU,,Intel,Core2 Duo T6570,1011,16.5,1646,https://cpu.userbenchmark.com/SpeedTest/438/IntelR-CoreTM2-Duo-CPU-----T6570----210GHz
+CPU,,Intel,Core i3-2365M,1012,16.5,1116,https://cpu.userbenchmark.com/SpeedTest/2519/IntelR-CoreTM-i3-2365M-CPU---140GHz
+CPU,,Intel,Pentium 987,1013,16.5,838,https://cpu.userbenchmark.com/SpeedTest/4947/IntelR-PentiumR-CPU-987---150GHz
+CPU,,Intel,Pentium T4300,1014,16.4,3891,https://cpu.userbenchmark.com/SpeedTest/2938/PentiumR-Dual-Core-CPU-------T4300----210GHz
+CPU,BX80557E6550,Intel,Core2 Duo E6550,1015,16.3,7725,https://cpu.userbenchmark.com/Intel-Core2-Duo-E6550/Rating/568
+CPU,,AMD,Athlon II M300,1016,16.3,778,https://cpu.userbenchmark.com/SpeedTest/5992/AMD-Athlontm-II-Dual-Core-M300
+CPU,,AMD,Athlon 64 X2 Dual Core 4000+,1017,16.3,2059,https://cpu.userbenchmark.com/SpeedTest/2436/AMD-Athlontm-64-X2-Dual-Core-Processor-4000-
+CPU,,Intel,Core2 Duo T6500,1018,16.3,1971,https://cpu.userbenchmark.com/SpeedTest/3474/IntelR-CoreTM2-Duo-CPU-----T6500----210GHz
+CPU,,Intel,Celeron Dual Core T3300,1019,16.1,338,https://cpu.userbenchmark.com/SpeedTest/8823/CeleronR-Dual-Core-CPU-------T3300----200GHz
+CPU,,Intel,Core2 T7600,1020,16,432,https://cpu.userbenchmark.com/SpeedTest/2765/IntelR-CoreTM2-CPU---------T7600----233GHz
+CPU,,Intel,Celeron N2930,1021,16,1258,https://cpu.userbenchmark.com/SpeedTest/13386/IntelR-CeleronR-CPU--N2930----183GHz
+CPU,,Intel,Celeron N3150,1022,15.9,1828,https://cpu.userbenchmark.com/SpeedTest/28103/IntelR-CeleronR-CPU--N3150----160GHz
+CPU,,Intel,Celeron 877,1023,15.9,407,https://cpu.userbenchmark.com/SpeedTest/6414/IntelR-CeleronR-CPU-877---140GHz
+CPU,,Intel,Core i3-2357M,1024,15.8,109,https://cpu.userbenchmark.com/SpeedTest/6916/IntelR-CoreTM-i3-2357M-CPU---130GHz
+CPU,,AMD,A4-5000 APU,1025,15.8,4968,https://cpu.userbenchmark.com/SpeedTest/5321/AMD-A4-5000-APU-with-RadeonTM-HD-Graphics
+CPU,,Intel,Pentium T4200,1026,15.7,3235,https://cpu.userbenchmark.com/SpeedTest/451/PentiumR-Dual-Core-CPU-------T4200----200GHz
+CPU,,AMD,Sempron 145,1027,15.7,2033,https://cpu.userbenchmark.com/SpeedTest/6487/AMD-Semprontm-145-Processor
+CPU,,Intel,Core2 Duo P7350,1028,15.6,1533,https://cpu.userbenchmark.com/SpeedTest/1998/IntelR-CoreTM2-Duo-CPU-----P7350----200GHz
+CPU,,Intel,Core2 Duo T6400,1029,15.6,3018,https://cpu.userbenchmark.com/SpeedTest/2405/IntelR-CoreTM2-Duo-CPU-----T6400----200GHz
+CPU,,AMD,Turion X2 Ultra Mobile ZM-82,1030,15.6,157,https://cpu.userbenchmark.com/SpeedTest/2211/AMD-Turiontm-X2-Ultra-Dual-Core-Mobile-ZM-82
+CPU,,AMD,Athlon X2 Dual-Core QL-65,1031,15.4,351,https://cpu.userbenchmark.com/SpeedTest/4672/AMD-Athlontm-X2-Dual-Core-QL-65
+CPU,,Intel,Core i3 U 380,1032,15.4,370,https://cpu.userbenchmark.com/SpeedTest/8152/IntelR-CoreTM-i3-CPU-------U-380----133GHz
+CPU,,AMD,Athlon 64 X2 Dual Core 3800+,1033,15.4,2210,https://cpu.userbenchmark.com/SpeedTest/2362/AMD-Athlontm-64-X2-Dual-Core-Processor-3800-
+CPU,,Intel,Pentium D 3.40GHz,1034,15.4,2493,https://cpu.userbenchmark.com/SpeedTest/5820/IntelR-PentiumR-D-CPU-340GHz
+CPU,,Intel,Pentium Dual E2200,1035,15.3,5677,https://cpu.userbenchmark.com/SpeedTest/1712/IntelR-PentiumR-Dual--CPU--E2200----220GHz
+CPU,,AMD,Turion 64 X2 Mobile Technology TL-60,1036,15.3,784,https://cpu.userbenchmark.com/SpeedTest/2315/AMD-Turiontm-64-X2-Mobile-Technology-TL-60
+CPU,,AMD,Sempron 140,1037,15.2,1518,https://cpu.userbenchmark.com/SpeedTest/3248/AMD-Semprontm-140-Processor
+CPU,,Intel,Core2 Duo L9400,1038,15.2,491,https://cpu.userbenchmark.com/SpeedTest/5525/IntelR-CoreTM2-Duo-CPU-----L9400----186GHz
+CPU,,Intel,Core2 6420,1039,15.2,1344,https://cpu.userbenchmark.com/SpeedTest/1967/IntelR-CoreTM2-CPU----------6420----213GHz
+CPU,,AMD,E2-3000M APU,1040,15.2,601,https://cpu.userbenchmark.com/SpeedTest/6063/AMD-E2-3000M-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,Athlon 64 X2 Dual Core 3600+,1041,15.1,382,https://cpu.userbenchmark.com/SpeedTest/5235/AMD-Athlontm-64-X2-Dual-Core-Processor-3600-
+CPU,,Intel,Celeron Dual Core T3100,1042,15.1,594,https://cpu.userbenchmark.com/SpeedTest/1715/CeleronR-Dual-Core-CPU-------T3100----190GHz
+CPU,,Intel,Core2 Duo E4500,1043,15.1,5770,https://cpu.userbenchmark.com/SpeedTest/65/IntelR-CoreTM2-Duo-CPU-----E4500----220GHz
+CPU,,Intel,Celeron E1500,1044,15.1,222,https://cpu.userbenchmark.com/SpeedTest/8605/IntelR-CeleronR-CPU--------E1500----220GHz
+CPU,,Intel,Core2 Duo T5900,1045,15,200,https://cpu.userbenchmark.com/SpeedTest/2376/IntelR-CoreTM2-Duo-CPU-----T5900----220GHz
+CPU,,AMD,A6-4455M APU,1046,14.9,1021,https://cpu.userbenchmark.com/SpeedTest/5941/AMD-A6-4455M-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Pentium 967,1047,14.9,179,https://cpu.userbenchmark.com/SpeedTest/4152/IntelR-PentiumR-CPU-967---130GHz
+CPU,,Intel,Core2 6400,1048,14.9,3393,https://cpu.userbenchmark.com/SpeedTest/106/IntelR-CoreTM2-CPU----------6400----213GHz
+CPU,,AMD,Athlon X2 Dual-Core QL-64,1049,14.8,295,https://cpu.userbenchmark.com/SpeedTest/3720/AMD-Athlontm-X2-Dual-Core-QL-64
+CPU,,Intel,Celeron N2920,1050,14.8,853,https://cpu.userbenchmark.com/SpeedTest/8725/IntelR-CeleronR-CPU--N2920----186GHz
+CPU,,AMD,Athlon X2 Dual Core BE-2300,1051,14.7,35,https://cpu.userbenchmark.com/SpeedTest/12410/AMD-Athlontm-X2-Dual-Core-Processor-BE-2300
+CPU,,AMD,Turion X2 Dual-Core Mobile RM-70,1052,14.7,356,https://cpu.userbenchmark.com/SpeedTest/199/AMD-Turiontm-X2-Dual-Core-Mobile-RM-70
+CPU,,Intel,Core2 Duo T7500,1053,14.6,2501,https://cpu.userbenchmark.com/SpeedTest/867/IntelR-CoreTM2-Duo-CPU-----T7500----220GHz
+CPU,,AMD,Turion 64 X2 Mobile Technology TL-58,1054,14.6,381,https://cpu.userbenchmark.com/SpeedTest/817/AMD-Turiontm-64-X2-Mobile-Technology-TL-58
+CPU,,Intel,Pentium Dual T3400,1055,14.5,1620,https://cpu.userbenchmark.com/SpeedTest/5174/IntelR-PentiumR-Dual--CPU--T3400----216GHz
+CPU,,Intel,Core2 Duo T5850,1056,14.5,317,https://cpu.userbenchmark.com/SpeedTest/6522/IntelR-CoreTM2-Duo-CPU-----T5850----216GHz
+CPU,,Intel,Core2 T7400,1057,14.4,416,https://cpu.userbenchmark.com/SpeedTest/5780/IntelR-CoreTM2-CPU---------T7400----216GHz
+CPU,,Intel,Pentium N3510,1058,14.3,237,https://cpu.userbenchmark.com/SpeedTest/11120/IntelR-PentiumR-CPU--N3510----199GHz
+CPU,,Intel,Pentium 4 3.80GHz,1059,14.2,113,https://cpu.userbenchmark.com/SpeedTest/11003/--------------IntelR-PentiumR-4-CPU-380GHz
+CPU,,AMD,Athlon 64 4000+,1060,14.2,43,https://cpu.userbenchmark.com/SpeedTest/10241/AMD-Athlontm-64-Processor-4000-
+CPU,,Intel,Core i3 U 330,1061,14.1,241,https://cpu.userbenchmark.com/SpeedTest/1602/IntelR-CoreTM-i3-CPU-------U-330----120GHz
+CPU,,Intel,Pentium D 3.20GHz,1062,14.1,687,https://cpu.userbenchmark.com/SpeedTest/1730/--------------IntelR-PentiumR-D-CPU-320GHz
+CPU,,Intel,Atom x5-Z8330,1063,14,169,https://cpu.userbenchmark.com/SpeedTest/153094/IntelR-AtomTM-x5-Z8330--CPU---144GHz
+CPU,,AMD,Athlon LE-1640,1064,14,290,https://cpu.userbenchmark.com/SpeedTest/7308/AMD-Athlontm-Processor-LE-1640
+CPU,,AMD,AthlonX2 DualCore QL-60,1065,13.9,19,https://cpu.userbenchmark.com/SpeedTest/6294/AMD-AthlontmX2-DualCore-QL-60
+CPU,,Intel,Atom Z3740,1066,13.9,1039,https://cpu.userbenchmark.com/SpeedTest/3256/IntelR-AtomTM-CPU--Z3740----133GHz
+CPU,,Intel,Celeron E1400,1067,13.9,290,https://cpu.userbenchmark.com/SpeedTest/2849/IntelR-CeleronR-CPU--------E1400----200GHz
+CPU,,Intel,Core2 Duo E4400,1068,13.9,864,https://cpu.userbenchmark.com/SpeedTest/3549/IntelR-CoreTM2-Duo-CPU-----E4400----200GHz
+CPU,,Intel,Core2 Duo T7300,1069,13.8,1902,https://cpu.userbenchmark.com/SpeedTest/2508/IntelR-CoreTM2-Duo-CPU-----T7300----200GHz
+CPU,,Intel,Core2 4400,1070,13.8,1297,https://cpu.userbenchmark.com/SpeedTest/5093/IntelR-CoreTM2-CPU----------4400----200GHz
+CPU,,AMD,Athlon 64 X2 Dual Core TK-55,1071,13.8,257,https://cpu.userbenchmark.com/SpeedTest/1927/AMD-Athlontm-64-X2-Dual-Core-Processor-TK-55
+CPU,,Intel,Core2 Duo T5870,1072,13.7,1319,https://cpu.userbenchmark.com/SpeedTest/5377/IntelR-CoreTM2-Duo-CPU-----T5870----200GHz
+CPU,,AMD,A4-4355M APU,1073,13.7,253,https://cpu.userbenchmark.com/SpeedTest/10814/AMD-A4-4355M-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,Turion 64 X2 Mobile Technology TL-56,1074,13.6,262,https://cpu.userbenchmark.com/SpeedTest/2456/AMD-Turiontm-64-X2-Mobile-Technology-TL-56
+CPU,,Intel,Pentium Dual E2180,1075,13.6,4719,https://cpu.userbenchmark.com/SpeedTest/814/IntelR-PentiumR-Dual--CPU--E2180----200GHz
+CPU,,Intel,Core2 T7200,1076,13.5,1427,https://cpu.userbenchmark.com/SpeedTest/248/IntelR-CoreTM2-CPU---------T7200----200GHz
+CPU,,Intel,Pentium Dual T3200,1077,13.4,1452,https://cpu.userbenchmark.com/SpeedTest/2235/IntelR-PentiumR-Dual--CPU--T3200----200GHz
+CPU,,Intel,Core2 Duo T5750,1078,13.3,1267,https://cpu.userbenchmark.com/SpeedTest/6581/IntelR-CoreTM2-Duo-CPU-----T5750----200GHz
+CPU,,Intel,Pentium D 3.00GHz,1079,13.3,3199,https://cpu.userbenchmark.com/SpeedTest/3363/IntelR-PentiumR-D-CPU-300GHz
+CPU,,Intel,Core2 Duo T7250,1080,13.2,1648,https://cpu.userbenchmark.com/SpeedTest/1781/IntelR-CoreTM2-Duo-CPU-----T7250----200GHz
+CPU,,Intel,Celeron N2840,1081,13.2,12622,https://cpu.userbenchmark.com/SpeedTest/16086/IntelR-CeleronR-CPU--N2840----216GHz
+CPU,,Intel,Core2 Duo T5800,1082,13.1,2013,https://cpu.userbenchmark.com/SpeedTest/2272/IntelR-CoreTM2-Duo-CPU-----T5800----200GHz
+CPU,,AMD,E2-9000e APU (2016 M.SR),1083,13.1,1459,https://cpu.userbenchmark.com/SpeedTest/321458/AMD-E2-9000e-RADEON-R2-4-COMPUTE-CORES-2C-2G
+CPU,,Intel,Core2 Duo U9600,1084,13.1,278,https://cpu.userbenchmark.com/SpeedTest/4270/IntelR-CoreTM2-Duo-CPU-----U9600----160GHz
+CPU,,Intel,Core2 6320,1085,13.1,1039,https://cpu.userbenchmark.com/SpeedTest/4501/IntelR-CoreTM2-CPU----------6320----186GHz
+CPU,,Intel,Atom Z3740D,1086,13,200,https://cpu.userbenchmark.com/SpeedTest/3287/IntelR-AtomTM-CPU--Z3740D---133GHz
+CPU,,Intel,Core2 Duo L9300,1087,13,101,https://cpu.userbenchmark.com/SpeedTest/5639/IntelR-CoreTM2-Duo-CPU-----L9300----160GHz
+CPU,,Intel,Atom x5-Z8350,1088,13,5554,https://cpu.userbenchmark.com/SpeedTest/143924/IntelR-AtomTM-x5-Z8350--CPU---144GHz
+CPU,,Intel,Core2 6300,1089,13,4243,https://cpu.userbenchmark.com/SpeedTest/2521/IntelR-CoreTM2-CPU----------6300----186GHz
+CPU,,AMD,V140,1090,13,487,https://cpu.userbenchmark.com/SpeedTest/1003/AMD-V140-Processor
+CPU,,AMD,V120,1091,12.8,359,https://cpu.userbenchmark.com/SpeedTest/5365/AMD-V120-Processor
+CPU,,AMD,Athlon 64 X2 Dual Core TK-53,1092,12.8,115,https://cpu.userbenchmark.com/SpeedTest/9182/AMD-Athlontm-64-X2-Dual-Core-Processor-TK-53
+CPU,,AMD,Athlon 64 3800+,1093,12.8,215,https://cpu.userbenchmark.com/SpeedTest/2391/AMD-Athlontm-64-Processor-3800-
+CPU,,Intel,Core2 4300,1094,12.7,1745,https://cpu.userbenchmark.com/SpeedTest/977/IntelR-CoreTM2-CPU----------4300----180GHz
+CPU,,Intel,Celeron N3060,1095,12.7,9588,https://cpu.userbenchmark.com/SpeedTest/130019/IntelR-CeleronR-CPU--N3060----160GHz
+CPU,,Intel,Core2 Duo T5670,1096,12.6,476,https://cpu.userbenchmark.com/SpeedTest/3564/IntelR-CoreTM2-Duo-CPU-----T5670----180GHz
+CPU,,Intel,Pentium Dual E2160,1097,12.6,3012,https://cpu.userbenchmark.com/SpeedTest/2113/IntelR-PentiumR-Dual--CPU--E2160----180GHz
+CPU,,Intel,Atom x5-Z8300,1098,12.6,2438,https://cpu.userbenchmark.com/SpeedTest/37765/IntelR-AtomTM-x5-Z8300--CPU---144GHz
+CPU,,AMD,Athlon 64 3400+,1099,12.6,39,https://cpu.userbenchmark.com/SpeedTest/1056/AMD-Athlontm-64-Processor-3400-
+CPU,,Intel,Celeron N3010,1100,12.5,191,https://cpu.userbenchmark.com/SpeedTest/195388/IntelR-CeleronR-CPU--N3010----104GHz
+CPU,,Intel,Core2 T5600,1101,12.4,796,https://cpu.userbenchmark.com/SpeedTest/6306/IntelR-CoreTM2-CPU---------T5600----183GHz
+CPU,,AMD,Turion II Neo N40L,1102,12.4,109,https://cpu.userbenchmark.com/SpeedTest/7/AMD-Turiontm-II-Neo-N40L-Dual-Core-Processor
+CPU,,Intel,Pentium Dual T2390,1103,12.3,712,https://cpu.userbenchmark.com/SpeedTest/2090/IntelR-PentiumR-Dual--CPU--T2390----186GHz
+CPU,,Intel,Core2 Duo T7100,1104,12.3,902,https://cpu.userbenchmark.com/SpeedTest/2268/IntelR-CoreTM2-Duo-CPU-----T7100----180GHz
+CPU,,AMD,Turion 64 X2 Mobile Technology TL-52,1105,12.2,146,https://cpu.userbenchmark.com/SpeedTest/1892/AMD-Turiontm-64-X2-Mobile-Technology-TL-52
+CPU,,Intel,Celeron N2830,1106,12.2,6193,https://cpu.userbenchmark.com/SpeedTest/12104/IntelR-CeleronR-CPU--N2830----216GHz
+CPU,,Intel,Core2 Duo T5550,1107,12.2,839,https://cpu.userbenchmark.com/SpeedTest/1673/IntelR-CoreTM2-Duo-CPU-----T5550----183GHz
+CPU,,Intel,Celeron N2820,1108,12.1,1108,https://cpu.userbenchmark.com/SpeedTest/5994/IntelR-CeleronR-CPU--N2820----213GHz
+CPU,,Intel,Pentium D 2.80GHz,1109,12,2605,https://cpu.userbenchmark.com/SpeedTest/267/--------------IntelR-PentiumR-D-CPU-280GHz
+CPU,,Intel,Celeron 900,1110,12,1851,https://cpu.userbenchmark.com/SpeedTest/4381/IntelR-CeleronR-CPU----------900----220GHz
+CPU,,Intel,Pentium 4 3.40GHz,1111,11.9,894,https://cpu.userbenchmark.com/SpeedTest/293/--------------IntelR-PentiumR-4-CPU-340GHz
+CPU,,Intel,T2600,1112,11.9,114,https://cpu.userbenchmark.com/SpeedTest/4124/Genuine-IntelR-CPU-----------T2600----216GHz
+CPU,,Intel,Celeron 847,1113,11.8,2542,https://cpu.userbenchmark.com/SpeedTest/457/IntelR-CeleronR-CPU-847---110GHz
+CPU,,AMD,Athlon 64 3500+,1114,11.7,425,https://cpu.userbenchmark.com/SpeedTest/2498/AMD-Athlontm-64-Processor-3500-
+CPU,,Intel,Pentium Dual T2370,1115,11.7,529,https://cpu.userbenchmark.com/SpeedTest/4795/IntelR-PentiumR-Dual--CPU--T2370----173GHz
+CPU,,AMD,Athlon Neo X2 Dual Core L335,1116,11.7,135,https://cpu.userbenchmark.com/SpeedTest/4043/AMD-Athlontm-Neo-X2-Dual-Core-Processor-L335
+CPU,,Intel,Core2 Duo U9400,1117,11.5,431,https://cpu.userbenchmark.com/SpeedTest/12007/IntelR-CoreTM2-Duo-CPU-----U9400----140GHz
+CPU,,Intel,Core2 T5300,1118,11.5,219,https://cpu.userbenchmark.com/SpeedTest/2288/IntelR-CoreTM2-CPU---------T5300----173GHz
+CPU,,Intel,Celeron N3000,1119,11.4,115,https://cpu.userbenchmark.com/SpeedTest/34511/IntelR-CeleronR-CPU--N3000----104GHz
+CPU,,Intel,Core2 T5500,1120,11.4,1059,https://cpu.userbenchmark.com/SpeedTest/2561/IntelR-CoreTM2-CPU---------T5500----166GHz
+CPU,,Intel,T2500,1121,11.3,306,https://cpu.userbenchmark.com/SpeedTest/1958/Genuine-IntelR-CPU-----------T2500----200GHz
+CPU,,Intel,Pentium D 2.66GHz,1122,11.3,357,https://cpu.userbenchmark.com/SpeedTest/4781/-------------IntelR-PentiumR-D--CPU-266GHz
+CPU,,Intel,Core2 Duo T5450,1123,11.3,808,https://cpu.userbenchmark.com/SpeedTest/5075/IntelR-CoreTM2-Duo-CPU-----T5450----166GHz
+CPU,,Intel,Pentium 4 3.20GHz,1124,11.2,2347,https://cpu.userbenchmark.com/SpeedTest/7095/--------------IntelR-PentiumR-4-CPU-320GHz
+CPU,,Intel,2140,1125,11.1,911,https://cpu.userbenchmark.com/SpeedTest/6453/Genuine-IntelR-CPU------------2140----160GHz
+CPU,,Intel,Pentium Dual E2140,1126,11.1,1523,https://cpu.userbenchmark.com/SpeedTest/4944/IntelR-PentiumR-Dual--CPU--E2140----160GHz
+CPU,,Intel,Celeron N3050,1127,11,7992,https://cpu.userbenchmark.com/SpeedTest/31154/IntelR-CeleronR-CPU--N3050----160GHz
+CPU,,Intel,U7300,1128,11,1117,https://cpu.userbenchmark.com/SpeedTest/4246/Genuine-IntelR-CPU-----------U7300----130GHz
+CPU,,Intel,Core2 Duo L7500,1129,11,148,https://cpu.userbenchmark.com/SpeedTest/6265/IntelR-CoreTM2-Duo-CPU-----L7500----160GHz
+CPU,,Intel,Celeron N2815,1130,10.9,581,https://cpu.userbenchmark.com/SpeedTest/9736/IntelR-CeleronR-CPU--N2815----186GHz
+CPU,,Intel,Pentium 4 3.06GHz,1131,10.9,650,https://cpu.userbenchmark.com/SpeedTest/614/--------------IntelR-PentiumR-4-CPU-306GHz
+CPU,,Intel,Pentium Dual T2330,1132,10.9,519,https://cpu.userbenchmark.com/SpeedTest/6733/IntelR-PentiumR-Dual--CPU--T2330----160GHz
+CPU,,Intel,Pentium 4 2.60GHz,1133,10.8,80,https://cpu.userbenchmark.com/SpeedTest/5254/--------------IntelR-PentiumR-4-CPU-260GHz
+CPU,,Intel,Core2 T5200,1134,10.8,218,https://cpu.userbenchmark.com/SpeedTest/11616/IntelR-CoreTM2-CPU---------T5200----160GHz
+CPU,,AMD,Athlon 64 3200+,1135,10.8,736,https://cpu.userbenchmark.com/SpeedTest/7063/AMD-Athlontm-64-Processor-3200-
+CPU,,Intel,Core Duo T2350,1136,10.7,178,https://cpu.userbenchmark.com/SpeedTest/3830/IntelR-CoreTM-Duo-CPU------T2350----186GHz
+CPU,,AMD,E2-2000 APU (2012 M.Za),1137,10.7,509,https://cpu.userbenchmark.com/SpeedTest/10908/AMD-E2-2000-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,T2400,1138,10.6,542,https://cpu.userbenchmark.com/SpeedTest/6584/Genuine-IntelR-CPU-----------T2400----183GHz
+CPU,EM1800GBB22GV,AMD,E2-1800 APU (2012 M.Za),1139,10.6,2858,https://cpu.userbenchmark.com/SpeedTest/839/AMD-E2-1800-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,Turion 64 Mobile Technology ML-32,1140,10.6,19,https://cpu.userbenchmark.com/SpeedTest/10530/AMD-Turiontm-64-Mobile-Technology-ML-32
+CPU,,AMD,Sempron 3600+,1141,10.4,90,https://cpu.userbenchmark.com/SpeedTest/1005/Mobile-AMD-Semprontm-Processor-3600-
+CPU,,Intel,U4100,1142,10.4,657,https://cpu.userbenchmark.com/SpeedTest/10746/Genuine-IntelR-CPU-----------U4100----130GHz
+CPU,,Intel,Pentium 4 3.00GHz,1143,10.4,5022,https://cpu.userbenchmark.com/SpeedTest/440/--------------IntelR-PentiumR-4-CPU-300GHz
+CPU,,AMD,Athlon 64 3000+,1144,10.3,269,https://cpu.userbenchmark.com/SpeedTest/5460/AMD-Athlontm-64-Processor-3000-
+CPU,,AMD,E-350D APU,1145,10.3,219,https://cpu.userbenchmark.com/SpeedTest/6589/AMD-E-350D-APU-with-Radeontm-HD-Graphics
+CPU,,AMD,E1-7010 APU (2015 M.Ca),1146,10.3,927,https://cpu.userbenchmark.com/SpeedTest/167591/AMD-E1-7010-APU-with-AMD-Radeon-R2-Graphics
+CPU,,Intel,T2080,1147,10.2,333,https://cpu.userbenchmark.com/SpeedTest/4748/Genuine-IntelR-CPU-----------T2080----173GHz
+CPU,,Intel,Core2 Duo T5250,1148,10.1,575,https://cpu.userbenchmark.com/SpeedTest/5189/IntelR-CoreTM2-Duo-CPU-----T5250----150GHz
+CPU,,AMD,E-450 APU,1149,10.1,5382,https://cpu.userbenchmark.com/SpeedTest/2189/AMD-E-450-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,T2250,1150,10.1,354,https://cpu.userbenchmark.com/SpeedTest/5955/Genuine-IntelR-CPU-----------T2250----173GHz
+CPU,,AMD,E-350,1151,10,3796,https://cpu.userbenchmark.com/SpeedTest/5356/AMD-E-350-Processor
+CPU,,Intel,Pentium 4 2.80GHz,1152,10,1221,https://cpu.userbenchmark.com/SpeedTest/3163/--------------IntelR-PentiumR-4-CPU-280GHz
+CPU,,Intel,T2300,1153,9.94,660,https://cpu.userbenchmark.com/SpeedTest/2474/Genuine-IntelR-CPU-----------T2300----166GHz
+CPU,,Intel,U2300,1154,9.88,208,https://cpu.userbenchmark.com/SpeedTest/2326/Genuine-IntelR-CPU-----------U2300----120GHz
+CPU,,AMD,Sempron 3400+,1155,9.8,187,https://cpu.userbenchmark.com/SpeedTest/8329/AMD-Semprontm-Processor-3400-
+CPU,,Intel,Pentium Dual T2310,1156,9.78,294,https://cpu.userbenchmark.com/SpeedTest/2719/IntelR-PentiumR-Dual--CPU--T2310----146GHz
+CPU,,AMD,E1-2500 APU,1157,9.77,2163,https://cpu.userbenchmark.com/SpeedTest/9778/AMD-E1-2500-APU-with-RadeonTM-HD-Graphics
+CPU,,Intel,Celeron 2.40GHz,1158,9.7,15,https://cpu.userbenchmark.com/SpeedTest/708/----------------IntelR-CeleronR-CPU-240GHz
+CPU,,Intel,Pentium 4 2.93GHz,1159,9.6,119,https://cpu.userbenchmark.com/SpeedTest/4199/--------------IntelR-PentiumR-4-CPU-293GHz
+CPU,,Intel,Celeron 2.53GHz,1160,9.49,9,https://cpu.userbenchmark.com/SpeedTest/4852/----------------IntelR-CeleronR-CPU-253GHz
+CPU,,Intel,575,1161,9.44,278,https://cpu.userbenchmark.com/SpeedTest/4105/Genuine-IntelR-CPU-------------575----200GHz
+CPU,,Intel,Pentium 4 2.66GHz,1162,9.41,234,https://cpu.userbenchmark.com/SpeedTest/4462/--------------IntelR-PentiumR-4-CPU-266GHz
+CPU,,AMD,Sempron 3000+,1163,9.36,242,https://cpu.userbenchmark.com/SpeedTest/3648/AMD-Semprontm-Processor-3000-
+CPU,,Intel,Pentium 4 2.40GHz,1164,9.31,272,https://cpu.userbenchmark.com/SpeedTest/5589/--------------IntelR-PentiumR-4-CPU-240GHz
+CPU,,AMD,Athlon XP 2800+,1165,8.95,9,https://cpu.userbenchmark.com/SpeedTest/1789/AMD-Athlontm-XP-2800-
+CPU,,Intel,Celeron D 3.06GHz,1166,8.92,240,https://cpu.userbenchmark.com/SpeedTest/13158/IntelR-CeleronR-D-CPU-306GHz
+CPU,,AMD,Sempron 2800+,1167,8.91,166,https://cpu.userbenchmark.com/SpeedTest/4755/AMD-Semprontm-Processor-2800-
+CPU,,Intel,Core2 Duo L7100,1168,8.62,64,https://cpu.userbenchmark.com/SpeedTest/5778/IntelR-CoreTM2-Duo-CPU-----L7100----120GHz
+CPU,,AMD,E1-1200 APU,1169,8.54,3513,https://cpu.userbenchmark.com/SpeedTest/2118/AMD-E1-1200-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Pentium M processor 1700MHz,1170,8.37,3,https://cpu.userbenchmark.com/SpeedTest/7958/--------IntelR-PentiumR-M-processor-1700MHz
+CPU,,AMD,Athlon XP 2600+,1171,8.32,6,https://cpu.userbenchmark.com/SpeedTest/6864/AMD-Athlontm-XP-2600-
+CPU,,AMD,Athlon 2650e,1172,8.09,114,https://cpu.userbenchmark.com/SpeedTest/4742/AMD-Athlontm-Processor-2650e
+CPU,,AMD,Athlon Neo MV-40,1173,8,120,https://cpu.userbenchmark.com/SpeedTest/12003/AMD-Athlontm-Neo-Processor-MV-40
+CPU,,AMD,E-300 APU,1174,7.95,4479,https://cpu.userbenchmark.com/SpeedTest/2468/AMD-E-300-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Celeron 2.80GHz,1175,7.81,60,https://cpu.userbenchmark.com/SpeedTest/8814/IntelR-CeleronR-CPU-280GHz
+CPU,,Intel,Atom D2700,1176,7.79,152,https://cpu.userbenchmark.com/SpeedTest/7623/IntelR-AtomTM-CPU-D2700-----213GHz
+CPU,,Intel,Pentium M processor 1.86GHz,1177,7.72,155,https://cpu.userbenchmark.com/SpeedTest/4587/--------IntelR-PentiumR-M-processor-186GHz
+CPU,,Intel,Pentium 4 1.70GHz,1178,7.7,5,https://cpu.userbenchmark.com/SpeedTest/6983/--------------IntelR-PentiumR-4-CPU-170GHz
+CPU,,Intel,Celeron M 430,1179,7.34,126,https://cpu.userbenchmark.com/SpeedTest/4999/IntelR-CeleronR-M-CPU--------430----173GHz
+CPU,,AMD,C-60 APU,1180,7.22,1519,https://cpu.userbenchmark.com/SpeedTest/3147/AMD-C-60-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Pentium M processor 1.73GHz,1181,7.19,274,https://cpu.userbenchmark.com/SpeedTest/7488/--------IntelR-PentiumR-M-processor-173GHz
+CPU,,AMD,Athlon XP 2200+,1182,7.11,6,https://cpu.userbenchmark.com/SpeedTest/3828/AMD-Athlontm-XP-2200-
+CPU,,AMD,A4-1200 APU,1183,7.11,329,https://cpu.userbenchmark.com/SpeedTest/2520/AMD-A4-1200-APU-with-RadeonTM-HD-Graphics
+CPU,,AMD,E1-2100 APU,1184,6.91,2864,https://cpu.userbenchmark.com/SpeedTest/7613/AMD-E1-2100-APU-with-RadeonTM-HD-Graphics
+CPU,,Intel,Atom N2800,1185,6.83,278,https://cpu.userbenchmark.com/SpeedTest/8985/IntelR-AtomTM-CPU-N2800-----186GHz
+CPU,,AMD,A4-1250 APU,1186,6.78,491,https://cpu.userbenchmark.com/SpeedTest/8678/AMD-A4-1250-APU-with-RadeonTM-HD-Graphics
+CPU,,AMD,Z-60 APU,1187,6.66,4,https://cpu.userbenchmark.com/SpeedTest/13444/AMD-Z-60-APU-with-Radeontm-HD-Graphics
+CPU,,Intel,Pentium M processor 1.60GHz,1188,6.59,153,https://cpu.userbenchmark.com/SpeedTest/4076/--------IntelR-PentiumR-M-processor-160GHz
+CPU,,Intel,Atom Z2760,1189,6.49,547,https://cpu.userbenchmark.com/SpeedTest/2088/IntelR-AtomTM-CPU-Z2760----180GHz
+CPU,,Intel,Celeron M processor 1.50GHz,1190,6.45,54,https://cpu.userbenchmark.com/SpeedTest/5383/IntelR-CeleronR-M-processor---------150GHz
+CPU,,Intel,Celeron 723,1191,6.42,32,https://cpu.userbenchmark.com/SpeedTest/10153/IntelR-CeleronR-CPU----------723----120GHz
+CPU,,Intel,Atom D525,1192,6.28,1350,https://cpu.userbenchmark.com/SpeedTest/5666/IntelR-AtomTM-CPU-D525-----180GHz
+CPU,,AMD,C-50,1193,6.24,1131,https://cpu.userbenchmark.com/SpeedTest/3082/AMD-C-50-Processor
+CPU,,Intel,Atom 330,1194,5.9,687,https://cpu.userbenchmark.com/SpeedTest/1917/IntelR-AtomTM-CPU--330-----160GHz
+CPU,,Intel,Atom N570,1195,5.84,820,https://cpu.userbenchmark.com/SpeedTest/3881/IntelR-AtomTM-CPU-N570-----166GHz
+CPU,,Intel,Atom D510,1196,5.76,266,https://cpu.userbenchmark.com/SpeedTest/5452/IntelR-AtomTM-CPU-D510-----166GHz
+CPU,,Intel,Atom N2600,1197,5.67,1267,https://cpu.userbenchmark.com/SpeedTest/704/IntelR-AtomTM-CPU-N2600-----160GHz
+CPU,,Intel,Atom N550,1198,5.23,533,https://cpu.userbenchmark.com/SpeedTest/182/IntelR-AtomTM-CPU-N550-----150GHz
+CPU,,Intel,Atom N280,1199,4.02,433,https://cpu.userbenchmark.com/SpeedTest/4556/---------IntelR-AtomTM-CPU-N280-----166GHz
+CPU,,Intel,Atom N450,1200,3.94,1596,https://cpu.userbenchmark.com/SpeedTest/3190/IntelR-AtomTM-CPU-N450-----166GHz
+CPU,,Intel,Atom 230,1201,3.93,208,https://cpu.userbenchmark.com/SpeedTest/5251/IntelR-AtomTM-CPU--230-----160GHz
+CPU,,Intel,Atom D410,1202,3.89,148,https://cpu.userbenchmark.com/SpeedTest/13305/---------IntelR-AtomTM-CPU-D410-----166GHz
+CPU,,Intel,Atom N455,1203,3.89,1654,https://cpu.userbenchmark.com/SpeedTest/2394/IntelR-AtomTM-CPU-N455-----166GHz
+CPU,,Intel,Atom N270,1204,3.77,2079,https://cpu.userbenchmark.com/SpeedTest/2697/IntelR-AtomTM-CPU-N270-----160GHz
+CPU,,Intel,Atom N435,1205,3.35,29,https://cpu.userbenchmark.com/SpeedTest/13319/IntelR-AtomTM-CPU-N435-----133GHz
+CPU,,Intel,Atom Z520,1206,3.26,222,https://cpu.userbenchmark.com/SpeedTest/4161/---------IntelR-AtomTM-CPU-Z520-----133GHz

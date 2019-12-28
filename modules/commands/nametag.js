@@ -54,6 +54,11 @@ module.exports = function(evt,args,_cfg,bot) {
             to: evt.d.channel_id,
             message: "You need to specify a color!",
         });
+    } else if(_cfg.enabledFeatures.namecolor_hex && args[0].toUpperCase().match(/^([0-F]){6}$/)) {
+        bot.sendMessage({
+            to: evt.d.channel_id,
+            message: "It looks like you're trying to use a hex color. Please make sure you have a hashtag (`#`) before the color. If you aren't trying to use a hex color, just ignore this :smiley:",
+        });
     } else if (args[0].toUpperCase().match(/^#([0-F]){6}$/)) {
         if (_cfg.enabledFeatures.namecolor_hex) {
             var hexCode = args[0].toUpperCase().match(/^#([0-F]){6}$/).input.substring(1);
@@ -81,8 +86,7 @@ module.exports = function(evt,args,_cfg,bot) {
                                     });
                                 }
                             }
-                            
-                            console.log(err); return; 
+                            console.log(err); return;
                         }
                         //console.log(resp);
                         var JustMadeRole = resp.id;

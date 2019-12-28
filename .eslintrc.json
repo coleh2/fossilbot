@@ -11,14 +11,6 @@
         "SharedArrayBuffer": "readonly"
     },
     "plugins": [
-        "json",
-        "require-path-exists"
-    ],
-    "overrides": [
-        {
-            "files": ["*-min.js"],
-            "rules": []
-        }
     ],
     "parserOptions": {
         "ecmaVersion": 2018
@@ -39,17 +31,6 @@
         "semi": [
             "warn",
             "always"
-        ],
-        "require-path-exists/exists": [
-            2, 
-            {
-                "extensions": [
-                    "",
-                    ".js",
-                    ".json",
-                    ".node"
-                ]
-            }
         ]
     }
 }
