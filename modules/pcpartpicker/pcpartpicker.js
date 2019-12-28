@@ -15,6 +15,7 @@ module.exports = function (evt, _cfg, bot) {
 
 function parseAndSendLists(links, bot, evt) {
     var listMessageIndices = [];
+    if(links.length == 0) return true;
     for(let i = 0; i < links.length; i++) {
         bot.sendMessage({
             to: evt.d.channel_id,
@@ -96,14 +97,14 @@ function recursiveParseListPage(j, links, cb, accumulator) {
             rowJson.type = row.querySelector(".td__component").textContent;
             rowJson.image = resolveRelative(row.querySelector(".td__image").querySelector("img").getAttribute("src"), listJson.url);
             rowJson.name = row.querySelector(".td__name").textContent.trim();
-            rowJson.id = row.querySelector(".td__name a").getAttribute("href");
+            rowJson.id = getIdFromUrl(row.querySelector(".td__name a").getAttribute("href"));
             rowJson.baseprice = row.querySelector(".td__base").textContent;
             rowJson.price = row.querySelector(".td__price").textContent;
 
             if(rowJson.type == "Case") listJson.imageUrl = rowJson.image;
-            
+
             if(getTableName(rowJson.type.toLowerCase())) {
-                let dbResults = db.prepare("SELECT * FROM ? WHERE id = ?").get([getTableName(rowJson.type.toLowerCase()), rowJson.id]);
+                let dbResults = db.prepare(`SELECT * FROM ${getTableName(rowJson.type.toLowerCase())} WHERE id = '${rowJson.id}'`).get();
                 unify(dbResults || {}, rowJson);
             }
             listJson.components.push(rowJson);
@@ -131,10 +132,14 @@ function unify(a,b) {
         b[keys[i]] = a[keys[i]];
     }
 }
-
+function getIdFromUrl(url) {
+  if(!url) return "";
+  else if(!url.match(/product\/([\d\w-]+)\//)) return "";
+  else return (/product\/([\d\w-]+)\//).exec(url)[1];
+}
 function getTableName(componentType) {
     switch(componentType) {
-    case "cpu": 
+    case "cpu":
         return "cpu";
     case "video card":
         return "gpu";

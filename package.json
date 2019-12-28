@@ -1,6 +1,6 @@
 {
   "name": "fossilbot",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "a custom bot",
   "main": "bot.js",
   "scripts": {
@@ -36,7 +36,7 @@
     "pcpartpickerparser": "^1.0.2",
     "profanity-matcher": "^1.0.2",
     "request": "^2.88.0",
-    "resolve-relative-url": "^1.1.0",
+    "resolve-relative-url": "^1.1.1",
     "simple-json-db": "^1.2.1",
     "stack-trace": "^0.0.10",
     "tiny-worker": "^2.1.2",
