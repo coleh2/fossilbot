@@ -7,7 +7,7 @@ const db = require("better-sqlite3")(__dirname + "/../../data/pcpartpickerparts.
 var rgbIndex = 0;
 
 module.exports = function (evt, _cfg, bot) {
-    var pcPartListLinks =  evt.d.content.match(/<?(?:(?:https?:\/\/pcpartpicker.com\/user\/[\d\w@\.\+-_]+\/saved\/[\d\w-]+)|(?:https?:\/\/pcpartpicker.com\/list\/[\d\w-]+)|(?:https?:\/\/pcpartpicker.com\/user\/[\d\w@\.\+-_]+\/saved\/#view=[\d\w-]+))>?/g);
+    var pcPartListLinks =  evt.d.content.match(/<?(?:(?:https?:\/\/pcpartpicker.com\/user\/[\d\w@.+-_]+\/saved\/[\d\w-]+)|(?:https?:\/\/pcpartpicker.com\/list\/[\d\w-]+)|(?:https?:\/\/pcpartpicker.com\/user\/[\d\w@.+-_]+\/saved\/#view=[\d\w-]+))>?/g);
 
     if(!pcPartListLinks) return false;
     else parseAndSendLists(pcPartListLinks.map(x=>x.replace("#view=","")/*normalize url*/).filter(x=>!x.startsWith("<")&&!x.endsWith(">")/*disregard <link>s*/), bot, evt);
@@ -133,9 +133,9 @@ function unify(a,b) {
     }
 }
 function getIdFromUrl(url) {
-  if(!url) return "";
-  else if(!url.match(/product\/([\d\w-]+)\//)) return "";
-  else return (/product\/([\d\w-]+)\//).exec(url)[1];
+    if(!url) return "";
+    else if(!url.match(/product\/([\d\w-]+)\//)) return "";
+    else return (/product\/([\d\w-]+)\//).exec(url)[1];
 }
 function getTableName(componentType) {
     switch(componentType) {
