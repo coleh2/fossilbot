@@ -3,6 +3,7 @@ var JSDOM = require("jsdom").JSDOM;
 var resolveRelative = require("resolve-relative-url");
 
 const db = require("better-sqlite3")(__dirname + "/../../data/pcpartpickerparts.db");
+const benchmarkGrabOrder = ["CPU", "GPU", "RAM", "Storage"];
 
 var rgbIndex = 0;
 
@@ -35,21 +36,41 @@ function parseAndSendLists(links, bot, evt) {
             message: "",
             embed: buildEmbed(data)
         });
+        recursiveFindUbmId(data.components, function (err, accBenchmarkData) {
+            if(err) return console.error(err);
+
+            bot.editMessage({
+                messageID: listMessageIndices[index],
+                channelID: evt.d.channel_id,
+                message: "",
+                embed: buildEmbed(data,accBenchmarkData)
+            });     
+        });
     });
 }
-function buildEmbed(pc) {
+function buildEmbed(pc, benchmarks) {
     if(!pc) return false;
-    var componentFields = pc.components.map(function(comp) {
-        return {
-            "name": comp.type,
-            "value": comp.name + " - " + comp.price,
-            "inline": true
-        };
-    });
+    var componentLines = pc.components.map(comp =>
+        `**${comp.type}**: [${comp.name}](${comp.url})`        
+    );
+    
+    var defaultBenchmarkText = "<a:load:593253216741883904> Loading benchmarks...";
+    var benchmarkText = defaultBenchmarkText;
+    if(benchmarks) {
+        var benchmarkableComponents = pc.components.filter(x=>getTableName(x.type) != "");
+        if(benchmarks.length < benchmarkableComponents.length) benchmarkText = `Fetching benchmark for ${benchmarkableComponents[benchmarks.length].type} (${benchmarks.length})/${benchmarkableComponents.length})`;
+        else benchmarkText = `Projected Performance (gaming): ${gamingAverageBenchmarks(benchmarks)}%\nProjected Performance (general use): ${generalAverageBenchmarks(benchmarks)}%\n`;
+
+        for(let i = 0; i < benchmarks.length; i++) {
+            let benchmark = benchmarks[i];
+            benchmarkText = `**${benchmark.type}**: ${benchmark.score}%\n` + benchmarkText;
+        }
+    }
+
     return {
         title: pc.name,
         url: pc.url,
-        description: `Price (minus shipping): ${pc.priceNoShip}; Total Price: ${pc.priceTotal}`,
+        description: "",
         color: getRgb(rgbIndex++),
         author: {
             name: pc.username,
@@ -59,9 +80,63 @@ function buildEmbed(pc) {
         thumbnail: {
             url: pc.imageUrl
         },
-        fields: componentFields
+        fields: [
+            {
+                name: "Pricing",
+                value: `Price (minus shipping): ${pc.priceNoShip}; Total Price: ${pc.priceTotal}`,
+                inline: true
+            },
+            {
+                name: "Components",
+                value: componentLines.join("\n"),
+                inline: true
+            },
+            {
+                name: "Benchmarks",
+                value: benchmarkText,
+                inline: true
+            }
+        ]
     };
 }
+
+function recursiveFindUbmId(components, cb, i, accumulator) {
+    if(!i) i = 0;
+    if(!accumulator) accumulator = [];
+
+    var usableComponents = components.filter(x=>getTableName(x.type) != "");
+    var currentComponent = usableComponents[i];
+    if(!currentComponent) {
+        accumulator.push({type: "", score: ""});
+        return recursiveFindUbmId(components, cb, i+1, accumulator);
+    }
+    request.get("https://www.userbenchmark.com/Search?searchTerm=" + encodeURIComponent(currentComponent.name), function(err, res, bod) {
+        if(err) return cb(err);
+
+        var dom = new JSDOM(bod);
+        var searchResults = dom.window.document.querySelector(".row .col-xs-6.col-xs-offset-1");
+
+        if(!searchResults.querySelector("a.tl-tag")) {
+            accumulator.push({type: "", score: ""});
+            return recursiveFindUbmId(components, cb, i+1, accumulator);
+        }
+
+        var relevantResult = searchResults.querySelector("a.tl-tag");
+
+        var resultDesc = relevantResult.querySelector(".tl-desc").textContent;
+        var resultTitle = relevantResult.querySelector(".tl-title").textContent;
+        var resultCaption = relevantResult.querySelector(".tl-caption").textContent;
+
+        var benchmark = parseFloat(resultDesc.match(/ [\d.]+%/)[0]);
+        accumulator.push({
+            type: (currentComponent.rotSpeed=="SSD")?"SSD":benchmarkGrabOrder[i],
+            score: benchmark
+        });
+        cb(null, accumulator);
+        if(usableComponents[i+1]) recursiveFindUbmId(components, cb, i+1, accumulator);
+    });
+}
+
 function recursiveParseListPage(j, links, cb, accumulator) {
     if(!accumulator) accumulator = [];
     request.get(links[j], function(err, res, bod) {
@@ -96,6 +171,7 @@ function recursiveParseListPage(j, links, cb, accumulator) {
 
             rowJson.type = row.querySelector(".td__component").textContent;
             rowJson.image = resolveRelative(row.querySelector(".td__image").querySelector("img").getAttribute("src"), listJson.url);
+            rowJson.url = resolveRelative(row.querySelector(".td__name a").getAttribute("href"));
             rowJson.name = row.querySelector(".td__name").textContent.trim();
             rowJson.id = getIdFromUrl(row.querySelector(".td__name a").getAttribute("href"));
             rowJson.baseprice = row.querySelector(".td__base").textContent;
@@ -153,7 +229,34 @@ function getTableName(componentType) {
         return "";
     }
 }
+function gamingAverageBenchmarks(benchmarks) {
+    var gamingBenchmarkWeights = {
+        "Storage": 0.25,
+        "GPU": 0.5,
+        "CPU": 0.25,
+        "SSD": 
+    };
 
+    let result = 0;
+    for(let i = 0; i < benchmarks.length; i++) {
+        result += benchmarks[i].score*gamingBenchmarkWeights[benchmarks[i].type];
+    }
+    return result;
+}
+function generalAverageBenchmarks(benchmarks) {
+    var generalBenchmarkWeights = {
+        "Storage": 0.4,
+        "GPU": 0.1,
+        "CPU": 0.5,
+        "SSD": 0.3
+    };
+
+    let result = 0;
+    for(let i = 0; i < benchmarks.length; i++) {
+        result += benchmarks[i].score*generalBenchmarkWeights[benchmarks[i].type];
+    }
+    return result;
+}
 function getRgb(i) {
     var colors = ["FF0000","FF8000","FFFF00","00FF00","0093FF","0F00FF","8B00FF","E400FF","FF00C1","FF005D"];
     return parseInt(colors[i % colors.length], 16);
