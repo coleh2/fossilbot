@@ -3,7 +3,6 @@ var JSDOM = require("jsdom").JSDOM;
 var resolveRelative = require("resolve-relative-url");
 
 const db = require("better-sqlite3")(__dirname + "/../../data/pcpartpickerparts.db");
-const benchmarkGrabOrder = ["CPU", "GPU", "RAM", "Storage"];
 
 var rgbIndex = 0;
 
@@ -29,41 +28,52 @@ function parseAndSendLists(links, bot, evt) {
     console.log(links);
     recursiveParseListPage(0, links, function(err, data, index) {
         if(err) return console.error(err);
-        console.log(data);
         bot.editMessage({
             messageID: listMessageIndices[index],
             channelID: evt.d.channel_id,
             message: "",
             embed: buildEmbed(data)
-        });
-        recursiveFindUbmId(data.components, function (err, accBenchmarkData) {
-            if(err) return console.error(err);
+        }, function(err) {
 
-            bot.editMessage({
-                messageID: listMessageIndices[index],
-                channelID: evt.d.channel_id,
-                message: "",
-                embed: buildEmbed(data,accBenchmarkData)
-            });     
+            if(err) console.error(err);
+            var benchmarkableComponents = data.components.filter(x=>(getUbmType(x)));
+            recursiveFindUbmId(benchmarkableComponents, function (err, accBenchmarkData, isSync) {
+                if(err) return console.error(err);
+                console.log(accBenchmarkData);
+
+                if(!isSync || accBenchmarkData.length == benchmarkableComponents.length) bot.editMessage({
+                    messageID: listMessageIndices[index],
+                    channelID: evt.d.channel_id,
+                    message: "",
+                    embed: buildEmbed(data,accBenchmarkData)
+                });
+            });
         });
     });
 }
 function buildEmbed(pc, benchmarks) {
     if(!pc) return false;
-    var componentLines = pc.components.map(comp =>
-        `**${comp.type}**: [${comp.name}](${comp.url})`        
-    );
-    
+    var componentLines = pc.components.map(comp =>`**${comp.type}**: [${comp.name}](${comp.url})`);
+
+    var componentFields = [];
+
+    for(let i = 0; i < componentLines.length; i++) {
+        if(!componentFields[0] || componentFields[componentFields.length - 1].value.length + componentLines[i].length > 1024) {
+            componentFields.push({name: `Components (${componentFields.length + 1})`, value: "", inline: true});
+        }
+        componentFields[componentFields.length - 1].value += componentLines[i] + "\n";
+    }
+
     var defaultBenchmarkText = "<a:load:593253216741883904> Loading benchmarks...";
     var benchmarkText = defaultBenchmarkText;
     if(benchmarks) {
-        var benchmarkableComponents = pc.components.filter(x=>getTableName(x.type) != "");
-        if(benchmarks.length < benchmarkableComponents.length) benchmarkText = `Fetching benchmark for ${benchmarkableComponents[benchmarks.length].type} (${benchmarks.length})/${benchmarkableComponents.length})`;
-        else benchmarkText = `Projected Performance (gaming): ${gamingAverageBenchmarks(benchmarks)}%\nProjected Performance (general use): ${generalAverageBenchmarks(benchmarks)}%\n`;
+        var benchmarkableComponents = pc.components.filter(x=>getUbmType(x));
+        if(benchmarks.length < benchmarkableComponents.length) benchmarkText = `<a:load:593253216741883904> Fetching benchmark for ${benchmarkableComponents[benchmarks.length].type} (${benchmarks.length}/${benchmarkableComponents.length})`;
+        else benchmarkText = `Projected Performance (gaming): ${roundToPlace(gamingAverageBenchmarks(benchmarks),10)}%\nProjected Performance (general use): ${roundToPlace(generalAverageBenchmarks(benchmarks),10)}%\n`;
 
         for(let i = 0; i < benchmarks.length; i++) {
             let benchmark = benchmarks[i];
-            benchmarkText = `**${benchmark.type}**: ${benchmark.score}%\n` + benchmarkText;
+            benchmarkText = benchmarkText + `\n**${benchmark.type}**: ${benchmark.score}%`;
         }
     }
 
@@ -80,23 +90,16 @@ function buildEmbed(pc, benchmarks) {
         thumbnail: {
             url: pc.imageUrl
         },
-        fields: [
+        fields: ([
             {
                 name: "Pricing",
                 value: `Price (minus shipping): ${pc.priceNoShip}; Total Price: ${pc.priceTotal}`,
-                inline: true
-            },
-            {
-                name: "Components",
-                value: componentLines.join("\n"),
-                inline: true
             },
             {
                 name: "Benchmarks",
-                value: benchmarkText,
-                inline: true
+                value: benchmarkText.substring(0,1024),
             }
-        ]
+        ]).concat(componentFields)
     };
 }
 
@@ -104,36 +107,70 @@ function recursiveFindUbmId(components, cb, i, accumulator) {
     if(!i) i = 0;
     if(!accumulator) accumulator = [];
 
-    var usableComponents = components.filter(x=>getTableName(x.type) != "");
-    var currentComponent = usableComponents[i];
+    var currentComponent = components[i];
     if(!currentComponent) {
+        console.log("no currentcomponent",components);
         accumulator.push({type: "", score: ""});
-        return recursiveFindUbmId(components, cb, i+1, accumulator);
+        return cb("no component");
     }
-    request.get("https://www.userbenchmark.com/Search?searchTerm=" + encodeURIComponent(currentComponent.name), function(err, res, bod) {
+
+    let componentDbEntry = db.prepare(`SELECT * FROM ${getTableName(currentComponent.type)} WHERE id = '${currentComponent.id}'`).get();
+    if(componentDbEntry.ubmId) {
+        var benchmarkDbEntry = db.prepare(`SELECT * FROM userbenchmarks WHERE ID = '${componentDbEntry.ubmId}'`).get();
+        accumulator.push({type: getUbmType(currentComponent), score: benchmarkDbEntry.Benchmark});
+        cb(null, accumulator, true);
+        if(components[i+1]) return recursiveFindUbmId(components, cb, i+1, accumulator);
+        else return true;
+    }
+    request.get("https://bing.com/search?q=" + encodeURIComponent(("site:userbenchmark.com/SpeedTest " +currentComponent._name).substring(0,60)), function(err, res, bod) {
         if(err) return cb(err);
 
         var dom = new JSDOM(bod);
-        var searchResults = dom.window.document.querySelector(".row .col-xs-6.col-xs-offset-1");
 
-        if(!searchResults.querySelector("a.tl-tag")) {
-            accumulator.push({type: "", score: ""});
-            return recursiveFindUbmId(components, cb, i+1, accumulator);
+
+        require("fs").writeFileSync(__dirname + "/bingsearch_"+currentComponent._name.replace(/\W+/g,"_")+".html", bod);
+
+        var searchResults = dom.window.document.querySelector("#b_results");
+
+        console.log(searchResults);
+
+        if(!searchResults || !searchResults.querySelector(".b_algo:not(.ans_adsup)")) {
+            accumulator.push({type: "", score: 0});
+            if(components[i+1]) return recursiveFindUbmId(components, cb, i+1, accumulator);
+            else return cb("unable to find searchResults", accumulator);
         }
 
-        var relevantResult = searchResults.querySelector("a.tl-tag");
+        console.log("found search res");
 
-        var resultDesc = relevantResult.querySelector(".tl-desc").textContent;
-        var resultTitle = relevantResult.querySelector(".tl-title").textContent;
-        var resultCaption = relevantResult.querySelector(".tl-caption").textContent;
+        var relevantResult = searchResults.querySelector(".b_algo:not(.ans_adsup)");
 
-        var benchmark = parseFloat(resultDesc.match(/ [\d.]+%/)[0]);
+        console.log(relevantResult.innerHTML);
+
+        var resultUrl = relevantResult.querySelector("h2 a").getAttribute("href");
+
+        var benchmarkId = (/SpeedTest\/(\d+)/).exec(resultUrl)[1] + "";
+
+        var benchmarkDbEntry = db.prepare(`SELECT * FROM userbenchmarks WHERE ID = '${getUbmType(currentComponent).toLowerCase() + benchmarkId}'`).get();
+        console.log(getUbmType(currentComponent).toLowerCase() + benchmarkId);
+
+        if(!benchmarkDbEntry) {
+            accumulator.push({type: "", score: 0});
+            if(components[i+1]) return recursiveFindUbmId(components, cb, i+1, accumulator);
+            else return cb("unable to find benchmarkDbEntry for " + benchmarkId, accumulator);
+        }
+
+        console.log("found benchmark db entry ", getUbmType(currentComponent).toLowerCase() + benchmarkId);
+
+        db.prepare(`UPDATE ${getTableName(currentComponent.type)} SET ubmId = '${getUbmType(currentComponent).toLowerCase() + benchmarkId}' WHERE id = '${currentComponent.id}'`).run();
+
         accumulator.push({
-            type: (currentComponent.rotSpeed=="SSD")?"SSD":benchmarkGrabOrder[i],
-            score: benchmark
+            type: getUbmType(currentComponent),
+            score: benchmarkDbEntry.Benchmark
         });
+        console.log("success!");
+        console.log(accumulator);
         cb(null, accumulator);
-        if(usableComponents[i+1]) recursiveFindUbmId(components, cb, i+1, accumulator);
+        if(components[i+1]) recursiveFindUbmId(components, cb, i+1, accumulator);
     });
 }
 
@@ -171,8 +208,9 @@ function recursiveParseListPage(j, links, cb, accumulator) {
 
             rowJson.type = row.querySelector(".td__component").textContent;
             rowJson.image = resolveRelative(row.querySelector(".td__image").querySelector("img").getAttribute("src"), listJson.url);
-            rowJson.url = resolveRelative(row.querySelector(".td__name a").getAttribute("href"));
+            rowJson.url = resolveRelative(row.querySelector(".td__name a").getAttribute("href"), listJson.url);
             rowJson.name = row.querySelector(".td__name").textContent.trim();
+            rowJson._name = rowJson.name;
             rowJson.id = getIdFromUrl(row.querySelector(".td__name a").getAttribute("href"));
             rowJson.baseprice = row.querySelector(".td__base").textContent;
             rowJson.price = row.querySelector(".td__price").textContent;
@@ -208,12 +246,16 @@ function unify(a,b) {
         b[keys[i]] = a[keys[i]];
     }
 }
+function roundToPlace(num, place) {
+    return Math.round(num * place) / place;
+}
 function getIdFromUrl(url) {
     if(!url) return "";
     else if(!url.match(/product\/([\d\w-]+)\//)) return "";
     else return (/product\/([\d\w-]+)\//).exec(url)[1];
 }
 function getTableName(componentType) {
+    componentType = componentType.toLowerCase();
     switch(componentType) {
     case "cpu":
         return "cpu";
@@ -231,31 +273,51 @@ function getTableName(componentType) {
 }
 function gamingAverageBenchmarks(benchmarks) {
     var gamingBenchmarkWeights = {
-        "Storage": 0.25,
+        "HDD": 0.1,
         "GPU": 0.5,
         "CPU": 0.25,
-        "SSD": 
+        "SSD": 0.15,
+        "RAM": 0
     };
 
     let result = 0;
     for(let i = 0; i < benchmarks.length; i++) {
+        if(isNaN(benchmarks[i].score)) console.log(benchmarks);
+        if(typeof benchmarks[i].score != "number") benchmarks[i].score = parseFloat(benchmarks[i].score);
         result += benchmarks[i].score*gamingBenchmarkWeights[benchmarks[i].type];
     }
     return result;
 }
 function generalAverageBenchmarks(benchmarks) {
     var generalBenchmarkWeights = {
-        "Storage": 0.4,
+        "HDD": 0.1,
         "GPU": 0.1,
         "CPU": 0.5,
-        "SSD": 0.3
+        "SSD": 0.3,
+        "RAM": 0
     };
 
+    console.log(benchmarks);
     let result = 0;
     for(let i = 0; i < benchmarks.length; i++) {
+        if(typeof benchmarks[i].score != "number") benchmarks[i].score = parseFloat(benchmarks[i].score);
         result += benchmarks[i].score*generalBenchmarkWeights[benchmarks[i].type];
     }
     return result;
+}
+function getUbmType(component) {
+    switch(component.type.toLowerCase()) {
+    case "storage":
+        return component.rotSpeed=="SSD"?"SSD":"HDD";
+    case "cpu":
+        return "CPU";
+    case "video card":
+        return "GPU";
+    case "memory":
+        return "RAM";
+    default:
+        return "";
+    }
 }
 function getRgb(i) {
     var colors = ["FF0000","FF8000","FFFF00","00FF00","0093FF","0F00FF","8B00FF","E400FF","FF00C1","FF005D"];
