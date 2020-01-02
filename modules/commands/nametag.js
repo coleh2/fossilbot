@@ -121,14 +121,19 @@ module.exports = function(evt,args,_cfg,bot) {
     } else if (colorRoleList(evt).length > 0) {
         var clrRoleList = colorRoleList(evt);
         if (args.length > 0 && (args[0] != "none" && args[0] != "clear")) {
-            var missingColorErrorMessage;
+            var missingColorErrorMessage, onlySendMessage;
             if(args[0] == "list") missingColorErrorMessage = "I'll DM you a list of colors right away!";
-            else missingColorErrorMessage = "That's not a valid color here! I'll DM you a list of colors that work on this server.";
+            else {
+                missingColorErrorMessage = "That's not a valid color here! If you are trying to clear your nametag, try `>namecolor clear`. Use `>namecolor list` to get a list of colors that work on this server.";
+                onlySendMessage = true;
+            }
             bot.sendMessage({
                 to: evt.d.channel_id,
                 message: missingColorErrorMessage,
             });
-            //Generate image of colors 
+
+            if(onlySendMessage) return
+            //Generate image of colors
 
             var canvas = createCanvas(100, (clrRoleList.length * 40));
             var ctx = canvas.getContext("2d");
