@@ -26,21 +26,29 @@ module.exports = function(evt,args,_cfg,bot) {
         if (isChannelNSFW) { url = "https://www.google.com/search?tbm=isch&q=" + encodeURIComponent(q) + "&safe=images"; }
         request(url, function (err, resp, body) {
 
+            if(err) return bot.editMessage({channelID: evt.d.channel_id, messageID: protoMessageId, message: ":warning: Error in Google Images. Please try again later."});
+
             var parsedBody = (new JSDOM(body)).window.document;
-            var imgs = parsedBody.querySelectorAll("img");
+
+            var imgs = Array.from(parsedBody.querySelectorAll("img")).filter(x=>(x.src||x.href)&&!(x.src || x.href || "").includes("branding"));
 
             if (imgs[0] == null) {
                 bot.sendMessage({
                     to: channelID,
-                    message: "That query didn't get any approved results!"
+                    message: ":warning: That query didn't get any approved results!"
                 });
                 return;
             }
             var color = _cfg.getmeColor || 7604687;
             if (!imgs[number]) number = imgs.length - 1;
 
-            var finalUrl = imgs[number].href ? imgs[number].href : imgs[number].src;
-            
+            console.log(imgs.map(x=>x.src||x.href));
+            var finalUrl = imgs[number].src || imgs[number].href;
+
+            console.log(imgs[number]);
+
+            console.log(finalUrl);
+
             var message = {
                 "messageID": protoMessageId,
                 "channelID": evt.d.channel_id,

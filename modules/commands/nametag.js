@@ -132,7 +132,7 @@ module.exports = function(evt,args,_cfg,bot) {
                 message: missingColorErrorMessage,
             });
 
-            if(onlySendMessage) return
+            if(onlySendMessage) return;
             //Generate image of colors
 
             var canvas = createCanvas(100, (clrRoleList.length * 40));
