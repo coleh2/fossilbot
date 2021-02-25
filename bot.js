@@ -18,7 +18,6 @@ const webserver = require(__dirname + "/modules/webserver/webserver.js")(db,bot)
 var channelActivity = require(__dirname + "/modules/channelactivity/channelactivity.js")(db);
 var antiSpam = require(__dirname + "/modules/antispam/antispam.js");
 var commandManager = require(__dirname + "/modules/commandmanager/commandmanager.js");
-var pcpartpicker = require(__dirname + "/modules/pcpartpicker/pcpartpicker.js");
 var reactionRoles = require(__dirname + "/modules/reactionroles/reactionroles.js")(bot);
 
 var cfg = {
@@ -349,9 +348,7 @@ bot.on("message", function (user, userID, channelID, message, evt) {
                 }
             }
         }
-        //embedding of pcpartpicker lists
-        pcpartpicker(evt, _cfg, bot);
-
+        
         //reaction role adding
         reactionRoles.add(evt);
 
