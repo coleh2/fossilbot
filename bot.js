@@ -192,6 +192,7 @@ bot.on("voiceStateUpdate", function (evt) {
 });
 bot.on("any", function(evt) {
     if(evt.t == "MESSAGE_REACTION_ADD") reactionRoles.reaction(evt);
+    else if(evt.t == "INTERACTION_CREATE") console.log("INTERACTION_CREATE", evt);
 });
 
 //when people join, do stuff
