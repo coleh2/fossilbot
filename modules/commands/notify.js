@@ -1,5 +1,17 @@
 module.exports = function (evt, args, _cfg, bot, db) {
     if (!_cfg.enabledFeatures.notify) { bot.sendMessage({ to: evt.d.channel_id, message: "Sorry, but that feature isn't enabled on this server." }); return; }
+
+    var notifName = args.slice(0, 3).join(" ");
+
+    if(notifName.toLowerCase().endsWith("notifications"))  {
+        //warn about notifications that end with "notifications", like "cs:go notifications notifications"
+        bot.sendMessage({
+            to: evt.d.channel_id,
+            message: "`[Error 301f73c.4.0]` Don't include 'notifications' at the end of the role; it is added automatically. You might be looking for `>notify " + notifName.replace(/ ?notifications$/i, "") + "` :)"
+        });
+        return;
+    }
+
     var specificNotifRole = roleSearchByName(evt, ((args.slice(0, 3).join(" ").substring(0, 32)) || "Annoying People") + " Notifications");
 
     var memberStoredData = db.prepare("SELECT notifybudget FROM members WHERE guild_id = ? AND id = ?").get([evt.d.guild_id, evt.d.author.id]);

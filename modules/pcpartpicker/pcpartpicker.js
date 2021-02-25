@@ -189,6 +189,8 @@ function recursiveParseListPage(j, links, cb, accumulator) {
 
         listJson.url = links[j];
 
+        if(!pageHeading || !pageTitle) return console.error(bod);
+
         listJson.title = pageTitle.textContent;
         listJson.name = pageHeading.textContent;
         listJson.priceNoShip = listTable.querySelector(".tr__total .td__price").textContent;

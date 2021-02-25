@@ -364,8 +364,8 @@ function requireLogin() {
     }
 }
 function openLogin() {
-    var windowUrl = "https://discordapp.com/oauth2/authorize?client_id=387963766798811136&redirect_uri=http%3A%2F%2Ffossilbot.cf%2Fdiscordoauthresponse&response_type=token&scope=identify%20guilds%20connections&state=" + encodeURIComponent(window.location.pathname);
-    if(location.protocol == "https:") windowUrl = "https://discordapp.com/oauth2/authorize?client_id=387963766798811136&redirect_uri=https%3A%2F%2Ffossilbot.cf%2Fdiscordoauthresponse&response_type=token&scope=identify%20guilds%20connections&state=" + encodeURIComponent(window.location.pathname);
+    var windowUrl = "https://discordapp.com/oauth2/authorize?client_id=387963766798811136&redirect_uri=http%3A%2F%2Ffossilbot.net%2Fdiscordoauthresponse&response_type=token&scope=identify%20guilds%20connections&state=" + encodeURIComponent(window.location.pathname);
+    if(location.protocol == "https:") windowUrl = "https://discordapp.com/oauth2/authorize?client_id=387963766798811136&redirect_uri=https%3A%2F%2Ffossilbot.net%2Fdiscordoauthresponse&response_type=token&scope=identify%20guilds%20connections&state=" + encodeURIComponent(window.location.pathname);
     window.open(windowUrl, "DiscordAuthWindow","toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=400,height=600"); 
     window.addEventListener("message", function(event) {
         localStorage.setItem("discordToken",event.data);

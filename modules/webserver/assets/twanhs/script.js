@@ -1,14 +1,13 @@
 var markdown;
 
 function parseMd(text) {
-  if(!text) return "";
+    if(!text) return "";
 
-  var pHtml = markdown.toHTML(text);
-  var p = document.createElement("p");
-  p.innerHTML = pHtml;
-  if(p.childElementCount == 1) return p.firstElementChild.innerHTML;
-  else return pHtml;
-  return p.firstElementChild.innerHTML;
+    var pHtml = markdown.toHTML(text);
+    var p = document.createElement("p");
+    p.innerHTML = pHtml;
+    if(p.childElementCount == 1) return p.firstElementChild.innerHTML;
+    else return pHtml;
 }
 
 var writingPost = {
@@ -301,7 +300,7 @@ function deletePost(postId, cb) {
                 action: sendPost
             }]
         });
-    };
+    }
 
     var xhr = new XMLHttpRequest();
 
@@ -331,7 +330,7 @@ function updateQueueDisplay() {
                 action: sendPost
             }]
         });
-    };
+    }
     
     var xhr = new XMLHttpRequest();
 
@@ -370,10 +369,10 @@ function updateQueueDisplay() {
                     let cardActions = document.createElement("div");
                     cardActions.classList.add("card-actions");
 
-                     var cardTime = document.createElement("span");
-                     cardTime.innerText = (new Date(posts[i].timeAt)).toLocaleString();
-                     cardTime.classList.add("card-time");
-                     cardActions.appendChild(cardTime);
+                    var cardTime = document.createElement("span");
+                    cardTime.innerText = (new Date(posts[i].timeAt)).toLocaleString();
+                    cardTime.classList.add("card-time");
+                    cardActions.appendChild(cardTime);
 
                     let cardActionEdit = document.createElement("a");
                     cardActionEdit.innerText = "edit";
@@ -514,8 +513,8 @@ function requireLogin() {
     }
 }
 function openLogin() {
-    var windowUrl = "https://discordapp.com/oauth2/authorize?client_id=387963766798811136&redirect_uri=http%3A%2F%2Ffossilbot.cf%2Fdiscordoauthresponse&response_type=token&scope=identify%20guilds%20connections&state=" + encodeURIComponent(window.location.pathname);
-    if(location.protocol == "https:") windowUrl = "https://discordapp.com/oauth2/authorize?client_id=387963766798811136&redirect_uri=https%3A%2F%2Ffossilbot.cf%2Fdiscordoauthresponse&response_type=token&scope=identify%20guilds%20connections&state=" + encodeURIComponent(window.location.pathname);
+    var windowUrl = "https://discordapp.com/oauth2/authorize?client_id=387963766798811136&redirect_uri=http%3A%2F%2Ffossilbot.net%2Fdiscordoauthresponse&response_type=token&scope=identify%20guilds%20connections&state=" + encodeURIComponent(window.location.pathname);
+    if(location.protocol == "https:") windowUrl = "https://discordapp.com/oauth2/authorize?client_id=387963766798811136&redirect_uri=https%3A%2F%2Ffossilbot.net%2Fdiscordoauthresponse&response_type=token&scope=identify%20guilds%20connections&state=" + encodeURIComponent(window.location.pathname);
     window.open(windowUrl, "DiscordAuthWindow","toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=400,height=600"); 
     window.addEventListener("message", function(event) {
         localStorage.setItem("discordToken",event.data);
@@ -548,7 +547,7 @@ function sendEdit() {
                 action: sendEdit
             }]
         });
-    };
+    }
     req.onreadystatechange = function() {
         if (this.readyState == 4) {
             if(this.status.toString().substring(0,1) == "2") {
@@ -568,7 +567,7 @@ function sendEdit() {
                     color: "err",
                     actions: [{
                         text: "Why?",
-                        action: function() { window.alert("Discord puts limits on the rate of messages that a bot sends. To stay under this limit, you're not allowed to queue multiple posts at the same time.") }
+                        action: function() { window.alert("Discord puts limits on the rate of messages that a bot sends. To stay under this limit, you're not allowed to queue multiple posts at the same time."); }
                     }]
                 });
             } else announceError();
@@ -595,7 +594,7 @@ function sendPost() {
                 action: sendPost
             }]
         });
-    };
+    }
     req.onreadystatechange = function() {
         if (this.readyState == 4) {
             if(this.status.toString().substring(0,1) == "2") {
@@ -614,7 +613,7 @@ function sendPost() {
                     color: "err",
                     actions: [{
                         text: "Why?",
-                        action: function() { window.alert("Discord puts limits on the rate of messages that a bot sends. To stay under this limit, you're not allowed to queue multiple posts at the same time.") }
+                        action: function() { window.alert("Discord puts limits on the rate of messages that a bot sends. To stay under this limit, you're not allowed to queue multiple posts at the same time."); }
                     }]
                 });
             } else announceError();
@@ -645,10 +644,10 @@ function loadPostToEdit(postEmbed) {
     var fieldIds = Object.keys(postEmbed.fields);
     var fieldDatas = Object.values(postEmbed.fields);
     var currentExistingFields = document.querySelectorAll("#edit-fields .input-fields-field-parent");
-    for(var i = 0; i < currentExistingFields.length; i++) {
+    for(let i = 0; i < currentExistingFields.length; i++) {
         currentExistingFields[i].parentElement.removeChild(currentExistingFields[i]);
     }
-    for(var i = 0; i < fieldDatas.length; i++) {
+    for(let i = 0; i < fieldDatas.length; i++) {
         console.log(fieldDatas[i]);
         let editElem = createFieldEditorElement(editingPost, fieldDatas[i].name, fieldDatas[i].value, fieldIds[i]);
         document.getElementById("edit-fields").insertBefore(editElem, document.getElementById("edit-fields-add"));

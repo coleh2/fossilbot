@@ -48,11 +48,6 @@ function updateActivity(evt) {
         db.prepare("UPDATE channelactivity SET messages = messages + 1 WHERE guild_id = ? AND channel_id = ? AND day = ?").run([evt.d.guild_id, evt.d.channel_id, today]);
 		
     }
-/*TODO: Update icon when game changes
- else if (evt.t == "PRESENCE_UPDATE") {
-
-    }
-*/
 }
 function updateChannelOrderFromActivity(serverId,categoryToUpdateId,topCallback) {
 	
@@ -61,11 +56,6 @@ function updateChannelOrderFromActivity(serverId,categoryToUpdateId,topCallback)
 	
     var activitiesOfChannels = makeActivityObj(serverId);
     if(!categoryToUpdateId) return false;
-	
-    Object.keys(activitiesOfChannels).sort((a,b) => {return activitiesOfChannels[b] - activitiesOfChannels[a];}).forEach((x,i) => {
-        activitiesOfChannels[x] = i;
-    });
-	
 	
     request({
         url: "https://discordapp.com/api/v6/guilds/" + serverId + "/channels",
@@ -83,12 +73,18 @@ function updateChannelOrderFromActivity(serverId,categoryToUpdateId,topCallback)
         var channelsThatAreInTheSpecifiedCategory = [];
         var basePosition = -Infinity;
         var numberOfDefaultSortedChannelsSoFar = 0;
+
         for(let i = 0; i < body.length; i++) {
             if(body[i].parent_id == categoryToUpdateId && body[i].type == 0) {
                 if(body[i].position > basePosition) basePosition = body[i].position;
                 channelsThatAreInTheSpecifiedCategory.push(body[i]);
             }
         }
+
+        Object.keys(activitiesOfChannels).filter(y=>channelsThatAreInTheSpecifiedCategory.find(z=>z.id==y)).sort((a,b) => {return activitiesOfChannels[b] - activitiesOfChannels[a];}).forEach((x,i) => {
+            activitiesOfChannels[x] = i;
+        });
+
         for(let i = 0; i < channelsThatAreInTheSpecifiedCategory.length; i++) {
             var thisChannel = channelsThatAreInTheSpecifiedCategory[i];
             if(activitiesOfChannels[thisChannel.id] === undefined) {

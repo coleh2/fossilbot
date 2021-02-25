@@ -19,6 +19,7 @@ var channelActivity = require(__dirname + "/modules/channelactivity/channelactiv
 var antiSpam = require(__dirname + "/modules/antispam/antispam.js");
 var commandManager = require(__dirname + "/modules/commandmanager/commandmanager.js");
 var pcpartpicker = require(__dirname + "/modules/pcpartpicker/pcpartpicker.js");
+var reactionRoles = require(__dirname + "/modules/reactionroles/reactionroles.js")(bot);
 
 var cfg = {
     cooldown_g: 30,
@@ -82,7 +83,7 @@ webserver.onEmailAuth(function (m) {
         userID: m.userid,
         roleID: roleSearchByName({ d: { guild_id: m.guild_id } }, "New Recruit")
     });
-    var directory = require("./nps_email_directory.json");
+    var directory = require(__dirname + "/nhs_resources/nps_email_directory.json");
     var directoryItem = directory.find(x => { return x.e == m.email; });
     if (!directoryItem) return;
     var hasMidddleInitial = (directoryItem.n.split(" ").length == 4);
@@ -118,18 +119,26 @@ webserver.onSnowDayAnnounced(function(m) {
 // Initialize Discord Bot
 bot.connect();
 
+var autoReconnectCount = 0;
+var lastAutoReconnect = Date.now();
 //on bot ready
 bot.on("ready", function () {
     console.log("📡 Connected");
     console.log("🔑 Logged in as: " + bot.username + " - (" + bot.id + ")");
     bot.setPresence({ status: "online", game: { name: "with >help" } });
     console.log("📱 Presence set");
+    autoReconnectCount = 0;
 });
 
-// Automatically reconnect if the bot disconnects
+// Automatically reconnect if the bot disconnects -- only 5 times!
 bot.on("disconnect", function (erMsg, code) {
     console.log("⚠️ Bot disconnected from Discord with code " + code + " for reason: " + erMsg);
-    bot.connect();
+    if(autoReconnectCount < 5) {
+        if(code != 1000 && Date.now() - lastAutoReconnect < 1000) autoReconnectCount++;
+        console.log("Automatically reconnecting -- attempt " + autoReconnectCount + "/5");
+        lastAutoReconnect = Date.now();
+        bot.connect();
+    }
 });
 
 var cmdprefix = ">";
@@ -148,6 +157,9 @@ bot.on("presenceUpdate", function (evt) {
     }
 });
 bot.on("voiceStateUpdate", function (evt) {
+
+    require("./voice-state-saver.js")(evt);
+
     try {
         var _cfg = db.prepare("SELECT * FROM serverconfig WHERE id = ?").get([evt.d.guild_id]);
         if (!_cfg) { _cfg = cfg; } else { _cfg = toLegacyConfigSchema(_cfg); }
@@ -178,6 +190,9 @@ bot.on("voiceStateUpdate", function (evt) {
             }
         }
     } catch(e) { console.error(e); }
+});
+bot.on("any", function(evt) {
+    if(evt.t == "MESSAGE_REACTION_ADD") reactionRoles.reaction(evt);
 });
 
 //when people join, do stuff
@@ -259,7 +274,35 @@ bot.on("message", function (user, userID, channelID, message, evt) {
         //if the user is a bot, stop ALL of this stuff
         if (evt.d.author.bot) return;
 
+        //preston's footnose thing
+        if(evt.d.guild_id == "392830469500043266" || evt.d.guild_id == "427197003035049985") {
+            if(evt.d.attachments && evt.d.attachments[0]) {
+                if(require(__dirname + "/data/bannedFileNames.json").includes(evt.d.attachments[0].filename)) {
+                    bot.deleteMessage({
+                        channelID: evt.d.channel_id,
+                        messageID: evt.d.id
+                    });
+                }
 
+            }
+
+        }
+
+
+        //mark's anti-politics thing
+        if(evt.d.guild_id == "392830469500043266" && !(["511690095238316042","447478213388795904","509375073958887424","485200425176268824"]).includes(channelID)){
+            var offTopicPolitics = ["aoc","biden","bernie","blm","black lives matter","brutality","covid","covid-19","coronavirus","candidate","cnn","donald","democrat","democracy","dictator","fox","fox news","police","gender","ben shapiro","communism","facism","anarchy","government","a right", "election","rigging", "free healthcare","racism","tyranny","violate"];
+            for(var i = 0; i < offTopicPolitics.length; i++) {
+                if(message.toLowerCase().match(offTopicPolitics[i])) {
+                    //someone's being naughty!
+                    /*bot.sendMessage({
+                        to: channelID,
+                        message: "Hi there! According to a list of terms specified by Mark, it looks like you're being political in a non-political chat. Here is the term that triggered this message: \"" + offTopicPolitics[i] + "\". Please move to #paulitics!"
+                    });*/
+                    break;
+                }
+            }
+        }
         //antispam section
         if (_cfg.enabledFeatures.antispam) {
             antiSpam.update(evt, _cfg);
@@ -309,6 +352,9 @@ bot.on("message", function (user, userID, channelID, message, evt) {
         //embedding of pcpartpicker lists
         pcpartpicker(evt, _cfg, bot);
 
+        //reaction role adding
+        reactionRoles.add(evt);
+
         //exp management section
         if (_cfg.enabledFeatures.experience) {
             //add a random number between 10 and 25 to the score
@@ -342,7 +388,7 @@ bot.on("message", function (user, userID, channelID, message, evt) {
         //automatic response
         if (_cfg.enabledFeatures.autoresponse && _cfg.autoResp) {
 
-            for (var i = 0, e = Object.keys(_cfg.autoResp); i < e.length; i++) {
+            for (let i = 0, e = Object.keys(_cfg.autoResp); i < e.length; i++) {
                 if (message.match(RegExp(e[i]))) {
                     bot.sendMessage({
                         to: channelID,

@@ -75,7 +75,7 @@ module.exports = function(evt,args,_cfg,bot) {
                 });
 
                 var hexDecNum = parseInt(hexCode, 16);
-                if (hexColorDelta(hexCode, "140A02") < 0.95) {
+                if (hexColorDelta(hexCode, "140A02") < 0.99) {
                     bot.createRole(evt.d.guild_id, function (err, resp) {
                         if (err) {
                             if(err.statusCode == 403 && err.response) {
@@ -90,7 +90,11 @@ module.exports = function(evt,args,_cfg,bot) {
                         }
                         //console.log(resp);
                         var JustMadeRole = resp.id;
-                        bot.editRole({ serverID: evt.d.guild_id, roleID: JustMadeRole, name: "#" + hexCode + " Nametag", color: hexDecNum });
+                        var editRolePayload = { serverID: evt.d.guild_id, roleID: JustMadeRole, name: "#" + hexCode + " Nametag", color: hexDecNum,
+                            position: Object.values(bot.servers[evt.d.guild_id].roles).find(x=>x.tags&&x.tags.bot_id=="387963766798811136").position - 1
+                        };
+                        console.log(editRolePayload);
+                        bot.editRole(editRolePayload, console.log);
                         if (JustMadeRole) {
                             bot.addToRole({
                                 serverID: evt.d.guild_id,

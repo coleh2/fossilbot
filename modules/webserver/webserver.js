@@ -6,7 +6,7 @@ var request = require("request");
 var nodemailer = require("nodemailer");
 var jsonDb = require("simple-json-db");
 var cache = new jsonDb(__dirname + "/db/webcache.json");
-var twanhsDb = new jsonDb(__dirname + "/db/twanhs.json")
+var twanhsDb = new jsonDb(__dirname + "/db/twanhs.json");
 var botAuth = require(__dirname + "/../../.data/auth.json");
 
 var callbacks = {};
@@ -56,7 +56,7 @@ setInterval(function() {
                 to: twanhsChannelId,
                 message: "<@&516614364837445633> New TW@NHS!",
                 embed: postArr[i].embed
-            }, function(e,b) {console.log(e,b)});
+            }, function(e,b) {console.log(e,b);});
             delete preparedTwanhsPosts[Object.keys(preparedTwanhsPosts)[i]];
             twanhsDb.JSON(preparedTwanhsPosts);
             twanhsDb.sync();
@@ -442,6 +442,7 @@ app.get("/validate_email", (req, res) => {
     var cacheObject = cache.JSON();
     var cacheContents = cacheObject.cache;
     var userRecord = cacheContents.find(x => { return x.discord.id.id == req.query.userid; });
+    console.log(userRecord);
     if (!userRecord) return notAuth(404);
     if (userRecord.emailConnectCode != req.query.code) return notAuth(401);
 
@@ -492,20 +493,20 @@ var emailCodeGenerateAndSend = (m, cb) => {
     cache.JSON(cacheObject);
 
     var transporter = nodemailer.createTransport({
-        host: "smtp.zoho.com",
+        host: "smtp.improvmx.com",
         port: 587,
         auth: {
-            user: "fossilbot-donotreply@coleh.net",
+            user: "noreply@fossilbot.net",
             pass: require(__dirname + "/../../.data/email_auth.json")
         }
     });
 
     var mailOptions = {
-        from: "fossilbot-donotreply@coleh.net",
+        from: "noreply@fossilbot.net",
         to: m.email_address,
         subject: "Code for Verification",
-        text: `Go to https://fossilbot.cf/validate_email?userid=${user_id}&serverid=${guild_id}&code=${code}&action=verify`,
-        html: `<!DOCTYPE HTML><html><head></head><body style="padding: 3em; margin: 0px; color: #000000; background: #dedede;font-family: sans-serif;">\r\n <div style="padding: 10px; background: #fefefe; ">\r\n    <h1 style="width: 100%; display: block; height: 2em; position: relative;">\r\n\t    <img src="cid:fossilbotlogo" style="width: 2em;border-radius:100%; width: 2em;" alt="Fossilbot logo">\r\n\t\t<span style="display: inline-block; position: absolute; top: 0px; left: 2.5em; line-height: 2em; vertical-align: middle;">Email Verification</span>\r\n\t</h1>\r\n\t<div style="padding:10px;">\r\n\t\t<p>Hey there! Someone wanted to use this email address to access the <b>NHS</b> Discord server. If it was you, click on the button below.</p>\r\n\t    <div style="background: #dedede; padding: 10px; border-radius: 4px; font-size: 2em;">\r\n\t\t\t<button style="margin: auto; display:block; background: #61B774; outline: none; border: none; padding: 0.5em; padding-left: 0.75em; padding-right: 0.75em; font-size: 1.25em; color: white; border-radius: 0.25em; width: auto; cursor: pointer; overflow: hidden; transition: width 10s linear;">\r\n\t\t\t    <a style="text-decoration:none;color:black;" href="https://fossilbot.cf/validate_email?userid=${user_id}&serverid=${guild_id}&code=${code}&action=verify">Verify Email</a>\r\n\t\t\t</button>\r\n\t\t</div>\r\n\t\t<p>If you didn't request this email, please click <a href="mailto:coleh@coleh.net" style="color: #3333cc;">here</a> to notify a human about that.</p>\r\n\t\t\r\n\t</div>\r\n\r\n </div>\r\n<div style="background: #cecece; padding: 10px; position: relative; text-align: center;">\r\n\t<i><span style="white-space: nowrap;"><a href="https://discordapp.com/oauth2/authorize?client_id=387963766798811136&permissions=335760448&scope=bot" style="color: #3333cc;">Get Fossilbot for your server</a></span> &bull; <span style="white-space: nowrap;"><a href="mailto:coleh@coleh.net" style="color: #3333cc;">Contact me</a></span> </i>\r\n</div>\r\n</body></html>`,
+        text: `Go to https://fossilbot.net/validate_email?userid=${user_id}&serverid=${guild_id}&code=${code}&action=verify`,
+        html: `<!DOCTYPE HTML><html><head></head><body style="padding: 3em; margin: 0px; color: #000000; background: #dedede;font-family: sans-serif;">\r\n <div style="padding: 10px; background: #fefefe; ">\r\n    <h1 style="width: 100%; display: block; height: 2em; position: relative;">\r\n\t    <img src="cid:fossilbotlogo" style="width: 2em;border-radius:100%; width: 2em;" alt="Fossilbot logo">\r\n\t\t<span style="display: inline-block; position: absolute; top: 0px; left: 2.5em; line-height: 2em; vertical-align: middle;">Email Verification</span>\r\n\t</h1>\r\n\t<div style="padding:10px;">\r\n\t\t<p>Hey there! Someone wanted to use this email address to access the <b>NHS</b> Discord server. If it was you, click on the button below.</p>\r\n\t    <div style="background: #dedede; padding: 10px; border-radius: 4px; font-size: 2em;">\r\n\t\t\t<button style="margin: auto; display:block; background: #61B774; outline: none; border: none; padding: 0.5em; padding-left: 0.75em; padding-right: 0.75em; font-size: 1.25em; color: white; border-radius: 0.25em; width: auto; cursor: pointer; overflow: hidden; transition: width 10s linear;">\r\n\t\t\t    <a style="text-decoration:none;color:black;" href="https://fossilbot.net/validate_email?userid=${user_id}&serverid=${guild_id}&code=${code}&action=verify">Verify Email</a>\r\n\t\t\t</button>\r\n\t\t</div>\r\n\t\t<p>If you didn't request this email, please click <a href="mailto:coleh@coleh.net" style="color: #3333cc;">here</a> to notify a human about that.</p>\r\n\t\t\r\n\t</div>\r\n\r\n </div>\r\n<div style="background: #cecece; padding: 10px; position: relative; text-align: center;">\r\n\t<i><span style="white-space: nowrap;"><a href="https://discordapp.com/oauth2/authorize?client_id=387963766798811136&permissions=335760448&scope=bot" style="color: #3333cc;">Get Fossilbot for your server</a></span> &bull; <span style="white-space: nowrap;"><a href="mailto:coleh@coleh.net" style="color: #3333cc;">Contact me</a></span> </i>\r\n</div>\r\n</body></html>`,
         attachments: [{
             filename: "fossilbotlogo.png",
             path: __dirname + "/assets/emailicon.png",
@@ -519,7 +520,7 @@ var emailCodeGenerateAndSend = (m, cb) => {
 };
 
 
-app.use((err, req, res, next) => {
+app.use((err, req, res) => {
     if (err instanceof SyntaxError && err.body) return res.status(400).send("invalid json");
 
     console.error(err);

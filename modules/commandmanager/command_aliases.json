@@ -20,5 +20,10 @@
     ],
     "periodgame": [
         "pg"
+    ],
+    "join": [
+       "addmeto",
+       "addme",
+       "addmetoo"
     ]
 }
