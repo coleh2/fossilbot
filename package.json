@@ -1,6 +1,6 @@
 {
   "name": "fossilbot",
-  "version": "1.4.3",
+  "version": "1.5.3",
   "description": "a custom bot",
   "main": "bot.js",
   "scripts": {

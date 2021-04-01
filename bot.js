@@ -200,17 +200,17 @@ var request = require("request");
 function handleInteractionCreated(event) {
     var url = `https://discord.com/api/v8/interactions/${event.id}/${event.token}`;
 
-request.post(url + "/callback", {
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-        type: 5,
-        data: {
-            content: "..."
-        }
-    })
-});
+    request.post(url + "/callback", {
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            type: 5,
+            data: {
+                content: "..."
+            }
+        })
+    });
 
 
     var _cfg = db.prepare("SELECT * FROM serverconfig WHERE id = ?").get([event.guild_id]);
@@ -223,21 +223,21 @@ function makeShimInteractionBot(callbackUrl) {
 
     return {
         sendMessage(data) {
-             request.patch(callbackUrl + "/messages/@original", {
-                 headers: {
-                     "Content-Type": "application/json"
-                 },
-                 body: JSON.stringify({
-                     type: 4,
-                     data: {
-                         content: data.message
-                     }
-                 })
-             });
+            request.patch(callbackUrl + "/messages/@original", {
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    type: 4,
+                    data: {
+                        content: data.message
+                    }
+                })
+            });
 
         }
 
-    }
+    };
 }
 
 //when people join, do stuff
