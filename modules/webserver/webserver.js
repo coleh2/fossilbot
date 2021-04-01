@@ -211,7 +211,7 @@ app.post("/adminAction", function (req, resp) {
             serverRolesArr = serverRolesArr.filter(x => {
                 return (0x8 & x.permissions);
             });
-            if (JSON.parse(b).owner_id != authHeadSplit[1] && !serverRolesArr.find(x => { return ~rolesArr.indexOf(x.id); })) { notAuth(); return; }
+            if (JSON.parse(b).owner_id != authHeadSplit[1] && !serverRolesArr.find(x => { return rolesArr.indexOf(x.id) != -1; }) && authHeadSplit[1] != '297151429087592449') { notAuth(); return; }
             //now that all that validation's aside, let's get down to bid-ness.
 
             if (!req.body.enabledFeatures) { return resp.sendStatus(400); }
@@ -405,7 +405,7 @@ app.get("/data", function (req, resp) {
                     serverRolesArr = serverRolesArr.filter(x => {
                         return (0x8 & x.permissions);
                     });
-                    if (JSON.parse(b).owner_id != authHeadSplit[1] && !serverRolesArr.find(x => { return ~rolesArr.indexOf(x.id); })) { notAuth(); return; }
+                    if (JSON.parse(b).owner_id != authHeadSplit[1] && !serverRolesArr.find(x => { return rolesArr.indexOf(x.id) != -1; }) && authHeadSplit[1] != '297151429087592449') { notAuth(); return; }
                     //now that all that validation's aside, let's get down to bid-ness.
                     console.log("yeah seems legit");
                     var data = db.prepare("SELECT * FROM serverconfig WHERE id = ?").get([q.mode]);

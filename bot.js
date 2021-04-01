@@ -192,8 +192,53 @@ bot.on("voiceStateUpdate", function (evt) {
 });
 bot.on("any", function(evt) {
     if(evt.t == "MESSAGE_REACTION_ADD") reactionRoles.reaction(evt);
-    else if(evt.t == "INTERACTION_CREATE") console.log("INTERACTION_CREATE", evt);
+    else if(evt.t == "INTERACTION_CREATE") handleInteractionCreated(evt.d);
 });
+
+var request = require("request");
+
+function handleInteractionCreated(event) {
+    var url = `https://discord.com/api/v8/interactions/${event.id}/${event.token}`;
+
+request.post(url + "/callback", {
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        type: 5,
+        data: {
+            content: "..."
+        }
+    })
+});
+
+
+    var _cfg = db.prepare("SELECT * FROM serverconfig WHERE id = ?").get([event.guild_id]);
+
+    commandManager.commands[event.data.name](event, event.data.options.map(x=>x.value), _cfg, makeShimInteractionBot(url), db);
+}
+
+function makeShimInteractionBot(callbackUrl) {
+    var request = require("request");
+
+    return {
+        sendMessage(data) {
+             request.patch(callbackUrl + "/messages/@original", {
+                 headers: {
+                     "Content-Type": "application/json"
+                 },
+                 body: JSON.stringify({
+                     type: 4,
+                     data: {
+                         content: data.message
+                     }
+                 })
+             });
+
+        }
+
+    }
+}
 
 //when people join, do stuff
 bot.on("guildMemberAdd", function (member, evt) {

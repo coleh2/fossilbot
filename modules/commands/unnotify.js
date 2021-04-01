@@ -26,7 +26,7 @@ module.exports = function (evt, args, _cfg, bot) {
         if (!bot.servers[evt.d.guild_id]) { return null; }
         var r = (Object.keys(bot.servers[evt.d.guild_id].roles).find(function (key) {
             var res = bot.servers[evt.d.guild_id].roles[key].name;
-            if (res.toLowerCase() == q.toLowerCase()) { return true; }
+            if ((res||"").toLowerCase() == (q||"").toLowerCase()) { return true; }
         }));
         if (r != null) { return r; } else { return null; }
     }
