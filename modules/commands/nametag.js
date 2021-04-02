@@ -1,5 +1,9 @@
 var { createCanvas } = require("canvas");
 
+var request = require("request");
+var botAuth = require(__dirname + "/../../.data/auth.json");
+
+
 module.exports = function(evt,args,_cfg,bot) {
     if (!_cfg.enabledFeatures.namecolor) { bot.sendMessage({ to: evt.d.channel_id, message: "Sorry, but that feature isn't enabled on this server." }); return; }
     var c = roleName(evt, args.join(" ").toLowerCase());
@@ -39,7 +43,10 @@ module.exports = function(evt,args,_cfg,bot) {
         } else if (iscpt) {
             evt.d.member.roles.find(function (key) {
                 var res = bot.servers[evt.d.guild_id].roles[key].name;
-                if (res.substring(res.length - 8, res.length).toLowerCase() == " nametag" && key != c) { bot.removeFromRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: key }); }
+                if (res.substring(res.length - 8, res.length).toLowerCase() == " nametag" && key != c) { 
+                    bot.removeFromRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: key }); 
+                    removeRoleIfUnused(key, evt.d.guild_id);
+                }
             });
             console.log("🖌️ Nametag Color on server " + evt.d.guild_id + " for " + evt.d.author.username + "#" + evt.d.author.discriminator + " changed to " + args.join(" ") + " (" + c + ")");
             bot.addToRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: c });
@@ -71,7 +78,10 @@ module.exports = function(evt,args,_cfg,bot) {
                 console.log("hexCode: " + hexCode);
                 evt.d.member.roles.find(function (key) {
                     var res = bot.servers[evt.d.guild_id].roles[key].name;
-                    if (res.substring(res.length - 8, res.length).toLowerCase() == " nametag" && key != c) { bot.removeFromRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: key }); }
+                    if (res.substring(res.length - 8, res.length).toLowerCase() == " nametag" && key != c) { 
+                        bot.removeFromRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: key });
+                        removeRoleIfUnused(key, evt.d.guild_id);
+                    }
                 });
 
                 var hexDecNum = parseInt(hexCode, 16);
@@ -168,7 +178,10 @@ module.exports = function(evt,args,_cfg,bot) {
         } else if (args[0] == "none" || args[0] == "clear") {
             evt.d.member.roles.find(function (key) {
                 var res = bot.servers[evt.d.guild_id].roles[key].name;
-                if (res.substring(res.length - 8, res.length).toLowerCase() == " nametag") { bot.removeFromRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: key }); }
+                if (res.substring(res.length - 8, res.length).toLowerCase() == " nametag") { 
+                    bot.removeFromRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: key });
+                    removeRoleIfUnused(key, evt.d.guild_id);
+                }
             });
             bot.sendMessage({
                 to: evt.d.channel_id,
@@ -182,13 +195,40 @@ module.exports = function(evt,args,_cfg,bot) {
         }
         evt.d.member.roles.find(function (key) {
             var res = bot.servers[evt.d.guild_id].roles[key].name;
-            if (res.substring(res.length - 8, res.length).toLowerCase() == " nametag") { bot.removeFromRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: key }); }
+            if (res.substring(res.length - 8, res.length).toLowerCase() == " nametag") { 
+                bot.removeFromRole({ serverID: evt.d.guild_id, userID: evt.d.author.id, roleID: key });
+                removeRoleIfUnused(key, evt.d.guild_id);
+            }
         });
     } else {
         bot.sendMessage({
             to: evt.d.channel_id,
             message: "Sorry, that feature isn't enabled on this server! Use `>help namecolor` to learn more.",
         });
+    }
+
+    function removeRoleIfUnused(id, guildId, cb) {
+        if(countRoleUsers(id, guildId) == 0) {
+            request({
+                url: "http://discordapp.com/api/v6/guilds/" + guildId + "/members/" + id,
+                method: "DELETE",
+                headers: {
+                    "Authorization": "Bot " + botAuth
+                }
+            }, function() {
+                if(cb) cb();
+            });
+        }
+    }
+
+    function countRoleUsers(roleId, guildId) {
+        var usrs = bot.servers[guildId].members;
+        if (!usrs) { return; }
+        usrs = Object.values(usrs);
+        usrs = usrs.filter(x => {
+            return x.roles.includes(roleId);
+        });
+        return usrs.length;
     }
 
     //utility functions to find ids from names, list colors, etc.
