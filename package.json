@@ -44,7 +44,7 @@
     "web-audio-api": "^0.2.2",
     "web-audio-engine": "^0.13.4",
     "winston": "^2.4.4",
-    "ws": "^5.2.2",
+    "ws": "^7.4.6",
     "x-ray-scraper": "^3.0.5",
     "yandex-speech": "0.0.14",
     "yandex-translate": "^2.1.2",
